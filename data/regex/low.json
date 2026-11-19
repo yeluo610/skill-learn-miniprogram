@@ -481,5 +481,191 @@
     "referenceAnswer": "\\D",
     "explanation": "\\D 是 \\d 的反义，匹配非数字字符。配合 g 标志可匹配所有非数字。",
     "tags": ["字符类"]
+  },
+  {
+    "id": "regex-low-041",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "[A-Za-z] 等价于？",
+    "options": ["[A-Z] 和 [a-z] 的并集", "仅大写", "仅小写", "任意字符"],
+    "answer": 0,
+    "explanation": "[A-Za-z] 用范围连写表示大小写字母的并集。要含数字可用 [A-Za-z0-9]。",
+    "tags": ["字符类"]
+  },
+  {
+    "id": "regex-low-042",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "下列哪个匹配字面的问号？",
+    "options": ["\\?", "?", "[?]", "选项1和3都对"],
+    "answer": 3,
+    "explanation": "? 是量词元字符，匹配字面 ? 需转义 \\?，或放入字符类 [?]。",
+    "tags": ["转义"]
+  },
+  {
+    "id": "regex-low-043",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "[^abc] 能匹配下列哪个？",
+    "options": ["非 a/b/c 的任意字符", "a 或 b 或 c", "字符串 abc", "空字符"],
+    "answer": 0,
+    "explanation": "[^...] 是取反字符类，[^abc] 匹配除 a、b、c 外的任意单个字符。",
+    "tags": ["字符类"]
+  },
+  {
+    "id": "regex-low-044",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "字符串 'hello' 用 [a-z]+ 匹配，结果是？",
+    "options": ["匹配整个 'hello'", "匹配单个字母", "无匹配", "匹配 'h'"],
+    "answer": 0,
+    "explanation": "[a-z]+ 匹配一个或多个连续小写字母，'hello' 全是小写字母，整体匹配。",
+    "tags": ["字符类", "量词"]
+  },
+  {
+    "id": "regex-low-045",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "\\d{1,} 等价于？",
+    "options": ["\\d+", "\\d*", "\\d?", "\\d{1}"],
+    "answer": 0,
+    "explanation": "{n,} 表示至少 n 次，{1,} 等价于 +，即 1 次或多次。",
+    "tags": ["量词"]
+  },
+  {
+    "id": "regex-low-046",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "下列哪个写法匹配字母后跟数字（如 a1, b2）？",
+    "options": ["[a-z]\\d", "[a-z][a-z]", "\\d[a-z]", "\\d\\d"],
+    "answer": 0,
+    "explanation": "[a-z] 一个小写字母，\\d 一个数字，[a-z]\\d 匹配字母+数字的组合。",
+    "tags": ["字符类"]
+  },
+  {
+    "id": "regex-low-047",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "在字符类 [] 内，下列哪个元字符仍需转义？",
+    "options": ["\\ ] ^ -", ". ", "* +", "{}"],
+    "answer": 0,
+    "explanation": "字符类内仍需转义的是 \\（转义符）、]（结束符）、^（开头取反）、-（范围，放中间时）。其他如 . * + 失去特殊含义。",
+    "tags": ["字符类", "陷阱"]
+  },
+  {
+    "id": "regex-low-048",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "字符串 'a1' 用 \\w 匹配，结果是？",
+    "options": ["匹配 'a' 和 '1' 两个", "匹配 'a1' 整体", "无匹配", "仅 'a'"],
+    "answer": 0,
+    "explanation": "\\w 匹配单个单词字符（字母数字下划线）。\\w 不带量词每次匹配一个，'a1' 中匹配 'a' 和 '1'（配合 g 标志）。",
+    "tags": ["字符类"]
+  },
+  {
+    "id": "regex-low-049",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "下列哪个标志让匹配忽略大小写？",
+    "options": ["i", "g", "m", "s"],
+    "answer": 0,
+    "explanation": "i 标志忽略大小写，使 /abc/i 匹配 ABC、Abc 等。g 全局；m 多行；s dotAll。",
+    "tags": ["标志"]
+  },
+  {
+    "id": "regex-low-050",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，匹配连续 4 个数字。",
+    "testCases": [
+      { "input": "pin 1234 ok", "expected": ["1234"], "expectedType": "match" },
+      { "input": "12 34", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "\\d{4}",
+    "explanation": "\\d{4} 匹配恰好 4 个连续数字。'12 34' 中间有空格不连续，不匹配。",
+    "tags": ["量词"]
+  },
+  {
+    "id": "regex-low-051",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，匹配字符串中所有大写字母。",
+    "testCases": [
+      { "input": "Hello WORLD", "expected": ["H", "W", "O", "R", "L", "D"], "expectedType": "match" },
+      { "input": "abc", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "[A-Z]",
+    "explanation": "[A-Z] 匹配单个大写字母，配合 g 标志全局匹配所有大写字母。",
+    "tags": ["字符类"]
+  },
+  {
+    "id": "regex-low-052",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，匹配一个或多个连续空格字符。",
+    "hint": "用空格 + 量词",
+    "testCases": [
+      { "input": "a   b", "expected": ["   "], "expectedType": "match" },
+      { "input": "ab", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": " +",
+    "explanation": " 空格字面量 + + 匹配 1 个或多个连续空格。'ab' 无空格不匹配。",
+    "tags": ["量词"]
+  },
+  {
+    "id": "regex-low-053",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，匹配字符串中的逗号。",
+    "testCases": [
+      { "input": "a,b,c", "expected": [",", ","], "expectedType": "match" },
+      { "input": "abc", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": ",",
+    "explanation": "逗号不是元字符，直接用 , 匹配字面逗号，配合 g 标志全局匹配所有逗号。",
+    "tags": ["基础"]
+  },
+  {
+    "id": "regex-low-054",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，匹配字符串中所有的 yes 或 no。",
+    "hint": "用选择 yes|no",
+    "testCases": [
+      { "input": "yes no maybe", "expected": ["yes", "no"], "expectedType": "match" },
+      { "input": "abc def", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "yes|no",
+    "explanation": "| 选择分支，yes|no 匹配 'yes' 或 'no'。注意需用单词边界避免匹配 'nothing' 中的 'no'，本题为简化未加。'abc def' 无 yes/no 不匹配。",
+    "tags": ["选择"]
+  },
+  {
+    "id": "regex-low-055",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，匹配以字母开头的字符串（匹配开头的字母）。",
+    "hint": "用 ^[a-zA-Z]",
+    "testCases": [
+      { "input": "hello", "expected": ["h"], "expectedType": "match" },
+      { "input": "123abc", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "^[a-zA-Z]",
+    "explanation": "^[a-zA-Z] 锚定开头是一个字母。'123abc' 开头是数字不匹配。",
+    "tags": ["锚点", "字符类"]
   }
 ]
