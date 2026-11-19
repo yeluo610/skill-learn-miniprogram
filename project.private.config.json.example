@@ -1,0 +1,14 @@
+{
+  "description": "云开发环境配置示例。复制为 project.private.config.json 并填入你的 envId",
+  "projectname": "skill-learn-miniprogram",
+  "setting": {
+    "compileHotReLoad": true,
+    "urlCheck": false
+  },
+  "condition": {},
+  "cloudfunctionRoot": "cloudfunctions/",
+  "cloudbaseRoot": "",
+  "cloudenvironment": {
+    "env": "your-env-id"
+  }
+}

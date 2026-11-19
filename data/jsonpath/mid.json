@@ -1,0 +1,90 @@
+[
+  {
+    "id": "jsonpath-mid-001",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "$.book[*] 表示什么？",
+    "options": ["book 数组所有元素", "book 的第一个元素", "book 字段本身", "错误语法"],
+    "answer": 0,
+    "explanation": "[*] 是数组通配符，取出数组所有元素，结果是一个列表。",
+    "tags": ["通配符"]
+  },
+  {
+    "id": "jsonpath-mid-002",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "$.book[1:3] 取出哪些元素？",
+    "options": ["下标 1 和 2", "下标 1、2、3", "下标 0、1、2", "下标 1 到 3 闭区间"],
+    "answer": 0,
+    "explanation": "切片 [start:end] 含 start 不含 end，[1:3] 取下标 1 和 2 两个元素。",
+    "tags": ["切片"]
+  },
+  {
+    "id": "jsonpath-mid-003",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "$.* 表示什么？",
+    "options": ["根下所有字段的值", "根对象本身", "所有数组", "错误语法"],
+    "answer": 0,
+    "explanation": "* 是通配符，$.* 取根对象下所有字段的值，返回列表。",
+    "tags": ["通配符"]
+  },
+  {
+    "id": "jsonpath-mid-004",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "过滤表达式 $.book[?(@.price < 10)] 中的 @ 表示？",
+    "options": ["当前正在判断的元素", "根对象", "上一个元素", "数组本身"],
+    "answer": 0,
+    "explanation": "@ 在过滤表达式里代表当前正在判断的数组元素，@.price 即当前元素的 price 字段。",
+    "tags": ["过滤"]
+  },
+  {
+    "id": "jsonpath-mid-005",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取出 books 数组中所有元素。",
+    "hint": "用 [*]",
+    "testCases": [
+      { "input": "{\"books\":[\"a\",\"b\",\"c\"]}", "expected": ["a", "b", "c"], "expectedType": "equal" },
+      { "input": "{\"books\":[1,2]}", "expected": ["1", "2"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.books[*]",
+    "explanation": "[*] 通配符取出数组所有元素，结果列表。",
+    "tags": ["通配符"]
+  },
+  {
+    "id": "jsonpath-mid-006",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取出数组前两个元素（下标 0 和 1）。",
+    "hint": "用切片 [:2]",
+    "testCases": [
+      { "input": "{\"arr\":[10,20,30,40]}", "expected": ["10", "20"], "expectedType": "equal" },
+      { "input": "{\"arr\":[\"x\",\"y\",\"z\"]}", "expected": ["x", "y"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.arr[:2]",
+    "explanation": "[:2] 等价于 [0:2]，含 0 不含 2，取下标 0 和 1。",
+    "tags": ["切片"]
+  },
+  {
+    "id": "jsonpath-mid-007",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "从 books 数组中筛选 price 小于 15 的元素。",
+    "hint": "过滤 [?(@.price < 15)]",
+    "testCases": [
+      { "input": "{\"books\":[{\"price\":10},{\"price\":20},{\"price\":5}]}", "expected": ["{\"price\":10}", "{\"price\":5}"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.books[?(@.price < 15)]",
+    "explanation": "[?(expr)] 过滤数组元素，@ 代表当前元素，@.price < 15 筛出价格小于 15 的项。",
+    "tags": ["过滤"]
+  }
+]

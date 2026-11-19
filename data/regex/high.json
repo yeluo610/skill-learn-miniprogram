@@ -1,0 +1,105 @@
+[
+  {
+    "id": "regex-high-001",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列哪个是顺序肯定环视（lookahead）？",
+    "options": ["(?=abc)", "(?!abc)", "(?<=abc)", "(?<!abc)"],
+    "answer": 0,
+    "explanation": "(?=abc) 顺序肯定环视，要求当前位置右侧能匹配 abc 但不消耗字符。(?!abc) 是顺序否定；(?<=abc) 逆序肯定；(?<!abc) 逆序否定。",
+    "tags": ["环视"]
+  },
+  {
+    "id": "regex-high-002",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "(?<=\\$)\\d+ 能匹配下列哪个？",
+    "options": ["$ 后面的数字", "数字后面的 $", "美元符号本身", "任意数字"],
+    "answer": 0,
+    "explanation": "(?<=\\$) 逆序肯定环视，要求左侧是 $（\\$ 转义），\\d+ 匹配数字。整体匹配 $100 中的 '100'，不含 $。",
+    "tags": ["环视", "逆序"]
+  },
+  {
+    "id": "regex-high-003",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "\\d+(?!元) 表示什么？",
+    "options": ["后面不跟'元'的数字", "后面跟'元'的数字", "数字本身", "元字符"],
+    "answer": 0,
+    "explanation": "(?!元) 顺序否定环视，要求数字后面不跟 '元'。'100元'不匹配，'100克'匹配。",
+    "tags": ["环视", "顺序否定"]
+  },
+  {
+    "id": "regex-high-004",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "字符类中的 - 在什么位置时表示字面量？",
+    "options": ["放在开头或结尾", "放在中间", "永远不表示字面量", "需转义"],
+    "answer": 0,
+    "explanation": "在字符类中，- 放在开头或结尾时是字面量，如 [-a] 或 [a-]。放中间表示范围，如 [a-z]。要安全表示字面 - 也可转义为 \\-。",
+    "tags": ["字符类", "陷阱"]
+  },
+  {
+    "id": "regex-high-005",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列哪个能匹配「不以0开头的数字串」？",
+    "options": ["^[1-9]\\d*$", "^\\d+$", "^[0-9]\\d*$", "^0\\d+$"],
+    "answer": 0,
+    "explanation": "^[1-9]\\d*$：首位是 1-9，后面任意数字，锚定整串。'^0\\d+' 恰恰匹配以 0 开头的。",
+    "tags": ["锚点", "字符类"]
+  },
+  {
+    "id": "regex-high-006",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "写一个正则，匹配被英文引号包裹的内容（不含引号本身），如 \"hello\" 中的 hello。",
+    "hint": "用环视 (?<=...)  (?=...)",
+    "testCases": [
+      { "input": "\"hello\"", "expected": ["hello"], "expectedType": "match" },
+      { "input": "\"a\" \"b\"", "expected": ["a", "b"], "expectedType": "match" },
+      { "input": "no quotes", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "(?<=\")\\w+(?=\")",
+    "explanation": "(?<=\") 逆序肯定环视要求左侧是引号，\\w+ 匹配单词，(?=\") 顺序肯定环视要求右侧是引号。整体只捕获引号间的单词部分。",
+    "tags": ["环视"]
+  },
+  {
+    "id": "regex-high-007",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "写一个正则，匹配后面跟着数字但本身不是数字的字母。",
+    "hint": "用顺序肯定环视 (?=\\d)",
+    "testCases": [
+      { "input": "a1b2c", "expected": ["a", "b"], "expectedType": "match" },
+      { "input": "x9", "expected": ["x"], "expectedType": "match" },
+      { "input": "abc", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "[a-zA-Z](?=\\d)",
+    "explanation": "[a-zA-Z] 匹配字母，(?=\\d) 顺序肯定环视要求右侧是数字但不消耗。'c' 后无数字不匹配。",
+    "tags": ["环视", "顺序肯定"]
+  },
+  {
+    "id": "regex-high-008",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "写一个正则，匹配字符串中不是以数字开头的部分（每个非数字开头的连续片段）。",
+    "hint": "可简化为：匹配非数字字符序列",
+    "testCases": [
+      { "input": "abc123def", "expected": ["abc", "def"], "expectedType": "match" },
+      { "input": "123abc", "expected": ["abc"], "expectedType": "match" },
+      { "input": "123456", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "\\D+",
+    "explanation": "\\D+ 匹配一个或多个非数字字符的连续片段。'abc123def' 匹配出 'abc' 和 'def' 两段。",
+    "tags": ["字符类", "量词"]
+  }
+]

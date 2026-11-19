@@ -1,0 +1,53 @@
+.q-meta { display: flex; align-items: center; gap: 16rpx; margin-bottom: 16rpx; }
+.q-title { font-size: 34rpx; font-weight: 600; line-height: 1.5; }
+.q-content { margin-top: 16rpx; color: #555; }
+.tag { font-size: 22rpx; padding: 4rpx 14rpx; border-radius: 8rpx; }
+.tag-choice { background: #e0e7ff; color: #4f46e5; }
+.tag-fill { background: #fef3c7; color: #b45309; }
+
+.testcases { margin-top: 20rpx; padding: 16rpx; background: #f9fafb; border-radius: 12rpx; }
+.tc-title { margin-bottom: 10rpx; }
+.tc-item { padding: 8rpx 0; border-bottom: 1rpx dashed #e5e7eb; }
+.tc-item:last-child { border-bottom: 0; }
+.tc-row { display: flex; }
+.tc-label { width: 80rpx; color: #888; font-size: 24rpx; flex-shrink: 0; }
+.tc-value { flex: 1; word-break: break-all; }
+
+.options { padding: 16rpx 24rpx; }
+.option {
+  display: flex; align-items: center;
+  padding: 24rpx; margin: 12rpx 0;
+  border: 2rpx solid #e5e7eb;
+  border-radius: 12rpx;
+}
+.option.selected { border-color: #4f46e5; background: #eef2ff; }
+.option.correct { border-color: #16a34a; background: #f0fdf4; }
+.option.wrong { border-color: #dc2626; background: #fef2f2; }
+.opt-letter {
+  width: 48rpx; height: 48rpx; line-height: 48rpx;
+  border-radius: 50%; background: #f3f4f6;
+  text-align: center; margin-right: 20rpx; font-weight: 600;
+}
+.option.selected .opt-letter { background: #4f46e5; color: #fff; }
+.option.correct .opt-letter { background: #16a34a; color: #fff; }
+
+.fill-area { padding: 24rpx; }
+.fill-input {
+  margin-top: 16rpx; padding: 20rpx;
+  background: #f9fafb; border-radius: 12rpx;
+  min-height: 120rpx; width: 100%;
+  font-family: monospace;
+}
+.check-result { margin-top: 20rpx; }
+.check-result .tc-item.ok { color: #16a34a; }
+.check-result .tc-item.fail { color: #dc2626; }
+
+.explanation { padding: 24rpx; }
+.result-head { margin-bottom: 16rpx; }
+.result-head.ok { color: #16a34a; }
+.result-head.fail { color: #dc2626; }
+.ref-answer { margin-bottom: 16rpx; }
+.exp-body { color: #444; line-height: 1.7; }
+
+.actions { margin-top: 30rpx; padding-bottom: 60rpx; }
+.loading-full { text-align: center; color: #aaa; padding: 100rpx; }

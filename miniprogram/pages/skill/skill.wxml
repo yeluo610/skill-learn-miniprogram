@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="quick-actions card">
+    <view class="quick-item" bindtap="goTutorial">
+      <view class="qa-icon">📖</view>
+      <view class="qa-label">教程</view>
+    </view>
+    <view class="quick-item" bindtap="goExam">
+      <view class="qa-icon">📝</view>
+      <view class="qa-label">考试</view>
+    </view>
+    <view class="quick-item" bindtap="" data-go="wrong">
+      <navigator url="/pages/wrongbook/wrongbook?skill={{skill}}" open-type="navigate" class="quick-item-inner">
+        <view class="qa-icon">❌</view>
+        <view class="qa-label">错题本</view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="section-title">学习关卡</view>
+  <block wx:for="{{levels}}" wx:key="id">
+    <view class="card level-item" bindtap="goLevel" data-level="{{item.id}}">
+      <view class="level-head">
+        <view class="title-md">{{item.name}}</view>
+        <view class="text-muted">{{item.desc}}</view>
+      </view>
+      <view class="level-progress">
+        <view class="progress-bar">
+          <view class="fill" style="width: {{item.total ? item.correct / item.total * 100 : 0}}%"></view>
+        </view>
+        <view class="progress-text">
+          <text class="text-primary">{{item.correct}}</text> / {{item.total || item.count}} 正确
+          <text wx:if="{{item.attempted}}"> · 已练习 {{item.attempted}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,101 @@
+[
+  {
+    "id": "jsonpath-low-001",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "JSONPath 中 $ 表示什么？",
+    "options": ["根对象", "当前元素", "数组下标", "通配符"],
+    "answer": 0,
+    "explanation": "$ 表示 JSON 文档的根对象/数组，所有路径都从 $ 开始。",
+    "tags": ["基础"]
+  },
+  {
+    "id": "jsonpath-low-002",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "$.store.book 表示什么？",
+    "options": ["根下 store 的 book 字段", "数组第 store 个元素", "根的 book 字段", "通配匹配"],
+    "answer": 0,
+    "explanation": ". 用于访问子节点，$.store.book 表示根 → store → book 的层级访问。",
+    "tags": ["点号"]
+  },
+  {
+    "id": "jsonpath-low-003",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "$.book[0] 表示什么？",
+    "options": ["book 数组第 0 个元素", "book 的第 0 个字段", "根本身", "错误语法"],
+    "answer": 0,
+    "explanation": "[n] 用下标访问数组元素，从 0 开始。$.book[0] 取 book 数组的第一个元素。",
+    "tags": ["下标"]
+  },
+  {
+    "id": "jsonpath-low-004",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "$.book[-1] 表示什么？",
+    "options": ["book 数组最后一个元素", "第一个元素", "倒数第二个", "语法错误"],
+    "answer": 0,
+    "explanation": "负数下标从末尾计数，[-1] 是最后一个元素，[-2] 是倒数第二个。",
+    "tags": ["下标"]
+  },
+  {
+    "id": "jsonpath-low-005",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "$['book'] 与下列哪个等价？",
+    "options": ["$.book", "$.book[0]", "$book", "$.book[]"],
+    "answer": 0,
+    "explanation": "$['book'] 用括号+引号的形式访问字段，等价于点号形式 $.book。引号形式在字段名含特殊字符时必须用。",
+    "tags": ["点号"]
+  },
+  {
+    "id": "jsonpath-low-006",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "用 JSONPath 取出根对象下的 name 字段值。",
+    "hint": "点号访问",
+    "testCases": [
+      { "input": "{\"name\":\"Tom\",\"age\":20}", "expected": ["Tom"], "expectedType": "equal" },
+      { "input": "{\"name\":\"Jerry\"}", "expected": ["Jerry"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.name",
+    "explanation": "$.name 用点号访问根下的 name 字段。结果是对应的值。",
+    "tags": ["点号"]
+  },
+  {
+    "id": "jsonpath-low-007",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取出 users 数组的第一个元素。",
+    "hint": "下标 0",
+    "testCases": [
+      { "input": "{\"users\":[\"alice\",\"bob\"]}", "expected": ["alice"], "expectedType": "equal" },
+      { "input": "{\"users\":[{\"id\":1}]}", "expected": ["{\"id\":1}"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.users[0]",
+    "explanation": "$.users[0] 先访问 users 字段，再取下标 0 的元素。",
+    "tags": ["下标"]
+  },
+  {
+    "id": "jsonpath-low-008",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取出 books 数组最后一个元素。",
+    "hint": "负数下标",
+    "testCases": [
+      { "input": "{\"books\":[\"a\",\"b\",\"c\"]}", "expected": ["c"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.books[-1]",
+    "explanation": "[-1] 表示最后一个元素，从末尾倒数。",
+    "tags": ["下标"]
+  }
+]

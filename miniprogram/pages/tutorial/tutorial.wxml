@@ -1,0 +1,22 @@
+<view class="tutorial">
+  <scroll-view scroll-y class="toc" enhanced show-scrollbar="{{false}}">
+    <block wx:for="{{sections}}" wx:key="id" wx:for-index="i">
+      <view class="toc-item {{i === currentIdx ? 'active' : ''}}" bindtap="selectSection" data-idx="{{i}}">
+        {{item.title}}
+      </view>
+    </block>
+  </scroll-view>
+
+  <view class="content">
+    <scroll-view scroll-y class="content-scroll">
+      <view class="content-inner">
+        <view class="title-lg">{{current.title}}</view>
+        <view class="md">{{current.content}}</view>
+      </view>
+    </scroll-view>
+    <view class="content-nav">
+      <button class="btn-ghost" bindtap="prev" disabled="{{currentIdx === 0}}">上一节</button>
+      <button class="btn-ghost" bindtap="next" disabled="{{currentIdx === sections.length - 1}}">下一节</button>
+    </view>
+  </view>
+</view>

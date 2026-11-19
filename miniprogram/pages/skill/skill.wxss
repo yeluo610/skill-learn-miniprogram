@@ -1,0 +1,12 @@
+.quick-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 24rpx;
+}
+.quick-item, .quick-item-inner { text-align: center; flex: 1; }
+.qa-icon { font-size: 48rpx; }
+.qa-label { font-size: 24rpx; color: #555; margin-top: 6rpx; }
+.section-title { font-size: 28rpx; color: #888; padding: 16rpx 8rpx; }
+.level-item { padding: 28rpx; }
+.level-head { margin-bottom: 16rpx; }
+.level-progress .progress-text { font-size: 24rpx; color: #888; margin-top: 10rpx; }

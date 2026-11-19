@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/skill/skill",
+    "pages/level/level",
+    "pages/question/question",
+    "pages/exam/exam",
+    "pages/exam-doing/exam-doing",
+    "pages/exam-result/exam-result",
+    "pages/wrongbook/wrongbook",
+    "pages/tutorial/tutorial",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4f46e5",
+    "navigationBarTitleText": "技能学习",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f5f5"
+  },
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#4f46e5",
+    "backgroundColor": "#ffffff",
+    "list": [
+      { "pagePath": "pages/home/home", "text": "学习" },
+      { "pagePath": "pages/wrongbook/wrongbook", "text": "错题本" },
+      { "pagePath": "pages/profile/profile", "text": "我的" }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

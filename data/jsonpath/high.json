@@ -1,0 +1,64 @@
+[
+  {
+    "id": "jsonpath-high-001",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "$..book 表示什么？",
+    "options": ["任意层级叫 book 的字段", "根的 book 字段", "book 数组第一个", "错误语法"],
+    "answer": 0,
+    "explanation": ".. 是递归下降，$..book 从根开始递归查找所有叫 book 的字段，无论嵌套多深。",
+    "tags": ["递归"]
+  },
+  {
+    "id": "jsonpath-high-002",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "$..* 表示什么？",
+    "options": ["递归取所有层级的所有值", "根对象本身", "仅第一层", "错误语法"],
+    "answer": 0,
+    "explanation": "$..* 递归下降 + 通配，返回 JSON 中所有层级的所有元素值，常用于遍历。",
+    "tags": ["递归", "通配符"]
+  },
+  {
+    "id": "jsonpath-high-003",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "$.book[?(@.price < 10 && @.category == 'fiction')] 表示？",
+    "options": ["价格<10 且 类别为 fiction 的书", "价格<10 或 类别为fiction", "全部书籍", "语法错误"],
+    "answer": 0,
+    "explanation": "&& 是逻辑与，过滤同时满足两个条件的元素。|| 是逻辑或。",
+    "tags": ["过滤", "逻辑"]
+  },
+  {
+    "id": "jsonpath-high-004",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归查找所有叫 name 的字段值。",
+    "hint": "用 $..name",
+    "testCases": [
+      { "input": "{\"a\":{\"name\":\"x\"},\"b\":{\"c\":{\"name\":\"y\"}}}", "expected": ["x", "y"], "expectedType": "equal" },
+      { "input": "{\"name\":\"top\"}", "expected": ["top"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$..name",
+    "explanation": ".. 递归下降，$..name 找出所有层级的 name 字段值。",
+    "tags": ["递归"]
+  },
+  {
+    "id": "jsonpath-high-005",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "找出 books 数组中 category 为 'fiction' 的所有书。",
+    "hint": "过滤 @.category == 'fiction'",
+    "testCases": [
+      { "input": "{\"books\":[{\"category\":\"fiction\",\"title\":\"A\"},{\"category\":\"science\",\"title\":\"B\"}]}", "expected": ["{\"category\":\"fiction\",\"title\":\"A\"}"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.books[?(@.category == 'fiction')]",
+    "explanation": "[?(@.category == 'fiction')] 过滤出 category 等于 'fiction' 的元素。",
+    "tags": ["过滤"]
+  }
+]

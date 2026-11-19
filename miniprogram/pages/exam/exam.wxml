@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="card head">
+    <view class="title-lg">{{skillName}} 考试</view>
+    <view class="text-muted">每套 50 道随机题，做完即出分与解析。题目从题库随机抽取。</view>
+  </view>
+  <view class="section-title">选择试卷（共 20 套）</view>
+  <view class="exam-grid">
+    <block wx:for="{{examSets}}" wx:key="*this">
+      <view class="exam-cell" bindtap="goExam" data-id="{{item}}">第 {{item}} 套</view>
+    </block>
+  </view>
+</view>

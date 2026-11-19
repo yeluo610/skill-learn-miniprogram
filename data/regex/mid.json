@@ -1,0 +1,176 @@
+[
+  {
+    "id": "regex-mid-001",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "捕获组 (abc) 的反向引用在大多数引擎中如何书写？",
+    "options": ["\\1", "$1", "(:1)", "/1"],
+    "answer": 0,
+    "explanation": "在正则模式内部反向引用捕获组用 \\1（第一组）、\\2 等表示。$1 主要用于替换字符串中引用捕获组。",
+    "tags": ["分组", "反向引用"]
+  },
+  {
+    "id": "regex-mid-002",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "(?:abc) 是什么类型分组？",
+    "options": ["非捕获分组", "捕获分组", "命名分组", "原子分组"],
+    "answer": 0,
+    "explanation": "(?:...) 是非捕获分组，仅分组不捕获，不能用 \\1 引用，性能略好于捕获分组。",
+    "tags": ["分组"]
+  },
+  {
+    "id": "regex-mid-003",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "正则 (\\w+)\\s\\1 能匹配下列哪个？",
+    "options": ["重复的单词如 'go go'", "任意单词", "两个不同单词", "纯数字"],
+    "answer": 0,
+    "explanation": "(\\w+) 捕获一组单词字符，\\s 匹配空白，\\1 反向引用要求与第一组完全相同。整体匹配重复单词如 'go go'。",
+    "tags": ["分组", "反向引用"]
+  },
+  {
+    "id": "regex-mid-004",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "命名捕获组 (?<word>\\w+) 中，如何反向引用？",
+    "options": ["\\k<word>", "\\word", "(?P=word)", "$word"],
+    "answer": 0,
+    "explanation": "命名分组的反向引用语法为 \\k<name>（JS/Python/PCRE 均支持）。(?P=name) 是 Python 旧式写法。",
+    "tags": ["分组", "命名分组"]
+  },
+  {
+    "id": "regex-mid-005",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "a*? 中的 ? 表示什么？",
+    "options": ["惰性匹配", "可选", "原子组", "忽略大小写"],
+    "answer": 0,
+    "explanation": "量词后加 ? 变惰性（非贪婪），尽可能少地匹配。a*? 会匹配尽可能少的 a（可以是 0 个）。",
+    "tags": ["量词", "贪婪与惰性"]
+  },
+  {
+    "id": "regex-mid-006",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "默认情况下 a+ 的匹配行为是？",
+    "options": ["贪婪，尽可能多匹配", "惰性，尽可能少匹配", "只匹配第一个", "随机匹配"],
+    "answer": 0,
+    "explanation": "默认量词是贪婪的，会尽可能多地匹配。要惰性需加 ?，如 a+?。",
+    "tags": ["贪婪与惰性"]
+  },
+  {
+    "id": "regex-mid-007",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列哪个能匹配邮箱中的 @ 符号？",
+    "options": ["@", "\\@", "[@]", "选项 1 和 3 都对"],
+    "answer": 3,
+    "explanation": "@ 不是元字符，可直接写 @ 匹配，也可写在字符类 [@] 中。无需转义。",
+    "tags": ["基础", "转义"]
+  },
+  {
+    "id": "regex-mid-008",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "替换字符串中的 $1 表示什么？",
+    "options": ["引用第一个捕获组", "字面 $1", "第一个匹配", "错误语法"],
+    "answer": 0,
+    "explanation": "在 replace 的替换字符串里，$1 引用第一个捕获组的内容，$& 引用整个匹配。",
+    "tags": ["替换"]
+  },
+  {
+    "id": "regex-mid-009",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "字符串 'a1b2c3' 用 /\\w\\d/g 匹配，结果是？",
+    "options": ["['a1', 'b2', 'c3']", "['a', '1', 'b', '2']", "['a1']", "无匹配"],
+    "answer": 0,
+    "explanation": "\\w\\d 匹配一个字母后跟一个数字，全局匹配会依次找到 'a1'、'b2'、'c3' 三段。",
+    "tags": ["量词", "全局匹配"]
+  },
+  {
+    "id": "regex-mid-010",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列哪个写法等价于 a{0,1}？",
+    "options": ["a?", "a*", "a+", "a{1}"],
+    "answer": 0,
+    "explanation": "? 表示 0 或 1 次，等价于 {0,1}。a* 等价于 a{0,}，a+ 等价于 a{1,}。",
+    "tags": ["量词"]
+  },
+  {
+    "id": "regex-mid-011",
+    "skill": "regex",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一个正则，匹配字符串中所有连续重复的字符对（如 'aa'、'bb'）。",
+    "hint": "用捕获组 + 反向引用",
+    "testCases": [
+      { "input": "aabbcc", "expected": ["aa", "bb", "cc"], "expectedType": "match" },
+      { "input": "abcabc", "expected": [], "expectedType": "nomatch" },
+      { "input": "aab", "expected": ["aa"], "expectedType": "match" }
+    ],
+    "referenceAnswer": "(.)\\1",
+    "explanation": "(.) 捕获任意一个字符，\\1 反向引用要求与第一组相同，整体匹配重复字符对。配合 g 标志可全局匹配所有重复对。",
+    "tags": ["分组", "反向引用"]
+  },
+  {
+    "id": "regex-mid-012",
+    "skill": "regex",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一个正则，匹配由字母和数字组成的3到6位字符串（整串匹配）。",
+    "hint": "用 ^ $ 和 [A-Za-z0-9]{3,6}",
+    "testCases": [
+      { "input": "abc123", "expected": ["abc123"], "expectedType": "match" },
+      { "input": "ab", "expected": [], "expectedType": "nomatch" },
+      { "input": "abcdefg7", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "^[A-Za-z0-9]{3,6}$",
+    "explanation": "^...$ 锚定整串，[A-Za-z0-9]{3,6} 要求 3 到 6 个字母或数字。'ab' 太短，'abcdefg7' 太长，均不匹配。",
+    "tags": ["锚点", "字符类", "量词"]
+  },
+  {
+    "id": "regex-mid-013",
+    "skill": "regex",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一个正则，匹配连续两个相同单词（中间可有空白），如 'go go'。",
+    "hint": "(\\w+)\\s+\\1",
+    "testCases": [
+      { "input": "go go", "expected": ["go go"], "expectedType": "match" },
+      { "input": "hello hello world", "expected": ["hello hello"], "expectedType": "match" },
+      { "input": "go stop", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "(\\w+)\\s+\\1",
+    "explanation": "(\\w+) 捕获单词，\\s+ 匹配空白，\\1 反向引用要求与第一组相同。整体匹配重复单词。",
+    "tags": ["分组", "反向引用"]
+  },
+  {
+    "id": "regex-mid-014",
+    "skill": "regex",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一个正则，惰性匹配 < 与 > 之间的内容（最短匹配），如 HTML 标签。",
+    "hint": "用 .*? 惰性量词",
+    "testCases": [
+      { "input": "<a><b>", "expected": ["<a>", "<b>"], "expectedType": "match" },
+      { "input": "<div>text</div>", "expected": ["<div>", "</div>"], "expectedType": "match" },
+      { "input": "no tags", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "<.*?>",
+    "explanation": "<.*?> 用惰性量词 .*?，匹配最短的 <...> 段。若用贪婪 <.*>，会把 '<a><b>' 整体匹配。",
+    "tags": ["贪婪与惰性"]
+  }
+]

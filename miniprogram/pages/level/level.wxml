@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="text-muted total-bar">共 {{total}} 题</view>
+  <block wx:for="{{list}}" wx:key="id">
+    <view class="card q-item" bindtap="goQuestion" data-idx="{{index}}">
+      <view class="q-num">第 {{index + 1}} 题</view>
+      <view class="q-title">{{item.title}}</view>
+      <view class="q-meta">
+        <text class="tag tag-{{item.type}}">{{item.type === 'choice' ? '选择' : '填空'}}</text>
+        <text wx:if="{{progress[item.id] === 'correct'}}" class="status status-correct">✓ 已掌握</text>
+        <text wx:elif="{{progress[item.id] === 'wrong'}}" class="status status-wrong">✗ 待复习</text>
+      </view>
+    </view>
+  </block>
+  <view class="loading" wx:if="{{loading}}">加载中...</view>
+  <view class="loading" wx:if="{{!loading && list.length >= total && total > 0}}">已经到底了</view>
+</view>

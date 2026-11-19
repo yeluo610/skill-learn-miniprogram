@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="card score-card">
+    <view class="score">{{score}}<text class="total">/{{total}}</text></view>
+    <view class="score-label">本次得分</view>
+    <view class="score-rate">正确率 {{total ? Math.round(score / total * 100) : 0}}%</view>
+  </view>
+
+  <view class="section-title">逐题解析（共 {{details.length}} 题）</view>
+  <block wx:for="{{details}}" wx:key="questionId" wx:for-index="i">
+    <view class="card detail-item {{item.correct ? 'ok' : 'fail'}}">
+      <view class="detail-head" bindtap="toggle" data-idx="{{i}}">
+        <text class="detail-num">第 {{i + 1}} 题</text>
+        <text class="detail-status">{{item.correct ? '✓ 正确' : '✗ 错误'}}</text>
+        <text class="arrow">{{expanded === i ? '▾' : '▸'}}</text>
+      </view>
+      <view class="detail-body" wx:if="{{expanded === i}}">
+        <view class="q-title">{{item.question.title}}</view>
+        <view class="row your-answer">
+          <text class="text-muted">你的答案：</text>
+          <text>{{item.userAnswer === undefined ? '未作答' : (item.question.type === 'choice' ? ['A','B','C','D'][item.userAnswer] : item.userAnswer)}}</text>
+        </view>
+        <view class="row right-answer" wx:if="{{item.question.type === 'choice'}}">
+          <text class="text-muted">正确答案：</text>
+          <text class="text-primary">{{['A','B','C','D'][item.correctAnswer]}}</text>
+        </view>
+        <view class="row right-answer" wx:if="{{item.question.type === 'fill' && item.referenceAnswer}}">
+          <text class="text-muted">参考答案：</text>
+          <text class="text-primary">{{item.referenceAnswer}}</text>
+        </view>
+        <view class="exp">{{item.explanation}}</view>
+      </view>
+    </view>
+  </block>
+</view>

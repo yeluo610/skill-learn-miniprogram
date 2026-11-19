@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="card user-card" wx:if="{{loggedIn}}">
+    <image class="avatar" src="{{avatarUrl}}" wx:if="{{avatarUrl}}" mode="aspectFill"></image>
+    <view class="avatar placeholder" wx:else>👤</view>
+    <view class="user-info">
+      <view class="title-md">{{nickname || '已登录'}}</view>
+      <view class="text-muted">已通过微信登录</view>
+    </view>
+  </view>
+
+  <view class="card login-card" wx:else>
+    <view class="title-md">登录后同步进度</view>
+    <view class="text-muted">使用微信登录，进度自动云端保存</view>
+    <button class="btn-primary" bindtap="login" style="margin-top: 20rpx;">微信登录</button>
+  </view>
+
+  <view class="section-title" wx:if="{{loggedIn}}">学习总览</view>
+  <block wx:for="{{skills}}" wx:key="id" wx:if="{{loggedIn}}">
+    <view class="card skill-summary">
+      <view class="row-between">
+        <view class="title-md">{{item.name}}</view>
+        <view class="text-primary">{{item.correct}}/{{item.total}}</view>
+      </view>
+      <view class="progress-bar" style="margin-top: 12rpx;">
+        <view class="fill" style="width: {{item.total ? item.correct / item.total * 100 : 0}}%"></view>
+      </view>
+      <view class="text-muted" style="margin-top: 8rpx;">已练习 {{item.attempted}} 题 · 正确 {{item.correct}} 题</view>
+    </view>
+  </block>
+
+  <view class="card about">
+    <view class="title-md">关于</view>
+    <view class="text-muted">技能学习小程序 · 通过关卡、考试、错题、教程系统掌握命令与语法。首期：正则、JSONPath；后续：Linux、kubectl。</view>
+  </view>
+</view>

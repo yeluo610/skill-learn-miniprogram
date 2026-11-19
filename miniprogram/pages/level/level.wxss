@@ -1,0 +1,12 @@
+.total-bar { padding: 8rpx 4rpx 16rpx; }
+.q-item { padding: 24rpx; }
+.q-num { font-size: 24rpx; color: #888; }
+.q-title { margin: 10rpx 0; font-size: 30rpx; }
+.q-meta { display: flex; align-items: center; gap: 16rpx; }
+.tag { font-size: 22rpx; padding: 4rpx 12rpx; border-radius: 8rpx; }
+.tag-choice { background: #e0e7ff; color: #4f46e5; }
+.tag-fill { background: #fef3c7; color: #b45309; }
+.status { font-size: 24rpx; }
+.status-correct { color: #16a34a; }
+.status-wrong { color: #dc2626; }
+.loading { text-align: center; color: #aaa; padding: 30rpx; font-size: 26rpx; }

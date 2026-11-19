@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="header card">
+    <view class="title-lg">技能学习平台</view>
+    <view class="text-muted">通过关卡、考试、错题、教程系统掌握命令与语法</view>
+  </view>
+
+  <view class="section-title">学习板块</view>
+  <view class="skill-list">
+    <block wx:for="{{skills}}" wx:key="id">
+      <view class="card skill-item" bindtap="goSkill" data-id="{{item.id}}">
+        <view class="skill-icon">{{item.icon === '/assets/icons/regex.svg' ? '⚡' : item.icon === '/assets/icons/jsonpath.svg' ? '🔗' : '📚'}}</view>
+        <view class="skill-body">
+          <view class="title-md">{{item.name}}</view>
+          <view class="text-muted">{{item.desc}}</view>
+          <view class="progress-bar" wx:if="{{progress[item.id].total}}">
+            <view class="fill" style="width: {{progress[item.id].correct / progress[item.id].total * 100}}%"></view>
+          </view>
+          <view class="text-muted" wx:if="{{progress[item.id].total}}">
+            已掌握 {{progress[item.id].correct}}/{{progress[item.id].total}}
+          </view>
+        </view>
+        <view class="arrow">›</view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+{
+  "name": "submitExam",
+  "version": "1.0.0",
+  "description": "提交考试并评分",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~2.6.3",
+    "jsonpath-plus": "^10.1.0"
+  }
+}

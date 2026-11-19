@@ -1,0 +1,102 @@
+[
+  {
+    "id": "regex-top-001",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列哪个正则存在灾难性回溯风险？",
+    "options": ["(a+)+$", "ab", "^\\d+$", "[a-z]+"],
+    "answer": 0,
+    "explanation": "(a+)+$ 这类嵌套量词是经典的 ReDoS 风险模式。输入 'aaaaaaaaaaaaaaaaaaab' 会引发指数级回溯，导致引擎卡死。",
+    "tags": ["回溯", "性能", "陷阱"]
+  },
+  {
+    "id": "regex-top-002",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "默认情况下 .* 能否跨行匹配？",
+    "options": ["不能，遇换行停止", "能，跨所有行", "仅第一行", "随机"],
+    "answer": 0,
+    "explanation": "默认 . 不匹配换行符，遇到 \\n 即停止。加 s（dotAll）标志后才能跨行匹配。",
+    "tags": ["标志", "陷阱"]
+  },
+  {
+    "id": "regex-top-003",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "\\b 在 'abc_def' 中能匹配单词边界吗？",
+    "options": ["不能，_ 是单词字符", "能", "只在开头", "只在结尾"],
+    "answer": 0,
+    "explanation": "\\b 匹配单词字符与与非单词字符的边界。_ 属于 \\w（单词字符），所以 'abc_def' 整体是一个单词，内部无边界。",
+    "tags": ["锚点", "陷阱"]
+  },
+  {
+    "id": "regex-top-004",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "回溯最常引发的问题是什么？",
+    "options": ["性能灾难", "语法错误", "无法匹配", "编码问题"],
+    "answer": 0,
+    "explanation": "回溯在贪婪量词嵌套等场景下可能指数级增长，引发 ReDoS（正则拒绝服务），使程序卡死。",
+    "tags": ["回溯", "性能"]
+  },
+  {
+    "id": "regex-top-005",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列哪个能避免贪婪量词过度回溯？",
+    "options": ["用惰性量词或占有量词", "加 i 标志", "用 [a-z]", "去掉量词"],
+    "answer": 0,
+    "explanation": "惰性量词 *? +? 尽量少匹配，占有量词 *+ ++（部分引擎支持）禁止回溯，都能减少回溯。但根本上是避免嵌套量词这种结构。",
+    "tags": ["回溯", "性能"]
+  },
+  {
+    "id": "regex-top-006",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "^(?:a|ab)+c$ 对 'abac' 的匹配结果是？",
+    "options": ["不匹配", "匹配整个 'abac'", "匹配 'aba'", "匹配 'ab'"],
+    "answer": 0,
+    "explanation": "^(?:a|ab)+c$ 要求以 c 结尾。'abac' 不以 c 单独结尾（最后是 ac），故不匹配。注意回溯分支选择的复杂性。",
+    "tags": ["回溯", "陷阱"]
+  },
+  {
+    "id": "regex-top-007",
+    "skill": "regex",
+    "level": "top",
+    "type": "fill",
+    "title": "写一个正则，匹配有效的 IPv4 地址（四段0-255，用点分隔）。",
+    "hint": "难点：0-255 的范围匹配",
+    "testCases": [
+      { "input": "192.168.1.1", "expected": ["192.168.1.1"], "expectedType": "match" },
+      { "input": "255.255.255.255", "expected": ["255.255.255.255"], "expectedType": "match" },
+      { "input": "256.1.1.1", "expected": [], "expectedType": "nomatch" },
+      { "input": "1.2.3", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "^(?:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)$",
+    "explanation": "每段匹配 0-255：25[0-5]（250-255）、2[0-4]\\d（200-249）、1\\d\\d（100-199）、[1-9]?\\d（0-99）。前三段后跟点，最后一段结尾。整串锚定。",
+    "tags": ["实战", "锚点"]
+  },
+  {
+    "id": "regex-top-008",
+    "skill": "regex",
+    "level": "top",
+    "type": "fill",
+    "title": "写一个正则，匹配有效的邮箱格式（简化：user@domain，要求 @ 前后都有内容，domain 含点）。",
+    "hint": "[^@]+@[^@]+\\.[^@]+",
+    "testCases": [
+      { "input": "test@example.com", "expected": ["test@example.com"], "expectedType": "match" },
+      { "input": "a.b@c.d", "expected": ["a.b@c.d"], "expectedType": "match" },
+      { "input": "noemail", "expected": [], "expectedType": "nomatch" },
+      { "input": "a@b", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "^[^@]+@[^@]+\\.[^@]+$",
+    "explanation": "^[^@]+ 要求开头至少一个非@字符，@ 分隔，[^@]+\\. 域名部分含点，最后 [^@]+$ 顶级域名。简化版，实际邮箱规则更复杂。",
+    "tags": ["实战", "锚点"]
+  }
+]

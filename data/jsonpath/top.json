@@ -1,0 +1,63 @@
+[
+  {
+    "id": "jsonpath-top-001",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "$..book[0] 在存在多层 book 字段时返回什么？",
+    "options": ["每层 book 数组的第一个元素（多个）", "仅根层的第一个", "报错", "全部 book"],
+    "answer": 0,
+    "explanation": ".. 递归查找所有 book，再 [0] 取每个找到的 book 数组的第一个元素。结果可能是多个。",
+    "tags": ["递归", "陷阱"]
+  },
+  {
+    "id": "jsonpath-top-002",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "JSONPath 过滤表达式中支持的正则匹配写法是？",
+    "options": ["=~ /pattern/", "== /pattern/", "like 'pattern'", "match(pattern)"],
+    "answer": 0,
+    "explanation": "标准 JSONPath 用 =~ /regex/ 做正则匹配，如 [?(@.name =~ /^Tom.*/)]。不同实现支持度不一。",
+    "tags": ["过滤", "脚本"]
+  },
+  {
+    "id": "jsonpath-top-003",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "$.store..price 与 $..price 的区别？",
+    "options": ["前者从 store 起递归；后者从根起递归", "完全相同", "前者只一层", "后者只一层"],
+    "answer": 0,
+    "explanation": ".. 的起点决定递归范围。$..price 从根递归；$.store..price 从 store 字段起递归。结果可能不同。",
+    "tags": ["递归", "陷阱"]
+  },
+  {
+    "id": "jsonpath-top-004",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "找出 JSON 中所有 price 字段值（递归，不限层级）。",
+    "hint": "$..price",
+    "testCases": [
+      { "input": "{\"store\":{\"book\":[{\"price\":10},{\"price\":20}],\"bike\":{\"price\":100}}}", "expected": ["10", "20", "100"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$..price",
+    "explanation": "$..price 从根递归找所有 price，无论是 book 数组里还是 bike 对象里。",
+    "tags": ["递归"]
+  },
+  {
+    "id": "jsonpath-top-005",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "找出 books 中标题以 'A' 开头的书。",
+    "hint": "过滤用 =~ /^A/",
+    "testCases": [
+      { "input": "{\"books\":[{\"title\":\"Apple\"},{\"title\":\"Banana\"},{\"title\":\"Apricot\"}]}", "expected": ["{\"title\":\"Apple\"}", "{\"title\":\"Apricot\"}"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.books[?(@.title =~ /^A/)]",
+    "explanation": "=~ /regex/ 做正则匹配，^A 匹配以 A 开头的标题。结果包含 Apple 和 Apricot。",
+    "tags": ["过滤", "正则"]
+  }
+]

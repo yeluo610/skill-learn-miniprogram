@@ -1,0 +1,19 @@
+.score-card { text-align: center; padding: 40rpx; }
+.score { font-size: 96rpx; color: #4f46e5; font-weight: 700; }
+.score .total { font-size: 40rpx; color: #888; }
+.score-label { color: #888; margin-top: 8rpx; }
+.score-rate { color: #16a34a; margin-top: 16rpx; font-size: 30rpx; }
+.section-title { font-size: 28rpx; color: #888; padding: 16rpx 8rpx; }
+.detail-item { padding: 20rpx 24rpx; border-left: 8rpx solid #e5e7eb; }
+.detail-item.ok { border-left-color: #16a34a; }
+.detail-item.fail { border-left-color: #dc2626; }
+.detail-head { display: flex; align-items: center; gap: 16rpx; }
+.detail-num { flex: 1; font-size: 28rpx; }
+.detail-status { font-size: 26rpx; }
+.detail-item.ok .detail-status { color: #16a34a; }
+.detail-item.fail .detail-status { color: #dc2626; }
+.arrow { color: #aaa; }
+.detail-body { margin-top: 16rpx; }
+.q-title { font-size: 30rpx; font-weight: 600; margin-bottom: 12rpx; }
+.your-answer, .right-answer { margin: 8rpx 0; }
+.exp { margin-top: 16rpx; color: #444; line-height: 1.7; background: #f9fafb; padding: 16rpx; border-radius: 8rpx; }

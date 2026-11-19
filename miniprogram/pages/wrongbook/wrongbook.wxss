@@ -1,0 +1,16 @@
+.filters { display: flex; gap: 20rpx; padding: 16rpx 24rpx; }
+.filter-pill { background: #f3f4f6; padding: 10rpx 24rpx; border-radius: 24rpx; font-size: 26rpx; }
+.total-bar { padding: 8rpx 8rpx 16rpx; }
+.wrong-item { padding: 24rpx; }
+.wi-head { display: flex; justify-content: space-between; margin-bottom: 12rpx; }
+.tag { background: #e0e7ff; color: #4f46e5; padding: 4rpx 12rpx; border-radius: 8rpx; font-size: 22rpx; text-transform: uppercase; }
+.status { font-size: 24rpx; }
+.status-unreviewed { color: #d97706; }
+.status-stillwrong { color: #dc2626; }
+.status-mastered { color: #16a34a; }
+.wi-title { font-size: 30rpx; line-height: 1.5; }
+.wi-actions { display: flex; gap: 24rpx; margin-top: 16rpx; }
+.act-link { font-size: 26rpx; color: #666; }
+.act-link.primary { color: #4f46e5; }
+.act-link.danger { color: #dc2626; }
+.loading, .empty { text-align: center; color: #aaa; padding: 40rpx; font-size: 26rpx; }
