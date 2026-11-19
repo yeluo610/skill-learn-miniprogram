@@ -207,5 +207,147 @@
     "referenceAnswer": "$.nums[-2]",
     "explanation": "[-2] 从末尾倒数第二个，[10,20,30,40] 的倒数第二个是 30。",
     "tags": ["下标"]
+  },
+  {
+    "id": "jsonpath-low-018",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "JSONPath 表达式以什么开头？",
+    "options": ["$", "@", "#", "/"],
+    "answer": 0,
+    "explanation": "$ 表示根对象，所有 JSONPath 从 $ 开始。@ 在过滤表达式内表示当前元素。",
+    "tags": ["基础"]
+  },
+  {
+    "id": "jsonpath-low-019",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "$.user.name 等价于？",
+    "options": ["$['user']['name']", "$.user[0]", "$user.name", "$.user.name[]"],
+    "answer": 0,
+    "explanation": "点号访问等价于引号形式，$.user.name = $['user']['name']。引号形式用于字段名含特殊字符时。",
+    "tags": ["点号"]
+  },
+  {
+    "id": "jsonpath-low-020",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "$.list[3] 取出 list 的第几个元素？",
+    "options": ["第 4 个", "第 3 个", "第 1 个", "最后一个"],
+    "answer": 0,
+    "explanation": "下标从 0 开始，[3] 是第 4 个元素（下标 0,1,2,3）。",
+    "tags": ["下标"]
+  },
+  {
+    "id": "jsonpath-low-021",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列哪个 JSONPath 能访问字段名含连字符的 'user-name'？",
+    "options": ["$['user-name']", "$.user-name", "$.user_name", "$user-name"],
+    "answer": 0,
+    "explanation": "字段名含 - 等特殊字符时必须用引号形式 $['user-name']，点号形式会解析为 user 减 name。",
+    "tags": ["点号", "陷阱"]
+  },
+  {
+    "id": "jsonpath-low-022",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "$.a.b.c 访问失败最可能的原因？",
+    "options": ["中间某层字段不存在", "JSON 太大", "字段名太短", "用了点号"],
+    "answer": 0,
+    "explanation": "链式访问若中间任一层不存在（如 a 没有 b 字段），后续访问会失败或返回空。",
+    "tags": ["点号", "陷阱"]
+  },
+  {
+    "id": "jsonpath-low-023",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "$.items[-3] 取出 items 的？",
+    "options": ["倒数第三个", "第三个", "倒数第一个", "前三个"],
+    "answer": 0,
+    "explanation": "负数下标从末尾计数，[-3] 是倒数第三个元素。",
+    "tags": ["下标"]
+  },
+  {
+    "id": "jsonpath-low-024",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "JSON 中数组 [10,20,30]，$.arr[1] 的值是？",
+    "options": ["20", "10", "30", "[10,20,30]"],
+    "answer": 0,
+    "explanation": "下标 1 是第二个元素，即 20（下标 0 是 10）。",
+    "tags": ["下标"]
+  },
+  {
+    "id": "jsonpath-low-025",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取出根对象下 email 字段的值。",
+    "testCases": [
+      { "input": "{\"email\":\"a@b.com\"}", "expected": ["a@b.com"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.email",
+    "explanation": "$.email 用点号访问根下的 email 字段。",
+    "tags": ["点号"]
+  },
+  {
+    "id": "jsonpath-low-026",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取出 data 数组的第三个元素（下标 2）。",
+    "testCases": [
+      { "input": "{\"data\":[\"x\",\"y\",\"z\"]}", "expected": ["z"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.data[2]",
+    "explanation": "$.data[2] 取下标 2（第三个元素）。",
+    "tags": ["下标"]
+  },
+  {
+    "id": "jsonpath-low-027",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取出 config.app.name 嵌套字段的值。",
+    "testCases": [
+      { "input": "{\"config\":{\"app\":{\"name\":\"MyApp\"}}}", "expected": ["MyApp"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.config.app.name",
+    "explanation": "点号链式逐层下钻：config → app → name。",
+    "tags": ["点号"]
+  },
+  {
+    "id": "jsonpath-low-028",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取出 numbers 数组的最后一个元素。",
+    "testCases": [
+      { "input": "{\"numbers\":[5,6,7]}", "expected": ["7"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.numbers[-1]",
+    "explanation": "[-1] 取最后一个元素。",
+    "tags": ["下标"]
+  },
+  {
+    "id": "jsonpath-low-029",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取出 obj 对象下 count 字段的值。",
+    "testCases": [
+      { "input": "{\"obj\":{\"count\":42}}", "expected": ["42"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.obj.count",
+    "explanation": "$.obj.count 先访问 obj 字段，再访问其下的 count。",
+    "tags": ["点号"]
   }
 ]
