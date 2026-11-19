@@ -97,5 +97,115 @@
     "referenceAnswer": "$.books[-1]",
     "explanation": "[-1] 表示最后一个元素，从末尾倒数。",
     "tags": ["下标"]
+  },
+  {
+    "id": "jsonpath-low-009",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "JSONPath 中 . 的作用是？",
+    "options": ["访问子节点", "通配符", "递归下降", "分隔数组"],
+    "answer": 0,
+    "explanation": ". 用于访问对象的子字段，如 $.a.b 表示根 → a → b。",
+    "tags": ["点号"]
+  },
+  {
+    "id": "jsonpath-low-010",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列哪个是合法的 JSONPath 起始符号？",
+    "options": ["$", "@", "#", "&"],
+    "answer": 0,
+    "explanation": "$ 表示根对象，是 JSONPath 的起始符号。@ 表示当前元素（用于过滤表达式内）。",
+    "tags": ["基础"]
+  },
+  {
+    "id": "jsonpath-low-011",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "$.a.b.c 访问的是？",
+    "options": ["根下 a 的 b 的 c 字段", "根的 abc 字段", "数组下标", "通配匹配"],
+    "answer": 0,
+    "explanation": "点号链式访问逐层下钻，$.a.b.c 表示根 → a → b → c 的层级路径。",
+    "tags": ["点号"]
+  },
+  {
+    "id": "jsonpath-low-012",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "数组下标从几开始？",
+    "options": ["0", "1", "-1", "任意"],
+    "answer": 0,
+    "explanation": "JSONPath 数组下标从 0 开始，[0] 是第一个元素，[-1] 是最后一个。",
+    "tags": ["下标"]
+  },
+  {
+    "id": "jsonpath-low-013",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "$['user-name'] 中的引号写法用于？",
+    "options": ["字段名含特殊字符", "访问数组", "递归下降", "过滤"],
+    "answer": 0,
+    "explanation": "字段名含 -、空格等特殊字符时，必须用 $['...'] 引号形式访问，点号形式会失效。",
+    "tags": ["点号"]
+  },
+  {
+    "id": "jsonpath-low-014",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取出根对象下 age 字段的值。",
+    "testCases": [
+      { "input": "{\"name\":\"Tom\",\"age\":20}", "expected": ["20"], "expectedType": "equal" },
+      { "input": "{\"age\":30}", "expected": ["30"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.age",
+    "explanation": "$.age 用点号访问根下的 age 字段。",
+    "tags": ["点号"]
+  },
+  {
+    "id": "jsonpath-low-015",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取出 list 数组的第二个元素（下标 1）。",
+    "testCases": [
+      { "input": "{\"list\":[\"x\",\"y\",\"z\"]}", "expected": ["y"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.list[1]",
+    "explanation": "$.list[1] 先访问 list 字段，再取下标 1（第二个元素）。",
+    "tags": ["下标"]
+  },
+  {
+    "id": "jsonpath-low-016",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取出嵌套对象 user.profile.name 的值。",
+    "hint": "链式点号访问",
+    "testCases": [
+      { "input": "{\"user\":{\"profile\":{\"name\":\"Alice\"}}}", "expected": ["Alice"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.user.profile.name",
+    "explanation": "点号链式逐层访问，$.user.profile.name 取 user → profile → name。",
+    "tags": ["点号"]
+  },
+  {
+    "id": "jsonpath-low-017",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取出数组 nums 的倒数第二个元素。",
+    "hint": "用 [-2]",
+    "testCases": [
+      { "input": "{\"nums\":[10,20,30,40]}", "expected": ["30"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.nums[-2]",
+    "explanation": "[-2] 从末尾倒数第二个，[10,20,30,40] 的倒数第二个是 30。",
+    "tags": ["下标"]
   }
 ]

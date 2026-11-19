@@ -295,5 +295,191 @@
     "referenceAnswer": "\\d{3}",
     "explanation": "\\d{3} 匹配恰好 3 个连续数字。在 '123456' 中会匹配到 '123' 和 '456' 两段。",
     "tags": ["量词"]
+  },
+  {
+    "id": "regex-low-026",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "下列哪个能匹配任意空白字符？",
+    "options": ["\\s", "\\S", "\\w", "\\b"],
+    "answer": 0,
+    "explanation": "\\s 匹配空白字符（空格、制表、换行等）；\\S 匹配非空白；\\w 匹配单词字符；\\b 是单词边界锚点。",
+    "tags": ["字符类"]
+  },
+  {
+    "id": "regex-low-027",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "[0-9] 等价于下列哪个？",
+    "options": ["\\d", "\\D", "\\w", "\\s"],
+    "answer": 0,
+    "explanation": "[0-9] 匹配数字 0 到 9，等价于 \\d。\\D 是其反义 [^0-9]。",
+    "tags": ["字符类"]
+  },
+  {
+    "id": "regex-low-028",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "下列哪个能匹配字母 a 或 b？",
+    "options": ["[ab]", "ab", "a|b", "选项1和3都对"],
+    "answer": 3,
+    "explanation": "[ab] 字符类匹配 a 或 b；a|b 选择分支也匹配 a 或 b。两种写法都正确。",
+    "tags": ["字符类", "选择"]
+  },
+  {
+    "id": "regex-low-029",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "cat|dog 能匹配下列哪个？",
+    "options": ["cat 或 dog", "仅 cat", "仅 dog", "catdog 连续"],
+    "answer": 0,
+    "explanation": "| 是选择分支，cat|dog 匹配 'cat' 或 'dog' 之一。",
+    "tags": ["选择"]
+  },
+  {
+    "id": "regex-low-030",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "下列哪个能匹配 1 到 3 个字母 a？",
+    "options": ["a{1,3}", "a{3}", "a{1,}", "a*"],
+    "answer": 0,
+    "explanation": "{n,m} 表示 n 到 m 次，a{1,3} 匹配 1、2 或 3 个 a。a{3} 恰好 3 个；a{1,} 至少 1 个；a* 0 个或多个。",
+    "tags": ["量词"]
+  },
+  {
+    "id": "regex-low-031",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "在字符类 [] 中，^ 放在开头表示什么？",
+    "options": ["取反", "行首", "字面 ^", "转义"],
+    "answer": 0,
+    "explanation": "字符类中以 ^ 开头表示取反，如 [^abc] 匹配非 a/b/c 的字符。注意 ^ 在 [] 外才表示行首锚点。",
+    "tags": ["字符类"]
+  },
+  {
+    "id": "regex-low-032",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "下列哪个匹配字面的 + 号？",
+    "options": ["\\+", "+", "[+]", "选项1和3都对"],
+    "answer": 3,
+    "explanation": "+ 是量词元字符，匹配字面 + 需转义 \\+，或放入字符类 [+]。两种写法都对。",
+    "tags": ["转义"]
+  },
+  {
+    "id": "regex-low-033",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "字符串 'aaa' 用 a{2} 匹配，结果是？",
+    "options": ["匹配 'aa'，剩余一个 a", "匹配整个 'aaa'", "无匹配", "匹配 'a'"],
+    "answer": 0,
+    "explanation": "a{2} 匹配恰好 2 个 a，'aaa' 中匹配到 'aa'，剩下 1 个 a（若无 g 标志只匹配第一处）。",
+    "tags": ["量词"]
+  },
+  {
+    "id": "regex-low-034",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "\\b 表示什么？",
+    "options": ["单词边界", "退格符", "空白字符", "行首"],
+    "answer": 0,
+    "explanation": "在正则中 \\b 是单词边界（\\w 与 \\W 的交界）。注意在字符类 [\\b] 中才是退格符。",
+    "tags": ["锚点"]
+  },
+  {
+    "id": "regex-low-035",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "下列哪个写法能匹配 0 个或多个 a？",
+    "options": ["a*", "a+", "a?", "a{1}"],
+    "answer": 0,
+    "explanation": "* 表示 0 次或多次，a* 匹配空串或任意多个 a。",
+    "tags": ["量词"]
+  },
+  {
+    "id": "regex-low-036",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，匹配字符串中所有的元音字母（aeiou，不区分大小写）。",
+    "hint": "用字符类 [aeiou]",
+    "testCases": [
+      { "input": "Hello World", "expected": ["e", "o", "o"], "expectedType": "match" },
+      { "input": "AEIOU", "expected": ["A", "E", "I", "O", "U"], "expectedType": "match" },
+      { "input": "xyz", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "[aeiouAEIOU]",
+    "explanation": "[aeiouAEIOU] 字符类匹配任意一个元音字母（大小写都包含）。配合 g 标志可全局匹配所有元音。",
+    "tags": ["字符类"]
+  },
+  {
+    "id": "regex-low-037",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，匹配以 'end' 结尾的字符串（匹配结尾的 end）。",
+    "hint": "用 $ 锚点",
+    "testCases": [
+      { "input": "the end", "expected": ["end"], "expectedType": "match" },
+      { "input": "ending", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "end$",
+    "explanation": "end$ 要求 'end' 出现在字符串末尾。'ending' 末尾是 'ing' 不是 'end'，不匹配。",
+    "tags": ["锚点"]
+  },
+  {
+    "id": "regex-low-038",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，匹配连续 2 到 4 个字母。",
+    "hint": "用 {n,m}",
+    "testCases": [
+      { "input": "ab cd efgh ijklm", "expected": ["ab", "cd", "efgh", "ijkl"], "expectedType": "match" },
+      { "input": "a", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "[a-zA-Z]{2,4}",
+    "explanation": "[a-zA-Z]{2,4} 匹配 2 到 4 个连续字母。'ijklm' 5 个字母，匹配前 4 个 'ijkl'。",
+    "tags": ["字符类", "量词"]
+  },
+  {
+    "id": "regex-low-039",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，匹配字符串中所有的 cat 或 dog。",
+    "hint": "用选择分支 |",
+    "testCases": [
+      { "input": "I have a cat and a dog", "expected": ["cat", "dog"], "expectedType": "match" },
+      { "input": "nothing here", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "cat|dog",
+    "explanation": "| 是选择分支，cat|dog 匹配 'cat' 或 'dog'。配合 g 标志全局匹配。",
+    "tags": ["选择"]
+  },
+  {
+    "id": "regex-low-040",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，匹配字符串中的所有非数字字符。",
+    "hint": "用 \\D",
+    "testCases": [
+      { "input": "a1b2", "expected": ["a", "b"], "expectedType": "match" },
+      { "input": "12345", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "\\D",
+    "explanation": "\\D 是 \\d 的反义，匹配非数字字符。配合 g 标志可匹配所有非数字。",
+    "tags": ["字符类"]
   }
 ]
