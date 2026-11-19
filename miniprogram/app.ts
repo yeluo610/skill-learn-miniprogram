@@ -1,11 +1,18 @@
 /**
  * 小程序入口
+ *
+ * 板块定义直接内联在此，避免跨目录 import 导致的运行时模块解析问题。
+ * 新增板块：在 SKILLS 数组里加一项，并在 data/skills 下加 checker（云函数端）。
  */
-import { listSkills } from './shared/registry'
-import type { SkillId } from './shared/types'
+import type { Skill, SkillId, LevelConfig, TutorialSection } from './shared/types'
+import { regexSkill } from './skills/regex'
+import { jsonpathSkill } from './skills/jsonpath'
 
 /** ⚠️ 替换为你的云环境 ID */
 const CLOUD_ENV = 'cloud1-d4gdcfzgf76bf95e7'
+
+/** 已启用板块列表 */
+const SKILLS: Skill[] = [regexSkill, jsonpathSkill]
 
 App({
   globalData: {
@@ -13,7 +20,7 @@ App({
     openid: '' as string,
     nickname: '' as string,
     avatarUrl: '' as string,
-    skills: listSkills(),
+    skills: SKILLS,
   },
 
   onLaunch() {
@@ -39,7 +46,6 @@ App({
         if (r?.openid) {
           this.globalData.openid = r.openid
           this.globalData.nickname = r.nickname || ''
-          // 通知页面登录完成
           this.emit('login', r)
         }
       },
