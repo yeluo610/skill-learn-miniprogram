@@ -1,29 +1,28 @@
 <view class="container" wx:if="{{!loading && question}}">
-  <view class="card">
-    <view class="q-meta">
-      <text class="tag tag-{{question.type}}">{{question.type === 'choice' ? '选择题' : '填空题'}}</text>
-      <text class="text-muted" wx:if="{{question.hint}}">提示：{{question.hint}}</text>
+  <view class="q-card">
+    <view class="q-tags">
+      <text class="tag {{question.type === 'choice' ? 'tag-indigo' : 'tag-amber'}}">{{question.type === 'choice' ? '选择题' : '填空题'}}</text>
+      <text class="text-muted" wx:if="{{question.hint}}">💡 {{question.hint}}</text>
     </view>
     <view class="q-title">{{question.title}}</view>
     <view class="q-content" wx:if="{{question.content}}">{{question.content}}</view>
 
-    <!-- 测试用例展示（填空题） -->
     <view class="testcases" wx:if="{{question.type === 'fill' && question.testCases.length}}">
-      <view class="text-muted tc-title">测试用例：</view>
+      <view class="tc-title">测试用例</view>
       <block wx:for="{{question.testCases}}" wx:key="index" wx:for-item="tc">
         <view class="tc-item">
-          <view class="tc-row"><text class="tc-label">输入</text><text class="tc-value">{{tc.input}}</text></view>
-          <view class="tc-row"><text class="tc-label">期望</text><text class="tc-value">{{tc.expected}}</text></view>
+          <view class="tc-row"><text class="tc-key">输入</text><text class="tc-val">{{tc.input}}</text></view>
+          <view class="tc-row"><text class="tc-key">期望</text><text class="tc-val">{{tc.expected}}</text></view>
         </view>
       </block>
     </view>
   </view>
 
   <!-- 选择题 -->
-  <view class="card options" wx:if="{{question.type === 'choice'}}">
+  <view class="options" wx:if="{{question.type === 'choice'}}">
     <block wx:for="{{question.options}}" wx:key="index">
       <view
-        class="option {{selected === index ? 'selected' : ''}} {{submitted && index === correctAnswer ? 'correct' : ''}} {{submitted && selected === index && index !== correctAnswer ? 'wrong' : ''}}"
+        class="option {{selected === index ? 'sel' : ''}} {{submitted && index === correctAnswer ? 'ok' : ''}} {{submitted && selected === index && index !== correctAnswer ? 'err' : ''}}"
         bindtap="onSelect" data-idx="{{index}}">
         <text class="opt-letter">{{['A','B','C','D'][index]}}</text>
         <text class="opt-text">{{item}}</text>
@@ -32,38 +31,39 @@
   </view>
 
   <!-- 填空题 -->
-  <view class="card fill-area" wx:if="{{question.type === 'fill'}}">
-    <view class="text-muted">请输入你的答案（如正则表达式）：</view>
+  <view class="fill-card" wx:if="{{question.type === 'fill'}}">
+    <view class="fill-label">输入你的答案</view>
     <textarea
       class="fill-input"
       value="{{userInput}}"
       bindinput="onInput"
       placeholder="在此输入..."
+      placeholder-class="fill-ph"
       disabled="{{submitted}}"
       auto-height
     />
-    <!-- 校验结果 -->
     <view class="check-result" wx:if="{{submitted && checkResult}}">
-      <view class="text-muted tc-title">校验详情：</view>
+      <view class="cr-title">校验详情</view>
       <block wx:for="{{checkResult.details}}" wx:key="index">
-        <view class="tc-item {{item.pass ? 'ok' : 'fail'}}">
-          <text class="tc-label">{{item.pass ? '✓' : '✗'}}</text>
-          <text class="tc-value">实际: {{item.got}} | 期望: {{item.expected}}</text>
+        <view class="cr-item {{item.pass ? 'ok' : 'err'}}">
+          <text class="cr-mark">{{item.pass ? '✓' : '✗'}}</text>
+          <text class="cr-text">实际: {{item.got}} · 期望: {{item.expected}}</text>
         </view>
       </block>
     </view>
   </view>
 
   <!-- 解析 -->
-  <view class="card explanation" wx:if="{{submitted}}">
-    <view class="title-md result-head {{correct ? 'ok' : 'fail'}}">
-      {{correct ? '✓ 回答正确' : '✗ 回答错误'}}
+  <view class="explanation {{correct ? 'ok' : 'err'}}" wx:if="{{submitted}}">
+    <view class="exp-head">
+      <text class="exp-icon">{{correct ? '✓' : '✗'}}</text>
+      <text class="exp-title">{{correct ? '回答正确' : '回答错误'}}</text>
     </view>
-    <view class="ref-answer" wx:if="{{question.type === 'fill' && referenceAnswer}}">
-      <text class="text-muted">参考答案：</text><text class="text-primary">{{referenceAnswer}}</text>
+    <view class="exp-answer" wx:if="{{question.type === 'fill' && referenceAnswer}}">
+      <text class="exp-label">参考答案：</text><text class="text-primary">{{referenceAnswer}}</text>
     </view>
-    <view class="ref-answer" wx:if="{{question.type === 'choice'}}">
-      <text class="text-muted">正确答案：</text><text class="text-primary">{{['A','B','C','D'][correctAnswer]}}</text>
+    <view class="exp-answer" wx:if="{{question.type === 'choice'}}">
+      <text class="exp-label">正确答案：</text><text class="text-primary">{{['A','B','C','D'][correctAnswer]}}</text>
     </view>
     <view class="exp-body">{{explanation}}</view>
   </view>
@@ -74,4 +74,4 @@
   </view>
 </view>
 
-<view class="loading-full" wx:if="{{loading}}">加载中...</view>
+<view class="loading-text" wx:if="{{loading}}">加载中...</view>

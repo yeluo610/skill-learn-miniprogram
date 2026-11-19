@@ -1,27 +1,85 @@
-.header {
-  text-align: center;
-  padding: 40rpx 24rpx;
+.home { padding-top: 8rpx; }
+
+.hero {
+  padding: 24rpx 8rpx 20rpx;
 }
-.section-title {
-  font-size: 28rpx;
-  color: #888;
-  padding: 12rpx 8rpx;
-  margin-top: 10rpx;
+.hero-title {
+  font-size: 44rpx;
+  font-weight: 700;
+  color: #1f2329;
+  letter-spacing: 1rpx;
 }
-.skill-list { display: flex; flex-direction: column; gap: 20rpx; }
-.skill-item {
+.hero-sub {
+  font-size: 22rpx;
+  color: #8a8f99;
+  margin-top: 6rpx;
+  letter-spacing: 2rpx;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14rpx;
+}
+
+.skill-card {
   display: flex;
   align-items: center;
-  padding: 28rpx;
+  background: #fff;
+  border-radius: 14rpx;
+  padding: 22rpx 20rpx;
+  box-shadow: 0 1rpx 4rpx rgba(0,0,0,0.04);
 }
-.skill-icon {
-  width: 80rpx; height: 80rpx;
+
+.skill-icon-wrap {
+  width: 72rpx;
+  height: 72rpx;
   border-radius: 16rpx;
-  background: #eef2ff;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 40rpx;
-  margin-right: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+  flex-shrink: 0;
 }
-.skill-body { flex: 1; }
-.skill-body .progress-bar { margin-top: 12rpx; }
-.arrow { font-size: 40rpx; color: #ccc; padding-left: 16rpx; }
+.skill-icon-wrap.regex { background: linear-gradient(135deg, #eef2ff, #e0e7ff); }
+.skill-icon-wrap.jsonpath { background: linear-gradient(135deg, #fef3c7, #fde68a); }
+.skill-icon {
+  font-size: 36rpx;
+}
+
+.skill-body {
+  flex: 1;
+  min-width: 0;
+}
+.skill-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1f2329;
+}
+.skill-desc {
+  font-size: 22rpx;
+  color: #8a8f99;
+  margin-top: 4rpx;
+  line-height: 1.4;
+}
+.skill-progress {
+  margin-top: 12rpx;
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+}
+.skill-progress .progress-bar {
+  flex: 1;
+}
+.skill-progress-text {
+  font-size: 20rpx;
+  color: #8a8f99;
+  flex-shrink: 0;
+}
+
+.skill-arrow {
+  font-size: 36rpx;
+  color: #d1d5db;
+  padding-left: 12rpx;
+  flex-shrink: 0;
+}

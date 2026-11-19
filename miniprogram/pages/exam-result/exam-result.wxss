@@ -1,19 +1,52 @@
-.score-card { text-align: center; padding: 40rpx; }
-.score { font-size: 96rpx; color: #4f46e5; font-weight: 700; }
-.score .total { font-size: 40rpx; color: #888; }
-.score-label { color: #888; margin-top: 8rpx; }
-.score-rate { color: #16a34a; margin-top: 16rpx; font-size: 30rpx; }
-.section-title { font-size: 28rpx; color: #888; padding: 16rpx 8rpx; }
-.detail-item { padding: 20rpx 24rpx; border-left: 8rpx solid #e5e7eb; }
+.score-card {
+  text-align: center;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff;
+  border-radius: 14rpx;
+  padding: 36rpx 24rpx;
+  margin-bottom: 8rpx;
+}
+.score-num {
+  font-size: 80rpx;
+  font-weight: 700;
+  line-height: 1;
+}
+.score-total { font-size: 36rpx; opacity: 0.85; }
+.score-label { opacity: 0.85; margin-top: 10rpx; font-size: 24rpx; }
+.score-rate { margin-top: 12rpx; font-size: 28rpx; font-weight: 600; }
+
+.detail-item {
+  background: #fff;
+  border-radius: 12rpx;
+  padding: 18rpx 20rpx;
+  margin-bottom: 10rpx;
+  border-left: 5rpx solid #e5e7eb;
+  box-shadow: 0 1rpx 3rpx rgba(0,0,0,0.03);
+}
 .detail-item.ok { border-left-color: #16a34a; }
-.detail-item.fail { border-left-color: #dc2626; }
-.detail-head { display: flex; align-items: center; gap: 16rpx; }
-.detail-num { flex: 1; font-size: 28rpx; }
-.detail-status { font-size: 26rpx; }
+.detail-item.err { border-left-color: #dc2626; }
+.detail-head {
+  display: flex;
+  align-items: center;
+  gap: 14rpx;
+}
+.detail-num { flex: 1; font-size: 26rpx; color: #1f2329; }
+.detail-status { font-size: 24rpx; }
 .detail-item.ok .detail-status { color: #16a34a; }
-.detail-item.fail .detail-status { color: #dc2626; }
-.arrow { color: #aaa; }
-.detail-body { margin-top: 16rpx; }
-.q-title { font-size: 30rpx; font-weight: 600; margin-bottom: 12rpx; }
-.your-answer, .right-answer { margin: 8rpx 0; }
-.exp { margin-top: 16rpx; color: #444; line-height: 1.7; background: #f9fafb; padding: 16rpx; border-radius: 8rpx; }
+.detail-item.err .detail-status { color: #dc2626; }
+.detail-arrow { color: #c7c7cc; font-size: 24rpx; }
+
+.detail-body { margin-top: 14rpx; }
+.d-q { font-size: 28rpx; font-weight: 600; color: #1f2329; margin-bottom: 12rpx; line-height: 1.5; }
+.d-row { margin: 8rpx 0; font-size: 26rpx; }
+.d-label { color: #8a8f99; font-size: 24rpx; }
+.d-val { color: #1f2329; }
+.d-exp {
+  margin-top: 14rpx;
+  padding: 14rpx;
+  background: #f9fafb;
+  border-radius: 8rpx;
+  font-size: 26rpx;
+  color: #374151;
+  line-height: 1.7;
+}

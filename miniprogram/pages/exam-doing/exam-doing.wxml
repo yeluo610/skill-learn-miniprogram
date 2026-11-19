@@ -1,30 +1,29 @@
-<view class="container" wx:if="{{!loading}}">
-  <view class="exam-header">
-    <text class="progress">第 {{current + 1}} / {{questions.length}} 题</text>
-    <text class="answered">已答 {{answeredCount}}</text>
+<view class="container exam" wx:if="{{!loading}}">
+  <view class="exam-bar">
+    <text class="eb-cur">第 {{current + 1}} / {{questions.length}} 题</text>
+    <text class="eb-answered">已答 {{answeredCount}}</text>
   </view>
-
-  <view class="progress-bar exam-progress">
+  <view class="progress-bar exam-prog">
     <view class="fill" style="width: {{(current + 1) / questions.length * 100}}%"></view>
   </view>
 
   <block wx:for="{{questions}}" wx:key="id" wx:for-index="i">
-    <view class="card q-card" wx:if="{{i === current}}">
-      <view class="tag tag-{{item.type}}">{{item.type === 'choice' ? '选择题' : '填空题'}}</view>
+    <view class="q-card" wx:if="{{i === current}}">
+      <text class="tag {{item.type === 'choice' ? 'tag-indigo' : 'tag-amber'}}">{{item.type === 'choice' ? '选择' : '填空'}}</text>
       <view class="q-title">{{item.title}}</view>
       <view class="q-content" wx:if="{{item.content}}">{{item.content}}</view>
 
       <view class="testcases" wx:if="{{item.type === 'fill' && item.testCases.length}}">
-        <view class="text-muted">测试用例：</view>
+        <view class="tc-title">测试用例</view>
         <block wx:for="{{item.testCases}}" wx:key="index" wx:for-item="tc">
-          <view class="tc-row"><text class="tc-label">输入</text><text class="tc-value">{{tc.input}}</text></view>
-          <view class="tc-row"><text class="tc-label">期望</text><text class="tc-value">{{tc.expected}}</text></view>
+          <view class="tc-row"><text class="tc-key">输入</text><text class="tc-val">{{tc.input}}</text></view>
+          <view class="tc-row"><text class="tc-key">期望</text><text class="tc-val">{{tc.expected}}</text></view>
         </block>
       </view>
 
       <view class="options" wx:if="{{item.type === 'choice'}}">
         <block wx:for="{{item.options}}" wx:key="index" wx:for-item="opt">
-          <view class="option {{answers[item.id] === index ? 'selected' : ''}}" bindtap="onSelect" data-idx="{{index}}">
+          <view class="option {{answers[item.id] === index ? 'sel' : ''}}" bindtap="onSelect" data-idx="{{index}}">
             <text class="opt-letter">{{['A','B','C','D'][index]}}</text>
             <text class="opt-text">{{opt}}</text>
           </view>
@@ -32,19 +31,19 @@
       </view>
 
       <view class="fill-area" wx:if="{{item.type === 'fill'}}">
-        <textarea class="fill-input" value="{{answers[item.id]}}" bindinput="onInput" placeholder="输入答案" auto-height />
+        <textarea class="fill-input" value="{{answers[item.id]}}" bindinput="onInput" placeholder="输入答案" placeholder-class="fill-ph" auto-height />
       </view>
     </view>
   </block>
 
   <view class="nav-btns">
-    <button class="btn-ghost" bindtap="prev" disabled="{{current === 0}}">上一题</button>
-    <button class="btn-ghost" bindtap="next" disabled="{{current === questions.length - 1}}">下一题</button>
+    <button class="nb" bindtap="prev" disabled="{{current === 0}}">上一题</button>
+    <button class="nb" bindtap="next" disabled="{{current === questions.length - 1}}">下一题</button>
   </view>
 
   <view class="jump-grid">
     <block wx:for="{{questions}}" wx:key="id" wx:for-index="i">
-      <view class="jump-cell {{answers[item.id] !== undefined ? 'answered' : ''}} {{i === current ? 'current' : ''}}"
+      <view class="jump-cell {{answers[item.id] !== undefined ? 'done' : ''}} {{i === current ? 'cur' : ''}}"
             bindtap="goJump" data-idx="{{i}}">{{i + 1}}</view>
     </block>
   </view>
@@ -52,4 +51,4 @@
   <button class="btn-primary submit-btn" bindtap="submit">交卷</button>
 </view>
 
-<view class="loading-full" wx:if="{{loading}}">出卷中...</view>
+<view class="loading-text" wx:if="{{loading}}">出卷中...</view>

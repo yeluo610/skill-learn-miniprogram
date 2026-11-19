@@ -1,5 +1,5 @@
 <view class="container">
-  <view class="filters card">
+  <view class="filters">
     <picker mode="selector" range="{{skillOptions}}" range-key="label" value="0" bindchange="onSkillChange">
       <view class="filter-pill">{{skillOptions[0].label}} ▾</view>
     </picker>
@@ -8,26 +8,26 @@
     </picker>
   </view>
 
-  <view class="text-muted total-bar">共 {{total}} 题</view>
+  <view class="list-meta">共 {{total}} 题</view>
 
   <block wx:for="{{list}}" wx:key="_id" wx:for-index="i">
-    <view class="card wrong-item">
-      <view class="wi-head" bindtap="goQuestion" data-id="{{item.questionId}}" data-skill="{{item.skill}}" data-level="{{item.question.level}}">
-        <text class="tag">{{item.skill}}</text>
-        <text class="status status-{{item.status}}">
+    <view class="wrong-item">
+      <view class="wi-head">
+        <text class="tag tag-indigo">{{item.skill}}</text>
+        <text class="wi-status s-{{item.status}}">
           {{item.status === 'unreviewed' ? '待复习' : item.status === 'stillwrong' ? '仍错' : '已掌握'}}
         </text>
       </view>
       <view class="wi-title">{{item.question.title}}</view>
       <view class="wi-actions">
-        <text class="act-link" bindtap="goQuestion" data-id="{{item.questionId}}" data-skill="{{item.skill}}" data-level="{{item.question.level}}">重做</text>
-        <text class="act-link primary" bindtap="markMastered" data-id="{{item.questionId}}" data-idx="{{i}}">标记掌握</text>
-        <text class="act-link danger" bindtap="remove" data-id="{{item.questionId}}" data-idx="{{i}}">移除</text>
+        <text class="act" bindtap="goQuestion" data-id="{{item.questionId}}" data-skill="{{item.skill}}" data-level="{{item.question.level}}">重做</text>
+        <text class="act primary" bindtap="markMastered" data-id="{{item.questionId}}" data-idx="{{i}}">标记掌握</text>
+        <text class="act danger" bindtap="remove" data-id="{{item.questionId}}" data-idx="{{i}}">移除</text>
       </view>
     </view>
   </block>
 
-  <view class="loading" wx:if="{{loading}}">加载中...</view>
-  <view class="loading" wx:if="{{!loading && list.length >= total && total > 0}}">已经到底了</view>
-  <view class="empty" wx:if="{{!loading && list.length === 0}}">暂无错题，继续加油！</view>
+  <view class="loading-text" wx:if="{{loading}}">加载中...</view>
+  <view class="loading-text" wx:if="{{!loading && list.length >= total && total > 0}}">已经到底了</view>
+  <view class="loading-text" wx:if="{{!loading && list.length === 0}}">暂无错题，继续加油！</view>
 </view>

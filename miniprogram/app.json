@@ -12,16 +12,17 @@
     "pages/profile/profile"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#4f46e5",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "技能学习",
-    "navigationBarTextStyle": "white",
-    "backgroundColor": "#f5f5f5"
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f7f7f9"
   },
   "tabBar": {
-    "color": "#888",
+    "color": "#9ca3af",
     "selectedColor": "#4f46e5",
     "backgroundColor": "#ffffff",
+    "borderStyle": "white",
     "list": [
       { "pagePath": "pages/home/home", "text": "学习" },
       { "pagePath": "pages/wrongbook/wrongbook", "text": "错题本" },

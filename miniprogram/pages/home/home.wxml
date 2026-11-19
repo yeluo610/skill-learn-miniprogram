@@ -1,25 +1,27 @@
-<view class="container">
-  <view class="header card">
-    <view class="title-lg">技能学习平台</view>
-    <view class="text-muted">通过关卡、考试、错题、教程系统掌握命令与语法</view>
+<view class="container home">
+  <view class="hero">
+    <view class="hero-title">技能学习</view>
+    <view class="hero-sub">关卡 · 考试 · 错题 · 教程</view>
   </view>
 
   <view class="section-title">学习板块</view>
   <view class="skill-list">
     <block wx:for="{{skills}}" wx:key="id">
-      <view class="card skill-item" bindtap="goSkill" data-id="{{item.id}}">
-        <view class="skill-icon">{{item.icon === '/assets/icons/regex.svg' ? '⚡' : item.icon === '/assets/icons/jsonpath.svg' ? '🔗' : '📚'}}</view>
+      <view class="skill-card" bindtap="goSkill" data-id="{{item.id}}">
+        <view class="skill-icon-wrap {{item.id}}">
+          <text class="skill-icon">{{item.id === 'regex' ? '⚡' : '🔗'}}</text>
+        </view>
         <view class="skill-body">
-          <view class="title-md">{{item.name}}</view>
-          <view class="text-muted">{{item.desc}}</view>
-          <view class="progress-bar" wx:if="{{progress[item.id].total}}">
-            <view class="fill" style="width: {{progress[item.id].correct / progress[item.id].total * 100}}%"></view>
-          </view>
-          <view class="text-muted" wx:if="{{progress[item.id].total}}">
-            已掌握 {{progress[item.id].correct}}/{{progress[item.id].total}}
+          <view class="skill-name">{{item.name}}</view>
+          <view class="skill-desc">{{item.desc}}</view>
+          <view class="skill-progress" wx:if="{{progress[item.id].total}}">
+            <view class="progress-bar">
+              <view class="fill" style="width: {{progress[item.id].correct / progress[item.id].total * 100}}%"></view>
+            </view>
+            <view class="skill-progress-text">{{progress[item.id].correct}} / {{progress[item.id].total}}</view>
           </view>
         </view>
-        <view class="arrow">›</view>
+        <view class="skill-arrow">›</view>
       </view>
     </block>
   </view>

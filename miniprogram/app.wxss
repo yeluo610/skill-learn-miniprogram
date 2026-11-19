@@ -1,56 +1,118 @@
+/* 全局样式 - 现代化精简设计 */
 page {
-  background: #f5f5f5;
-  font-size: 28rpx;
-  color: #333;
-  line-height: 1.6;
+  background: #f7f7f9;
+  color: #1f2329;
+  font-size: 26rpx;
+  line-height: 1.55;
+  font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
 }
+
 view, text, button, input, textarea {
   box-sizing: border-box;
 }
+
 .container {
-  padding: 24rpx;
+  padding: 20rpx 24rpx 40rpx;
 }
+
+/* 卡片：更小圆角、更轻阴影、更紧凑内边距 */
 .card {
   background: #fff;
-  border-radius: 16rpx;
-  padding: 24rpx;
-  margin-bottom: 20rpx;
-  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.04);
+  border-radius: 12rpx;
+  padding: 20rpx;
+  margin-bottom: 16rpx;
+  box-shadow: 0 1rpx 4rpx rgba(0,0,0,0.04);
 }
+
+/* 按钮 */
 .btn-primary {
   background: #4f46e5;
   color: #fff;
-  border-radius: 12rpx;
-  padding: 20rpx 0;
+  border-radius: 10rpx;
+  padding: 16rpx 0;
   text-align: center;
-  font-size: 30rpx;
+  font-size: 28rpx;
+  line-height: 1.4;
+  border: none;
 }
 .btn-primary[disabled] {
   background: #c7d2fe;
+  color: #fff;
 }
 .btn-ghost {
   background: #fff;
   color: #4f46e5;
   border: 1rpx solid #4f46e5;
-  border-radius: 12rpx;
-  padding: 20rpx 0;
+  border-radius: 10rpx;
+  padding: 16rpx 0;
   text-align: center;
+  font-size: 28rpx;
+  line-height: 1.4;
 }
-.text-muted { color: #888; font-size: 24rpx; }
+
+/* 文字工具类 */
+.text-muted { color: #8a8f99; font-size: 22rpx; }
 .text-primary { color: #4f46e5; }
-.title-lg { font-size: 36rpx; font-weight: 600; }
-.title-md { font-size: 32rpx; font-weight: 600; }
+.text-success { color: #16a34a; }
+.text-danger { color: #dc2626; }
+.title-lg { font-size: 32rpx; font-weight: 600; color: #1f2329; }
+.title-md { font-size: 28rpx; font-weight: 600; color: #1f2329; }
+.title-sm { font-size: 26rpx; font-weight: 600; color: #1f2329; }
+
+/* 布局工具 */
 .row { display: flex; align-items: center; }
 .row-between { display: flex; align-items: center; justify-content: space-between; }
+.col { display: flex; flex-direction: column; }
+.gap-8 { gap: 8rpx; }
+.gap-12 { gap: 12rpx; }
+.gap-16 { gap: 16rpx; }
+.mt-8 { margin-top: 8rpx; }
+.mt-12 { margin-top: 12rpx; }
+.mt-16 { margin-top: 16rpx; }
+.mb-8 { margin-bottom: 8rpx; }
+.mb-12 { margin-bottom: 12rpx; }
+.flex-1 { flex: 1; min-width: 0; }
+
+/* 进度条：更细更精致 */
 .progress-bar {
-  height: 12rpx;
-  background: #e5e7eb;
-  border-radius: 6rpx;
+  height: 8rpx;
+  background: #eef0f3;
+  border-radius: 4rpx;
   overflow: hidden;
 }
 .progress-bar > .fill {
   height: 100%;
-  background: #4f46e5;
-  border-radius: 6rpx;
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  border-radius: 4rpx;
   transition: width 0.3s;
+}
+
+/* 标签 */
+.tag {
+  font-size: 20rpx;
+  padding: 2rpx 10rpx;
+  border-radius: 6rpx;
+  line-height: 1.5;
+  display: inline-block;
+}
+.tag-indigo { background: #eef2ff; color: #4f46e5; }
+.tag-amber { background: #fef3c7; color: #b45309; }
+.tag-green { background: #dcfce7; color: #16a34a; }
+.tag-red { background: #fee2e2; color: #dc2626; }
+.tag-gray { background: #f3f4f6; color: #6b7280; }
+
+/* 分隔标题 */
+.section-title {
+  font-size: 24rpx;
+  color: #8a8f99;
+  padding: 8rpx 4rpx 12rpx;
+  font-weight: 500;
+}
+
+/* 加载/空状态 */
+.loading-text, .empty-text {
+  text-align: center;
+  color: #aaa;
+  padding: 40rpx;
+  font-size: 24rpx;
 }
