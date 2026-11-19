@@ -39,4 +39,12 @@ skill-learn-miniprogram/
 
 ## 开发
 
-详见 [docs/architecture.md](docs/architecture.md) 与 [docs/deploy.md](docs/deploy.md)。
+详见 [docs/development.md](docs/development.md)（快速上手）、[docs/architecture.md](docs/architecture.md)（架构）、[docs/deploy.md](docs/deploy.md)（部署）、[docs/question-authoring.md](docs/question-authoring.md)（题库编写）。
+
+### 常用命令
+
+```bash
+npm install                  # 安装依赖
+npm run validate-questions   # 校验题库
+npm run seed-db              # 生成导入文件
+```
