@@ -5,7 +5,7 @@ import { listSkills } from './shared/registry'
 import type { SkillId } from './shared/types'
 
 /** ⚠️ 替换为你的云环境 ID */
-const CLOUD_ENV = 'your-env-id'
+const CLOUD_ENV = 'cloud1-d4gdcfzgf76bf95e7'
 
 App({
   globalData: {
