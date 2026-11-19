@@ -133,19 +133,31 @@ exports.main = async (event) => {
       data: { answers, score, total: idArr.length, finishedAt: Date.now() },
     })
 
-    // 错题入错题本
+    // 错题入错题本（批量处理，减少查询次数）
     const now = Date.now()
     const wb = db.collection('wrong_questions')
+    // 一次性查出已有错题
+    const wrongIds = wrongNow.map((q) => q.id)
+    let existingMap = new Map()
+    if (wrongIds.length > 0) {
+      const existRes = await wb.where({ _openid: openid, questionId: _.in(wrongIds) }).limit(200).get()
+      existingMap = new Map(existRes.data.map((w) => [w.questionId, w]))
+    }
+    // 批量处理：已存在则更新，不存在则新增
+    const addOps = []
+    const updateOps = []
     for (const q of wrongNow) {
-      const exist = await wb.where({ _openid: openid, questionId: q.id }).limit(1).get()
-      if (exist.data.length === 0) {
-        await wb.add({
-          data: { _openid: openid, skill: q.skill, questionId: q.id, source: 'exam', status: 'unreviewed', addedAt: now, updatedAt: now },
-        })
+      const exist = existingMap.get(q.id)
+      if (exist) {
+        updateOps.push(wb.doc(exist._id).update({ data: { status: 'unreviewed', updatedAt: now } }))
       } else {
-        await wb.doc(exist.data[0]._id).update({ data: { status: 'unreviewed', updatedAt: now } })
+        addOps.push(wb.add({
+          data: { _openid: openid, skill: q.skill, questionId: q.id, source: 'exam', status: 'unreviewed', addedAt: now, updatedAt: now },
+        }))
       }
     }
+    // 并发执行
+    await Promise.all([...addOps, ...updateOps])
 
     return { ok: true, data: { score, total: idArr.length, details } }
   } catch (e) {
