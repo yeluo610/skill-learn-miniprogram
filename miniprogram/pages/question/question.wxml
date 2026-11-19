@@ -69,8 +69,12 @@
   </view>
 
   <view class="actions">
-    <button class="btn-primary" wx:if="{{!submitted}}" bindtap="onSubmit">提交</button>
-    <button class="btn-ghost" wx:if="{{submitted}}" bindtap="goNext">返回列表</button>
+    <button class="btn-ghost" wx:if="{{!submitted}}" bindtap="onSubmit">提交</button>
+    <block wx:if="{{submitted}}">
+      <button class="btn-ghost" bindtap="prev" disabled="{{idx === 0}}">上一题</button>
+      <button class="btn-primary" bindtap="next" disabled="{{idx >= list.length - 1}}">下一题</button>
+      <button class="btn-ghost" bindtap="back">返回列表</button>
+    </block>
   </view>
 </view>
 

@@ -191,6 +191,12 @@
 }
 
 .actions {
+  display: flex;
+  gap: 14rpx;
   margin-top: 16rpx;
   padding-bottom: 40rpx;
+}
+.actions .btn-primary, .actions .btn-ghost {
+  flex: 1;
+  margin: 0;
 }

@@ -9,25 +9,16 @@ Page({
     nickname: '',
     avatarUrl: '',
     skills: [] as Array<{ id: string; name: string; attempted: number; correct: number; total: number }>,
+    logging: false,
   },
 
   onLoad() {
     const app = getApp() as any
     if (app.globalData.openid) {
-      this.setData({
-        loggedIn: true,
-        nickname: app.globalData.nickname,
-        avatarUrl: app.globalData.avatarUrl,
-      })
-      this.loadProgress()
+      this.setLoggedIn(app.globalData)
     } else {
       app.on('login', () => {
-        this.setData({
-          loggedIn: true,
-          nickname: app.globalData.nickname,
-          avatarUrl: app.globalData.avatarUrl,
-        })
-        this.loadProgress()
+        this.setLoggedIn(app.globalData)
       })
     }
   },
@@ -36,26 +27,35 @@ Page({
     if (this.data.loggedIn) this.loadProgress()
   },
 
+  setLoggedIn(g: any) {
+    this.setData({
+      loggedIn: true,
+      nickname: g.nickname || '已登录',
+      avatarUrl: g.avatarUrl || '',
+    })
+    this.loadProgress()
+  },
+
+  /** 手动触发登录（静默：调 login 云函数拿 openid） */
   async login() {
+    if (this.data.logging) return
+    this.setData({ logging: true })
     const app = getApp() as any
     try {
-      const userInfo = await new Promise<WechatMiniprogram.UserInfoSuccessCallbackResult>((resolve, reject) => {
-        wx.getUserProfile({ desc: '用于展示昵称头像', success: resolve, fail: reject })
-      }).catch(() => null as any)
-      const data = userInfo ? { nickname: userInfo.userInfo.nickName, avatarUrl: userInfo.userInfo.avatarUrl } : {}
-      const res = await api.login(data)
-      if (res.ok && res.data) {
+      const res = await api.login({})
+      if (res.ok && res.data?.openid) {
         app.globalData.openid = res.data.openid
-        app.globalData.nickname = res.data.nickname
-        app.globalData.avatarUrl = res.data.avatarUrl
-        this.setData({ loggedIn: true, nickname: res.data.nickname, avatarUrl: res.data.avatarUrl })
-        this.loadProgress()
+        app.globalData.nickname = res.data.nickname || ''
+        app.globalData.avatarUrl = res.data.avatarUrl || ''
+        this.setLoggedIn(app.globalData)
+        wx.showToast({ title: '登录成功', icon: 'success' })
       } else {
         wx.showToast({ title: res.error || '登录失败', icon: 'none' })
       }
     } catch (e) {
-      wx.showToast({ title: '登录取消', icon: 'none' })
+      wx.showToast({ title: '网络错误', icon: 'none' })
     }
+    this.setData({ logging: false })
   },
 
   async loadProgress() {

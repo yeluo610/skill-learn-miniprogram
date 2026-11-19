@@ -8,10 +8,6 @@
       <view class="qc-icon">📝</view>
       <view class="qc-label">考试</view>
     </view>
-    <navigator url="/pages/wrongbook/wrongbook?skill={{skill}}" open-type="navigate" class="quick-cell">
-      <view class="qc-icon">❌</view>
-      <view class="qc-label">错题本</view>
-    </navigator>
   </view>
 
   <view class="section-title">学习关卡</view>

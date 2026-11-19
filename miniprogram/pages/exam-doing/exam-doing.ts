@@ -14,6 +14,13 @@ Page({
     answeredCount: 0,
     loading: true,
     submitted: false,
+    // 自定义确认弹层
+    showConfirm: false,
+    unansweredCount: 0,
+    submitting: false,
+    // 错误提示
+    showError: false,
+    errorMsg: '',
   },
 
   onLoad(query: { skill?: string; examSetId?: string }) {
@@ -36,27 +43,37 @@ Page({
           loading: false,
         })
       } else {
-        wx.showToast({ title: res.error || '出卷失败', icon: 'none' })
+        this.showError(res.error || '出卷失败')
         this.setData({ loading: false })
       }
     } catch (e) {
       wx.hideLoading()
-      wx.showToast({ title: '网络错误', icon: 'none' })
+      this.showError('网络错误，请检查云函数是否部署')
       this.setData({ loading: false })
     }
+  },
+
+  /** 统计真实已答数（非空） */
+  countAnswered(): number {
+    const a = this.data.answers
+    return Object.keys(a).filter((k) => a[k] !== '' && a[k] !== undefined && a[k] !== null).length
   },
 
   onSelect(e: WechatMiniprogram.TouchEvent) {
     if (this.data.submitted) return
     const q = this.data.questions[this.data.current]
     const answers = { ...this.data.answers, [q.id]: Number(e.currentTarget.dataset.idx) }
-    this.setData({ answers, answeredCount: Object.keys(answers).length })
+    this.setData({ answers, answeredCount: this.countAnswered.call({ data: { answers } }) })
+    // 重新计算
+    const cnt = Object.keys(answers).filter((k) => answers[k] !== '' && answers[k] !== undefined && answers[k] !== null).length
+    this.setData({ answeredCount: cnt })
   },
 
   onInput(e: WechatMiniprogram.Input) {
     const q = this.data.questions[this.data.current]
     const answers = { ...this.data.answers, [q.id]: e.detail.value }
-    this.setData({ answers, answeredCount: Object.keys(answers).filter((k) => answers[k] !== '' && answers[k] !== undefined).length })
+    const cnt = Object.keys(answers).filter((k) => answers[k] !== '' && answers[k] !== undefined && answers[k] !== null).length
+    this.setData({ answers, answeredCount: cnt })
   },
 
   prev() {
@@ -73,33 +90,54 @@ Page({
     this.setData({ current: Number(e.currentTarget.dataset.idx) })
   },
 
-  async submit() {
-    const answered = Object.keys(this.data.answers).length
-    if (answered < this.data.questions.length) {
-      const ok = await new Promise<boolean>((resolve) => {
-        wx.showModal({
-          title: '提示',
-          content: `还有 ${this.data.questions.length - answered} 题未作答，确定交卷？`,
-          success: (r) => resolve(r.confirm),
-        })
-      })
-      if (!ok) return
+  /** 点交卷按钮 */
+  onSubmitTap() {
+    const answered = this.data.answeredCount
+    const unanswered = this.data.questions.length - answered
+    if (unanswered > 0) {
+      this.setData({ showConfirm: true, unansweredCount: unanswered })
+    } else {
+      this.doSubmit()
     }
+  },
+
+  /** 确认交卷 */
+  confirmSubmit() {
+    this.setData({ showConfirm: false })
+    this.doSubmit()
+  },
+
+  cancelSubmit() {
+    this.setData({ showConfirm: false })
+  },
+
+  async doSubmit() {
+    if (this.data.submitting) return
+    this.setData({ submitting: true })
     wx.showLoading({ title: '评分中...' })
     try {
       const res = await api.submitExam({ examId: this.data.examId, answers: this.data.answers })
       wx.hideLoading()
+      this.setData({ submitting: false })
       if (res.ok && res.data) {
         const app = getApp() as any
-        // 通过全局缓存传递结果（大数据不适合通过 URL）
         app.globalData._lastExamResult = { ...res.data, skill: this.data.skill, examSetId: this.data.examSetId }
         wx.redirectTo({ url: `/pages/exam-result/exam-result?skill=${this.data.skill}&examSetId=${this.data.examSetId}` })
       } else {
-        wx.showToast({ title: res.error || '提交失败', icon: 'none' })
+        this.showError(res.error || '提交失败，请重试')
       }
     } catch (e) {
       wx.hideLoading()
-      wx.showToast({ title: '网络错误', icon: 'none' })
+      this.setData({ submitting: false })
+      this.showError('网络错误，请检查 submitExam 云函数是否部署')
     }
+  },
+
+  showError(msg: string) {
+    this.setData({ showError: true, errorMsg: msg })
+  },
+
+  closeError() {
+    this.setData({ showError: false })
   },
 })

@@ -48,7 +48,15 @@ function err(qid: string, msg: string) {
 function checkRegexAnswer(userInput: string, tcs: TestCase[]): { pass: boolean } {
   let re: RegExp
   try {
-    re = new RegExp(userInput, 'g')
+    // 支持 /pattern/flags 形式
+    let pattern = userInput
+    let flags = 'g'
+    const m = /^\/(.+)\/([gimsuy]*)$/.exec(userInput.trim())
+    if (m) {
+      pattern = m[1]
+      flags = m[2].includes('g') ? m[2] : 'g' + m[2]
+    }
+    re = new RegExp(pattern, flags)
   } catch (e) {
     return { pass: false }
   }

@@ -1,5 +1,6 @@
 /**
  * 做题页：选择题 / 填空题
+ * 加载整个阶段题目列表，支持上一题/下一题翻页
  */
 import { api } from '../../utils/api'
 
@@ -9,16 +10,19 @@ Page({
     level: '',
     questionId: '',
     idx: 0,
+    list: [] as any[],
     question: null as any,
     loading: true,
-    selected: -1,           // 选择题选中
-    userInput: '',          // 填空题输入
+    selected: -1,
+    userInput: '',
     submitted: false,
     correct: false,
     checkResult: null as any,
     explanation: '',
     referenceAnswer: '',
     correctAnswer: -1,
+    // 每题作答状态缓存（id -> 已提交）
+    answeredMap: {} as Record<string, boolean>,
   },
 
   onLoad(query: { skill?: string; level?: string; questionId?: string; idx?: string }) {
@@ -28,28 +32,52 @@ Page({
       questionId: query.questionId || '',
       idx: Number(query.idx || 0),
     })
-    this.loadQuestion()
+    this.loadList()
   },
 
-  async loadQuestion() {
-    this.setData({ loading: true, submitted: false, selected: -1, userInput: '' })
+  async loadList() {
+    this.setData({ loading: true })
     try {
-      // 通过 getQuestions 取该题（简单起见拉首页题列表）
       const res = await api.getQuestions({ skill: this.data.skill, level: this.data.level, page: 1, pageSize: 200 })
       if (res.ok && res.data) {
-        const q = res.data.list.find((x: any) => x.id === this.data.questionId)
-        if (q) {
-          wx.setNavigationBarTitle({ title: `第 ${this.data.idx + 1} 题` })
-          this.setData({ question: q, loading: false })
-          return
-        }
+        const list = res.data.list || []
+        this.setData({ list })
+        this.showQuestion(this.data.idx)
+      } else {
+        wx.showToast({ title: '题目加载失败', icon: 'none' })
+        this.setData({ loading: false })
       }
-      wx.showToast({ title: '题目加载失败', icon: 'none' })
-      this.setData({ loading: false })
     } catch (e) {
       console.warn(e)
+      wx.showToast({ title: '加载失败', icon: 'none' })
       this.setData({ loading: false })
     }
+  },
+
+  /** 显示第 idx 题 */
+  showQuestion(idx: number) {
+    const list = this.data.list
+    if (idx < 0 || idx >= list.length) {
+      this.setData({ loading: false })
+      return
+    }
+    const q = list[idx]
+    wx.setNavigationBarTitle({ title: `第 ${idx + 1} / ${list.length} 题` })
+    this.setData({
+      idx,
+      question: q,
+      questionId: q.id,
+      loading: false,
+      // 重置作答状态
+      selected: -1,
+      userInput: '',
+      submitted: false,
+      correct: false,
+      checkResult: null,
+      explanation: '',
+      referenceAnswer: '',
+      correctAnswer: -1,
+    })
   },
 
   onSelect(e: WechatMiniprogram.TouchEvent) {
@@ -86,6 +114,7 @@ Page({
       wx.hideLoading()
       if (res.ok && res.data) {
         const d = res.data
+        const answeredMap = { ...this.data.answeredMap, [this.data.questionId]: true }
         this.setData({
           submitted: true,
           correct: d.correct,
@@ -93,8 +122,9 @@ Page({
           explanation: d.explanation,
           referenceAnswer: d.referenceAnswer,
           correctAnswer: d.correctAnswer,
+          answeredMap,
         })
-        if (d.correct) wx.showToast({ title: '回答正确！', icon: 'success' })
+        if (d.correct) wx.showToast({ title: '回答正确', icon: 'success' })
         else wx.showToast({ title: '回答错误', icon: 'none' })
       } else {
         wx.showToast({ title: res.error || '提交失败', icon: 'none' })
@@ -105,8 +135,22 @@ Page({
     }
   },
 
-  goNext() {
-    // 简化：返回关卡列表，由用户选下一题；后续可优化为自动翻页
+  /** 上一题 */
+  prev() {
+    if (this.data.idx > 0) this.showQuestion(this.data.idx - 1)
+  },
+
+  /** 下一题 */
+  next() {
+    if (this.data.idx < this.data.list.length - 1) {
+      this.showQuestion(this.data.idx + 1)
+    } else {
+      wx.showToast({ title: '已是最后一题', icon: 'none' })
+    }
+  },
+
+  /** 返回列表 */
+  back() {
     wx.navigateBack()
   },
 })

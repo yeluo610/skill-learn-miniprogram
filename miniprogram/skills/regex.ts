@@ -20,7 +20,15 @@ export function regexChecker(
 ): CheckResult {
   let re: RegExp
   try {
-    re = new RegExp(userInput, 'g')
+    // 支持 /pattern/flags 形式（如 /\d/g）
+    let pattern = userInput
+    let flags = 'g'
+    const m = /^\/(.+)\/([gimsuy]*)$/.exec(userInput.trim())
+    if (m) {
+      pattern = m[1]
+      flags = m[2].includes('g') ? m[2] : 'g' + m[2]
+    }
+    re = new RegExp(pattern, flags)
   } catch (e) {
     return buildResult([], `正则语法错误：${(e as Error).message}`)
   }

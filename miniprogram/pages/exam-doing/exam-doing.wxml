@@ -48,7 +48,32 @@
     </block>
   </view>
 
-  <button class="btn-primary submit-btn" bindtap="submit">交卷</button>
+  <button class="btn-primary submit-btn" bindtap="onSubmitTap" loading="{{submitting}}">交卷</button>
 </view>
 
 <view class="loading-text" wx:if="{{loading}}">出卷中...</view>
+
+<!-- 确认交卷弹层 -->
+<view class="modal-mask" wx:if="{{showConfirm}}" bindtap="cancelSubmit">
+  <view class="modal-card" catchtap="">
+    <view class="modal-icon">⚠️</view>
+    <view class="modal-title">确认交卷？</view>
+    <view class="modal-content">还有 {{unansweredCount}} 题未作答，交卷后将无法修改。</view>
+    <view class="modal-actions">
+      <button class="modal-btn ghost" bindtap="cancelSubmit">再想想</button>
+      <button class="modal-btn primary" bindtap="confirmSubmit">确认交卷</button>
+    </view>
+  </view>
+</view>
+
+<!-- 错误提示弹层 -->
+<view class="modal-mask" wx:if="{{showError}}" bindtap="closeError">
+  <view class="modal-card" catchtap="">
+    <view class="modal-icon err">⚠️</view>
+    <view class="modal-title">出错了</view>
+    <view class="modal-content">{{errorMsg}}</view>
+    <view class="modal-actions">
+      <button class="modal-btn primary" bindtap="closeError">知道了</button>
+    </view>
+  </view>
+</view>
