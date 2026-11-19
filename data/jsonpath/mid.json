@@ -86,5 +86,116 @@
     "referenceAnswer": "$.books[?(@.price < 15)]",
     "explanation": "[?(expr)] 过滤数组元素，@ 代表当前元素，@.price < 15 筛出价格小于 15 的项。",
     "tags": ["过滤"]
+  },
+  {
+    "id": "jsonpath-mid-008",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "$.arr[:] 等价于？",
+    "options": ["$.arr[*]", "$.arr[0]", "$.arr[-1]", "语法错误"],
+    "answer": 0,
+    "explanation": "[:] 是完整切片（start:end 都省略），等价于 [*]，取出数组全部元素。",
+    "tags": ["切片"]
+  },
+  {
+    "id": "jsonpath-mid-009",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "$.arr[2:] 取出哪些？",
+    "options": ["从下标 2 到末尾", "下标 2 一个", "前两个", "下标 0 到 2"],
+    "answer": 0,
+    "explanation": "[start:] 省略 end 表示取到末尾，[2:] 取下标 2 及之后所有元素。",
+    "tags": ["切片"]
+  },
+  {
+    "id": "jsonpath-mid-010",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "$.arr[-2:] 取出哪些？",
+    "options": ["最后两个元素", "前两个", "倒数第二个", "全部"],
+    "answer": 0,
+    "explanation": "[-2:] 表示从倒数第二个取到末尾，即最后两个元素。",
+    "tags": ["切片"]
+  },
+  {
+    "id": "jsonpath-mid-011",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "$.book[?(@.price > 10 && @.price < 20)] 表示？",
+    "options": ["价格在 10 到 20 之间", "价格大于 10 或小于 20", "全部书", "语法错误"],
+    "answer": 0,
+    "explanation": "&& 是逻辑与，过滤同时满足价格 >10 且 <20 的元素。",
+    "tags": ["过滤"]
+  },
+  {
+    "id": "jsonpath-mid-012",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "$.users[?(@.age == 18)] 中的 == 用于？",
+    "options": ["相等比较", "赋值", "近似匹配", "递归"],
+    "answer": 0,
+    "explanation": "== 是相等比较运算符，过滤 age 等于 18 的用户。",
+    "tags": ["过滤"]
+  },
+  {
+    "id": "jsonpath-mid-013",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取出数组 arr 中下标 1 到 3（含 1 不含 3）的元素。",
+    "hint": "切片 [1:3]",
+    "testCases": [
+      { "input": "{\"arr\":[10,20,30,40,50]}", "expected": ["20", "30"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.arr[1:3]",
+    "explanation": "[1:3] 切片含 start 不含 end，取下标 1、2 两个元素。",
+    "tags": ["切片"]
+  },
+  {
+    "id": "jsonpath-mid-014",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取出数组 list 的最后三个元素。",
+    "hint": "切片 [-3:]",
+    "testCases": [
+      { "input": "{\"list\":[1,2,3,4,5]}", "expected": ["3", "4", "5"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.list[-3:]",
+    "explanation": "[-3:] 从倒数第三个取到末尾，即最后三个元素。",
+    "tags": ["切片"]
+  },
+  {
+    "id": "jsonpath-mid-015",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "从 users 数组中筛选 age 大于 18 的元素。",
+    "hint": "过滤 @.age > 18",
+    "testCases": [
+      { "input": "{\"users\":[{\"age\":15},{\"age\":20},{\"age\":25}]}", "expected": ["{\"age\":20}", "{\"age\":25}"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.users[?(@.age > 18)]",
+    "explanation": "[?(@.age > 18)] 过滤 age 大于 18 的用户。",
+    "tags": ["过滤"]
+  },
+  {
+    "id": "jsonpath-mid-016",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取出根对象下所有字段的值。",
+    "hint": "用通配符 $.*",
+    "testCases": [
+      { "input": "{\"a\":1,\"b\":2,\"c\":3}", "expected": ["1", "2", "3"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.*",
+    "explanation": "$.* 取根对象下所有字段的值，返回列表。",
+    "tags": ["通配符"]
   }
 ]
