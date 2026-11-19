@@ -172,5 +172,140 @@
     "referenceAnswer": "<.*?>",
     "explanation": "<.*?> 用惰性量词 .*?，匹配最短的 <...> 段。若用贪婪 <.*>，会把 '<a><b>' 整体匹配。",
     "tags": ["贪婪与惰性"]
+  },
+  {
+    "id": "regex-mid-015",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "字符串 '<a><b>' 用 <.*> 匹配，结果是？",
+    "options": ["整体匹配 '<a><b>'", "匹配 '<a>' 和 '<b>' 两段", "仅匹配 '<a>'", "无匹配"],
+    "answer": 0,
+    "explanation": "贪婪量词 .* 会尽可能多匹配，跨过第一个 > 一直到最后一个 >，整体匹配 '<a><b>'。要分两段需用惰性 <.*?>。",
+    "tags": ["贪婪与惰性"]
+  },
+  {
+    "id": "regex-mid-016",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "(ab|cd)+ 能匹配下列哪个？",
+    "options": ["ab 和 cd 的任意重复组合", "仅 'ab'", "仅 'cd'", "字面 (ab|cd)+"],
+    "answer": 0,
+    "explanation": "(ab|cd)+ 是分组+选择+量词，匹配 'ab' 或 'cd' 的 1 次或多次重复，如 'abcd'、'ababcd'。",
+    "tags": ["分组", "选择"]
+  },
+  {
+    "id": "regex-mid-017",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列哪个能提取 'name=value' 中的 value？",
+    "options": ["(\\w+)=(\\w+) 捕获第2组", "(\\w+)=(\\w+) 捕获第1组", "name=value", "\\w+"],
+    "answer": 0,
+    "explanation": "(\\w+)=(\\w+) 第一个分组是 name，第二个分组是 value。提取 value 用捕获组 2（$2 或 \\2）。",
+    "tags": ["分组", "捕获"]
+  },
+  {
+    "id": "regex-mid-018",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "$& 在替换字符串中表示什么？",
+    "options": ["整个匹配的内容", "第一个捕获组", "上一个匹配", "字面 $&"],
+    "answer": 0,
+    "explanation": "$& 引用整个匹配的内容，常用于在匹配前后添加内容，如把 'cat' 替换成 '[cat]'。",
+    "tags": ["替换"]
+  },
+  {
+    "id": "regex-mid-019",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "字符串 '2024-01-15' 用 /(\\d+)-(\\d+)-(\\d+)/ 匹配，捕获组 2 是？",
+    "options": ["01", "2024", "15", "整个串"],
+    "answer": 0,
+    "explanation": "三个捕获组分别对应年、月、日。第 2 组是月，即 '01'。",
+    "tags": ["分组", "捕获"]
+  },
+  {
+    "id": "regex-mid-020",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "a{2,} 表示？",
+    "options": ["至少 2 个 a", "恰好 2 个 a", "0 到 2 个 a", "2 个或 3 个 a"],
+    "answer": 0,
+    "explanation": "{n,} 表示至少 n 次，a{2,} 匹配 2 个或更多 a。",
+    "tags": ["量词"]
+  },
+  {
+    "id": "regex-mid-021",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "(?:abc)+ 与 (abc)+ 的区别是？",
+    "options": ["前者不捕获，后者捕获", "前者匹配更多", "前者更快但不正确", "完全相同"],
+    "answer": 0,
+    "explanation": "(?:...) 非捕获分组不占用捕获组编号，(abc) 捕获分组可用 \\1 引用。匹配效果相同。",
+    "tags": ["分组"]
+  },
+  {
+    "id": "regex-mid-022",
+    "skill": "regex",
+    "level": "mid",
+    "type": "choice",
+    "title": "字符串 'aaa' 用 a*? 匹配，结果是？",
+    "options": ["匹配空串", "匹配 'aaa'", "匹配 'a'", "无匹配"],
+    "answer": 0,
+    "explanation": "惰性量词 *? 尽可能少匹配，最少是 0 个，所以匹配空串。要匹配实际 a 需配合其他约束。",
+    "tags": ["贪婪与惰性"]
+  },
+  {
+    "id": "regex-mid-023",
+    "skill": "regex",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一个正则，匹配 'key=value' 形式中的 key 部分（等号前的字母）。",
+    "hint": "用 ^ 锚点和捕获",
+    "testCases": [
+      { "input": "name=Tom", "expected": ["name"], "expectedType": "match" },
+      { "input": "age=20", "expected": ["age"], "expectedType": "match" }
+    ],
+    "referenceAnswer": "^[a-zA-Z]+",
+    "explanation": "^[a-zA-Z]+ 从开头匹配一个或多个字母，即等号前的 key 部分。",
+    "tags": ["锚点", "字符类"]
+  },
+  {
+    "id": "regex-mid-024",
+    "skill": "regex",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一个正则，匹配 4 位年份（19xx 或 20xx）。",
+    "hint": "用 (19|20)\\d{2}",
+    "testCases": [
+      { "input": "born in 1990", "expected": ["1990"], "expectedType": "match" },
+      { "input": "year 2024 now", "expected": ["2024"], "expectedType": "match" },
+      { "input": "year 1800", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "(19|20)\\d{2}",
+    "explanation": "(19|20) 匹配前两位是 19 或 20，\\d{2} 匹配后两位数字。1800 不匹配。",
+    "tags": ["分组", "选择"]
+  },
+  {
+    "id": "regex-mid-025",
+    "skill": "regex",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一个正则，匹配被方括号 [ ] 包裹的内容（含括号）。",
+    "hint": "转义方括号",
+    "testCases": [
+      { "input": "see [note] here", "expected": ["[note]"], "expectedType": "match" },
+      { "input": "[a][b]", "expected": ["[a]", "[b]"], "expectedType": "match" },
+      { "input": "no brackets", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "\\[[^\\]]*\\]",
+    "explanation": "\\[ 匹配字面 [，[^\\]]* 匹配非 ] 的任意字符（避免跨段），\\] 匹配字面 ]。整体匹配一个 [..] 段。",
+    "tags": ["转义", "字符类"]
   }
 ]
