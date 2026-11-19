@@ -18,7 +18,7 @@ exports.main = async (event) => {
 
   if (action === 'list') {
     const { skill, status, page = 1, pageSize = 50 } = event || {}
-    const where: any = { _openid: openid }
+    const where = { _openid: openid }
     if (skill) where.skill = skill
     if (status) where.status = status
     const countRes = await db.collection('wrong_questions').where(where).count()
