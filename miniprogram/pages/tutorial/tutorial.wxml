@@ -8,15 +8,62 @@
   </scroll-view>
 
   <view class="content">
-    <scroll-view scroll-y class="content-scroll">
+    <scroll-view scroll-y class="content-scroll" enhanced show-scrollbar="{{false}}">
       <view class="content-inner">
-        <view class="title-lg">{{current.title}}</view>
-        <view class="md">{{current.content}}</view>
+        <view class="doc-title">{{current.title}}</view>
+
+        <block wx:for="{{blocks}}" wx:key="index" wx:for-item="b">
+          <!-- 标题 -->
+          <view class="md-h1" wx:if="{{b.type === 'h1'}}">{{b.text}}</view>
+          <view class="md-h2" wx:elif="{{b.type === 'h2'}}">{{b.text}}</view>
+          <view class="md-h3" wx:elif="{{b.type === 'h3'}}">{{b.text}}</view>
+
+          <!-- 段落 -->
+          <view class="md-p" wx:elif="{{b.type === 'p'}}">{{b.text}}</view>
+
+          <!-- 代码块 -->
+          <view class="md-code" wx:elif="{{b.type === 'code'}}">
+            <view class="md-code-lang" wx:if="{{b.lang}}">{{b.lang}}</view>
+            <text class="md-code-text" user-select="{{true}}">{{b.text}}</text>
+          </view>
+
+          <!-- 无序列表 -->
+          <view class="md-ul" wx:elif="{{b.type === 'ul'}}">
+            <view class="md-li" wx:for="{{b.items}}" wx:key="index" wx:for-item="li">
+              <text class="md-bullet">•</text>
+              <text class="md-li-text">{{li}}</text>
+            </view>
+          </view>
+
+          <!-- 有序列表 -->
+          <view class="md-ol" wx:elif="{{b.type === 'ol'}}">
+            <view class="md-li" wx:for="{{b.items}}" wx:key="index" wx:for-item="li" wx:for-index="oi">
+              <text class="md-bullet">{{oi + 1}}.</text>
+              <text class="md-li-text">{{li}}</text>
+            </view>
+          </view>
+
+          <!-- 表格 -->
+          <view class="md-table-wrap" wx:elif="{{b.type === 'table'}}">
+            <view class="md-table">
+              <view class="md-tr md-thead">
+                <view class="md-th" wx:for="{{b.header}}" wx:key="index" wx:for-item="h">{{h}}</view>
+              </view>
+              <view class="md-tr" wx:for="{{b.rows}}" wx:key="index" wx:for-item="row">
+                <view class="md-td" wx:for="{{row}}" wx:key="index" wx:for-item="cell">{{cell}}</view>
+              </view>
+            </view>
+          </view>
+
+          <!-- 分隔线 -->
+          <view class="md-hr" wx:elif="{{b.type === 'hr'}}"></view>
+        </block>
       </view>
     </scroll-view>
+
     <view class="content-nav">
-      <button class="btn-ghost" bindtap="prev" disabled="{{currentIdx === 0}}">上一节</button>
-      <button class="btn-ghost" bindtap="next" disabled="{{currentIdx === sections.length - 1}}">下一节</button>
+      <button class="nav-btn prev {{currentIdx === 0 ? 'disabled' : ''}}" bindtap="prev" disabled="{{currentIdx === 0}}">上一节</button>
+      <button class="nav-btn next {{currentIdx === sections.length - 1 ? 'disabled' : ''}}" bindtap="next" disabled="{{currentIdx === sections.length - 1}}">下一节</button>
     </view>
   </view>
 </view>
