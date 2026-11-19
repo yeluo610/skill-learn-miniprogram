@@ -31,3 +31,16 @@
   <view class="loading-text" wx:if="{{!loading && list.length >= total && total > 0}}">已经到底了</view>
   <view class="loading-text" wx:if="{{!loading && list.length === 0}}">暂无错题，继续加油！</view>
 </view>
+
+<!-- 移除确认弹层 -->
+<view class="modal-mask" wx:if="{{showRemove}}" bindtap="cancelRemove">
+  <view class="modal-card" catchtap="">
+    <view class="modal-icon err">🗑</view>
+    <view class="modal-title">确认移除？</view>
+    <view class="modal-content">移除后该题将不再出现在错题本中。</view>
+    <view class="modal-actions">
+      <button class="modal-btn ghost" bindtap="cancelRemove">取消</button>
+      <button class="modal-btn danger" bindtap="confirmRemove">确认移除</button>
+    </view>
+  </view>
+</view>

@@ -45,3 +45,65 @@
 .act { font-size: 24rpx; color: #6b7280; }
 .act.primary { color: #4f46e5; }
 .act.danger { color: #dc2626; }
+
+/* 自定义弹层 */
+.modal-mask {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.modal-card {
+  width: 560rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 40rpx 32rpx 24rpx;
+  text-align: center;
+  animation: pop 0.2s ease;
+}
+@keyframes pop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.modal-icon {
+  font-size: 72rpx;
+  line-height: 1;
+  margin-bottom: 16rpx;
+}
+.modal-icon.err { color: #f59e0b; }
+.modal-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1f2329;
+  margin-bottom: 12rpx;
+}
+.modal-content {
+  font-size: 26rpx;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 28rpx;
+}
+.modal-actions {
+  display: flex;
+  gap: 16rpx;
+}
+.modal-btn {
+  flex: 1;
+  margin: 0;
+  padding: 18rpx 0;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+  line-height: 1.4;
+  border: none;
+}
+.modal-btn.danger {
+  background: #dc2626;
+  color: #fff;
+}
+.modal-btn.ghost {
+  background: #f3f4f6;
+  color: #4b5563;
+}

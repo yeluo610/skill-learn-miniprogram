@@ -20,6 +20,9 @@ Page({
       { value: 'mastered', label: '已掌握' },
     ],
     skillOptions: [] as Array<{ value: string; label: string }>,
+    // 移除确认弹层
+    showRemove: false,
+    removeTarget: null as any,
   },
 
   onLoad(query: { skill?: string }) {
@@ -61,10 +64,12 @@ Page({
         })
       } else {
         this.setData({ loading: false })
+        if (res.error) wx.showToast({ title: res.error, icon: 'none', duration: 3000 })
       }
     } catch (e) {
       console.warn(e)
       this.setData({ loading: false })
+      wx.showToast({ title: (e as Error).message || '加载失败', icon: 'none', duration: 3000 })
     }
   },
 
@@ -104,22 +109,28 @@ Page({
 
   async remove(e: WechatMiniprogram.TouchEvent) {
     const { id, idx } = e.currentTarget.dataset
-    const ok = await new Promise<boolean>((resolve) => {
-      wx.showModal({
-        title: '提示', content: '确定从错题本移除？',
-        success: (r) => resolve(r.confirm),
-      })
-    })
-    if (!ok) return
+    this.setData({ showRemove: true, removeTarget: { id, idx } })
+  },
+
+  cancelRemove() {
+    this.setData({ showRemove: false, removeTarget: null })
+  },
+
+  async confirmRemove() {
+    const { id, idx } = this.data.removeTarget || {}
+    this.setData({ showRemove: false, removeTarget: null })
+    if (!id) return
     try {
       const res = await api.wrongbook({ action: 'remove', questionId: id })
       if (res.ok) {
         const list = this.data.list.filter((_, i) => i !== idx)
         this.setData({ list, total: this.data.total - 1 })
         wx.showToast({ title: '已移除', icon: 'success' })
+      } else {
+        wx.showToast({ title: res.error || '操作失败', icon: 'none' })
       }
     } catch (e) {
-      wx.showToast({ title: '操作失败', icon: 'none' })
+      wx.showToast({ title: (e as Error).message || '操作失败', icon: 'none' })
     }
   },
 })
