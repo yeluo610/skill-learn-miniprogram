@@ -98,5 +98,121 @@
     "referenceAnswer": "^[^@]+@[^@]+\\.[^@]+$",
     "explanation": "^[^@]+ 要求开头至少一个非@字符，@ 分隔，[^@]+\\. 域名部分含点，最后 [^@]+$ 顶级域名。简化版，实际邮箱规则更复杂。",
     "tags": ["实战", "锚点"]
+  },
+  {
+    "id": "regex-top-009",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列哪个正则在输入 'aaaaaaaaaaaaaaaaaaaa!' 上最可能引发 ReDoS？",
+    "options": ["(a+)+b", "^a+$", "[a-z]+", "a{1,5}"],
+    "answer": 0,
+    "explanation": "(a+)+b 是经典灾难性回溯模式：嵌套量词 + 末尾不匹配字符，引擎尝试所有拆分方式，时间指数级增长。",
+    "tags": ["回溯", "ReDoS"]
+  },
+  {
+    "id": "regex-top-010",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "占有量词 a++ 的作用是？",
+    "options": ["匹配后不回溯", "惰性匹配", "可选匹配", "否定匹配"],
+    "answer": 0,
+    "explanation": "占有量词（如 a++、a*+）匹配后放弃回溯，能避免灾难性回溯。注意部分引擎（如 JS 标准 RegExp）不支持占有量词。",
+    "tags": ["回溯", "性能"]
+  },
+  {
+    "id": "regex-top-011",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "(a|ab)+c 对 'ababc' 的匹配结果是？",
+    "options": ["匹配整个 'ababc'", "匹配 'abc'", "无匹配", "匹配 'aba'"],
+    "answer": 0,
+    "explanation": "分支 a|ab 会尝试组合，'ababc' = (ab)(a)(b)c 中能凑出末尾 c，整体可匹配。注意分支选择与回溯的复杂性。",
+    "tags": ["回溯", "分支"]
+  },
+  {
+    "id": "regex-top-012",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列哪个写法能跨行匹配任意字符（含换行）？",
+    "options": ["[\\s\\S]", ".", "[\\d\\D]", "选项1和3都对"],
+    "answer": 3,
+    "explanation": ". 默认不匹配换行。要跨行可用 [\\s\\S] 或 [\\d\\D]（互补字符类的并集覆盖所有字符），或加 s 标志让 . 匹配换行。",
+    "tags": ["陷阱", "字符类"]
+  },
+  {
+    "id": "regex-top-013",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "^(?:a|aa)+b$ 对 'aaaaaaaaaaaaac' 的行为最可能是？",
+    "options": ["长时间回溯后失败", "立即失败", "立即成功", "匹配部分"],
+    "answer": 0,
+    "explanation": "(?:a|aa)+b$ 末尾要求 b，但输入以 c 结尾。分支 a|aa 的多种拆分组合导致指数级回溯，最终失败但耗时极长。",
+    "tags": ["回溯", "ReDoS"]
+  },
+  {
+    "id": "regex-top-014",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "字符类 [.] 中的 . 表示什么？",
+    "options": ["字面点号", "任意字符", "行首", "错误"],
+    "answer": 0,
+    "explanation": "在字符类 [] 中，大多数元字符（包括 .）失去特殊含义，[.] 匹配字面点号，无需转义。",
+    "tags": ["字符类", "陷阱"]
+  },
+  {
+    "id": "regex-top-015",
+    "skill": "regex",
+    "level": "top",
+    "type": "fill",
+    "title": "写一个正则，匹配中国大陆手机号（1开头，第二位3-9，共11位数字）。",
+    "hint": "^1[3-9]\\d{9}$",
+    "testCases": [
+      { "input": "13812345678", "expected": ["13812345678"], "expectedType": "match" },
+      { "input": "12345678901", "expected": [], "expectedType": "nomatch" },
+      { "input": "1381234567", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "^1[3-9]\\d{9}$",
+    "explanation": "^1 锚定以 1 开头，[3-9] 第二位 3-9，\\d{9} 后 9 位数字，$ 锚定结尾，共 11 位。'123...' 第二位是 2 不匹配；少一位也不匹配。",
+    "tags": ["实战", "锚点"]
+  },
+  {
+    "id": "regex-top-016",
+    "skill": "regex",
+    "level": "top",
+    "type": "fill",
+    "title": "写一个正则，匹配 YYYY-MM-DD 格式日期（年 1000-2999，月 01-12，日 01-31）。",
+    "hint": "[12]\\d{3}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])",
+    "testCases": [
+      { "input": "2024-01-15", "expected": ["2024-01-15"], "expectedType": "match" },
+      { "input": "1999-12-31", "expected": ["1999-12-31"], "expectedType": "match" },
+      { "input": "2024-13-01", "expected": [], "expectedType": "nomatch" },
+      { "input": "2024-00-15", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "[12]\\d{3}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])",
+    "explanation": "[12]\\d{3} 匹配 1000-2999 年；(?:0[1-9]|1[0-2]) 匹配 01-12 月；(?:0[1-9]|[12]\\d|3[01]) 匹配 01-31 日。注意未校验每月实际天数。",
+    "tags": ["实战", "分组"]
+  },
+  {
+    "id": "regex-top-017",
+    "skill": "regex",
+    "level": "top",
+    "type": "fill",
+    "title": "写一个正则，匹配强密码：至少8位，包含大小写字母和数字。",
+    "hint": "用多个环视分别校验",
+    "testCases": [
+      { "input": "Abc12345", "expected": ["Abc12345"], "expectedType": "match" },
+      { "input": "abc12345", "expected": [], "expectedType": "nomatch" },
+      { "input": "ABC12345", "expected": [], "expectedType": "nomatch" },
+      { "input": "Abc1", "expected": [], "expectedType": "nomatch" }
+    ],
+    "referenceAnswer": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$",
+    "explanation": "三个顺序肯定环视分别要求含小写、大写、数字（不消耗字符），.{8,} 要求总长至少 8 位。'abc12345' 缺大写不匹配。",
+    "tags": ["实战", "环视"]
   }
 ]

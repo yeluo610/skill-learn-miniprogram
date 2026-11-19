@@ -59,5 +59,88 @@
     "referenceAnswer": "$.books[?(@.title =~ /^A/)]",
     "explanation": "=~ /regex/ 做正则匹配，^A 匹配以 A 开头的标题。结果包含 Apple 和 Apricot。",
     "tags": ["过滤", "正则"]
+  },
+  {
+    "id": "jsonpath-top-006",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "JSONPath 过滤表达式支持的运算符包括？",
+    "options": ["== != < > && || =~", "仅 ==", "仅 < >", "仅 &&"],
+    "answer": 0,
+    "explanation": "标准 JSONPath 过滤支持相等/不等、大小比较、逻辑与或、正则匹配 =~。不同实现支持度不一。",
+    "tags": ["过滤", "脚本"]
+  },
+  {
+    "id": "jsonpath-top-007",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "$..book[(@.length-1)] 表示什么？",
+    "options": ["每个 book 数组的最后一个元素", "book 数组长度", "第一个元素", "语法错误"],
+    "answer": 0,
+    "explanation": "(@.length-1) 是脚本表达式，计算当前数组长度减 1，作为下标，取每个 book 数组的最后一个元素。等价于 [-1]。",
+    "tags": ["脚本", "下标"]
+  },
+  {
+    "id": "jsonpath-top-008",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "$[(@.length-1)] 中 length 是什么？",
+    "options": ["当前数组的长度", "字符串长度", "字段名", "错误"],
+    "answer": 0,
+    "explanation": "@.length 在脚本表达式中表示当前数组的长度，常用于取最后一个元素或切片。",
+    "tags": ["脚本"]
+  },
+  {
+    "id": "jsonpath-top-009",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "$..[?(@.price)] 取出哪些？",
+    "options": ["任意层级含有 price 字段的元素", "price 的值", "全部元素", "语法错误"],
+    "answer": 0,
+    "explanation": "$.. 递归找所有层级，[?(@.price)] 过滤含 price 字段（真值）的元素。常用于查找含某字段的节点。",
+    "tags": ["递归", "过滤"]
+  },
+  {
+    "id": "jsonpath-top-010",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "$..* 与 $.* 的区别？",
+    "options": ["前者递归所有层级，后者仅第一层", "完全相同", "前者只叶子", "后者递归"],
+    "answer": 0,
+    "explanation": "$.* 仅取根下第一层字段值；$..* 递归所有层级的所有值。",
+    "tags": ["递归", "通配符"]
+  },
+  {
+    "id": "jsonpath-top-011",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "递归查找所有 active 为 true 的元素。",
+    "hint": "$..[?(@.active == true)]",
+    "testCases": [
+      { "input": "{\"a\":{\"active\":true},\"b\":{\"active\":false},\"c\":{\"d\":{\"active\":true}}}", "expected": ["{\"active\":true}", "{\"active\":true}"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$..[?(@.active == true)]",
+    "explanation": "$.. 递归，过滤 active 为 true 的元素。结果包含两层级的两个 active:true 对象。",
+    "tags": ["递归", "过滤"]
+  },
+  {
+    "id": "jsonpath-top-012",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "找出 books 中 name 字段包含 'a' 的元素（用正则匹配）。",
+    "hint": "=~ /a/",
+    "testCases": [
+      { "input": "{\"books\":[{\"name\":\"cat\"},{\"name\":\"dog\"},{\"name\":\"ant\"}]}", "expected": ["{\"name\":\"cat\"}", "{\"name\":\"ant\"}"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.books[?(@.name =~ /a/)]",
+    "explanation": "=~ /a/ 做正则匹配，name 含字母 a 的元素被筛出。'cat' 和 'ant' 含 a，'dog' 不含。",
+    "tags": ["过滤", "正则"]
   }
 ]

@@ -60,5 +60,91 @@
     "referenceAnswer": "$.books[?(@.category == 'fiction')]",
     "explanation": "[?(@.category == 'fiction')] 过滤出 category 等于 'fiction' 的元素。",
     "tags": ["过滤"]
+  },
+  {
+    "id": "jsonpath-high-006",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "$..* 会返回什么？",
+    "options": ["所有层级的所有值", "仅根对象", "仅叶子值", "错误语法"],
+    "answer": 0,
+    "explanation": "$..* 递归下降 + 通配，返回 JSON 中所有层级的所有元素值（包括嵌套对象、数组、叶子值）。",
+    "tags": ["递归", "通配符"]
+  },
+  {
+    "id": "jsonpath-high-007",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "$.store..price 与 $..price 的区别？",
+    "options": ["前者从 store 起递归，后者从根起", "完全相同", "前者只一层", "后者只一层"],
+    "answer": 0,
+    "explanation": ".. 起点决定递归范围。$..price 从根递归；$.store..price 仅从 store 字段起递归。结果可能不同。",
+    "tags": ["递归", "陷阱"]
+  },
+  {
+    "id": "jsonpath-high-008",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "$..book[?((@.price < 30) && (@.category == 'fiction'))] 表示？",
+    "options": ["任意层级 book 中价格<30 且类别为fiction 的项", "价格<30 或 类别fiction", "全部 book", "语法错误"],
+    "answer": 0,
+    "explanation": "嵌套括号组合 && 与条件，从任意层级 book 中过滤同时满足价格<30 且类别为fiction 的元素。",
+    "tags": ["递归", "过滤"]
+  },
+  {
+    "id": "jsonpath-high-009",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "$.data[?(@.active)] 取出哪些元素？",
+    "options": ["active 为真的元素", "全部元素", "active 字段", "错误语法"],
+    "answer": 0,
+    "explanation": "过滤表达式 @.active 取真值元素，等价于 active 为 true 的项。",
+    "tags": ["过滤"]
+  },
+  {
+    "id": "jsonpath-high-010",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归查找所有叫 id 的字段值。",
+    "hint": "$..id",
+    "testCases": [
+      { "input": "{\"a\":{\"id\":1},\"b\":{\"c\":{\"id\":2}}}", "expected": ["1", "2"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$..id",
+    "explanation": ".. 递归下降，$..id 找出所有层级的 id 字段值。",
+    "tags": ["递归"]
+  },
+  {
+    "id": "jsonpath-high-011",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "从 books 中筛选 category 为 'fiction' 或 category 为 'history' 的书。",
+    "hint": "用 || 逻辑或",
+    "testCases": [
+      { "input": "{\"books\":[{\"category\":\"fiction\"},{\"category\":\"science\"},{\"category\":\"history\"}]}", "expected": ["{\"category\":\"fiction\"}", "{\"category\":\"history\"}"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$.books[?(@.category == 'fiction' || @.category == 'history')]",
+    "explanation": "|| 是逻辑或，过滤出满足任一条件的元素。",
+    "tags": ["过滤"]
+  },
+  {
+    "id": "jsonpath-high-012",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归查找所有数组（任意层级），并取每个数组的第一个元素。",
+    "hint": "$..*[0] 或类似",
+    "testCases": [
+      { "input": "{\"a\":[1,2,3],\"b\":{\"c\":[4,5]}}", "expected": ["1", "4"], "expectedType": "equal" }
+    ],
+    "referenceAnswer": "$..[0]",
+    "explanation": "$..[0] 递归找所有数组并取下标 0 元素。",
+    "tags": ["递归"]
   }
 ]
