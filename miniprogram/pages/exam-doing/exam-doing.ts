@@ -129,7 +129,7 @@ Page({
     } catch (e) {
       wx.hideLoading()
       this.setData({ submitting: false })
-      this.showError('网络错误，请检查 submitExam 云函数是否部署')
+      this.showError((e as Error).message || '网络错误，请检查 submitExam 云函数是否部署')
     }
   },
 

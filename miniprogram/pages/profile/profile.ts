@@ -53,7 +53,7 @@ Page({
         wx.showToast({ title: res.error || '登录失败', icon: 'none' })
       }
     } catch (e) {
-      wx.showToast({ title: '网络错误', icon: 'none' })
+      wx.showToast({ title: (e as Error).message || '网络错误', icon: 'none', duration: 3000 })
     }
     this.setData({ logging: false })
   },

@@ -1,15 +1,21 @@
 /**
  * 云函数调用封装
  */
-type CloudFn = <T = unknown>(name: string, data?: unknown) => Promise<T>
+interface CloudError extends Error {
+  errMsg?: string
+}
 
-const call: CloudFn = (name, data) =>
+const call = <T = unknown>(name: string, data?: unknown): Promise<T> =>
   new Promise((resolve, reject) => {
     wx.cloud.callFunction({
       name,
       data,
       success: (res) => resolve(res.result as any),
-      fail: (err) => reject(err),
+      fail: (err) => {
+        const e: CloudError = new Error(err.errMsg || `调用云函数 ${name} 失败`)
+        e.errMsg = err.errMsg
+        reject(e)
+      },
     })
   })
 

@@ -12,30 +12,34 @@ exports.main = async (event) => {
   const openid = wxCtx.OPENID
   if (!openid) return { ok: false, error: '获取 openid 失败' }
 
-  const { nickname = '', avatarUrl = '' } = event || {}
-  const users = db.collection('users')
+  try {
+    const { nickname = '', avatarUrl = '' } = event || {}
+    const users = db.collection('users')
 
-  // 查用户
-  const found = await users.where({ _openid: openid }).get()
-  if (found.data.length === 0) {
-    await users.add({
-      data: {
-        _openid: openid,
-        nickname,
-        avatarUrl,
-        createdAt: Date.now(),
-      },
-    })
-  } else if (nickname || avatarUrl) {
-    const update: Record<string, unknown> = {}
-    if (nickname) update.nickname = nickname
-    if (avatarUrl) update.avatarUrl = avatarUrl
-    await users.where({ _openid: openid }).update({ data: update })
-  }
+    // 查用户
+    const found = await users.where({ _openid: openid }).get()
+    if (found.data.length === 0) {
+      await users.add({
+        data: {
+          _openid: openid,
+          nickname,
+          avatarUrl,
+          createdAt: Date.now(),
+        },
+      })
+    } else if (nickname || avatarUrl) {
+      const update = {}
+      if (nickname) update.nickname = nickname
+      if (avatarUrl) update.avatarUrl = avatarUrl
+      await users.where({ _openid: openid }).update({ data: update })
+    }
 
-  const user = found.data[0] || (await users.where({ _openid: openid }).get()).data[0]
-  return {
-    ok: true,
-    data: { openid, nickname: user?.nickname || nickname, avatarUrl: user?.avatarUrl || avatarUrl },
+    const user = found.data[0] || (await users.where({ _openid: openid }).get()).data[0]
+    return {
+      ok: true,
+      data: { openid, nickname: (user && user.nickname) || nickname, avatarUrl: (user && user.avatarUrl) || avatarUrl },
+    }
+  } catch (e) {
+    return { ok: false, error: `登录云函数错误：${e.message || String(e)}` }
   }
 }

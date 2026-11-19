@@ -91,63 +91,64 @@ exports.main = async (event) => {
   const { examId, answers } = event || {}
   if (!examId || !answers) return { ok: false, error: '参数缺失' }
 
-  const recRes = await db.collection('exam_records').doc(examId).get()
-  const rec = recRes.data
-  if (!rec || rec._openid !== openid) return { ok: false, error: '考试记录不存在' }
+  try {
+    const recRes = await db.collection('exam_records').doc(examId).get()
+    const rec = recRes.data
+    if (!rec || rec._openid !== openid) return { ok: false, error: '考试记录不存在或无权访问' }
 
-  // 拉题目（按 questionId 一次拿）
-  const idArr = rec.questionIds
-  const qRes = await db.collection('questions').where({ id: _.in(idArr) }).limit(200).get()
-  const qMap = new Map(qRes.data.map((q) => [q.id, q]))
+    // 拉题目（按 questionId 一次拿）
+    const idArr = rec.questionIds || []
+    const qRes = await db.collection('questions').where({ id: _.in(idArr) }).limit(200).get()
+    const qMap = new Map(qRes.data.map((q) => [q.id, q]))
 
-  let score = 0
-  const details = []
-  const wrongNow = []
-  for (const qid of idArr) {
-    const q = qMap.get(qid)
-    if (!q) continue
-    const ua = answers[qid]
-    let correct = false
-    if (q.type === 'choice') {
-      correct = Number(ua) === q.answer
-    } else if (q.type === 'fill' && q.testCases) {
-      const checker = q.skill === 'regex' ? regexChecker : q.skill === 'jsonpath' ? jsonpathChecker : null
-      if (checker) correct = checker(String(ua), q.testCases).pass
-    }
-    if (correct) score++
-    else wrongNow.push(q)
-    details.push({
-      questionId: qid,
-      correct,
-      correctAnswer: q.answer,
-      referenceAnswer: q.referenceAnswer,
-      explanation: q.explanation,
-      question: q,
-      userAnswer: ua,
-    })
-  }
-
-  // 更新考试记录
-  await db.collection('exam_records').doc(examId).update({
-    data: { answers, score, total: idArr.length, finishedAt: Date.now() },
-  })
-
-  // 错题入错题本
-  const now = Date.now()
-  const wb = db.collection('wrong_questions')
-  for (const q of wrongNow) {
-    const exist = await wb.where({ _openid: openid, questionId: q.id }).limit(1).get()
-    if (exist.data.length === 0) {
-      await wb.add({
-        data: { _openid: openid, skill: q.skill, questionId: q.id, source: 'exam', status: 'unreviewed', addedAt: now, updatedAt: now },
+    let score = 0
+    const details = []
+    const wrongNow = []
+    for (const qid of idArr) {
+      const q = qMap.get(qid)
+      if (!q) continue
+      const ua = answers[qid]
+      let correct = false
+      if (q.type === 'choice') {
+        correct = Number(ua) === q.answer
+      } else if (q.type === 'fill' && q.testCases) {
+        const checker = q.skill === 'regex' ? regexChecker : q.skill === 'jsonpath' ? jsonpathChecker : null
+        if (checker) correct = checker(String(ua), q.testCases).pass
+      }
+      if (correct) score++
+      else wrongNow.push(q)
+      details.push({
+        questionId: qid,
+        correct,
+        correctAnswer: q.answer,
+        referenceAnswer: q.referenceAnswer,
+        explanation: q.explanation,
+        question: q,
+        userAnswer: ua,
       })
-    } else {
-      await wb.doc(exist.data[0]._id).update({ data: { status: 'unreviewed', updatedAt: now } })
     }
-  }
 
-  return {
-    ok: true,
-    data: { score, total: idArr.length, details },
+    // 更新考试记录
+    await db.collection('exam_records').doc(examId).update({
+      data: { answers, score, total: idArr.length, finishedAt: Date.now() },
+    })
+
+    // 错题入错题本
+    const now = Date.now()
+    const wb = db.collection('wrong_questions')
+    for (const q of wrongNow) {
+      const exist = await wb.where({ _openid: openid, questionId: q.id }).limit(1).get()
+      if (exist.data.length === 0) {
+        await wb.add({
+          data: { _openid: openid, skill: q.skill, questionId: q.id, source: 'exam', status: 'unreviewed', addedAt: now, updatedAt: now },
+        })
+      } else {
+        await wb.doc(exist.data[0]._id).update({ data: { status: 'unreviewed', updatedAt: now } })
+      }
+    }
+
+    return { ok: true, data: { score, total: idArr.length, details } }
+  } catch (e) {
+    return { ok: false, error: `云函数错误：${e.message || String(e)}` }
   }
 }
