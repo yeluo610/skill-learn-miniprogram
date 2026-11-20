@@ -33,6 +33,21 @@ function stringify(v) {
   return JSON.stringify(v)
 }
 
+/** 命令归一化：trim、合并空白、小写 */
+function normalizeCmd(s) {
+  return String(s).trim().replace(/\s+/g, ' ').toLowerCase()
+}
+function cmdChecker(userInput, testCases) {
+  const details = testCases.map((tc) => {
+    const expArr = Array.isArray(tc.expected) ? tc.expected : [tc.expected]
+    const got = normalizeCmd(userInput)
+    const expList = expArr.map(normalizeCmd)
+    const pass = expList.includes(got)
+    return { pass, got: String(userInput).trim(), expected: expArr.join(' | ') }
+  })
+  return { pass: details.length > 0 && details.every((d) => d.pass), details, error: undefined }
+}
+
 function regexChecker(userInput, testCases) {
   let re
   try {
@@ -122,7 +137,10 @@ exports.main = async (event) => {
     if (!q.testCases || q.testCases.length === 0) {
       return { ok: false, error: '填空题缺少测试用例' }
     }
-    const checker = skill === 'regex' ? regexChecker : skill === 'jsonpath' ? jsonpathChecker : null
+    const checker = skill === 'regex' ? regexChecker
+      : skill === 'jsonpath' ? jsonpathChecker
+      : (skill === 'linux' || skill === 'kubectl') ? cmdChecker
+      : null
     if (!checker) return { ok: false, error: `板块 ${skill} 暂不支持填空题` }
     checkResult = checker(String(answer), q.testCases)
     correct = checkResult.pass

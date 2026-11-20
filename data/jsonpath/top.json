@@ -5,10 +5,18 @@
     "level": "top",
     "type": "choice",
     "title": "$..book[0] 在存在多层 book 字段时返回什么？",
-    "options": ["每层 book 数组的第一个元素（多个）", "仅根层的第一个", "报错", "全部 book"],
+    "options": [
+      "每层 book 数组的第一个元素（多个）",
+      "仅根层的第一个",
+      "报错",
+      "全部 book"
+    ],
     "answer": 0,
     "explanation": ".. 递归查找所有 book，再 [0] 取每个找到的 book 数组的第一个元素。结果可能是多个。",
-    "tags": ["递归", "陷阱"]
+    "tags": [
+      "递归",
+      "陷阱"
+    ]
   },
   {
     "id": "jsonpath-top-002",
@@ -16,10 +24,18 @@
     "level": "top",
     "type": "choice",
     "title": "JSONPath 过滤表达式中支持的正则匹配写法是？",
-    "options": ["=~ /pattern/", "== /pattern/", "like 'pattern'", "match(pattern)"],
+    "options": [
+      "=~ /pattern/",
+      "== /pattern/",
+      "like 'pattern'",
+      "match(pattern)"
+    ],
     "answer": 0,
     "explanation": "标准 JSONPath 用 =~ /regex/ 做正则匹配，如 [?(@.name =~ /^Tom.*/)]。不同实现支持度不一。",
-    "tags": ["过滤", "脚本"]
+    "tags": [
+      "过滤",
+      "脚本"
+    ]
   },
   {
     "id": "jsonpath-top-003",
@@ -27,10 +43,18 @@
     "level": "top",
     "type": "choice",
     "title": "$.store..price 与 $..price 的区别？",
-    "options": ["前者从 store 起递归；后者从根起递归", "完全相同", "前者只一层", "后者只一层"],
+    "options": [
+      "前者从 store 起递归；后者从根起递归",
+      "完全相同",
+      "前者只一层",
+      "后者只一层"
+    ],
     "answer": 0,
     "explanation": ".. 的起点决定递归范围。$..price 从根递归；$.store..price 从 store 字段起递归。结果可能不同。",
-    "tags": ["递归", "陷阱"]
+    "tags": [
+      "递归",
+      "陷阱"
+    ]
   },
   {
     "id": "jsonpath-top-004",
@@ -40,11 +64,21 @@
     "title": "找出 JSON 中所有 price 字段值（递归，不限层级）。",
     "hint": "$..price",
     "testCases": [
-      { "input": "{\"store\":{\"book\":[{\"price\":10},{\"price\":20}],\"bike\":{\"price\":100}}}", "expected": ["10", "20", "100"], "expectedType": "equal" }
+      {
+        "input": "{\"store\":{\"book\":[{\"price\":10},{\"price\":20}],\"bike\":{\"price\":100}}}",
+        "expected": [
+          "10",
+          "20",
+          "100"
+        ],
+        "expectedType": "equal"
+      }
     ],
     "referenceAnswer": "$..price",
     "explanation": "$..price 从根递归找所有 price，无论是 book 数组里还是 bike 对象里。",
-    "tags": ["递归"]
+    "tags": [
+      "递归"
+    ]
   },
   {
     "id": "jsonpath-top-005",
@@ -54,11 +88,21 @@
     "title": "找出 books 中标题以 'A' 开头的书。",
     "hint": "过滤用 =~ /^A/",
     "testCases": [
-      { "input": "{\"books\":[{\"title\":\"Apple\"},{\"title\":\"Banana\"},{\"title\":\"Apricot\"}]}", "expected": ["{\"title\":\"Apple\"}", "{\"title\":\"Apricot\"}"], "expectedType": "equal" }
+      {
+        "input": "{\"books\":[{\"title\":\"Apple\"},{\"title\":\"Banana\"},{\"title\":\"Apricot\"}]}",
+        "expected": [
+          "{\"title\":\"Apple\"}",
+          "{\"title\":\"Apricot\"}"
+        ],
+        "expectedType": "equal"
+      }
     ],
     "referenceAnswer": "$.books[?(@.title =~ /^A/)]",
     "explanation": "=~ /regex/ 做正则匹配，^A 匹配以 A 开头的标题。结果包含 Apple 和 Apricot。",
-    "tags": ["过滤", "正则"]
+    "tags": [
+      "过滤",
+      "正则"
+    ]
   },
   {
     "id": "jsonpath-top-006",
@@ -66,10 +110,18 @@
     "level": "top",
     "type": "choice",
     "title": "JSONPath 过滤表达式支持的运算符包括？",
-    "options": ["== != < > && || =~", "仅 ==", "仅 < >", "仅 &&"],
+    "options": [
+      "== != < > && || =~",
+      "仅 ==",
+      "仅 < >",
+      "仅 &&"
+    ],
     "answer": 0,
     "explanation": "标准 JSONPath 过滤支持相等/不等、大小比较、逻辑与或、正则匹配 =~。不同实现支持度不一。",
-    "tags": ["过滤", "脚本"]
+    "tags": [
+      "过滤",
+      "脚本"
+    ]
   },
   {
     "id": "jsonpath-top-007",
@@ -77,10 +129,18 @@
     "level": "top",
     "type": "choice",
     "title": "$..book[(@.length-1)] 表示什么？",
-    "options": ["每个 book 数组的最后一个元素", "book 数组长度", "第一个元素", "语法错误"],
+    "options": [
+      "每个 book 数组的最后一个元素",
+      "book 数组长度",
+      "第一个元素",
+      "语法错误"
+    ],
     "answer": 0,
     "explanation": "(@.length-1) 是脚本表达式，计算当前数组长度减 1，作为下标，取每个 book 数组的最后一个元素。等价于 [-1]。",
-    "tags": ["脚本", "下标"]
+    "tags": [
+      "脚本",
+      "下标"
+    ]
   },
   {
     "id": "jsonpath-top-008",
@@ -88,10 +148,17 @@
     "level": "top",
     "type": "choice",
     "title": "$[(@.length-1)] 中 length 是什么？",
-    "options": ["当前数组的长度", "字符串长度", "字段名", "错误"],
+    "options": [
+      "当前数组的长度",
+      "字符串长度",
+      "字段名",
+      "错误"
+    ],
     "answer": 0,
     "explanation": "@.length 在脚本表达式中表示当前数组的长度，常用于取最后一个元素或切片。",
-    "tags": ["脚本"]
+    "tags": [
+      "脚本"
+    ]
   },
   {
     "id": "jsonpath-top-009",
@@ -99,10 +166,18 @@
     "level": "top",
     "type": "choice",
     "title": "$..[?(@.price)] 取出哪些？",
-    "options": ["任意层级含有 price 字段的元素", "price 的值", "全部元素", "语法错误"],
+    "options": [
+      "任意层级含有 price 字段的元素",
+      "price 的值",
+      "全部元素",
+      "语法错误"
+    ],
     "answer": 0,
     "explanation": "$.. 递归找所有层级，[?(@.price)] 过滤含 price 字段（真值）的元素。常用于查找含某字段的节点。",
-    "tags": ["递归", "过滤"]
+    "tags": [
+      "递归",
+      "过滤"
+    ]
   },
   {
     "id": "jsonpath-top-010",
@@ -110,10 +185,18 @@
     "level": "top",
     "type": "choice",
     "title": "$..* 与 $.* 的区别？",
-    "options": ["前者递归所有层级，后者仅第一层", "完全相同", "前者只叶子", "后者递归"],
+    "options": [
+      "前者递归所有层级，后者仅第一层",
+      "完全相同",
+      "前者只叶子",
+      "后者递归"
+    ],
     "answer": 0,
     "explanation": "$.* 仅取根下第一层字段值；$..* 递归所有层级的所有值。",
-    "tags": ["递归", "通配符"]
+    "tags": [
+      "递归",
+      "通配符"
+    ]
   },
   {
     "id": "jsonpath-top-011",
@@ -123,11 +206,21 @@
     "title": "递归查找所有 active 为 true 的元素。",
     "hint": "$..[?(@.active == true)]",
     "testCases": [
-      { "input": "{\"a\":{\"active\":true},\"b\":{\"active\":false},\"c\":{\"d\":{\"active\":true}}}", "expected": ["{\"active\":true}", "{\"active\":true}"], "expectedType": "equal" }
+      {
+        "input": "{\"a\":{\"active\":true},\"b\":{\"active\":false},\"c\":{\"d\":{\"active\":true}}}",
+        "expected": [
+          "{\"active\":true}",
+          "{\"active\":true}"
+        ],
+        "expectedType": "equal"
+      }
     ],
     "referenceAnswer": "$..[?(@.active == true)]",
     "explanation": "$.. 递归，过滤 active 为 true 的元素。结果包含两层级的两个 active:true 对象。",
-    "tags": ["递归", "过滤"]
+    "tags": [
+      "递归",
+      "过滤"
+    ]
   },
   {
     "id": "jsonpath-top-012",
@@ -137,10 +230,99 @@
     "title": "找出 books 中 name 字段包含 'a' 的元素（用正则匹配）。",
     "hint": "=~ /a/",
     "testCases": [
-      { "input": "{\"books\":[{\"name\":\"cat\"},{\"name\":\"dog\"},{\"name\":\"ant\"}]}", "expected": ["{\"name\":\"cat\"}", "{\"name\":\"ant\"}"], "expectedType": "equal" }
+      {
+        "input": "{\"books\":[{\"name\":\"cat\"},{\"name\":\"dog\"},{\"name\":\"ant\"}]}",
+        "expected": [
+          "{\"name\":\"cat\"}",
+          "{\"name\":\"ant\"}"
+        ],
+        "expectedType": "equal"
+      }
     ],
     "referenceAnswer": "$.books[?(@.name =~ /a/)]",
     "explanation": "=~ /a/ 做正则匹配，name 含字母 a 的元素被筛出。'cat' 和 'ant' 含 a，'dog' 不含。",
-    "tags": ["过滤", "正则"]
+    "tags": [
+      "过滤",
+      "正则"
+    ]
+  },
+  {
+    "id": "jsonpath-top-013",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「过滤陷阱」，下列正确的是？",
+    "options": [
+      "过滤表达式中 @ 与 $ 的区别。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "过滤表达式中 @ 与 $ 的区别。",
+    "tags": [
+      "JSONPath",
+      "过滤陷阱"
+    ]
+  },
+  {
+    "id": "jsonpath-top-014",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「切片步长」，下列正确的是？",
+    "options": [
+      "[::2] 步长切片。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[::2] 步长切片。",
+    "tags": [
+      "JSONPath",
+      "切片步长"
+    ]
+  },
+  {
+    "id": "jsonpath-top-015",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「空结果」，下列正确的是？",
+    "options": [
+      "不存在的字段返回空数组而非报错。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "不存在的字段返回空数组而非报错。",
+    "tags": [
+      "JSONPath",
+      "空结果"
+    ]
+  },
+  {
+    "id": "jsonpath-top-016",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "写一个 JSONPath，取 {\"list\":[10,20,30,40,50]} 中下标 0、2、4 的元素（步长切片）。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "10",
+          "30",
+          "50"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[::2]",
+    "explanation": "[::2] 从头到尾步长 2。",
+    "tags": [
+      "切片步长"
+    ]
   }
 ]

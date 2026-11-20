@@ -1,0 +1,578 @@
+[
+  {
+    "id": "linux-top-001",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "查看系统负载的命令是？",
+    "options": [
+      "uptime",
+      "load",
+      "top",
+      "free"
+    ],
+    "answer": 0,
+    "explanation": "uptime 显示运行时间和平均负载。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-002",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "查看打开文件的命令是？",
+    "options": [
+      "lsof",
+      "openfiles",
+      "files",
+      "fuser"
+    ],
+    "answer": 0,
+    "explanation": "lsof 列出打开的文件和进程。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-003",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "跟踪系统调用的命令是？",
+    "options": [
+      "strace",
+      "trace",
+      "sys",
+      "ptrace"
+    ],
+    "answer": 0,
+    "explanation": "strace 跟踪进程的系统调用。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-004",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "跟踪库调用的命令是？",
+    "options": [
+      "ltrace",
+      "libtrace",
+      "ldtrace",
+      "strace"
+    ],
+    "answer": 0,
+    "explanation": "ltrace 跟踪库函数调用。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-005",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "性能分析工具是？",
+    "options": [
+      "perf",
+      "prof",
+      "perfmon",
+      "bench"
+    ],
+    "answer": 0,
+    "explanation": "perf 是 Linux 性能分析工具。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-006",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 IO 情况的命令是？",
+    "options": [
+      "iostat",
+      "iostat",
+      "io",
+      "diskstat"
+    ],
+    "answer": 0,
+    "explanation": "iostat 查看 IO 统计。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-007",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 CPU 情况的命令是？",
+    "options": [
+      "mpstat",
+      "cpustat",
+      "cpu",
+      "top"
+    ],
+    "answer": 0,
+    "explanation": "mpstat 查看各 CPU 统计。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-008",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "查看进程资源用？",
+    "options": [
+      "pidstat",
+      "procstat",
+      "psstat",
+      "pstat"
+    ],
+    "answer": 0,
+    "explanation": "pidstat 查看进程资源使用。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-009",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "定时任务管理命令是？",
+    "options": [
+      "crontab",
+      "cron",
+      "schedule",
+      "timer"
+    ],
+    "answer": 0,
+    "explanation": "crontab -e 编辑定时任务。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-010",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "crontab 中 * * * * * 含义？",
+    "options": [
+      "每分钟",
+      "每小时",
+      "每天",
+      "每秒"
+    ],
+    "answer": 0,
+    "explanation": "5 个字段：分 时 日 月 周，全 * 是每分钟。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-011",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "systemctl 重启服务？",
+    "options": [
+      "systemctl restart svc",
+      "systemctl reload svc",
+      "systemctl start svc",
+      "systemctl stop svc"
+    ],
+    "answer": 0,
+    "explanation": "restart 重启服务。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-012",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "查看服务状态用？",
+    "options": [
+      "systemctl status svc",
+      "systemctl show svc",
+      "service svc",
+      "svc status"
+    ],
+    "answer": 0,
+    "explanation": "systemctl status 查看服务运行状态。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-013",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "journalctl 查看日志用？",
+    "options": [
+      "journalctl -u svc",
+      "log svc",
+      "dmesg",
+      "syslog"
+    ],
+    "answer": 0,
+    "explanation": "journalctl -u 查看某服务日志。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-014",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "tar 解压 .tar.gz？",
+    "options": [
+      "tar -xzf f.tar.gz",
+      "tar -czf f.tar.gz",
+      "tar -xf f.tar.gz",
+      "untar f.tar.gz"
+    ],
+    "answer": 0,
+    "explanation": "-x 解压，-z gzip，-f 指定文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-015",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "find 按大小查找？",
+    "options": [
+      "find . -size +1M",
+      "find . -big 1M",
+      "find . -s 1M",
+      "find . -1M"
+    ],
+    "answer": 0,
+    "explanation": "-size +1M 找大于 1M 的文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-016",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "find 按时间查找（修改）？",
+    "options": [
+      "find . -mtime -7",
+      "find . -time 7",
+      "find . -m 7",
+      "find . -age 7"
+    ],
+    "answer": 0,
+    "explanation": "-mtime -7 表示 7 天内修改。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-017",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "环境变量 PATH 用？",
+    "options": [
+      "echo $PATH",
+      "echo PATH",
+      "print PATH",
+      "show PATH"
+    ],
+    "answer": 0,
+    "explanation": "$PATH 引用环境变量。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-018",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "export 的作用是？",
+    "options": [
+      "导出为环境变量",
+      "导出文件",
+      "退出",
+      "执行"
+    ],
+    "answer": 0,
+    "explanation": "export 把变量设为环境变量，子进程可继承。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-019",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "alias 的作用是？",
+    "options": [
+      "设置命令别名",
+      "别名文件",
+      "列表",
+      "对齐"
+    ],
+    "answer": 0,
+    "explanation": "alias ll=\"ls -la\" 设置别名。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-020",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "查看路由表用？",
+    "options": [
+      "ip route",
+      "route",
+      "routetable",
+      "paths"
+    ],
+    "answer": 0,
+    "explanation": "ip route 查看路由表（新版）。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-021",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "写一条命令，查看系统负载。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "uptime"
+      }
+    ],
+    "referenceAnswer": "uptime",
+    "explanation": "uptime 显示负载。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-022",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "写一条命令，编辑定时任务。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "crontab -e"
+      }
+    ],
+    "referenceAnswer": "crontab -e",
+    "explanation": "crontab -e 编辑定时任务。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-023",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "写一条命令，重启 nginx 服务（systemd）。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "systemctl restart nginx"
+      }
+    ],
+    "referenceAnswer": "systemctl restart nginx",
+    "explanation": "systemctl restart 重启。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-024",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "写一条命令，查看 nginx 服务状态。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "systemctl status nginx"
+      }
+    ],
+    "referenceAnswer": "systemctl status nginx",
+    "explanation": "systemctl status 状态。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-025",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "写一条命令，查看 nginx 服务日志。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "journalctl -u nginx"
+      }
+    ],
+    "referenceAnswer": "journalctl -u nginx",
+    "explanation": "journalctl -u 服务日志。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-026",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "写一条命令，解压 f.tar.gz。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "tar -xzf f.tar.gz"
+      }
+    ],
+    "referenceAnswer": "tar -xzf f.tar.gz",
+    "explanation": "tar -xzf 解压。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-027",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "写一条命令，查找大于 1M 的文件。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "find . -size +1M"
+      }
+    ],
+    "referenceAnswer": "find . -size +1M",
+    "explanation": "find -size 按大小。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-028",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "写一条命令，查找 7 天内修改的文件。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "find . -mtime -7"
+      }
+    ],
+    "referenceAnswer": "find . -mtime -7",
+    "explanation": "find -mtime 按时间。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-029",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "写一条命令，查看当前 PATH 变量。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "echo $PATH"
+      }
+    ],
+    "referenceAnswer": "echo $PATH",
+    "explanation": "echo $PATH 查看 PATH。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-030",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "写一条命令，把 MYVAR 导出为环境变量。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "export MYVAR"
+      }
+    ],
+    "referenceAnswer": "export MYVAR",
+    "explanation": "export 导出环境变量。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-031",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "写一条命令，设置 ll 别名为 ls -la。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "alias ll=\"ls -la\""
+      }
+    ],
+    "referenceAnswer": "alias ll=\"ls -la\"",
+    "explanation": "alias 设置别名。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-032",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "写一条命令，查看路由表。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "ip route"
+      }
+    ],
+    "referenceAnswer": "ip route",
+    "explanation": "ip route 路由表。",
+    "tags": [
+      "Linux"
+    ]
+  }
+]

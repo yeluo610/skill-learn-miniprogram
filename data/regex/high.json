@@ -5,10 +5,17 @@
     "level": "high",
     "type": "choice",
     "title": "下列哪个是顺序肯定环视（lookahead）？",
-    "options": ["(?=abc)", "(?!abc)", "(?<=abc)", "(?<!abc)"],
+    "options": [
+      "(?=abc)",
+      "(?!abc)",
+      "(?<=abc)",
+      "(?<!abc)"
+    ],
     "answer": 0,
     "explanation": "(?=abc) 顺序肯定环视，要求当前位置右侧能匹配 abc 但不消耗字符。(?!abc) 是顺序否定；(?<=abc) 逆序肯定；(?<!abc) 逆序否定。",
-    "tags": ["环视"]
+    "tags": [
+      "环视"
+    ]
   },
   {
     "id": "regex-high-002",
@@ -16,10 +23,18 @@
     "level": "high",
     "type": "choice",
     "title": "(?<=\\$)\\d+ 能匹配下列哪个？",
-    "options": ["$ 后面的数字", "数字后面的 $", "美元符号本身", "任意数字"],
+    "options": [
+      "$ 后面的数字",
+      "数字后面的 $",
+      "美元符号本身",
+      "任意数字"
+    ],
     "answer": 0,
     "explanation": "(?<=\\$) 逆序肯定环视，要求左侧是 $（\\$ 转义），\\d+ 匹配数字。整体匹配 $100 中的 '100'，不含 $。",
-    "tags": ["环视", "逆序"]
+    "tags": [
+      "环视",
+      "逆序"
+    ]
   },
   {
     "id": "regex-high-003",
@@ -27,10 +42,18 @@
     "level": "high",
     "type": "choice",
     "title": "\\d+(?!元) 表示什么？",
-    "options": ["后面不跟'元'的数字", "后面跟'元'的数字", "数字本身", "元字符"],
+    "options": [
+      "后面不跟'元'的数字",
+      "后面跟'元'的数字",
+      "数字本身",
+      "元字符"
+    ],
     "answer": 0,
     "explanation": "(?!元) 顺序否定环视，要求数字后面不跟 '元'。'100元'不匹配，'100克'匹配。",
-    "tags": ["环视", "顺序否定"]
+    "tags": [
+      "环视",
+      "顺序否定"
+    ]
   },
   {
     "id": "regex-high-004",
@@ -38,10 +61,18 @@
     "level": "high",
     "type": "choice",
     "title": "字符类中的 - 在什么位置时表示字面量？",
-    "options": ["放在开头或结尾", "放在中间", "永远不表示字面量", "需转义"],
+    "options": [
+      "放在开头或结尾",
+      "放在中间",
+      "永远不表示字面量",
+      "需转义"
+    ],
     "answer": 0,
     "explanation": "在字符类中，- 放在开头或结尾时是字面量，如 [-a] 或 [a-]。放中间表示范围，如 [a-z]。要安全表示字面 - 也可转义为 \\-。",
-    "tags": ["字符类", "陷阱"]
+    "tags": [
+      "字符类",
+      "陷阱"
+    ]
   },
   {
     "id": "regex-high-005",
@@ -49,10 +80,18 @@
     "level": "high",
     "type": "choice",
     "title": "下列哪个能匹配「不以0开头的数字串」？",
-    "options": ["^[1-9]\\d*$", "^\\d+$", "^[0-9]\\d*$", "^0\\d+$"],
+    "options": [
+      "^[1-9]\\d*$",
+      "^\\d+$",
+      "^[0-9]\\d*$",
+      "^0\\d+$"
+    ],
     "answer": 0,
     "explanation": "^[1-9]\\d*$：首位是 1-9，后面任意数字，锚定整串。'^0\\d+' 恰恰匹配以 0 开头的。",
-    "tags": ["锚点", "字符类"]
+    "tags": [
+      "锚点",
+      "字符类"
+    ]
   },
   {
     "id": "regex-high-006",
@@ -62,13 +101,32 @@
     "title": "写一个正则，匹配被英文引号包裹的内容（不含引号本身），如 \"hello\" 中的 hello。",
     "hint": "用环视 (?<=...)  (?=...)",
     "testCases": [
-      { "input": "\"hello\"", "expected": ["hello"], "expectedType": "match" },
-      { "input": "\"a\" \"b\"", "expected": ["a", "b"], "expectedType": "match" },
-      { "input": "no quotes", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "\"hello\"",
+        "expected": [
+          "hello"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "\"a\" \"b\"",
+        "expected": [
+          "a",
+          "b"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "no quotes",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "(?<=\")\\w+(?=\")",
     "explanation": "(?<=\") 逆序肯定环视要求左侧是引号，\\w+ 匹配单词，(?=\") 顺序肯定环视要求右侧是引号。整体只捕获引号间的单词部分。",
-    "tags": ["环视"]
+    "tags": [
+      "环视"
+    ]
   },
   {
     "id": "regex-high-007",
@@ -78,13 +136,33 @@
     "title": "写一个正则，匹配后面跟着数字但本身不是数字的字母。",
     "hint": "用顺序肯定环视 (?=\\d)",
     "testCases": [
-      { "input": "a1b2c", "expected": ["a", "b"], "expectedType": "match" },
-      { "input": "x9", "expected": ["x"], "expectedType": "match" },
-      { "input": "abc", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "a1b2c",
+        "expected": [
+          "a",
+          "b"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "x9",
+        "expected": [
+          "x"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "abc",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "[a-zA-Z](?=\\d)",
     "explanation": "[a-zA-Z] 匹配字母，(?=\\d) 顺序肯定环视要求右侧是数字但不消耗。'c' 后无数字不匹配。",
-    "tags": ["环视", "顺序肯定"]
+    "tags": [
+      "环视",
+      "顺序肯定"
+    ]
   },
   {
     "id": "regex-high-008",
@@ -94,13 +172,33 @@
     "title": "写一个正则，匹配字符串中不是以数字开头的部分（每个非数字开头的连续片段）。",
     "hint": "可简化为：匹配非数字字符序列",
     "testCases": [
-      { "input": "abc123def", "expected": ["abc", "def"], "expectedType": "match" },
-      { "input": "123abc", "expected": ["abc"], "expectedType": "match" },
-      { "input": "123456", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "abc123def",
+        "expected": [
+          "abc",
+          "def"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "123abc",
+        "expected": [
+          "abc"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "123456",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "\\D+",
     "explanation": "\\D+ 匹配一个或多个非数字字符的连续片段。'abc123def' 匹配出 'abc' 和 'def' 两段。",
-    "tags": ["字符类", "量词"]
+    "tags": [
+      "字符类",
+      "量词"
+    ]
   },
   {
     "id": "regex-high-009",
@@ -108,10 +206,18 @@
     "level": "high",
     "type": "choice",
     "title": "(?<!\\d)\\w+ 表示什么？",
-    "options": ["前面不是数字的单词字符序列", "前面是数字的单词", "任意单词", "数字后的单词"],
+    "options": [
+      "前面不是数字的单词字符序列",
+      "前面是数字的单词",
+      "任意单词",
+      "数字后的单词"
+    ],
     "answer": 0,
     "explanation": "(?<!\\d) 逆序否定环视，要求左侧不是数字。整体匹配前面不紧挨数字的 \\w+ 序列。",
-    "tags": ["环视", "逆序否定"]
+    "tags": [
+      "环视",
+      "逆序否定"
+    ]
   },
   {
     "id": "regex-high-010",
@@ -119,10 +225,18 @@
     "level": "high",
     "type": "choice",
     "title": "\\b\\w+\\b 能匹配什么？",
-    "options": ["完整的单词", "单词的一部分", "任意字符", "数字"],
+    "options": [
+      "完整的单词",
+      "单词的一部分",
+      "任意字符",
+      "数字"
+    ],
     "answer": 0,
     "explanation": "\\b...\\b 锚定单词边界，\\b\\w+\\b 匹配一个完整的单词（连续的字母数字下划线）。",
-    "tags": ["锚点", "单词边界"]
+    "tags": [
+      "锚点",
+      "单词边界"
+    ]
   },
   {
     "id": "regex-high-011",
@@ -130,10 +244,17 @@
     "level": "high",
     "type": "choice",
     "title": "下列哪个能匹配不在 <> 中的内容？",
-    "options": ["(?<!<)[^>]+(?!>)", "[^<>]+", "<.*?>", "<[^>]+>"],
+    "options": [
+      "(?<!<)[^>]+(?!>)",
+      "[^<>]+",
+      "<.*?>",
+      "<[^>]+>"
+    ],
     "answer": 1,
     "explanation": "[^<>]+ 匹配非 < > 的字符序列，简单有效。其他选项要么用环视复杂化，要么匹配的是标签。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-high-012",
@@ -141,10 +262,18 @@
     "level": "high",
     "type": "choice",
     "title": "\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01]) 匹配什么？",
-    "options": ["YYYY-MM-DD 日期", "时间", "电话", "IP地址"],
+    "options": [
+      "YYYY-MM-DD 日期",
+      "时间",
+      "电话",
+      "IP地址"
+    ],
     "answer": 0,
     "explanation": "4位年-月-日格式。月份 01-12，日期 01-31，用非捕获分组限定范围（未校验每月实际天数）。",
-    "tags": ["实战", "分组"]
+    "tags": [
+      "实战",
+      "分组"
+    ]
   },
   {
     "id": "regex-high-013",
@@ -152,10 +281,17 @@
     "level": "high",
     "type": "choice",
     "title": "字符串 'a1b2' 用 (?=\\d)\\w 匹配，结果是？",
-    "options": ["匹配 '1' 和 '2'", "匹配 'a' 和 'b'", "匹配整个串", "无匹配"],
+    "options": [
+      "匹配 '1' 和 '2'",
+      "匹配 'a' 和 'b'",
+      "匹配整个串",
+      "无匹配"
+    ],
     "answer": 0,
     "explanation": "(?=\\d) 顺序肯定环视要求右侧是数字，\\w 匹配当前字符。只有 '1' 和 '2' 位置满足（右侧不是数字则不匹配 'a' 'b'）。",
-    "tags": ["环视"]
+    "tags": [
+      "环视"
+    ]
   },
   {
     "id": "regex-high-014",
@@ -165,13 +301,31 @@
     "title": "写一个正则，匹配字符串中被 $ 包裹的金额数字（如 $100 中的 100，不含 $）。",
     "hint": "用逆序肯定环视 (?<=\\$)",
     "testCases": [
-      { "input": "price $100 and $200", "expected": ["100", "200"], "expectedType": "match" },
-      { "input": "no money", "expected": [], "expectedType": "nomatch" },
-      { "input": "cost 50", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "price $100 and $200",
+        "expected": [
+          "100",
+          "200"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "no money",
+        "expected": [],
+        "expectedType": "nomatch"
+      },
+      {
+        "input": "cost 50",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "(?<=\\$)\\d+",
     "explanation": "(?<=\\$) 逆序肯定环视要求左侧是 $（\\$ 转义），\\d+ 匹配数字。只取数字部分，不含 $。",
-    "tags": ["环视", "逆序肯定"]
+    "tags": [
+      "环视",
+      "逆序肯定"
+    ]
   },
   {
     "id": "regex-high-015",
@@ -181,13 +335,31 @@
     "title": "写一个正则，匹配后面跟着字母的数字（数字与字母直接相连，如 100g 中的 100）。",
     "hint": "用顺序肯定环视 (?=[a-zA-Z])",
     "testCases": [
-      { "input": "100g 200m", "expected": ["100", "200"], "expectedType": "match" },
-      { "input": "100 200", "expected": [], "expectedType": "nomatch" },
-      { "input": "abc", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "100g 200m",
+        "expected": [
+          "100",
+          "200"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "100 200",
+        "expected": [],
+        "expectedType": "nomatch"
+      },
+      {
+        "input": "abc",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "\\d+(?=[a-zA-Z])",
     "explanation": "(?=[a-zA-Z]) 顺序肯定环视要求右侧紧接字母，\\d+ 贪婪匹配数字但会在字母前停止。'100g' 匹配 '100'，纯数字 '100 200' 不匹配。",
-    "tags": ["环视", "顺序否定"]
+    "tags": [
+      "环视",
+      "顺序否定"
+    ]
   },
   {
     "id": "regex-high-016",
@@ -197,13 +369,32 @@
     "title": "写一个正则，匹配完整的英文单词 'cat'（前后是单词边界）。",
     "hint": "用 \\b 锚定",
     "testCases": [
-      { "input": "the cat sat", "expected": ["cat"], "expectedType": "match" },
-      { "input": "category cat", "expected": ["cat"], "expectedType": "match" },
-      { "input": "concat", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "the cat sat",
+        "expected": [
+          "cat"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "category cat",
+        "expected": [
+          "cat"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "concat",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "\\bcat\\b",
     "explanation": "\\b 锚定单词边界，\\bcat\\b 只匹配独立单词 'cat'，不匹配 'category' 或 'concat' 中的 cat。",
-    "tags": ["锚点", "单词边界"]
+    "tags": [
+      "锚点",
+      "单词边界"
+    ]
   },
   {
     "id": "regex-high-017",
@@ -213,12 +404,226 @@
     "title": "写一个正则，匹配 HTML 标签名（如 <div> 中的 div，不含 < >）。",
     "hint": "用环视提取标签名",
     "testCases": [
-      { "input": "<div>text", "expected": ["div"], "expectedType": "match" },
-      { "input": "<span>", "expected": ["span"], "expectedType": "match" },
-      { "input": "no tag", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "<div>text",
+        "expected": [
+          "div"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "<span>",
+        "expected": [
+          "span"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "no tag",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "(?<=<)\\w+",
     "explanation": "(?<=<) 逆序肯定环视要求左侧是 <，\\w+ 匹配标签名。不含 < 本身。",
-    "tags": ["环视", "实战"]
+    "tags": [
+      "环视",
+      "实战"
+    ]
+  },
+  {
+    "id": "regex-high-018",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「顺序肯定环视」，下列说法正确的是？",
+    "options": [
+      "(?=...) 顺序肯定环视，匹配后面是 ... 的位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?=...) 顺序肯定环视，匹配后面是 ... 的位置。",
+    "tags": [
+      "正则",
+      "顺序肯定环视"
+    ]
+  },
+  {
+    "id": "regex-high-019",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「顺序否定环视」，下列说法正确的是？",
+    "options": [
+      "(?!...) 顺序否定环视，匹配后面不是 ... 的位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?!...) 顺序否定环视，匹配后面不是 ... 的位置。",
+    "tags": [
+      "正则",
+      "顺序否定环视"
+    ]
+  },
+  {
+    "id": "regex-high-020",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「逆序肯定环视」，下列说法正确的是？",
+    "options": [
+      "(?<=...) 逆序肯定环视，匹配前面是 ... 的位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?<=...) 逆序肯定环视，匹配前面是 ... 的位置。",
+    "tags": [
+      "正则",
+      "逆序肯定环视"
+    ]
+  },
+  {
+    "id": "regex-high-021",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「逆序否定环视」，下列说法正确的是？",
+    "options": [
+      "(?<!...) 逆序否定环视，匹配前面不是 ... 的位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?<!...) 逆序否定环视，匹配前面不是 ... 的位置。",
+    "tags": [
+      "正则",
+      "逆序否定环视"
+    ]
+  },
+  {
+    "id": "regex-high-022",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「命名分组」，下列说法正确的是？",
+    "options": [
+      "(?<name>...) 命名分组，用 \\k<name> 引用。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?<name>...) 命名分组，用 \\k<name> 引用。",
+    "tags": [
+      "正则",
+      "命名分组"
+    ]
+  },
+  {
+    "id": "regex-high-023",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「回溯陷阱」，下列说法正确的是？",
+    "options": [
+      "贪婪量词 + 多个 .* 会导致大量回溯，性能差。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "贪婪量词 + 多个 .* 会导致大量回溯，性能差。",
+    "tags": [
+      "正则",
+      "回溯陷阱"
+    ]
+  },
+  {
+    "id": "regex-high-024",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "写一个正则，匹配后面跟着\"元\"的数字（如 \"100元\" 中的 100）。",
+    "testCases": [
+      {
+        "input": "100元 200块 300元",
+        "expected": [
+          "100",
+          "300"
+        ]
+      }
+    ],
+    "referenceAnswer": "/\\d+(?=元)/g",
+    "explanation": "(?=元) 顺序肯定环视，匹配后面是\"元\"的位置。",
+    "tags": [
+      "环视"
+    ]
+  },
+  {
+    "id": "regex-high-025",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "写一个正则，匹配不以数字开头的单词。",
+    "testCases": [
+      {
+        "input": "abc 1de f2g",
+        "expected": [
+          "abc"
+        ]
+      }
+    ],
+    "referenceAnswer": "/^(?!\\d)\\w+/g",
+    "explanation": "(?!\\d) 顺序否定环视，后面不能是数字开头。",
+    "tags": [
+      "环视"
+    ]
+  },
+  {
+    "id": "regex-high-026",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "写一个正则，匹配前面是 $ 符号的数字（如 \"$100\" 中的 100）。",
+    "testCases": [
+      {
+        "input": "$100 and 200",
+        "expected": [
+          "100"
+        ]
+      }
+    ],
+    "referenceAnswer": "/(?<=\\$)\\d+/g",
+    "explanation": "(?<=\\$) 逆序肯定环视，前面是 $。",
+    "tags": [
+      "环视"
+    ]
+  },
+  {
+    "id": "regex-high-027",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "写一个正则，匹配前面不是空格的字母（从 \"a b c\" 中匹配 a，不匹配 b、c）。",
+    "testCases": [
+      {
+        "input": "a b c",
+        "expected": [
+          "a"
+        ]
+      }
+    ],
+    "referenceAnswer": "/(?<!\\s)[a-z]/g",
+    "explanation": "(?<!\\s) 逆序否定环视，前面不是空白。",
+    "tags": [
+      "环视"
+    ]
   }
 ]

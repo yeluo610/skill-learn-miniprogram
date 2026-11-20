@@ -1,0 +1,578 @@
+[
+  {
+    "id": "linux-mid-001",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "修改文件权限的命令是？",
+    "options": [
+      "chmod",
+      "chown",
+      "chperm",
+      "perm"
+    ],
+    "answer": 0,
+    "explanation": "chmod 修改权限，如 chmod 755 file。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-002",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "修改文件所有者的命令是？",
+    "options": [
+      "chown",
+      "chmod",
+      "chuser",
+      "owner"
+    ],
+    "answer": 0,
+    "explanation": "chown user:group file 修改所有者和组。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-003",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "权限 rwx 对应的数字是？",
+    "options": [
+      "7",
+      "6",
+      "5",
+      "4"
+    ],
+    "answer": 0,
+    "explanation": "r=4, w=2, x=1，rwx=4+2+1=7。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-004",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "权限 r-x 对应的数字是？",
+    "options": [
+      "5",
+      "7",
+      "6",
+      "4"
+    ],
+    "answer": 0,
+    "explanation": "r=4, x=1，r-x=5。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-005",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "搜索文本的命令是？",
+    "options": [
+      "grep",
+      "find",
+      "search",
+      "locate"
+    ],
+    "answer": 0,
+    "explanation": "grep 按内容搜索，如 grep \"TODO\" file。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-006",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "按文件名查找的命令是？",
+    "options": [
+      "find",
+      "grep",
+      "locate",
+      "search"
+    ],
+    "answer": 0,
+    "explanation": "find /path -name \"*.txt\" 按文件名查找。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-007",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "流编辑器替换文本的命令是？",
+    "options": [
+      "sed",
+      "awk",
+      "cut",
+      "tr"
+    ],
+    "answer": 0,
+    "explanation": "sed 's/old/new/g' file 全局替换。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-008",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "列处理的命令是？",
+    "options": [
+      "awk",
+      "sed",
+      "grep",
+      "sort"
+    ],
+    "answer": 0,
+    "explanation": "awk '{print $1}' file 按列处理。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-009",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "管道符 | 的作用是？",
+    "options": [
+      "前命令输出作后命令输入",
+      "或运算",
+      "重定向",
+      "注释"
+    ],
+    "answer": 0,
+    "explanation": "管道把前一个命令的标准输出连接到后一个命令的输入。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-010",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "grep -i 的作用是？",
+    "options": [
+      "忽略大小写",
+      "递归",
+      "反向",
+      "行号"
+    ],
+    "answer": 0,
+    "explanation": "-i 忽略大小写。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-011",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "grep -r 的作用是？",
+    "options": [
+      "递归搜索子目录",
+      "反向",
+      "行号",
+      "正则"
+    ],
+    "answer": 0,
+    "explanation": "-r 递归搜索目录下所有文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-012",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "grep -v 的作用是？",
+    "options": [
+      "反向匹配",
+      "递归",
+      "忽略大小写",
+      "行号"
+    ],
+    "answer": 0,
+    "explanation": "-v 显示不匹配的行。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-013",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "sort -u 的作用是？",
+    "options": [
+      "排序并去重",
+      "升序",
+      "降序",
+      "唯一"
+    ],
+    "answer": 0,
+    "explanation": "-u 排序后去重。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-014",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "uniq 的作用是？",
+    "options": [
+      "去重相邻重复行",
+      "唯一文件",
+      "统计",
+      "排序"
+    ],
+    "answer": 0,
+    "explanation": "uniq 去除相邻重复行，常与 sort 配合。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-015",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "输出重定向 > 的作用是？",
+    "options": [
+      "覆盖写入文件",
+      "追加",
+      "管道",
+      "错误重定向"
+    ],
+    "answer": 0,
+    "explanation": "> 覆盖写入文件，>> 追加。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-016",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": ">> 的作用是？",
+    "options": [
+      "追加写入",
+      "覆盖写入",
+      "管道",
+      "错误重定向"
+    ],
+    "answer": 0,
+    "explanation": ">> 追加到文件末尾。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-017",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "2> 的作用是？",
+    "options": [
+      "重定向标准错误",
+      "重定向标准输出",
+      "追加",
+      "管道"
+    ],
+    "answer": 0,
+    "explanation": "2> 重定向标准错误（文件描述符 2）。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-018",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "cut -d , -f 2 的作用是？",
+    "options": [
+      "以逗号分隔取第 2 段",
+      "删除第 2 行",
+      "复制第 2 列",
+      "排序"
+    ],
+    "answer": 0,
+    "explanation": "-d 指定分隔符，-f 指定字段。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-019",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "tee 命令的作用是？",
+    "options": [
+      "同时输出到屏幕和文件",
+      "排序",
+      "过滤",
+      "删除"
+    ],
+    "answer": 0,
+    "explanation": "tee 把 stdin 同时输出到文件和 stdout。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-020",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "xargs 的作用是？",
+    "options": [
+      "把 stdin 作为参数传给命令",
+      "执行多次",
+      "等待",
+      "排序"
+    ],
+    "answer": 0,
+    "explanation": "xargs 把标准输入转为命令参数。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-021",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，把文件权限改为 755。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "chmod 755 file"
+      }
+    ],
+    "referenceAnswer": "chmod 755 file",
+    "explanation": "chmod 数字法改权限。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-022",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，给文件所有者加执行权限。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "chmod u+x file"
+      }
+    ],
+    "referenceAnswer": "chmod u+x file",
+    "explanation": "u+x 符号法。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-023",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，把文件所有者改为 root。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "chown root file"
+      }
+    ],
+    "referenceAnswer": "chown root file",
+    "explanation": "chown 改所有者。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-024",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，在 file 中搜索 \"TODO\"。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "grep TODO file"
+      }
+    ],
+    "referenceAnswer": "grep TODO file",
+    "explanation": "grep 搜索文本。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-025",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，递归搜索目录中含 \"TODO\" 的行。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "grep -r TODO ."
+      }
+    ],
+    "referenceAnswer": "grep -r TODO .",
+    "explanation": "-r 递归。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-026",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，忽略大小写搜索 \"error\"。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "grep -i error file"
+      }
+    ],
+    "referenceAnswer": "grep -i error file",
+    "explanation": "-i 忽略大小写。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-027",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，把 file 中的 old 替换为 new。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "sed 's/old/new/g' file"
+      }
+    ],
+    "referenceAnswer": "sed 's/old/new/g' file",
+    "explanation": "sed 替换。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-028",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，打印 file 的第 1 列。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "awk '{print $1}' file"
+      }
+    ],
+    "referenceAnswer": "awk '{print $1}' file",
+    "explanation": "awk 列处理。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-029",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，对 file 排序并去重。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "sort file | uniq"
+      }
+    ],
+    "referenceAnswer": "sort file | uniq",
+    "explanation": "sort 排序，uniq 去重。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-030",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，统计 file 的行数。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "wc -l file"
+      }
+    ],
+    "referenceAnswer": "wc -l file",
+    "explanation": "wc -l 统计行数。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-031",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，把命令输出追加到 log.txt。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "cmd >> log.txt"
+      }
+    ],
+    "referenceAnswer": "cmd >> log.txt",
+    "explanation": ">> 追加重定向。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-032",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，把错误输出重定向到 err.txt。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "cmd 2> err.txt"
+      }
+    ],
+    "referenceAnswer": "cmd 2> err.txt",
+    "explanation": "2> 重定向标准错误。",
+    "tags": [
+      "Linux"
+    ]
+  }
+]

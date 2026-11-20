@@ -7,12 +7,14 @@
 import type { Skill, SkillId, LevelConfig, TutorialSection } from './shared/types'
 import { regexSkill } from './skills/regex'
 import { jsonpathSkill } from './skills/jsonpath'
+import { linuxSkill } from './skills/linux'
+import { kubectlSkill } from './skills/kubectl'
 
 /** ⚠️ 替换为你的云环境 ID */
 const CLOUD_ENV = 'cloud1-d4gdcfzgf76bf95e7'
 
 /** 已启用板块列表 */
-const SKILLS: Skill[] = [regexSkill, jsonpathSkill]
+const SKILLS: Skill[] = [regexSkill, jsonpathSkill, linuxSkill, kubectlSkill]
 
 App({
   globalData: {

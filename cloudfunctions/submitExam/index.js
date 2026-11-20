@@ -26,6 +26,20 @@ function stringify(v) {
   if (typeof v === 'string') return v
   return JSON.stringify(v)
 }
+
+function normalizeCmd(s) {
+  return String(s).trim().replace(/\s+/g, ' ').toLowerCase()
+}
+function cmdChecker(userInput, testCases) {
+  const details = testCases.map((tc) => {
+    const expArr = Array.isArray(tc.expected) ? tc.expected : [tc.expected]
+    const got = normalizeCmd(userInput)
+    const expList = expArr.map(normalizeCmd)
+    const pass = expList.includes(got)
+    return { pass, got: String(userInput).trim(), expected: expArr.join(' | ') }
+  })
+  return { pass: details.length > 0 && details.every((d) => d.pass), details, error: undefined }
+}
 function regexChecker(userInput, testCases) {
   let re
   try {
@@ -112,7 +126,10 @@ exports.main = async (event) => {
       if (q.type === 'choice') {
         correct = Number(ua) === q.answer
       } else if (q.type === 'fill' && q.testCases) {
-        const checker = q.skill === 'regex' ? regexChecker : q.skill === 'jsonpath' ? jsonpathChecker : null
+        const checker = q.skill === 'regex' ? regexChecker
+          : q.skill === 'jsonpath' ? jsonpathChecker
+          : (q.skill === 'linux' || q.skill === 'kubectl') ? cmdChecker
+          : null
         if (checker) correct = checker(String(ua), q.testCases).pass
       }
       if (correct) score++

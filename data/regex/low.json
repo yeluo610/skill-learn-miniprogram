@@ -5,10 +5,18 @@
     "level": "low",
     "type": "choice",
     "title": "下列哪个元字符可以匹配任意单个数字？",
-    "options": ["\\d", "\\D", "\\w", "\\s"],
+    "options": [
+      "\\d",
+      "\\D",
+      "\\w",
+      "\\s"
+    ],
     "answer": 0,
     "explanation": "\\d 等价于 [0-9]，匹配任意一个数字字符；\\D 匹配非数字；\\w 匹配单词字符 [A-Za-z0-9_]；\\s 匹配空白字符。",
-    "tags": ["字符类", "元字符"]
+    "tags": [
+      "字符类",
+      "元字符"
+    ]
   },
   {
     "id": "regex-low-002",
@@ -16,10 +24,17 @@
     "level": "low",
     "type": "choice",
     "title": "正则 ^abc 中的 ^ 表示什么？",
-    "options": ["字符串开头", "字符串结尾", "任意字符", "转义符"],
+    "options": [
+      "字符串开头",
+      "字符串结尾",
+      "任意字符",
+      "转义符"
+    ],
     "answer": 0,
     "explanation": "^ 是行首锚点，匹配字符串的开始位置。注意在多行模式 m 下匹配每行的开头。$ 匹配结尾。",
-    "tags": ["锚点"]
+    "tags": [
+      "锚点"
+    ]
   },
   {
     "id": "regex-low-003",
@@ -27,10 +42,17 @@
     "level": "low",
     "type": "choice",
     "title": "[abc] 能匹配下列哪个？",
-    "options": ["字符串 'abc'", "字符 a 或 b 或 c", "任意字符", "三个连续字符"],
+    "options": [
+      "字符串 'abc'",
+      "字符 a 或 b 或 c",
+      "任意字符",
+      "三个连续字符"
+    ],
     "answer": 1,
     "explanation": "方括号 [] 是字符类，匹配其中任意一个字符。[abc] 匹配单个字符 a、b 或 c，不是匹配字符串 'abc'。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-004",
@@ -38,10 +60,17 @@
     "level": "low",
     "type": "choice",
     "title": "下列哪个量词表示「零次或多次」？",
-    "options": ["*", "+", "?", "{n}"],
+    "options": [
+      "*",
+      "+",
+      "?",
+      "{n}"
+    ],
     "answer": 0,
     "explanation": "* 表示前面的元素出现 0 次或多次；+ 表示 1 次或多次；? 表示 0 次或 1 次；{n} 表示恰好 n 次。",
-    "tags": ["量词"]
+    "tags": [
+      "量词"
+    ]
   },
   {
     "id": "regex-low-005",
@@ -49,10 +78,17 @@
     "level": "low",
     "type": "choice",
     "title": "a+ 等价于下列哪个写法？",
-    "options": ["a{0,}", "a{1,}", "a{0,1}", "a{1}"],
+    "options": [
+      "a{0,}",
+      "a{1,}",
+      "a{0,1}",
+      "a{1}"
+    ],
     "answer": 1,
     "explanation": "+ 表示至少 1 次，等价于 {1,}。a{0,} 等价于 a*；a{0,1} 等价于 a?；a{1} 表示恰好 1 次。",
-    "tags": ["量词"]
+    "tags": [
+      "量词"
+    ]
   },
   {
     "id": "regex-low-006",
@@ -60,10 +96,17 @@
     "level": "low",
     "type": "choice",
     "title": "正则中的 .（点号）默认匹配什么？",
-    "options": ["任意字符（换行除外）", "任意字符（含换行）", "字面意义的点", "数字"],
+    "options": [
+      "任意字符（换行除外）",
+      "任意字符（含换行）",
+      "字面意义的点",
+      "数字"
+    ],
     "answer": 0,
     "explanation": "默认情况下 . 匹配除换行符 \\n 外的任意字符。若加 s 标志（dotAll），则连换行也匹配。",
-    "tags": ["元字符"]
+    "tags": [
+      "元字符"
+    ]
   },
   {
     "id": "regex-low-007",
@@ -71,10 +114,17 @@
     "level": "low",
     "type": "choice",
     "title": "\\w 能匹配下列哪组字符？",
-    "options": ["字母数字下划线", "仅字母", "仅数字", "空白字符"],
+    "options": [
+      "字母数字下划线",
+      "仅字母",
+      "仅数字",
+      "空白字符"
+    ],
     "answer": 0,
     "explanation": "\\w 等价于 [A-Za-z0-9_]，匹配字母、数字和下划线。\\W 是其反义。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-008",
@@ -82,10 +132,17 @@
     "level": "low",
     "type": "choice",
     "title": "下列哪个写法匹配「恰好3个数字」？",
-    "options": ["\\d{3}", "\\d{3,}", "\\d*", "\\d?"],
+    "options": [
+      "\\d{3}",
+      "\\d{3,}",
+      "\\d*",
+      "\\d?"
+    ],
     "answer": 0,
     "explanation": "{n} 表示恰好 n 次，\\d{3} 匹配连续 3 个数字。{3,} 表示至少 3 次；* 表示 0 次或多次；? 表示 0 或 1 次。",
-    "tags": ["量词"]
+    "tags": [
+      "量词"
+    ]
   },
   {
     "id": "regex-low-009",
@@ -93,10 +150,17 @@
     "level": "low",
     "type": "choice",
     "title": "[^0-9] 表示什么？",
-    "options": ["非数字字符", "数字 0 到 9", "字符串开头", "空字符"],
+    "options": [
+      "非数字字符",
+      "数字 0 到 9",
+      "字符串开头",
+      "空字符"
+    ],
     "answer": 0,
     "explanation": "字符类中以 ^ 开头表示取反，[^0-9] 匹配任何非数字字符，等价于 \\D。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-010",
@@ -104,10 +168,17 @@
     "level": "low",
     "type": "choice",
     "title": "正则 cat 能从字符串 'catalog' 中匹配到什么？",
-    "options": ["前三个字符 cat", "整个 catalog", "无法匹配", "字母 c"],
+    "options": [
+      "前三个字符 cat",
+      "整个 catalog",
+      "无法匹配",
+      "字母 c"
+    ],
     "answer": 0,
     "explanation": "正则 cat 是字面匹配，会找到字符串中第一个 'cat' 子串，即前三个字符。不会要求整个字符串匹配。",
-    "tags": ["基础"]
+    "tags": [
+      "基础"
+    ]
   },
   {
     "id": "regex-low-011",
@@ -115,10 +186,17 @@
     "level": "low",
     "type": "choice",
     "title": "下列哪个匹配「0个或1个a」？",
-    "options": ["a?", "a*", "a+", "a{1}"],
+    "options": [
+      "a?",
+      "a*",
+      "a+",
+      "a{1}"
+    ],
     "answer": 0,
     "explanation": "? 表示 0 次或 1 次，a? 匹配空串或单个 'a'。",
-    "tags": ["量词"]
+    "tags": [
+      "量词"
+    ]
   },
   {
     "id": "regex-low-012",
@@ -126,10 +204,17 @@
     "level": "low",
     "type": "choice",
     "title": "$ 在正则中表示什么？",
-    "options": ["字符串结尾", "字符串开头", "美元符号字面量", "任意字符"],
+    "options": [
+      "字符串结尾",
+      "字符串开头",
+      "美元符号字面量",
+      "任意字符"
+    ],
     "answer": 0,
     "explanation": "$ 是行尾锚点，匹配字符串（或每行）的结尾位置。若要匹配字面 $，需转义为 \\$。",
-    "tags": ["锚点"]
+    "tags": [
+      "锚点"
+    ]
   },
   {
     "id": "regex-low-013",
@@ -137,10 +222,17 @@
     "level": "low",
     "type": "choice",
     "title": "[a-z] 能匹配下列哪个？",
-    "options": ["任意小写字母", "任意大写字母", "字母 a 或 z", "字符串 'a-z'"],
+    "options": [
+      "任意小写字母",
+      "任意大写字母",
+      "字母 a 或 z",
+      "字符串 'a-z'"
+    ],
     "answer": 0,
     "explanation": "[a-z] 是字符范围，匹配 a 到 z 之间的任意一个小写字母。要同时匹配大小写可用 [a-zA-Z]。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-014",
@@ -148,10 +240,17 @@
     "level": "low",
     "type": "choice",
     "title": "\\s 匹配下列哪类字符？",
-    "options": ["空白字符", "数字", "字母", "标点符号"],
+    "options": [
+      "空白字符",
+      "数字",
+      "字母",
+      "标点符号"
+    ],
     "answer": 0,
     "explanation": "\\s 匹配空白字符，包括空格、制表符 \\t、换行 \\n、回车 \\r、换页 \\f 等，等价于 [ \\t\\n\\r\\f]。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-015",
@@ -159,10 +258,17 @@
     "level": "low",
     "type": "choice",
     "title": "正则 ab?c 能匹配下列哪个？",
-    "options": ["ac 或 abc", "仅 abc", "仅 ac", "abbc"],
+    "options": [
+      "ac 或 abc",
+      "仅 abc",
+      "仅 ac",
+      "abbc"
+    ],
     "answer": 0,
     "explanation": "? 作用于前面的 b，表示 b 可有可无。ab?c 匹配 'ac' 或 'abc'，不能匹配 'abbc'。",
-    "tags": ["量词"]
+    "tags": [
+      "量词"
+    ]
   },
   {
     "id": "regex-low-016",
@@ -170,10 +276,17 @@
     "level": "low",
     "type": "choice",
     "title": "下列哪个标志表示「全局匹配」？",
-    "options": ["g", "i", "m", "s"],
+    "options": [
+      "g",
+      "i",
+      "m",
+      "s"
+    ],
     "answer": 0,
     "explanation": "g 表示全局匹配，找出所有匹配而非仅第一个；i 忽略大小写；m 多行模式；s 让 . 匹配换行。",
-    "tags": ["标志"]
+    "tags": [
+      "标志"
+    ]
   },
   {
     "id": "regex-low-017",
@@ -181,10 +294,17 @@
     "level": "low",
     "type": "choice",
     "title": "要匹配字面的 .（点号），应写成？",
-    "options": ["\\.", ".", "[.]", "\\."],
+    "options": [
+      "\\.",
+      ".",
+      "[.]",
+      "\\."
+    ],
     "answer": 0,
     "explanation": ". 是元字符，匹配任意字符；要匹配字面点号需转义为 \\.。答案 0 和 3 都是 \\.，正确。",
-    "tags": ["转义"]
+    "tags": [
+      "转义"
+    ]
   },
   {
     "id": "regex-low-018",
@@ -192,10 +312,17 @@
     "level": "low",
     "type": "choice",
     "title": "\\d{2,4} 表示数字出现？",
-    "options": ["2 到 4 次", "恰好 2 次", "恰好 4 次", "2 次或 4 次"],
+    "options": [
+      "2 到 4 次",
+      "恰好 2 次",
+      "恰好 4 次",
+      "2 次或 4 次"
+    ],
     "answer": 0,
     "explanation": "{n,m} 表示 n 到 m 次（含两端），\\d{2,4} 匹配 2、3 或 4 个连续数字。",
-    "tags": ["量词"]
+    "tags": [
+      "量词"
+    ]
   },
   {
     "id": "regex-low-019",
@@ -203,10 +330,18 @@
     "level": "low",
     "type": "choice",
     "title": "[A-Z][a-z]+ 能匹配下列哪个？",
-    "options": ["以大写字母开头的小写单词", "全大写单词", "全小写单词", "数字"],
+    "options": [
+      "以大写字母开头的小写单词",
+      "全大写单词",
+      "全小写单词",
+      "数字"
+    ],
     "answer": 0,
     "explanation": "[A-Z] 匹配一个大写字母，[a-z]+ 匹配一个或多个小写字母，组合起来匹配如 'Hello'、'World' 这类首字母大写的单词。",
-    "tags": ["字符类", "量词"]
+    "tags": [
+      "字符类",
+      "量词"
+    ]
   },
   {
     "id": "regex-low-020",
@@ -214,10 +349,18 @@
     "level": "low",
     "type": "choice",
     "title": "下列哪个能匹配「3个连续的字母」？",
-    "options": ["[a-zA-Z]{3}", "[a-z]{3,}", "\\w*", "[A-Z]"],
+    "options": [
+      "[a-zA-Z]{3}",
+      "[a-z]{3,}",
+      "\\w*",
+      "[A-Z]"
+    ],
     "answer": 0,
     "explanation": "[a-zA-Z]{3} 匹配恰好 3 个连续字母（大小写均可）。{3,} 是至少 3 个；\\w* 包含数字和下划线。",
-    "tags": ["字符类", "量词"]
+    "tags": [
+      "字符类",
+      "量词"
+    ]
   },
   {
     "id": "regex-low-021",
@@ -227,13 +370,35 @@
     "title": "写一个正则，匹配字符串中的所有数字。",
     "hint": "使用 \\d",
     "testCases": [
-      { "input": "abc123", "expected": ["1", "2", "3"], "expectedType": "match" },
-      { "input": "no digits here", "expected": [], "expectedType": "match" },
-      { "input": "a1b2c3", "expected": ["1", "2", "3"], "expectedType": "match" }
+      {
+        "input": "abc123",
+        "expected": [
+          "1",
+          "2",
+          "3"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "no digits here",
+        "expected": [],
+        "expectedType": "match"
+      },
+      {
+        "input": "a1b2c3",
+        "expected": [
+          "1",
+          "2",
+          "3"
+        ],
+        "expectedType": "match"
+      }
     ],
     "referenceAnswer": "\\d",
     "explanation": "\\d 等价于 [0-9]，匹配单个数字。配合全局标志 g 可找出所有数字。注意期望是逐个匹配，所以每个数字是单独一项。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-022",
@@ -243,12 +408,26 @@
     "title": "写一个正则，匹配字符串中的所有小写字母。",
     "hint": "用 [a-z]",
     "testCases": [
-      { "input": "AbCdEf", "expected": ["b", "d", "f"], "expectedType": "match" },
-      { "input": "ABC", "expected": [], "expectedType": "match" }
+      {
+        "input": "AbCdEf",
+        "expected": [
+          "b",
+          "d",
+          "f"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "ABC",
+        "expected": [],
+        "expectedType": "match"
+      }
     ],
     "referenceAnswer": "[a-z]",
     "explanation": "[a-z] 是字符类，匹配 a 到 z 之间任意一个小写字母。配合 g 标志可全局匹配所有小写字母。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-023",
@@ -258,12 +437,24 @@
     "title": "写一个正则，匹配以 'Hello' 开头的字符串（整串匹配）。",
     "hint": "用 ^ 锚点",
     "testCases": [
-      { "input": "Hello world", "expected": ["Hello"], "expectedType": "match" },
-      { "input": "Say Hello", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "Hello world",
+        "expected": [
+          "Hello"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "Say Hello",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "^Hello",
     "explanation": "^ 是行首锚点，^Hello 要求 'Hello' 出现在字符串开头。第二行 'Say Hello' 不以 Hello 开头，故不匹配。",
-    "tags": ["锚点"]
+    "tags": [
+      "锚点"
+    ]
   },
   {
     "id": "regex-low-024",
@@ -273,12 +464,24 @@
     "title": "写一个正则，匹配以 'world' 结尾的字符串（仅匹配结尾的 world）。",
     "hint": "用 $ 锚点",
     "testCases": [
-      { "input": "hello world", "expected": ["world"], "expectedType": "match" },
-      { "input": "world peace", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "hello world",
+        "expected": [
+          "world"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "world peace",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "world$",
     "explanation": "$ 是行尾锚点，world$ 要求 'world' 出现在字符串末尾。'world peace' 中 world 不在末尾，不匹配。",
-    "tags": ["锚点"]
+    "tags": [
+      "锚点"
+    ]
   },
   {
     "id": "regex-low-025",
@@ -288,13 +491,32 @@
     "title": "写一个正则，匹配连续 3 个数字。",
     "hint": "用 {n}",
     "testCases": [
-      { "input": "abc123def", "expected": ["123"], "expectedType": "match" },
-      { "input": "12", "expected": [], "expectedType": "nomatch" },
-      { "input": "123456", "expected": ["123", "456"], "expectedType": "match" }
+      {
+        "input": "abc123def",
+        "expected": [
+          "123"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "12",
+        "expected": [],
+        "expectedType": "nomatch"
+      },
+      {
+        "input": "123456",
+        "expected": [
+          "123",
+          "456"
+        ],
+        "expectedType": "match"
+      }
     ],
     "referenceAnswer": "\\d{3}",
     "explanation": "\\d{3} 匹配恰好 3 个连续数字。在 '123456' 中会匹配到 '123' 和 '456' 两段。",
-    "tags": ["量词"]
+    "tags": [
+      "量词"
+    ]
   },
   {
     "id": "regex-low-026",
@@ -302,10 +524,17 @@
     "level": "low",
     "type": "choice",
     "title": "下列哪个能匹配任意空白字符？",
-    "options": ["\\s", "\\S", "\\w", "\\b"],
+    "options": [
+      "\\s",
+      "\\S",
+      "\\w",
+      "\\b"
+    ],
     "answer": 0,
     "explanation": "\\s 匹配空白字符（空格、制表、换行等）；\\S 匹配非空白；\\w 匹配单词字符；\\b 是单词边界锚点。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-027",
@@ -313,10 +542,17 @@
     "level": "low",
     "type": "choice",
     "title": "[0-9] 等价于下列哪个？",
-    "options": ["\\d", "\\D", "\\w", "\\s"],
+    "options": [
+      "\\d",
+      "\\D",
+      "\\w",
+      "\\s"
+    ],
     "answer": 0,
     "explanation": "[0-9] 匹配数字 0 到 9，等价于 \\d。\\D 是其反义 [^0-9]。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-028",
@@ -324,10 +560,18 @@
     "level": "low",
     "type": "choice",
     "title": "下列哪个能匹配字母 a 或 b？",
-    "options": ["[ab]", "ab", "a|b", "选项1和3都对"],
+    "options": [
+      "[ab]",
+      "ab",
+      "a|b",
+      "选项1和3都对"
+    ],
     "answer": 3,
     "explanation": "[ab] 字符类匹配 a 或 b；a|b 选择分支也匹配 a 或 b。两种写法都正确。",
-    "tags": ["字符类", "选择"]
+    "tags": [
+      "字符类",
+      "选择"
+    ]
   },
   {
     "id": "regex-low-029",
@@ -335,10 +579,17 @@
     "level": "low",
     "type": "choice",
     "title": "cat|dog 能匹配下列哪个？",
-    "options": ["cat 或 dog", "仅 cat", "仅 dog", "catdog 连续"],
+    "options": [
+      "cat 或 dog",
+      "仅 cat",
+      "仅 dog",
+      "catdog 连续"
+    ],
     "answer": 0,
     "explanation": "| 是选择分支，cat|dog 匹配 'cat' 或 'dog' 之一。",
-    "tags": ["选择"]
+    "tags": [
+      "选择"
+    ]
   },
   {
     "id": "regex-low-030",
@@ -346,10 +597,17 @@
     "level": "low",
     "type": "choice",
     "title": "下列哪个能匹配 1 到 3 个字母 a？",
-    "options": ["a{1,3}", "a{3}", "a{1,}", "a*"],
+    "options": [
+      "a{1,3}",
+      "a{3}",
+      "a{1,}",
+      "a*"
+    ],
     "answer": 0,
     "explanation": "{n,m} 表示 n 到 m 次，a{1,3} 匹配 1、2 或 3 个 a。a{3} 恰好 3 个；a{1,} 至少 1 个；a* 0 个或多个。",
-    "tags": ["量词"]
+    "tags": [
+      "量词"
+    ]
   },
   {
     "id": "regex-low-031",
@@ -357,10 +615,17 @@
     "level": "low",
     "type": "choice",
     "title": "在字符类 [] 中，^ 放在开头表示什么？",
-    "options": ["取反", "行首", "字面 ^", "转义"],
+    "options": [
+      "取反",
+      "行首",
+      "字面 ^",
+      "转义"
+    ],
     "answer": 0,
     "explanation": "字符类中以 ^ 开头表示取反，如 [^abc] 匹配非 a/b/c 的字符。注意 ^ 在 [] 外才表示行首锚点。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-032",
@@ -368,10 +633,17 @@
     "level": "low",
     "type": "choice",
     "title": "下列哪个匹配字面的 + 号？",
-    "options": ["\\+", "+", "[+]", "选项1和3都对"],
+    "options": [
+      "\\+",
+      "+",
+      "[+]",
+      "选项1和3都对"
+    ],
     "answer": 3,
     "explanation": "+ 是量词元字符，匹配字面 + 需转义 \\+，或放入字符类 [+]。两种写法都对。",
-    "tags": ["转义"]
+    "tags": [
+      "转义"
+    ]
   },
   {
     "id": "regex-low-033",
@@ -379,10 +651,17 @@
     "level": "low",
     "type": "choice",
     "title": "字符串 'aaa' 用 a{2} 匹配，结果是？",
-    "options": ["匹配 'aa'，剩余一个 a", "匹配整个 'aaa'", "无匹配", "匹配 'a'"],
+    "options": [
+      "匹配 'aa'，剩余一个 a",
+      "匹配整个 'aaa'",
+      "无匹配",
+      "匹配 'a'"
+    ],
     "answer": 0,
     "explanation": "a{2} 匹配恰好 2 个 a，'aaa' 中匹配到 'aa'，剩下 1 个 a（若无 g 标志只匹配第一处）。",
-    "tags": ["量词"]
+    "tags": [
+      "量词"
+    ]
   },
   {
     "id": "regex-low-034",
@@ -390,10 +669,17 @@
     "level": "low",
     "type": "choice",
     "title": "\\b 表示什么？",
-    "options": ["单词边界", "退格符", "空白字符", "行首"],
+    "options": [
+      "单词边界",
+      "退格符",
+      "空白字符",
+      "行首"
+    ],
     "answer": 0,
     "explanation": "在正则中 \\b 是单词边界（\\w 与 \\W 的交界）。注意在字符类 [\\b] 中才是退格符。",
-    "tags": ["锚点"]
+    "tags": [
+      "锚点"
+    ]
   },
   {
     "id": "regex-low-035",
@@ -401,10 +687,17 @@
     "level": "low",
     "type": "choice",
     "title": "下列哪个写法能匹配 0 个或多个 a？",
-    "options": ["a*", "a+", "a?", "a{1}"],
+    "options": [
+      "a*",
+      "a+",
+      "a?",
+      "a{1}"
+    ],
     "answer": 0,
     "explanation": "* 表示 0 次或多次，a* 匹配空串或任意多个 a。",
-    "tags": ["量词"]
+    "tags": [
+      "量词"
+    ]
   },
   {
     "id": "regex-low-036",
@@ -414,13 +707,37 @@
     "title": "写一个正则，匹配字符串中所有的元音字母（aeiou，不区分大小写）。",
     "hint": "用字符类 [aeiou]",
     "testCases": [
-      { "input": "Hello World", "expected": ["e", "o", "o"], "expectedType": "match" },
-      { "input": "AEIOU", "expected": ["A", "E", "I", "O", "U"], "expectedType": "match" },
-      { "input": "xyz", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "Hello World",
+        "expected": [
+          "e",
+          "o",
+          "o"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "AEIOU",
+        "expected": [
+          "A",
+          "E",
+          "I",
+          "O",
+          "U"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "xyz",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "[aeiouAEIOU]",
     "explanation": "[aeiouAEIOU] 字符类匹配任意一个元音字母（大小写都包含）。配合 g 标志可全局匹配所有元音。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-037",
@@ -430,12 +747,24 @@
     "title": "写一个正则，匹配以 'end' 结尾的字符串（匹配结尾的 end）。",
     "hint": "用 $ 锚点",
     "testCases": [
-      { "input": "the end", "expected": ["end"], "expectedType": "match" },
-      { "input": "ending", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "the end",
+        "expected": [
+          "end"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "ending",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "end$",
     "explanation": "end$ 要求 'end' 出现在字符串末尾。'ending' 末尾是 'ing' 不是 'end'，不匹配。",
-    "tags": ["锚点"]
+    "tags": [
+      "锚点"
+    ]
   },
   {
     "id": "regex-low-038",
@@ -445,12 +774,28 @@
     "title": "写一个正则，匹配连续 2 到 4 个字母。",
     "hint": "用 {n,m}",
     "testCases": [
-      { "input": "ab cd efgh ijklm", "expected": ["ab", "cd", "efgh", "ijkl"], "expectedType": "match" },
-      { "input": "a", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "ab cd efgh ijklm",
+        "expected": [
+          "ab",
+          "cd",
+          "efgh",
+          "ijkl"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "a",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "[a-zA-Z]{2,4}",
     "explanation": "[a-zA-Z]{2,4} 匹配 2 到 4 个连续字母。'ijklm' 5 个字母，匹配前 4 个 'ijkl'。",
-    "tags": ["字符类", "量词"]
+    "tags": [
+      "字符类",
+      "量词"
+    ]
   },
   {
     "id": "regex-low-039",
@@ -460,12 +805,25 @@
     "title": "写一个正则，匹配字符串中所有的 cat 或 dog。",
     "hint": "用选择分支 |",
     "testCases": [
-      { "input": "I have a cat and a dog", "expected": ["cat", "dog"], "expectedType": "match" },
-      { "input": "nothing here", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "I have a cat and a dog",
+        "expected": [
+          "cat",
+          "dog"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "nothing here",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "cat|dog",
     "explanation": "| 是选择分支，cat|dog 匹配 'cat' 或 'dog'。配合 g 标志全局匹配。",
-    "tags": ["选择"]
+    "tags": [
+      "选择"
+    ]
   },
   {
     "id": "regex-low-040",
@@ -475,12 +833,25 @@
     "title": "写一个正则，匹配字符串中的所有非数字字符。",
     "hint": "用 \\D",
     "testCases": [
-      { "input": "a1b2", "expected": ["a", "b"], "expectedType": "match" },
-      { "input": "12345", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "a1b2",
+        "expected": [
+          "a",
+          "b"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "12345",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "\\D",
     "explanation": "\\D 是 \\d 的反义，匹配非数字字符。配合 g 标志可匹配所有非数字。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-041",
@@ -488,10 +859,17 @@
     "level": "low",
     "type": "choice",
     "title": "[A-Za-z] 等价于？",
-    "options": ["[A-Z] 和 [a-z] 的并集", "仅大写", "仅小写", "任意字符"],
+    "options": [
+      "[A-Z] 和 [a-z] 的并集",
+      "仅大写",
+      "仅小写",
+      "任意字符"
+    ],
     "answer": 0,
     "explanation": "[A-Za-z] 用范围连写表示大小写字母的并集。要含数字可用 [A-Za-z0-9]。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-042",
@@ -499,10 +877,17 @@
     "level": "low",
     "type": "choice",
     "title": "下列哪个匹配字面的问号？",
-    "options": ["\\?", "?", "[?]", "选项1和3都对"],
+    "options": [
+      "\\?",
+      "?",
+      "[?]",
+      "选项1和3都对"
+    ],
     "answer": 3,
     "explanation": "? 是量词元字符，匹配字面 ? 需转义 \\?，或放入字符类 [?]。",
-    "tags": ["转义"]
+    "tags": [
+      "转义"
+    ]
   },
   {
     "id": "regex-low-043",
@@ -510,10 +895,17 @@
     "level": "low",
     "type": "choice",
     "title": "[^abc] 能匹配下列哪个？",
-    "options": ["非 a/b/c 的任意字符", "a 或 b 或 c", "字符串 abc", "空字符"],
+    "options": [
+      "非 a/b/c 的任意字符",
+      "a 或 b 或 c",
+      "字符串 abc",
+      "空字符"
+    ],
     "answer": 0,
     "explanation": "[^...] 是取反字符类，[^abc] 匹配除 a、b、c 外的任意单个字符。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-044",
@@ -521,10 +913,18 @@
     "level": "low",
     "type": "choice",
     "title": "字符串 'hello' 用 [a-z]+ 匹配，结果是？",
-    "options": ["匹配整个 'hello'", "匹配单个字母", "无匹配", "匹配 'h'"],
+    "options": [
+      "匹配整个 'hello'",
+      "匹配单个字母",
+      "无匹配",
+      "匹配 'h'"
+    ],
     "answer": 0,
     "explanation": "[a-z]+ 匹配一个或多个连续小写字母，'hello' 全是小写字母，整体匹配。",
-    "tags": ["字符类", "量词"]
+    "tags": [
+      "字符类",
+      "量词"
+    ]
   },
   {
     "id": "regex-low-045",
@@ -532,10 +932,17 @@
     "level": "low",
     "type": "choice",
     "title": "\\d{1,} 等价于？",
-    "options": ["\\d+", "\\d*", "\\d?", "\\d{1}"],
+    "options": [
+      "\\d+",
+      "\\d*",
+      "\\d?",
+      "\\d{1}"
+    ],
     "answer": 0,
     "explanation": "{n,} 表示至少 n 次，{1,} 等价于 +，即 1 次或多次。",
-    "tags": ["量词"]
+    "tags": [
+      "量词"
+    ]
   },
   {
     "id": "regex-low-046",
@@ -543,10 +950,17 @@
     "level": "low",
     "type": "choice",
     "title": "下列哪个写法匹配字母后跟数字（如 a1, b2）？",
-    "options": ["[a-z]\\d", "[a-z][a-z]", "\\d[a-z]", "\\d\\d"],
+    "options": [
+      "[a-z]\\d",
+      "[a-z][a-z]",
+      "\\d[a-z]",
+      "\\d\\d"
+    ],
     "answer": 0,
     "explanation": "[a-z] 一个小写字母，\\d 一个数字，[a-z]\\d 匹配字母+数字的组合。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-047",
@@ -554,10 +968,18 @@
     "level": "low",
     "type": "choice",
     "title": "在字符类 [] 内，下列哪个元字符仍需转义？",
-    "options": ["\\ ] ^ -", ". ", "* +", "{}"],
+    "options": [
+      "\\ ] ^ -",
+      ". ",
+      "* +",
+      "{}"
+    ],
     "answer": 0,
     "explanation": "字符类内仍需转义的是 \\（转义符）、]（结束符）、^（开头取反）、-（范围，放中间时）。其他如 . * + 失去特殊含义。",
-    "tags": ["字符类", "陷阱"]
+    "tags": [
+      "字符类",
+      "陷阱"
+    ]
   },
   {
     "id": "regex-low-048",
@@ -565,10 +987,17 @@
     "level": "low",
     "type": "choice",
     "title": "字符串 'a1' 用 \\w 匹配，结果是？",
-    "options": ["匹配 'a' 和 '1' 两个", "匹配 'a1' 整体", "无匹配", "仅 'a'"],
+    "options": [
+      "匹配 'a' 和 '1' 两个",
+      "匹配 'a1' 整体",
+      "无匹配",
+      "仅 'a'"
+    ],
     "answer": 0,
     "explanation": "\\w 匹配单个单词字符（字母数字下划线）。\\w 不带量词每次匹配一个，'a1' 中匹配 'a' 和 '1'（配合 g 标志）。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-049",
@@ -576,10 +1005,17 @@
     "level": "low",
     "type": "choice",
     "title": "下列哪个标志让匹配忽略大小写？",
-    "options": ["i", "g", "m", "s"],
+    "options": [
+      "i",
+      "g",
+      "m",
+      "s"
+    ],
     "answer": 0,
     "explanation": "i 标志忽略大小写，使 /abc/i 匹配 ABC、Abc 等。g 全局；m 多行；s dotAll。",
-    "tags": ["标志"]
+    "tags": [
+      "标志"
+    ]
   },
   {
     "id": "regex-low-050",
@@ -588,12 +1024,24 @@
     "type": "fill",
     "title": "写一个正则，匹配连续 4 个数字。",
     "testCases": [
-      { "input": "pin 1234 ok", "expected": ["1234"], "expectedType": "match" },
-      { "input": "12 34", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "pin 1234 ok",
+        "expected": [
+          "1234"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "12 34",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "\\d{4}",
     "explanation": "\\d{4} 匹配恰好 4 个连续数字。'12 34' 中间有空格不连续，不匹配。",
-    "tags": ["量词"]
+    "tags": [
+      "量词"
+    ]
   },
   {
     "id": "regex-low-051",
@@ -602,12 +1050,29 @@
     "type": "fill",
     "title": "写一个正则，匹配字符串中所有大写字母。",
     "testCases": [
-      { "input": "Hello WORLD", "expected": ["H", "W", "O", "R", "L", "D"], "expectedType": "match" },
-      { "input": "abc", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "Hello WORLD",
+        "expected": [
+          "H",
+          "W",
+          "O",
+          "R",
+          "L",
+          "D"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "abc",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "[A-Z]",
     "explanation": "[A-Z] 匹配单个大写字母，配合 g 标志全局匹配所有大写字母。",
-    "tags": ["字符类"]
+    "tags": [
+      "字符类"
+    ]
   },
   {
     "id": "regex-low-052",
@@ -617,12 +1082,24 @@
     "title": "写一个正则，匹配一个或多个连续空格字符。",
     "hint": "用空格 + 量词",
     "testCases": [
-      { "input": "a   b", "expected": ["   "], "expectedType": "match" },
-      { "input": "ab", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "a   b",
+        "expected": [
+          "   "
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "ab",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": " +",
     "explanation": " 空格字面量 + + 匹配 1 个或多个连续空格。'ab' 无空格不匹配。",
-    "tags": ["量词"]
+    "tags": [
+      "量词"
+    ]
   },
   {
     "id": "regex-low-053",
@@ -631,12 +1108,25 @@
     "type": "fill",
     "title": "写一个正则，匹配字符串中的逗号。",
     "testCases": [
-      { "input": "a,b,c", "expected": [",", ","], "expectedType": "match" },
-      { "input": "abc", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "a,b,c",
+        "expected": [
+          ",",
+          ","
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "abc",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": ",",
     "explanation": "逗号不是元字符，直接用 , 匹配字面逗号，配合 g 标志全局匹配所有逗号。",
-    "tags": ["基础"]
+    "tags": [
+      "基础"
+    ]
   },
   {
     "id": "regex-low-054",
@@ -646,12 +1136,25 @@
     "title": "写一个正则，匹配字符串中所有的 yes 或 no。",
     "hint": "用选择 yes|no",
     "testCases": [
-      { "input": "yes no maybe", "expected": ["yes", "no"], "expectedType": "match" },
-      { "input": "abc def", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "yes no maybe",
+        "expected": [
+          "yes",
+          "no"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "abc def",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "yes|no",
     "explanation": "| 选择分支，yes|no 匹配 'yes' 或 'no'。注意需用单词边界避免匹配 'nothing' 中的 'no'，本题为简化未加。'abc def' 无 yes/no 不匹配。",
-    "tags": ["选择"]
+    "tags": [
+      "选择"
+    ]
   },
   {
     "id": "regex-low-055",
@@ -661,11 +1164,359 @@
     "title": "写一个正则，匹配以字母开头的字符串（匹配开头的字母）。",
     "hint": "用 ^[a-zA-Z]",
     "testCases": [
-      { "input": "hello", "expected": ["h"], "expectedType": "match" },
-      { "input": "123abc", "expected": [], "expectedType": "nomatch" }
+      {
+        "input": "hello",
+        "expected": [
+          "h"
+        ],
+        "expectedType": "match"
+      },
+      {
+        "input": "123abc",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
     ],
     "referenceAnswer": "^[a-zA-Z]",
     "explanation": "^[a-zA-Z] 锚定开头是一个字母。'123abc' 开头是数字不匹配。",
-    "tags": ["锚点", "字符类"]
+    "tags": [
+      "锚点",
+      "字符类"
+    ]
+  },
+  {
+    "id": "regex-low-056",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "关于正则「字符类 \\d」，下列说法正确的是？",
+    "options": [
+      "\\d 等价于 [0-9]，匹配单个数字字符。\\D 匹配非数字。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "\\d 等价于 [0-9]，匹配单个数字字符。\\D 匹配非数字。",
+    "tags": [
+      "正则",
+      "字符类 \\d"
+    ]
+  },
+  {
+    "id": "regex-low-057",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "关于正则「字符类 \\w」，下列说法正确的是？",
+    "options": [
+      "\\w 匹配单词字符 [A-Za-z0-9_]，\\W 匹配非单词字符。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "\\w 匹配单词字符 [A-Za-z0-9_]，\\W 匹配非单词字符。",
+    "tags": [
+      "正则",
+      "字符类 \\w"
+    ]
+  },
+  {
+    "id": "regex-low-058",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "关于正则「字符类 \\s」，下列说法正确的是？",
+    "options": [
+      "\\s 匹配空白字符（空格、制表、换行等），\\S 匹配非空白。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "\\s 匹配空白字符（空格、制表、换行等），\\S 匹配非空白。",
+    "tags": [
+      "正则",
+      "字符类 \\s"
+    ]
+  },
+  {
+    "id": "regex-low-059",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "关于正则「点号 .」，下列说法正确的是？",
+    "options": [
+      ". 匹配除换行外的任意单个字符。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": ". 匹配除换行外的任意单个字符。",
+    "tags": [
+      "正则",
+      "点号 ."
+    ]
+  },
+  {
+    "id": "regex-low-060",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "关于正则「锚点 ^」，下列说法正确的是？",
+    "options": [
+      "^ 匹配字符串开头位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "^ 匹配字符串开头位置。",
+    "tags": [
+      "正则",
+      "锚点 ^"
+    ]
+  },
+  {
+    "id": "regex-low-061",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "关于正则「锚点 $」，下列说法正确的是？",
+    "options": [
+      "$ 匹配字符串结尾位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "$ 匹配字符串结尾位置。",
+    "tags": [
+      "正则",
+      "锚点 $"
+    ]
+  },
+  {
+    "id": "regex-low-062",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "关于正则「量词 *」，下列说法正确的是？",
+    "options": [
+      "* 表示前面的元素出现 0 次或多次。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "* 表示前面的元素出现 0 次或多次。",
+    "tags": [
+      "正则",
+      "量词 *"
+    ]
+  },
+  {
+    "id": "regex-low-063",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "关于正则「量词 +」，下列说法正确的是？",
+    "options": [
+      "+ 表示前面的元素出现 1 次或多次，等价于 {1,}。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "+ 表示前面的元素出现 1 次或多次，等价于 {1,}。",
+    "tags": [
+      "正则",
+      "量词 +"
+    ]
+  },
+  {
+    "id": "regex-low-064",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "关于正则「量词 ?」，下列说法正确的是？",
+    "options": [
+      "? 表示前面的元素出现 0 次或 1 次。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "? 表示前面的元素出现 0 次或 1 次。",
+    "tags": [
+      "正则",
+      "量词 ?"
+    ]
+  },
+  {
+    "id": "regex-low-065",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "关于正则「字符类 []」，下列说法正确的是？",
+    "options": [
+      "[abc] 匹配 a、b、c 中任意一个字符。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "[abc] 匹配 a、b、c 中任意一个字符。",
+    "tags": [
+      "正则",
+      "字符类 []"
+    ]
+  },
+  {
+    "id": "regex-low-066",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，从 \"abc123def456\" 中匹配出所有数字片段。",
+    "hint": "用 \\d+ 匹配连续数字",
+    "testCases": [
+      {
+        "input": "abc123def456",
+        "expected": [
+          "123",
+          "456"
+        ]
+      },
+      {
+        "input": "no digits here",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
+    ],
+    "referenceAnswer": "/\\d+/g",
+    "explanation": "\\d 匹配数字，+ 表示 1 次或多次，g 标志全局匹配。",
+    "tags": [
+      "字符类",
+      "量词"
+    ]
+  },
+  {
+    "id": "regex-low-067",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，匹配字符串 \"hello world\" 中的所有小写字母。",
+    "testCases": [
+      {
+        "input": "hello world",
+        "expected": [
+          "h",
+          "e",
+          "l",
+          "l",
+          "o",
+          "w",
+          "o",
+          "r",
+          "l",
+          "d"
+        ]
+      }
+    ],
+    "referenceAnswer": "/[a-z]/g",
+    "explanation": "[a-z] 匹配任意小写字母，g 全局匹配。",
+    "tags": [
+      "字符类"
+    ]
+  },
+  {
+    "id": "regex-low-068",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，判断字符串是否以 \"Hello\" 开头（匹配到即视为正确）。",
+    "testCases": [
+      {
+        "input": "Hello world",
+        "expected": "Hello"
+      },
+      {
+        "input": "Say Hello",
+        "expected": [],
+        "expectedType": "nomatch"
+      }
+    ],
+    "referenceAnswer": "/^Hello/",
+    "explanation": "^ 锚定开头，Hello 匹配字面量。",
+    "tags": [
+      "锚点"
+    ]
+  },
+  {
+    "id": "regex-low-069",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，从 \"a1 b2 c3\" 中匹配出字母+数字的组合。",
+    "testCases": [
+      {
+        "input": "a1 b2 c3",
+        "expected": [
+          "a1",
+          "b2",
+          "c3"
+        ]
+      }
+    ],
+    "referenceAnswer": "/[a-z]\\d/g",
+    "explanation": "[a-z] 匹配字母，\\d 匹配数字，组合即字母+数字。",
+    "tags": [
+      "字符类"
+    ]
+  },
+  {
+    "id": "regex-low-070",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，匹配 \"color colour\" 中的两种写法。",
+    "testCases": [
+      {
+        "input": "color colour",
+        "expected": [
+          "color",
+          "colour"
+        ]
+      }
+    ],
+    "referenceAnswer": "/colou?r/g",
+    "explanation": "u? 表示 u 出现 0 或 1 次，可匹配 color 和 colour。",
+    "tags": [
+      "量词"
+    ]
+  },
+  {
+    "id": "regex-low-071",
+    "skill": "regex",
+    "level": "low",
+    "type": "fill",
+    "title": "写一个正则，从 \"100 200 300\" 中匹配出所有数字。",
+    "testCases": [
+      {
+        "input": "100 200 300",
+        "expected": [
+          "100",
+          "200",
+          "300"
+        ]
+      }
+    ],
+    "referenceAnswer": "/\\d+/g",
+    "explanation": "\\d+ 匹配连续数字，g 全局匹配。",
+    "tags": [
+      "量词"
+    ]
   }
 ]

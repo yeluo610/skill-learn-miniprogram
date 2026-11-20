@@ -1,0 +1,578 @@
+[
+  {
+    "id": "kubectl-mid-001",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "声明式应用配置用？",
+    "options": [
+      "kubectl apply -f f.yaml",
+      "kubectl create -f f.yaml",
+      "kubectl run -f f.yaml",
+      "kubectl set -f f.yaml"
+    ],
+    "answer": 0,
+    "explanation": "apply 声明式创建/更新，推荐。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-002",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "删除配置文件中的资源用？",
+    "options": [
+      "kubectl delete -f f.yaml",
+      "kubectl remove -f f.yaml",
+      "kubectl drop -f f.yaml",
+      "kubectl destroy -f f.yaml"
+    ],
+    "answer": 0,
+    "explanation": "delete -f 删除文件定义的资源。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-003",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "创建 Deployment 用？",
+    "options": [
+      "kubectl create deployment nginx --image=nginx",
+      "kubectl run deployment nginx",
+      "kubectl new deployment nginx",
+      "kubectl make deployment nginx"
+    ],
+    "answer": 0,
+    "explanation": "create deployment 命令式创建。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-004",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "扩缩容用？",
+    "options": [
+      "kubectl scale deployment nginx --replicas=3",
+      "kubectl resize deploy nginx 3",
+      "kubectl set deploy nginx 3",
+      "kubectl expand deploy nginx 3"
+    ],
+    "answer": 0,
+    "explanation": "scale --replicas 调整副本数。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-005",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "更新镜像用？",
+    "options": [
+      "kubectl set image deploy/nginx nginx=nginx:1.25",
+      "kubectl update image deploy nginx",
+      "kubectl change image nginx",
+      "kubectl image deploy/nginx nginx:1.25"
+    ],
+    "answer": 0,
+    "explanation": "set image 触发滚动更新。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-006",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "查看滚动状态用？",
+    "options": [
+      "kubectl rollout status deploy/nginx",
+      "kubectl rollout deploy nginx",
+      "kubectl status rollout nginx",
+      "kubectl rolling nginx"
+    ],
+    "answer": 0,
+    "explanation": "rollout status 查看发布进度。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-007",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "回滚用？",
+    "options": [
+      "kubectl rollout undo deploy/nginx",
+      "kubectl rollback deploy/nginx",
+      "kubectl undo deploy nginx",
+      "kubectl revert deploy/nginx"
+    ],
+    "answer": 0,
+    "explanation": "rollout undo 回滚到上一版本。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-008",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "查看发布历史用？",
+    "options": [
+      "kubectl rollout history deploy/nginx",
+      "kubectl history deploy nginx",
+      "kubectl rollout list nginx",
+      "kubectl revisions nginx"
+    ],
+    "answer": 0,
+    "explanation": "rollout history 查看历史版本。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-009",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "重启 Deployment 用？",
+    "options": [
+      "kubectl rollout restart deploy/nginx",
+      "kubectl restart deploy/nginx",
+      "kubectl reload deploy/nginx",
+      "kubectl reboot deploy/nginx"
+    ],
+    "answer": 0,
+    "explanation": "rollout restart 触发重启。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-010",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "查看 Pod 日志用？",
+    "options": [
+      "kubectl logs <pod>",
+      "kubectl cat <pod>",
+      "kubectl show logs <pod>",
+      "kubectl tail <pod>"
+    ],
+    "answer": 0,
+    "explanation": "kubectl logs 查看容器日志。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-011",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "跟踪日志用？",
+    "options": [
+      "kubectl logs -f <pod>",
+      "kubectl logs --tail <pod>",
+      "kubectl logs --follow <pod>",
+      "kubectl stream <pod>"
+    ],
+    "answer": 0,
+    "explanation": "-f 跟踪日志输出。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-012",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "进入容器用？",
+    "options": [
+      "kubectl exec -it <pod> -- sh",
+      "kubectl ssh <pod>",
+      "kubectl enter <pod>",
+      "kubectl shell <pod>"
+    ],
+    "answer": 0,
+    "explanation": "exec -it 进入交互式终端。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-013",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "端口转发用？",
+    "options": [
+      "kubectl port-forward svc/web 8080:80",
+      "kubectl forward svc/web 8080",
+      "kubectl tunnel svc/web 8080:80",
+      "kubectl proxy svc/web 8080"
+    ],
+    "answer": 0,
+    "explanation": "port-forward 本地端口转发到 Pod。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-014",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "运行临时 Pod 用？",
+    "options": [
+      "kubectl run tmp --image=busybox --rm -it -- sh",
+      "kubectl pod tmp busybox",
+      "kubectl create tmp busybox",
+      "kubectl exec tmp busybox"
+    ],
+    "answer": 0,
+    "explanation": "run --rm -it 运行临时交互 Pod。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-015",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "暴露服务用？",
+    "options": [
+      "kubectl expose deployment nginx --port=80",
+      "kubectl service nginx 80",
+      "kubectl publish nginx 80",
+      "kubectl open nginx 80"
+    ],
+    "answer": 0,
+    "explanation": "expose 创建 Service 暴露 Deployment。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-016",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "kubectl get 输出 JSON 用？",
+    "options": [
+      "-o json",
+      "--json",
+      "-j",
+      "-O json"
+    ],
+    "answer": 0,
+    "explanation": "-o json 输出 JSON 格式。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-017",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "查看 ConfigMap 用？",
+    "options": [
+      "kubectl get cm",
+      "kubectl get configmaps",
+      "kubectl get cfgmap",
+      "kubectl get configmap"
+    ],
+    "answer": 0,
+    "explanation": "cm 是 configmap 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-018",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "查看 Secret 用？",
+    "options": [
+      "kubectl get secret",
+      "kubectl get secrets",
+      "kubectl get sec",
+      "kubectl get credentials"
+    ],
+    "answer": 0,
+    "explanation": "kubectl get secret 查看 Secret。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-019",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "查看标签用？",
+    "options": [
+      "kubectl get pods --show-labels",
+      "kubectl get pods -l",
+      "kubectl get pods labels",
+      "kubectl get pods --labels"
+    ],
+    "answer": 0,
+    "explanation": "--show-labels 显示标签。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-020",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "choice",
+    "title": "按标签筛选用？",
+    "options": [
+      "kubectl get pods -l app=nginx",
+      "kubectl get pods --label app=nginx",
+      "kubectl get pods --filter app=nginx",
+      "kubectl get pods -L app=nginx"
+    ],
+    "answer": 0,
+    "explanation": "-l 按标签选择器筛选。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-021",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，声明式应用 deploy.yaml。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl apply -f deploy.yaml"
+      }
+    ],
+    "referenceAnswer": "kubectl apply -f deploy.yaml",
+    "explanation": "apply -f 声明式应用。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-022",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，删除 deploy.yaml 中的资源。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl delete -f deploy.yaml"
+      }
+    ],
+    "referenceAnswer": "kubectl delete -f deploy.yaml",
+    "explanation": "delete -f 删除。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-023",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，创建 nginx Deployment（镜像 nginx）。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl create deployment nginx --image=nginx"
+      }
+    ],
+    "referenceAnswer": "kubectl create deployment nginx --image=nginx",
+    "explanation": "create deployment 命令式创建。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-024",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，把 nginx Deployment 扩到 3 副本。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl scale deployment nginx --replicas=3"
+      }
+    ],
+    "referenceAnswer": "kubectl scale deployment nginx --replicas=3",
+    "explanation": "scale --replicas 扩缩容。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-025",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，把 deploy/nginx 的 nginx 容器镜像改为 nginx:1.25。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl set image deploy/nginx nginx=nginx:1.25"
+      }
+    ],
+    "referenceAnswer": "kubectl set image deploy/nginx nginx=nginx:1.25",
+    "explanation": "set image 更新镜像。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-026",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，查看 deploy/nginx 的发布状态。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl rollout status deploy/nginx"
+      }
+    ],
+    "referenceAnswer": "kubectl rollout status deploy/nginx",
+    "explanation": "rollout status 发布状态。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-027",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，回滚 deploy/nginx。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl rollout undo deploy/nginx"
+      }
+    ],
+    "referenceAnswer": "kubectl rollout undo deploy/nginx",
+    "explanation": "rollout undo 回滚。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-028",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，查看 Pod nginx 的日志。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl logs nginx"
+      }
+    ],
+    "referenceAnswer": "kubectl logs nginx",
+    "explanation": "logs 查看日志。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-029",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，跟踪 Pod nginx 的日志。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl logs -f nginx"
+      }
+    ],
+    "referenceAnswer": "kubectl logs -f nginx",
+    "explanation": "-f 跟踪日志。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-030",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，进入 Pod nginx 的交互终端。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl exec -it nginx -- sh"
+      }
+    ],
+    "referenceAnswer": "kubectl exec -it nginx -- sh",
+    "explanation": "exec -it 进入容器。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-031",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，把本地 8080 转发到 svc/web 的 80。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl port-forward svc/web 8080:80"
+      }
+    ],
+    "referenceAnswer": "kubectl port-forward svc/web 8080:80",
+    "explanation": "port-forward 端口转发。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-mid-032",
+    "skill": "kubectl",
+    "level": "mid",
+    "type": "fill",
+    "title": "写一条命令，按标签 app=nginx 筛选 Pod。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl get pods -l app=nginx"
+      }
+    ],
+    "referenceAnswer": "kubectl get pods -l app=nginx",
+    "explanation": "-l 标签选择器。",
+    "tags": [
+      "kubectl"
+    ]
+  }
+]

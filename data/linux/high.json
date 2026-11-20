@@ -1,0 +1,578 @@
+[
+  {
+    "id": "linux-high-001",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看所有进程的命令是？",
+    "options": [
+      "ps aux",
+      "ps",
+      "top",
+      "proc"
+    ],
+    "answer": 0,
+    "explanation": "ps aux 显示所有进程详细信息。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-002",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "实时查看进程的命令是？",
+    "options": [
+      "top",
+      "ps",
+      "proc",
+      "list"
+    ],
+    "answer": 0,
+    "explanation": "top 实时显示进程和资源占用。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-003",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "强制杀进程的信号是？",
+    "options": [
+      "kill -9",
+      "kill -1",
+      "kill -15",
+      "kill -2"
+    ],
+    "answer": 0,
+    "explanation": "-9 SIGKILL 强制终止，不可被捕获。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-004",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "优雅终止进程的信号是？",
+    "options": [
+      "kill -15",
+      "kill -9",
+      "kill -19",
+      "kill -2"
+    ],
+    "answer": 0,
+    "explanation": "-15 SIGTERM 优雅终止，可被程序捕获处理。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-005",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看磁盘使用情况的命令是？",
+    "options": [
+      "df -h",
+      "du",
+      "disk",
+      "free"
+    ],
+    "answer": 0,
+    "explanation": "df -h 查看文件系统磁盘使用，-h 人类可读。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-006",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看目录大小的命令是？",
+    "options": [
+      "du -sh",
+      "df",
+      "ls",
+      "size"
+    ],
+    "answer": 0,
+    "explanation": "du -sh dir 查看目录总大小。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-007",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看内存的命令是？",
+    "options": [
+      "free -h",
+      "mem",
+      "top",
+      "df"
+    ],
+    "answer": 0,
+    "explanation": "free -h 查看内存使用，-h 人类可读。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-008",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看系统信息的命令是？",
+    "options": [
+      "uname -a",
+      "sysinfo",
+      "info",
+      "os"
+    ],
+    "answer": 0,
+    "explanation": "uname -a 显示内核、主机名等系统信息。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-009",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "测试网络连通的命令是？",
+    "options": [
+      "ping",
+      "test",
+      "check",
+      "net"
+    ],
+    "answer": 0,
+    "explanation": "ping host 发送 ICMP 包测试连通性。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-010",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "发起 HTTP 请求的命令是？",
+    "options": [
+      "curl",
+      "http",
+      "request",
+      "get"
+    ],
+    "answer": 0,
+    "explanation": "curl URL 发起 HTTP 请求。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-011",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "下载文件的命令是？",
+    "options": [
+      "wget",
+      "get",
+      "download",
+      "fetch"
+    ],
+    "answer": 0,
+    "explanation": "wget URL 非交互式下载文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-012",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看端口监听的命令是？",
+    "options": [
+      "netstat -tlnp",
+      "ports",
+      "listen",
+      "sock"
+    ],
+    "answer": 0,
+    "explanation": "netstat -tlnp 查看 TCP 监听端口。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-013",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "SSH 远程登录的命令是？",
+    "options": [
+      "ssh user@host",
+      "telnet",
+      "ftp",
+      "remote"
+    ],
+    "answer": 0,
+    "explanation": "ssh user@host 远程登录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-014",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "安全复制文件的命令是？",
+    "options": [
+      "scp",
+      "cp",
+      "rcp",
+      "ftp"
+    ],
+    "answer": 0,
+    "explanation": "scp file user@host:/path 安全复制。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-015",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看网络接口的命令是？",
+    "options": [
+      "ip addr",
+      "netif",
+      "ifcfg",
+      "route"
+    ],
+    "answer": 0,
+    "explanation": "ip addr 查看网卡接口（新版）。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-016",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "Shell 脚本第一行通常是？",
+    "options": [
+      "#!/bin/bash",
+      "# bash",
+      "//bin/bash",
+      "/bin/bash"
+    ],
+    "answer": 0,
+    "explanation": "#! 称为 shebang，指定解释器。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-017",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "脚本中变量引用用？",
+    "options": [
+      "$VAR",
+      "VAR",
+      "&VAR",
+      "*VAR"
+    ],
+    "answer": 0,
+    "explanation": "$VAR 引用变量值，定义时不用 $。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-018",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "后台运行命令加？",
+    "options": [
+      "&",
+      "@",
+      "#",
+      "*"
+    ],
+    "answer": 0,
+    "explanation": "命令后加 & 放后台运行。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-019",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "nohup 的作用是？",
+    "options": [
+      "忽略挂断信号",
+      "不输出",
+      "不暂停",
+      "不占用"
+    ],
+    "answer": 0,
+    "explanation": "nohup 使命令在终端关闭后继续运行。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-020",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看命令历史用？",
+    "options": [
+      "history",
+      "hist",
+      "past",
+      "cmdlog"
+    ],
+    "answer": 0,
+    "explanation": "history 显示命令历史。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-021",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，查看所有进程。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "ps aux"
+      }
+    ],
+    "referenceAnswer": "ps aux",
+    "explanation": "ps aux 查看所有进程。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-022",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，强制杀死 PID 1234。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kill -9 1234"
+      }
+    ],
+    "referenceAnswer": "kill -9 1234",
+    "explanation": "kill -9 强制终止。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-023",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，查看磁盘使用情况。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "df -h"
+      }
+    ],
+    "referenceAnswer": "df -h",
+    "explanation": "df -h 磁盘使用。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-024",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，查看当前目录总大小。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "du -sh ."
+      }
+    ],
+    "referenceAnswer": "du -sh .",
+    "explanation": "du -sh 目录大小。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-025",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，查看内存使用。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "free -h"
+      }
+    ],
+    "referenceAnswer": "free -h",
+    "explanation": "free -h 内存。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-026",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，测试到 example.com 的连通。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "ping example.com"
+      }
+    ],
+    "referenceAnswer": "ping example.com",
+    "explanation": "ping 测试连通。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-027",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，请求 http://example.com。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "curl http://example.com"
+      }
+    ],
+    "referenceAnswer": "curl http://example.com",
+    "explanation": "curl 发起请求。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-028",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，远程登录 user@host。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "ssh user@host"
+      }
+    ],
+    "referenceAnswer": "ssh user@host",
+    "explanation": "ssh 远程登录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-029",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，把本地 file 复制到远程 /tmp。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "scp file user@host:/tmp"
+      }
+    ],
+    "referenceAnswer": "scp file user@host:/tmp",
+    "explanation": "scp 远程复制。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-030",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，查看 TCP 监听端口。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "netstat -tlnp"
+      }
+    ],
+    "referenceAnswer": "netstat -tlnp",
+    "explanation": "netstat -tlnp 查看端口。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-031",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，查看系统信息。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "uname -a"
+      }
+    ],
+    "referenceAnswer": "uname -a",
+    "explanation": "uname -a 系统信息。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-032",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "写一个 Shell 脚本第一行（指定 bash 解释器）。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "#!/bin/bash"
+      }
+    ],
+    "referenceAnswer": "#!/bin/bash",
+    "explanation": "shebang 指定解释器。",
+    "tags": [
+      "Linux"
+    ]
+  }
+]

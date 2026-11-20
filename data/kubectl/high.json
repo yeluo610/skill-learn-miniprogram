@@ -1,0 +1,578 @@
+[
+  {
+    "id": "kubectl-high-001",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "给 Pod 打标签用？",
+    "options": [
+      "kubectl label pod <name> env=prod",
+      "kubectl tag pod <name> env=prod",
+      "kubectl setlabel pod <name> env=prod",
+      "kubectl mark pod <name> env=prod"
+    ],
+    "answer": 0,
+    "explanation": "label 命令打标签。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-002",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "添加注解用？",
+    "options": [
+      "kubectl annotate pod <name> x=y",
+      "kubectl note pod <name> x=y",
+      "kubectl comment pod <name> x=y",
+      "kubectl meta pod <name> x=y"
+    ],
+    "answer": 0,
+    "explanation": "annotate 添加注解。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-003",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "节点打污点用？",
+    "options": [
+      "kubectl taint node <n> key=value:NoSchedule",
+      "kubectl taint node <n> NoSchedule",
+      "kubectl node-taint <n> NoSchedule",
+      "kubectl mark node <n> NoSchedule"
+    ],
+    "answer": 0,
+    "explanation": "taint 给节点打污点。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-004",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "标记节点不可调度用？",
+    "options": [
+      "kubectl cordon <node>",
+      "kubectl unschedule <node>",
+      "kubectl block <node>",
+      "kubectl pause <node>"
+    ],
+    "answer": 0,
+    "explanation": "cordon 标记节点不可调度。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-005",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "驱逐节点 Pod 用？",
+    "options": [
+      "kubectl drain <node>",
+      "kubectl evict <node>",
+      "kubectl empty <node>",
+      "kubectl clear <node>"
+    ],
+    "answer": 0,
+    "explanation": "drain 安全驱逐节点上的 Pod。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-006",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "恢复节点调度用？",
+    "options": [
+      "kubectl uncordon <node>",
+      "kubectl resume <node>",
+      "kubectl enable <node>",
+      "kubectl schedule <node>"
+    ],
+    "answer": 0,
+    "explanation": "uncordon 恢复节点调度。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-007",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "查看 ConfigMap 内容用？",
+    "options": [
+      "kubectl get cm <name> -o yaml",
+      "kubectl cat cm <name>",
+      "kubectl show cm <name>",
+      "kubectl read cm <name>"
+    ],
+    "answer": 0,
+    "explanation": "get -o yaml 查看完整内容。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-008",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "编辑资源用？",
+    "options": [
+      "kubectl edit deploy/nginx",
+      "kubectl modify deploy/nginx",
+      "kubectl change deploy/nginx",
+      "kubectl update deploy/nginx"
+    ],
+    "answer": 0,
+    "explanation": "edit 打开编辑器修改并应用。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-009",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "强制删除 Pod 用？",
+    "options": [
+      "kubectl delete pod <name> --force --grace-period=0",
+      "kubectl delete pod <name> -f",
+      "kubectl delete pod <name> --now",
+      "kubectl remove pod <name> --force"
+    ],
+    "answer": 0,
+    "explanation": "--force --grace-period=0 强制删除。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-010",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "查看 Ingress 用？",
+    "options": [
+      "kubectl get ingress",
+      "kubectl get ing",
+      "kubectl get ingresses",
+      "kubectl get routing"
+    ],
+    "answer": 0,
+    "explanation": "ing 是 ingress 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-011",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "查看 PV 用？",
+    "options": [
+      "kubectl get pv",
+      "kubectl get persistentvolumes",
+      "kubectl get volumes",
+      "kubectl get disk"
+    ],
+    "answer": 0,
+    "explanation": "pv 是 persistentvolume 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-012",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "查看 PVC 用？",
+    "options": [
+      "kubectl get pvc",
+      "kubectl get persistentvolumeclaims",
+      "kubectl get claims",
+      "kubectl get disk-claim"
+    ],
+    "answer": 0,
+    "explanation": "pvc 是 persistentvolumeclaim 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-013",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "查看 RBAC 角色用？",
+    "options": [
+      "kubectl get roles",
+      "kubectl get rbac",
+      "kubectl get perms",
+      "kubectl get access"
+    ],
+    "answer": 0,
+    "explanation": "kubectl get roles 查看 Role。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-014",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "查看 ServiceAccount 用？",
+    "options": [
+      "kubectl get sa",
+      "kubectl get serviceaccounts",
+      "kubectl get accounts",
+      "kubectl get sa-list"
+    ],
+    "answer": 0,
+    "explanation": "sa 是 serviceaccount 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-015",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "切换上下文用？",
+    "options": [
+      "kubectl config use-context <name>",
+      "kubectl switch <name>",
+      "kubectl context <name>",
+      "kubectl set-context <name>"
+    ],
+    "answer": 0,
+    "explanation": "config use-context 切换。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-016",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "查看当前上下文用？",
+    "options": [
+      "kubectl config current-context",
+      "kubectl context",
+      "kubectl current",
+      "kubectl where"
+    ],
+    "answer": 0,
+    "explanation": "config current-context 显示当前上下文。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-017",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "查看上下文列表用？",
+    "options": [
+      "kubectl config get-contexts",
+      "kubectl contexts",
+      "kubectl list contexts",
+      "kubectl show contexts"
+    ],
+    "answer": 0,
+    "explanation": "config get-contexts 列出所有上下文。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-018",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "导出资源为 YAML 用？",
+    "options": [
+      "kubectl get deploy nginx -o yaml --export",
+      "kubectl export deploy nginx",
+      "kubectl save deploy nginx",
+      "kubectl dump deploy nginx"
+    ],
+    "answer": 0,
+    "explanation": "get -o yaml 导出（--export 已废弃但可忽略）。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-019",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "查看 API 资源用？",
+    "options": [
+      "kubectl api-resources",
+      "kubectl resources",
+      "kubectl api",
+      "kubectl types"
+    ],
+    "answer": 0,
+    "explanation": "api-resources 列出所有资源类型。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-020",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "choice",
+    "title": "查看 API 版本用？",
+    "options": [
+      "kubectl api-versions",
+      "kubectl versions",
+      "kubectl api-ver",
+      "kubectl k8s-versions"
+    ],
+    "answer": 0,
+    "explanation": "api-versions 列出可用 API 版本。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-021",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，给 Pod nginx 打标签 env=prod。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl label pod nginx env=prod"
+      }
+    ],
+    "referenceAnswer": "kubectl label pod nginx env=prod",
+    "explanation": "label 打标签。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-022",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，给 Pod nginx 加注解 x=y。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl annotate pod nginx x=y"
+      }
+    ],
+    "referenceAnswer": "kubectl annotate pod nginx x=y",
+    "explanation": "annotate 加注解。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-023",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，给节点 node1 打污点 key=value:NoSchedule。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl taint node node1 key=value:NoSchedule"
+      }
+    ],
+    "referenceAnswer": "kubectl taint node node1 key=value:NoSchedule",
+    "explanation": "taint 打污点。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-024",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，标记 node1 不可调度。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl cordon node1"
+      }
+    ],
+    "referenceAnswer": "kubectl cordon node1",
+    "explanation": "cordon 不可调度。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-025",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，驱逐 node1 上的 Pod。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl drain node1"
+      }
+    ],
+    "referenceAnswer": "kubectl drain node1",
+    "explanation": "drain 驱逐。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-026",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，恢复 node1 调度。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl uncordon node1"
+      }
+    ],
+    "referenceAnswer": "kubectl uncordon node1",
+    "explanation": "uncordon 恢复调度。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-027",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，编辑 deploy/nginx。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl edit deploy/nginx"
+      }
+    ],
+    "referenceAnswer": "kubectl edit deploy/nginx",
+    "explanation": "edit 编辑资源。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-028",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，强制删除 Pod nginx。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl delete pod nginx --force --grace-period=0"
+      }
+    ],
+    "referenceAnswer": "kubectl delete pod nginx --force --grace-period=0",
+    "explanation": "--force --grace-period=0 强制。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-029",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，切换到上下文 prod。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl config use-context prod"
+      }
+    ],
+    "referenceAnswer": "kubectl config use-context prod",
+    "explanation": "config use-context 切换。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-030",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，查看当前上下文。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl config current-context"
+      }
+    ],
+    "referenceAnswer": "kubectl config current-context",
+    "explanation": "config current-context 当前上下文。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-031",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，查看 ConfigMap 名为 cfg。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl get cm cfg"
+      }
+    ],
+    "referenceAnswer": "kubectl get cm cfg",
+    "explanation": "get cm 查看 ConfigMap。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-high-032",
+    "skill": "kubectl",
+    "level": "high",
+    "type": "fill",
+    "title": "写一条命令，查看所有 Ingress。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl get ingress"
+      }
+    ],
+    "referenceAnswer": "kubectl get ingress",
+    "explanation": "get ingress 查看。",
+    "tags": [
+      "kubectl"
+    ]
+  }
+]

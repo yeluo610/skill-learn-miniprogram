@@ -1,0 +1,578 @@
+[
+  {
+    "id": "linux-low-001",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "显示当前工作目录的命令是？",
+    "options": [
+      "pwd",
+      "cd",
+      "ls",
+      "dir"
+    ],
+    "answer": 0,
+    "explanation": "pwd (print working directory) 显示当前目录绝对路径。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-002",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "列出目录内容的命令是？",
+    "options": [
+      "ls",
+      "list",
+      "dir",
+      "show"
+    ],
+    "answer": 0,
+    "explanation": "ls 列出目录内容，-l 详细，-a 含隐藏文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-003",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "切换目录的命令是？",
+    "options": [
+      "cd",
+      "chdir",
+      "goto",
+      "move"
+    ],
+    "answer": 0,
+    "explanation": "cd (change directory) 切换工作目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-004",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "创建目录的命令是？",
+    "options": [
+      "mkdir",
+      "createdir",
+      "md",
+      "newdir"
+    ],
+    "answer": 0,
+    "explanation": "mkdir 创建目录，-p 递归创建父目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-005",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "创建空文件的命令是？",
+    "options": [
+      "touch",
+      "create",
+      "new",
+      "make"
+    ],
+    "answer": 0,
+    "explanation": "touch 创建空文件或更新文件时间戳。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-006",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "删除文件的命令是？",
+    "options": [
+      "rm",
+      "del",
+      "delete",
+      "remove"
+    ],
+    "answer": 0,
+    "explanation": "rm 删除文件，-r 递归，-f 强制。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-007",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "复制文件的命令是？",
+    "options": [
+      "cp",
+      "copy",
+      "duplicate",
+      "clone"
+    ],
+    "answer": 0,
+    "explanation": "cp 复制文件或目录，-r 递归复制目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-008",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "移动或重命名文件的命令是？",
+    "options": [
+      "mv",
+      "move",
+      "rename",
+      "cut"
+    ],
+    "answer": 0,
+    "explanation": "mv 移动或重命名文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-009",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "查看文件内容的命令是？",
+    "options": [
+      "cat",
+      "show",
+      "view",
+      "read"
+    ],
+    "answer": 0,
+    "explanation": "cat 输出文件全部内容，适合小文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-010",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "显示文件前几行的命令是？",
+    "options": [
+      "head",
+      "top",
+      "first",
+      "begin"
+    ],
+    "answer": 0,
+    "explanation": "head 默认显示前 10 行，-n N 指定行数。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-011",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "显示文件末尾几行的命令是？",
+    "options": [
+      "tail",
+      "bottom",
+      "last",
+      "end"
+    ],
+    "answer": 0,
+    "explanation": "tail 默认显示后 10 行，-f 实时跟踪。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-012",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "ls -la 中 -l 的含义是？",
+    "options": [
+      "长格式",
+      "链接",
+      "本地",
+      "列表"
+    ],
+    "answer": 0,
+    "explanation": "-l 长格式，显示权限、所有者、大小等详细信息。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-013",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "ls -a 中 -a 的含义是？",
+    "options": [
+      "所有文件",
+      "追加",
+      "归档",
+      "绝对路径"
+    ],
+    "answer": 0,
+    "explanation": "-a 显示包括 . 开头的隐藏文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-014",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "cd ~ 的作用是？",
+    "options": [
+      "回到用户主目录",
+      "上一级目录",
+      "根目录",
+      "当前目录"
+    ],
+    "answer": 0,
+    "explanation": "~ 代表当前用户主目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-015",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "cd - 的作用是？",
+    "options": [
+      "回到上一个工作目录",
+      "后退一步",
+      "根目录",
+      "主目录"
+    ],
+    "answer": 0,
+    "explanation": "cd - 切换到上一个工作目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-016",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "mkdir -p 的作用是？",
+    "options": [
+      "递归创建父目录",
+      "打印",
+      "权限",
+      "粘贴"
+    ],
+    "answer": 0,
+    "explanation": "-p 需要时创建父目录，已存在不报错。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-017",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "rm -rf 中 -f 的含义是？",
+    "options": [
+      "强制",
+      "递归",
+      "文件",
+      "快速"
+    ],
+    "answer": 0,
+    "explanation": "-f 强制删除，不提示确认。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-018",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "cp -r 的作用是？",
+    "options": [
+      "递归复制目录",
+      "保留权限",
+      "远程",
+      "重命名"
+    ],
+    "answer": 0,
+    "explanation": "-r 递归复制，用于复制目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-019",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "查看命令帮助的命令是？",
+    "options": [
+      "man",
+      "help",
+      "info",
+      "doc"
+    ],
+    "answer": 0,
+    "explanation": "man 显示命令手册页，如 man ls。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-020",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "wc -l 的作用是？",
+    "options": [
+      "统计行数",
+      "统计字数",
+      "统计字符",
+      "统计文件"
+    ],
+    "answer": 0,
+    "explanation": "wc -l 统计行数，-w 字数，-c 字符数。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-021",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "写一条命令，显示当前工作目录。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "pwd"
+      }
+    ],
+    "referenceAnswer": "pwd",
+    "explanation": "pwd 显示当前目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-022",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "写一条命令，列出当前目录所有文件（含隐藏文件）。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "ls -a"
+      }
+    ],
+    "referenceAnswer": "ls -a",
+    "explanation": "-a 显示隐藏文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-023",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "写一条命令，以长格式列出目录内容。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "ls -l"
+      }
+    ],
+    "referenceAnswer": "ls -l",
+    "explanation": "-l 长格式。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-024",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "写一条命令，回到用户主目录。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "cd ~"
+      }
+    ],
+    "referenceAnswer": "cd ~",
+    "explanation": "~ 代表主目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-025",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "写一条命令，创建名为 test 的目录。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "mkdir test"
+      }
+    ],
+    "referenceAnswer": "mkdir test",
+    "explanation": "mkdir 创建目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-026",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "写一条命令，创建空文件 a.txt。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "touch a.txt"
+      }
+    ],
+    "referenceAnswer": "touch a.txt",
+    "explanation": "touch 创建空文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-027",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "写一条命令，删除文件 a.txt。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "rm a.txt"
+      }
+    ],
+    "referenceAnswer": "rm a.txt",
+    "explanation": "rm 删除文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-028",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "写一条命令，递归删除目录 dir。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "rm -r dir"
+      }
+    ],
+    "referenceAnswer": "rm -r dir",
+    "explanation": "-r 递归删除。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-029",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "写一条命令，复制文件 a.txt 为 b.txt。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "cp a.txt b.txt"
+      }
+    ],
+    "referenceAnswer": "cp a.txt b.txt",
+    "explanation": "cp 源 目标。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-030",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "写一条命令，重命名 a.txt 为 b.txt。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "mv a.txt b.txt"
+      }
+    ],
+    "referenceAnswer": "mv a.txt b.txt",
+    "explanation": "mv 移动/重命名。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-031",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "写一条命令，查看文件 a.txt 内容。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "cat a.txt"
+      }
+    ],
+    "referenceAnswer": "cat a.txt",
+    "explanation": "cat 输出文件内容。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-032",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "写一条命令，查看文件前 10 行。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "head -n 10 a.txt"
+      }
+    ],
+    "referenceAnswer": "head -n 10 a.txt",
+    "explanation": "head -n 指定行数。",
+    "tags": [
+      "Linux"
+    ]
+  }
+]

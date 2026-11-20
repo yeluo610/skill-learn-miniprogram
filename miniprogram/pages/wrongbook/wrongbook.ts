@@ -11,7 +11,7 @@ Page({
     list: [] as any[],
     total: 0,
     page: 1,
-    pageSize: 50,
+    pageSize: 15,
     loading: true,
     statusOptions: [
       { value: '', label: '全部' },

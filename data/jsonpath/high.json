@@ -5,10 +5,17 @@
     "level": "high",
     "type": "choice",
     "title": "$..book 表示什么？",
-    "options": ["任意层级叫 book 的字段", "根的 book 字段", "book 数组第一个", "错误语法"],
+    "options": [
+      "任意层级叫 book 的字段",
+      "根的 book 字段",
+      "book 数组第一个",
+      "错误语法"
+    ],
     "answer": 0,
     "explanation": ".. 是递归下降，$..book 从根开始递归查找所有叫 book 的字段，无论嵌套多深。",
-    "tags": ["递归"]
+    "tags": [
+      "递归"
+    ]
   },
   {
     "id": "jsonpath-high-002",
@@ -16,10 +23,18 @@
     "level": "high",
     "type": "choice",
     "title": "$..* 表示什么？",
-    "options": ["递归取所有层级的所有值", "根对象本身", "仅第一层", "错误语法"],
+    "options": [
+      "递归取所有层级的所有值",
+      "根对象本身",
+      "仅第一层",
+      "错误语法"
+    ],
     "answer": 0,
     "explanation": "$..* 递归下降 + 通配，返回 JSON 中所有层级的所有元素值，常用于遍历。",
-    "tags": ["递归", "通配符"]
+    "tags": [
+      "递归",
+      "通配符"
+    ]
   },
   {
     "id": "jsonpath-high-003",
@@ -27,10 +42,18 @@
     "level": "high",
     "type": "choice",
     "title": "$.book[?(@.price < 10 && @.category == 'fiction')] 表示？",
-    "options": ["价格<10 且 类别为 fiction 的书", "价格<10 或 类别为fiction", "全部书籍", "语法错误"],
+    "options": [
+      "价格<10 且 类别为 fiction 的书",
+      "价格<10 或 类别为fiction",
+      "全部书籍",
+      "语法错误"
+    ],
     "answer": 0,
     "explanation": "&& 是逻辑与，过滤同时满足两个条件的元素。|| 是逻辑或。",
-    "tags": ["过滤", "逻辑"]
+    "tags": [
+      "过滤",
+      "逻辑"
+    ]
   },
   {
     "id": "jsonpath-high-004",
@@ -40,12 +63,27 @@
     "title": "递归查找所有叫 name 的字段值。",
     "hint": "用 $..name",
     "testCases": [
-      { "input": "{\"a\":{\"name\":\"x\"},\"b\":{\"c\":{\"name\":\"y\"}}}", "expected": ["x", "y"], "expectedType": "equal" },
-      { "input": "{\"name\":\"top\"}", "expected": ["top"], "expectedType": "equal" }
+      {
+        "input": "{\"a\":{\"name\":\"x\"},\"b\":{\"c\":{\"name\":\"y\"}}}",
+        "expected": [
+          "x",
+          "y"
+        ],
+        "expectedType": "equal"
+      },
+      {
+        "input": "{\"name\":\"top\"}",
+        "expected": [
+          "top"
+        ],
+        "expectedType": "equal"
+      }
     ],
     "referenceAnswer": "$..name",
     "explanation": ".. 递归下降，$..name 找出所有层级的 name 字段值。",
-    "tags": ["递归"]
+    "tags": [
+      "递归"
+    ]
   },
   {
     "id": "jsonpath-high-005",
@@ -55,11 +93,19 @@
     "title": "找出 books 数组中 category 为 'fiction' 的所有书。",
     "hint": "过滤 @.category == 'fiction'",
     "testCases": [
-      { "input": "{\"books\":[{\"category\":\"fiction\",\"title\":\"A\"},{\"category\":\"science\",\"title\":\"B\"}]}", "expected": ["{\"category\":\"fiction\",\"title\":\"A\"}"], "expectedType": "equal" }
+      {
+        "input": "{\"books\":[{\"category\":\"fiction\",\"title\":\"A\"},{\"category\":\"science\",\"title\":\"B\"}]}",
+        "expected": [
+          "{\"category\":\"fiction\",\"title\":\"A\"}"
+        ],
+        "expectedType": "equal"
+      }
     ],
     "referenceAnswer": "$.books[?(@.category == 'fiction')]",
     "explanation": "[?(@.category == 'fiction')] 过滤出 category 等于 'fiction' 的元素。",
-    "tags": ["过滤"]
+    "tags": [
+      "过滤"
+    ]
   },
   {
     "id": "jsonpath-high-006",
@@ -67,10 +113,18 @@
     "level": "high",
     "type": "choice",
     "title": "$..* 会返回什么？",
-    "options": ["所有层级的所有值", "仅根对象", "仅叶子值", "错误语法"],
+    "options": [
+      "所有层级的所有值",
+      "仅根对象",
+      "仅叶子值",
+      "错误语法"
+    ],
     "answer": 0,
     "explanation": "$..* 递归下降 + 通配，返回 JSON 中所有层级的所有元素值（包括嵌套对象、数组、叶子值）。",
-    "tags": ["递归", "通配符"]
+    "tags": [
+      "递归",
+      "通配符"
+    ]
   },
   {
     "id": "jsonpath-high-007",
@@ -78,10 +132,18 @@
     "level": "high",
     "type": "choice",
     "title": "$.store..price 与 $..price 的区别？",
-    "options": ["前者从 store 起递归，后者从根起", "完全相同", "前者只一层", "后者只一层"],
+    "options": [
+      "前者从 store 起递归，后者从根起",
+      "完全相同",
+      "前者只一层",
+      "后者只一层"
+    ],
     "answer": 0,
     "explanation": ".. 起点决定递归范围。$..price 从根递归；$.store..price 仅从 store 字段起递归。结果可能不同。",
-    "tags": ["递归", "陷阱"]
+    "tags": [
+      "递归",
+      "陷阱"
+    ]
   },
   {
     "id": "jsonpath-high-008",
@@ -89,10 +151,18 @@
     "level": "high",
     "type": "choice",
     "title": "$..book[?((@.price < 30) && (@.category == 'fiction'))] 表示？",
-    "options": ["任意层级 book 中价格<30 且类别为fiction 的项", "价格<30 或 类别fiction", "全部 book", "语法错误"],
+    "options": [
+      "任意层级 book 中价格<30 且类别为fiction 的项",
+      "价格<30 或 类别fiction",
+      "全部 book",
+      "语法错误"
+    ],
     "answer": 0,
     "explanation": "嵌套括号组合 && 与条件，从任意层级 book 中过滤同时满足价格<30 且类别为fiction 的元素。",
-    "tags": ["递归", "过滤"]
+    "tags": [
+      "递归",
+      "过滤"
+    ]
   },
   {
     "id": "jsonpath-high-009",
@@ -100,10 +170,17 @@
     "level": "high",
     "type": "choice",
     "title": "$.data[?(@.active)] 取出哪些元素？",
-    "options": ["active 为真的元素", "全部元素", "active 字段", "错误语法"],
+    "options": [
+      "active 为真的元素",
+      "全部元素",
+      "active 字段",
+      "错误语法"
+    ],
     "answer": 0,
     "explanation": "过滤表达式 @.active 取真值元素，等价于 active 为 true 的项。",
-    "tags": ["过滤"]
+    "tags": [
+      "过滤"
+    ]
   },
   {
     "id": "jsonpath-high-010",
@@ -113,11 +190,20 @@
     "title": "递归查找所有叫 id 的字段值。",
     "hint": "$..id",
     "testCases": [
-      { "input": "{\"a\":{\"id\":1},\"b\":{\"c\":{\"id\":2}}}", "expected": ["1", "2"], "expectedType": "equal" }
+      {
+        "input": "{\"a\":{\"id\":1},\"b\":{\"c\":{\"id\":2}}}",
+        "expected": [
+          "1",
+          "2"
+        ],
+        "expectedType": "equal"
+      }
     ],
     "referenceAnswer": "$..id",
     "explanation": ".. 递归下降，$..id 找出所有层级的 id 字段值。",
-    "tags": ["递归"]
+    "tags": [
+      "递归"
+    ]
   },
   {
     "id": "jsonpath-high-011",
@@ -127,11 +213,20 @@
     "title": "从 books 中筛选 category 为 'fiction' 或 category 为 'history' 的书。",
     "hint": "用 || 逻辑或",
     "testCases": [
-      { "input": "{\"books\":[{\"category\":\"fiction\"},{\"category\":\"science\"},{\"category\":\"history\"}]}", "expected": ["{\"category\":\"fiction\"}", "{\"category\":\"history\"}"], "expectedType": "equal" }
+      {
+        "input": "{\"books\":[{\"category\":\"fiction\"},{\"category\":\"science\"},{\"category\":\"history\"}]}",
+        "expected": [
+          "{\"category\":\"fiction\"}",
+          "{\"category\":\"history\"}"
+        ],
+        "expectedType": "equal"
+      }
     ],
     "referenceAnswer": "$.books[?(@.category == 'fiction' || @.category == 'history')]",
     "explanation": "|| 是逻辑或，过滤出满足任一条件的元素。",
-    "tags": ["过滤"]
+    "tags": [
+      "过滤"
+    ]
   },
   {
     "id": "jsonpath-high-012",
@@ -141,10 +236,158 @@
     "title": "递归查找所有数组（任意层级），并取每个数组的第一个元素。",
     "hint": "$..*[0] 或类似",
     "testCases": [
-      { "input": "{\"a\":[1,2,3],\"b\":{\"c\":[4,5]}}", "expected": ["1", "4"], "expectedType": "equal" }
+      {
+        "input": "{\"a\":[1,2,3],\"b\":{\"c\":[4,5]}}",
+        "expected": [
+          "1",
+          "4"
+        ],
+        "expectedType": "equal"
+      }
     ],
     "referenceAnswer": "$..[0]",
     "explanation": "$..[0] 递归找所有数组并取下标 0 元素。",
-    "tags": ["递归"]
+    "tags": [
+      "递归"
+    ]
+  },
+  {
+    "id": "jsonpath-high-013",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「递归 ..」，下列正确的是？",
+    "options": [
+      ".. 从当前位置递归查找所有层级。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": ".. 从当前位置递归查找所有层级。",
+    "tags": [
+      "JSONPath",
+      "递归 .."
+    ]
+  },
+  {
+    "id": "jsonpath-high-014",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「脚本表达式」，下列正确的是？",
+    "options": [
+      "部分实现支持 (script) 脚本表达式。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "部分实现支持 (script) 脚本表达式。",
+    "tags": [
+      "JSONPath",
+      "脚本表达式"
+    ]
+  },
+  {
+    "id": "jsonpath-high-015",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「多选 [a,b]」，下列正确的是？",
+    "options": [
+      "['a','b'] 同时选取多个字段。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "['a','b'] 同时选取多个字段。",
+    "tags": [
+      "JSONPath",
+      "多选 [a,b]"
+    ]
+  },
+  {
+    "id": "jsonpath-high-016",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「组合表达式」，下列正确的是？",
+    "options": [
+      "$..book[0].title 与 $..price 组合查询。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$..book[0].title 与 $..price 组合查询。",
+    "tags": [
+      "JSONPath",
+      "组合表达式"
+    ]
+  },
+  {
+    "id": "jsonpath-high-017",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "写一个 JSONPath，递归取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中所有 price。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "10",
+          "20"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..price",
+    "explanation": ".. 递归下降，找所有层级的 price。",
+    "tags": [
+      "递归"
+    ]
+  },
+  {
+    "id": "jsonpath-high-018",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "写一个 JSONPath，递归取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中所有 title。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "A",
+          "B"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..title",
+    "explanation": ".. 递归查找 title 字段。",
+    "tags": [
+      "递归"
+    ]
+  },
+  {
+    "id": "jsonpath-high-019",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "写一个 JSONPath，同时取 {\"a\":1,\"b\":2,\"c\":3} 中 a 和 b 的值。",
+    "testCases": [
+      {
+        "input": "{\"a\":1,\"b\":2,\"c\":3}",
+        "expected": [
+          "1",
+          "2"
+        ]
+      }
+    ],
+    "referenceAnswer": "$['a','b']",
+    "explanation": "['a','b'] 多选字段。",
+    "tags": [
+      "多选"
+    ]
   }
 ]
