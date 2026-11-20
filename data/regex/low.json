@@ -1518,5 +1518,176 @@
     "tags": [
       "量词"
     ]
+  },
+  {
+    "id": "regex-low-072",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "关于正则「字符类 \\d」，下列说法正确的是？",
+    "options": [
+      "\\d 等价于 [0-9]，匹配单个数字字符。\\D 匹配非数字。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "\\d 等价于 [0-9]，匹配单个数字字符。\\D 匹配非数字。",
+    "tags": [
+      "正则",
+      "字符类 \\d"
+    ]
+  },
+  {
+    "id": "regex-low-073",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「字符类 \\d」的描述，错误的是？",
+    "options": [
+      "\\d 等价于 [0-9]，匹配单个数字字符。\\D 匹配非数字。",
+      "表示取反操作",
+      "只匹配字符串开头",
+      "等价于空匹配"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：\\d 等价于 [0-9]，匹配单个数字字符。\\D 匹配非数字。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "字符类 \\d"
+    ]
+  },
+  {
+    "id": "regex-low-074",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "关于正则「字符类 \\w」，下列说法正确的是？",
+    "options": [
+      "\\w 匹配单词字符 [A-Za-z0-9_]，\\W 匹配非单词字符。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "\\w 匹配单词字符 [A-Za-z0-9_]，\\W 匹配非单词字符。",
+    "tags": [
+      "正则",
+      "字符类 \\w"
+    ]
+  },
+  {
+    "id": "regex-low-075",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「字符类 \\w」的描述，错误的是？",
+    "options": [
+      "\\w 匹配单词字符 [A-Za-z0-9_]，\\W 匹配非单词字符。",
+      "只匹配字符串开头",
+      "等价于空匹配",
+      "必须转义才能使用"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：\\w 匹配单词字符 [A-Za-z0-9_]，\\W 匹配非单词字符。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "字符类 \\w"
+    ]
+  },
+  {
+    "id": "regex-low-076",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "关于正则「字符类 \\s」，下列说法正确的是？",
+    "options": [
+      "\\s 匹配空白字符（空格、制表、换行等），\\S 匹配非空白。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "\\s 匹配空白字符（空格、制表、换行等），\\S 匹配非空白。",
+    "tags": [
+      "正则",
+      "字符类 \\s"
+    ]
+  },
+  {
+    "id": "regex-low-077",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「字符类 \\s」的描述，错误的是？",
+    "options": [
+      "\\s 匹配空白字符（空格、制表、换行等），\\S 匹配非空白。",
+      "等价于空匹配",
+      "必须转义才能使用",
+      "表示取反操作"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：\\s 匹配空白字符（空格、制表、换行等），\\S 匹配非空白。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "字符类 \\s"
+    ]
+  },
+  {
+    "id": "regex-low-078",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "关于正则「点号 .」，下列说法正确的是？",
+    "options": [
+      ". 匹配除换行外的任意单个字符。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": ". 匹配除换行外的任意单个字符。",
+    "tags": [
+      "正则",
+      "点号 ."
+    ]
+  },
+  {
+    "id": "regex-low-079",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「点号 .」的描述，错误的是？",
+    "options": [
+      ". 匹配除换行外的任意单个字符。",
+      "必须转义才能使用",
+      "表示取反操作",
+      "只匹配字符串开头"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：. 匹配除换行外的任意单个字符。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "点号 ."
+    ]
+  },
+  {
+    "id": "regex-low-080",
+    "skill": "regex",
+    "level": "low",
+    "type": "choice",
+    "title": "关于正则「锚点 ^」，下列说法正确的是？",
+    "options": [
+      "^ 匹配字符串开头位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "^ 匹配字符串开头位置。",
+    "tags": [
+      "正则",
+      "锚点 ^"
+    ]
   }
 ]

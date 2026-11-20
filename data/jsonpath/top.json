@@ -324,5 +324,1278 @@
     "tags": [
       "切片步长"
     ]
+  },
+  {
+    "id": "jsonpath-top-017",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「过滤陷阱」，下列正确的是？",
+    "options": [
+      "过滤表达式中 @ 与 $ 的区别。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "过滤表达式中 @ 与 $ 的区别。",
+    "tags": [
+      "JSONPath",
+      "过滤陷阱"
+    ]
+  },
+  {
+    "id": "jsonpath-top-018",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「过滤陷阱」错误的是？",
+    "options": [
+      "过滤表达式中 @ 与 $ 的区别。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：过滤表达式中 @ 与 $ 的区别。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "过滤陷阱"
+    ]
+  },
+  {
+    "id": "jsonpath-top-019",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「切片步长」，下列正确的是？",
+    "options": [
+      "[::2] 步长切片。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[::2] 步长切片。",
+    "tags": [
+      "JSONPath",
+      "切片步长"
+    ]
+  },
+  {
+    "id": "jsonpath-top-020",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「切片步长」错误的是？",
+    "options": [
+      "[::2] 步长切片。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：[::2] 步长切片。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "切片步长"
+    ]
+  },
+  {
+    "id": "jsonpath-top-021",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「空结果」，下列正确的是？",
+    "options": [
+      "不存在的字段返回空数组而非报错。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "不存在的字段返回空数组而非报错。",
+    "tags": [
+      "JSONPath",
+      "空结果"
+    ]
+  },
+  {
+    "id": "jsonpath-top-022",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「空结果」错误的是？",
+    "options": [
+      "不存在的字段返回空数组而非报错。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：不存在的字段返回空数组而非报错。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "空结果"
+    ]
+  },
+  {
+    "id": "jsonpath-top-023",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「实现差异」，下列正确的是？",
+    "options": [
+      "jsonpath-plus 与 Goessner 语法略有不同。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "jsonpath-plus 与 Goessner 语法略有不同。",
+    "tags": [
+      "JSONPath",
+      "实现差异"
+    ]
+  },
+  {
+    "id": "jsonpath-top-024",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「实现差异」错误的是？",
+    "options": [
+      "jsonpath-plus 与 Goessner 语法略有不同。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：jsonpath-plus 与 Goessner 语法略有不同。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "实现差异"
+    ]
+  },
+  {
+    "id": "jsonpath-top-025",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「性能」，下列正确的是？",
+    "options": [
+      "递归 .. 较慢，能用具体路径就用。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "递归 .. 较慢，能用具体路径就用。",
+    "tags": [
+      "JSONPath",
+      "性能"
+    ]
+  },
+  {
+    "id": "jsonpath-top-026",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「性能」错误的是？",
+    "options": [
+      "递归 .. 较慢，能用具体路径就用。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：递归 .. 较慢，能用具体路径就用。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "性能"
+    ]
+  },
+  {
+    "id": "jsonpath-top-027",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「结果顺序」，下列正确的是？",
+    "options": [
+      "递归结果顺序与实现有关，不保证固定。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "递归结果顺序与实现有关，不保证固定。",
+    "tags": [
+      "JSONPath",
+      "结果顺序"
+    ]
+  },
+  {
+    "id": "jsonpath-top-028",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「结果顺序」错误的是？",
+    "options": [
+      "递归结果顺序与实现有关，不保证固定。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：递归结果顺序与实现有关，不保证固定。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "结果顺序"
+    ]
+  },
+  {
+    "id": "jsonpath-top-029",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「根对象返回」，下列正确的是？",
+    "options": [
+      "$ 返回整个根对象。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$ 返回整个根对象。",
+    "tags": [
+      "JSONPath",
+      "根对象返回"
+    ]
+  },
+  {
+    "id": "jsonpath-top-030",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「根对象返回」错误的是？",
+    "options": [
+      "$ 返回整个根对象。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：$ 返回整个根对象。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "根对象返回"
+    ]
+  },
+  {
+    "id": "jsonpath-top-031",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「负步长」，下列正确的是？",
+    "options": [
+      "[::-1] 反转，[5:0:-1] 倒序取一段。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[::-1] 反转，[5:0:-1] 倒序取一段。",
+    "tags": [
+      "JSONPath",
+      "负步长"
+    ]
+  },
+  {
+    "id": "jsonpath-top-032",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「负步长」错误的是？",
+    "options": [
+      "[::-1] 反转，[5:0:-1] 倒序取一段。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：[::-1] 反转，[5:0:-1] 倒序取一段。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "负步长"
+    ]
+  },
+  {
+    "id": "jsonpath-top-033",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「多下标」，下列正确的是？",
+    "options": [
+      "$[0,2,4] 一次取多个下标。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$[0,2,4] 一次取多个下标。",
+    "tags": [
+      "JSONPath",
+      "多下标"
+    ]
+  },
+  {
+    "id": "jsonpath-top-034",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「多下标」错误的是？",
+    "options": [
+      "$[0,2,4] 一次取多个下标。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：$[0,2,4] 一次取多个下标。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "多下标"
+    ]
+  },
+  {
+    "id": "jsonpath-top-035",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「过滤嵌套」，下列正确的是？",
+    "options": [
+      "可在过滤条件里用 @.a.b 访问子字段。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "可在过滤条件里用 @.a.b 访问子字段。",
+    "tags": [
+      "JSONPath",
+      "过滤嵌套"
+    ]
+  },
+  {
+    "id": "jsonpath-top-036",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「过滤嵌套」错误的是？",
+    "options": [
+      "可在过滤条件里用 @.a.b 访问子字段。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：可在过滤条件里用 @.a.b 访问子字段。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "过滤嵌套"
+    ]
+  },
+  {
+    "id": "jsonpath-top-037",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中下标 0、2、4 的元素。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "10",
+          "30",
+          "50"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[::2]",
+    "explanation": "步长切片。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-038",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 反转数组。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "50",
+          "40",
+          "30",
+          "20",
+          "10"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[::-1]",
+    "explanation": "负步长。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-039",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中下标 4 到 1 倒序。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "50",
+          "40",
+          "30"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[4:0:-1]",
+    "explanation": "负步长切片。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-040",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"a\":1,\"b\":2,\"c\":3} 中所有字段值。",
+    "testCases": [
+      {
+        "input": "{\"a\":1,\"b\":2,\"c\":3}",
+        "expected": [
+          "1",
+          "2",
+          "3"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.*",
+    "explanation": "通配。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-041",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 根对象。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "{\"store\":{\"book\":[{\"price\":10,\"title\":\"A\"},{\"price\":20,\"title\":\"B\"}]}}"
+        ]
+      }
+    ],
+    "referenceAnswer": "$",
+    "explanation": "根。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-042",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "递归取 {\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]} 中所有 age。",
+    "testCases": [
+      {
+        "input": "{\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]}",
+        "expected": [
+          "20",
+          "25"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..age",
+    "explanation": "递归。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-043",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中下标 1、3。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "20",
+          "40"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[1,3]",
+    "explanation": "多下标。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-044",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "过滤嵌套：取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中 book 的 price<15 的 title。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "A"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.store.book[?(@.price<15)].title",
+    "explanation": "过滤嵌套。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-045",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「过滤陷阱」，下列正确的是？",
+    "options": [
+      "过滤表达式中 @ 与 $ 的区别。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "过滤表达式中 @ 与 $ 的区别。",
+    "tags": [
+      "JSONPath",
+      "过滤陷阱"
+    ]
+  },
+  {
+    "id": "jsonpath-top-046",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「过滤陷阱」错误的是？",
+    "options": [
+      "过滤表达式中 @ 与 $ 的区别。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：过滤表达式中 @ 与 $ 的区别。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "过滤陷阱"
+    ]
+  },
+  {
+    "id": "jsonpath-top-047",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「切片步长」，下列正确的是？",
+    "options": [
+      "[::2] 步长切片。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[::2] 步长切片。",
+    "tags": [
+      "JSONPath",
+      "切片步长"
+    ]
+  },
+  {
+    "id": "jsonpath-top-048",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「切片步长」错误的是？",
+    "options": [
+      "[::2] 步长切片。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：[::2] 步长切片。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "切片步长"
+    ]
+  },
+  {
+    "id": "jsonpath-top-049",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「空结果」，下列正确的是？",
+    "options": [
+      "不存在的字段返回空数组而非报错。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "不存在的字段返回空数组而非报错。",
+    "tags": [
+      "JSONPath",
+      "空结果"
+    ]
+  },
+  {
+    "id": "jsonpath-top-050",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「空结果」错误的是？",
+    "options": [
+      "不存在的字段返回空数组而非报错。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：不存在的字段返回空数组而非报错。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "空结果"
+    ]
+  },
+  {
+    "id": "jsonpath-top-051",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「实现差异」，下列正确的是？",
+    "options": [
+      "jsonpath-plus 与 Goessner 语法略有不同。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "jsonpath-plus 与 Goessner 语法略有不同。",
+    "tags": [
+      "JSONPath",
+      "实现差异"
+    ]
+  },
+  {
+    "id": "jsonpath-top-052",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「实现差异」错误的是？",
+    "options": [
+      "jsonpath-plus 与 Goessner 语法略有不同。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：jsonpath-plus 与 Goessner 语法略有不同。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "实现差异"
+    ]
+  },
+  {
+    "id": "jsonpath-top-053",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「性能」，下列正确的是？",
+    "options": [
+      "递归 .. 较慢，能用具体路径就用。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "递归 .. 较慢，能用具体路径就用。",
+    "tags": [
+      "JSONPath",
+      "性能"
+    ]
+  },
+  {
+    "id": "jsonpath-top-054",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「性能」错误的是？",
+    "options": [
+      "递归 .. 较慢，能用具体路径就用。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：递归 .. 较慢，能用具体路径就用。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "性能"
+    ]
+  },
+  {
+    "id": "jsonpath-top-055",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「结果顺序」，下列正确的是？",
+    "options": [
+      "递归结果顺序与实现有关，不保证固定。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "递归结果顺序与实现有关，不保证固定。",
+    "tags": [
+      "JSONPath",
+      "结果顺序"
+    ]
+  },
+  {
+    "id": "jsonpath-top-056",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「结果顺序」错误的是？",
+    "options": [
+      "递归结果顺序与实现有关，不保证固定。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：递归结果顺序与实现有关，不保证固定。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "结果顺序"
+    ]
+  },
+  {
+    "id": "jsonpath-top-057",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「根对象返回」，下列正确的是？",
+    "options": [
+      "$ 返回整个根对象。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$ 返回整个根对象。",
+    "tags": [
+      "JSONPath",
+      "根对象返回"
+    ]
+  },
+  {
+    "id": "jsonpath-top-058",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「根对象返回」错误的是？",
+    "options": [
+      "$ 返回整个根对象。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：$ 返回整个根对象。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "根对象返回"
+    ]
+  },
+  {
+    "id": "jsonpath-top-059",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「负步长」，下列正确的是？",
+    "options": [
+      "[::-1] 反转，[5:0:-1] 倒序取一段。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[::-1] 反转，[5:0:-1] 倒序取一段。",
+    "tags": [
+      "JSONPath",
+      "负步长"
+    ]
+  },
+  {
+    "id": "jsonpath-top-060",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「负步长」错误的是？",
+    "options": [
+      "[::-1] 反转，[5:0:-1] 倒序取一段。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：[::-1] 反转，[5:0:-1] 倒序取一段。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "负步长"
+    ]
+  },
+  {
+    "id": "jsonpath-top-061",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「多下标」，下列正确的是？",
+    "options": [
+      "$[0,2,4] 一次取多个下标。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$[0,2,4] 一次取多个下标。",
+    "tags": [
+      "JSONPath",
+      "多下标"
+    ]
+  },
+  {
+    "id": "jsonpath-top-062",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「多下标」错误的是？",
+    "options": [
+      "$[0,2,4] 一次取多个下标。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：$[0,2,4] 一次取多个下标。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "多下标"
+    ]
+  },
+  {
+    "id": "jsonpath-top-063",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「过滤嵌套」，下列正确的是？",
+    "options": [
+      "可在过滤条件里用 @.a.b 访问子字段。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "可在过滤条件里用 @.a.b 访问子字段。",
+    "tags": [
+      "JSONPath",
+      "过滤嵌套"
+    ]
+  },
+  {
+    "id": "jsonpath-top-064",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「过滤嵌套」错误的是？",
+    "options": [
+      "可在过滤条件里用 @.a.b 访问子字段。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：可在过滤条件里用 @.a.b 访问子字段。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "过滤嵌套"
+    ]
+  },
+  {
+    "id": "jsonpath-top-065",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中下标 0、2、4 的元素。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "10",
+          "30",
+          "50"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[::2]",
+    "explanation": "步长切片。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-066",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 反转数组。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "50",
+          "40",
+          "30",
+          "20",
+          "10"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[::-1]",
+    "explanation": "负步长。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-067",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中下标 4 到 1 倒序。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "50",
+          "40",
+          "30"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[4:0:-1]",
+    "explanation": "负步长切片。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-068",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"a\":1,\"b\":2,\"c\":3} 中所有字段值。",
+    "testCases": [
+      {
+        "input": "{\"a\":1,\"b\":2,\"c\":3}",
+        "expected": [
+          "1",
+          "2",
+          "3"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.*",
+    "explanation": "通配。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-069",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 根对象。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "{\"store\":{\"book\":[{\"price\":10,\"title\":\"A\"},{\"price\":20,\"title\":\"B\"}]}}"
+        ]
+      }
+    ],
+    "referenceAnswer": "$",
+    "explanation": "根。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-070",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "递归取 {\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]} 中所有 age。",
+    "testCases": [
+      {
+        "input": "{\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]}",
+        "expected": [
+          "20",
+          "25"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..age",
+    "explanation": "递归。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-071",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中下标 1、3。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "20",
+          "40"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[1,3]",
+    "explanation": "多下标。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-072",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中下标 0、4。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "10",
+          "50"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[0,4]",
+    "explanation": "多下标。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-073",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "过滤嵌套：取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中 book 的 price<15 的 title。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "A"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.store.book[?(@.price<15)].title",
+    "explanation": "过滤嵌套。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-074",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中下标 0、1、2、3、4 全部（用切片）。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "10",
+          "20",
+          "30",
+          "40",
+          "50"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[0:5]",
+    "explanation": "切片全取。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-075",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中步长 3 的元素。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "10",
+          "40"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[::3]",
+    "explanation": "步长 3。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-076",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中前 3 个。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "10",
+          "20",
+          "30"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[:3]",
+    "explanation": "前 N。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-077",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中下标 1 之后所有。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "20",
+          "30",
+          "40",
+          "50"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[1:]",
+    "explanation": "省略 end。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-078",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]} 中 age 在 21-24 之间的用户（空结果）。",
+    "testCases": [
+      {
+        "input": "{\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]}",
+        "expected": []
+      }
+    ],
+    "referenceAnswer": "$.users[?(@.age>20 && @.age<25)]",
+    "explanation": "区间过滤。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-079",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "fill",
+    "title": "取 {\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]} 中 age >= 20 的用户。",
+    "testCases": [
+      {
+        "input": "{\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]}",
+        "expected": [
+          "{\"age\":20,\"name\":\"Tom\"}",
+          "{\"age\":25,\"name\":\"Jerry\"}"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.users[?(@.age>=20)]",
+    "explanation": "过滤。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-top-080",
+    "skill": "jsonpath",
+    "level": "top",
+    "type": "choice",
+    "title": "关于 JSONPath「过滤陷阱」，下列正确的是？",
+    "options": [
+      "过滤表达式中 @ 与 $ 的区别。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "过滤表达式中 @ 与 $ 的区别。",
+    "tags": [
+      "JSONPath",
+      "过滤陷阱"
+    ]
   }
 ]

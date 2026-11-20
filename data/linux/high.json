@@ -574,5 +574,869 @@
     "tags": [
       "Linux"
     ]
+  },
+  {
+    "id": "linux-high-033",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看所有进程的命令是？",
+    "options": [
+      "ps aux",
+      "ps",
+      "top",
+      "proc"
+    ],
+    "answer": 0,
+    "explanation": "ps aux 显示所有进程详细信息。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-034",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "实时查看进程的命令是？",
+    "options": [
+      "top",
+      "ps",
+      "proc",
+      "list"
+    ],
+    "answer": 0,
+    "explanation": "top 实时显示进程和资源占用。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-035",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "强制杀进程的信号是？",
+    "options": [
+      "kill -9",
+      "kill -1",
+      "kill -15",
+      "kill -2"
+    ],
+    "answer": 0,
+    "explanation": "-9 SIGKILL 强制终止，不可被捕获。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-036",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "优雅终止进程的信号是？",
+    "options": [
+      "kill -15",
+      "kill -9",
+      "kill -19",
+      "kill -2"
+    ],
+    "answer": 0,
+    "explanation": "-15 SIGTERM 优雅终止，可被程序捕获处理。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-037",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看磁盘使用情况的命令是？",
+    "options": [
+      "df -h",
+      "du",
+      "disk",
+      "free"
+    ],
+    "answer": 0,
+    "explanation": "df -h 查看文件系统磁盘使用，-h 人类可读。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-038",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看目录大小的命令是？",
+    "options": [
+      "du -sh",
+      "df",
+      "ls",
+      "size"
+    ],
+    "answer": 0,
+    "explanation": "du -sh dir 查看目录总大小。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-039",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看内存的命令是？",
+    "options": [
+      "free -h",
+      "mem",
+      "top",
+      "df"
+    ],
+    "answer": 0,
+    "explanation": "free -h 查看内存使用，-h 人类可读。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-040",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看系统信息的命令是？",
+    "options": [
+      "uname -a",
+      "sysinfo",
+      "info",
+      "os"
+    ],
+    "answer": 0,
+    "explanation": "uname -a 显示内核、主机名等系统信息。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-041",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "测试网络连通的命令是？",
+    "options": [
+      "ping",
+      "test",
+      "check",
+      "net"
+    ],
+    "answer": 0,
+    "explanation": "ping host 发送 ICMP 包测试连通性。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-042",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "发起 HTTP 请求的命令是？",
+    "options": [
+      "curl",
+      "http",
+      "request",
+      "get"
+    ],
+    "answer": 0,
+    "explanation": "curl URL 发起 HTTP 请求。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-043",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "下载文件的命令是？",
+    "options": [
+      "wget",
+      "get",
+      "download",
+      "fetch"
+    ],
+    "answer": 0,
+    "explanation": "wget URL 非交互式下载文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-044",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看端口监听的命令是？",
+    "options": [
+      "netstat -tlnp",
+      "ports",
+      "listen",
+      "sock"
+    ],
+    "answer": 0,
+    "explanation": "netstat -tlnp 查看 TCP 监听端口。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-045",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "SSH 远程登录的命令是？",
+    "options": [
+      "ssh user@host",
+      "telnet",
+      "ftp",
+      "remote"
+    ],
+    "answer": 0,
+    "explanation": "ssh user@host 远程登录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-046",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "安全复制文件的命令是？",
+    "options": [
+      "scp",
+      "cp",
+      "rcp",
+      "ftp"
+    ],
+    "answer": 0,
+    "explanation": "scp file user@host:/path 安全复制。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-047",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看网络接口的命令是？",
+    "options": [
+      "ip addr",
+      "netif",
+      "ifcfg",
+      "route"
+    ],
+    "answer": 0,
+    "explanation": "ip addr 查看网卡接口（新版）。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-048",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "Shell 脚本第一行通常是？",
+    "options": [
+      "#!/bin/bash",
+      "# bash",
+      "//bin/bash",
+      "/bin/bash"
+    ],
+    "answer": 0,
+    "explanation": "#! 称为 shebang，指定解释器。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-049",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "脚本中变量引用用？",
+    "options": [
+      "$VAR",
+      "VAR",
+      "&VAR",
+      "*VAR"
+    ],
+    "answer": 0,
+    "explanation": "$VAR 引用变量值，定义时不用 $。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-050",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "后台运行命令加？",
+    "options": [
+      "&",
+      "@",
+      "#",
+      "*"
+    ],
+    "answer": 0,
+    "explanation": "命令后加 & 放后台运行。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-051",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "nohup 的作用是？",
+    "options": [
+      "忽略挂断信号",
+      "不输出",
+      "不暂停",
+      "不占用"
+    ],
+    "answer": 0,
+    "explanation": "nohup 使命令在终端关闭后继续运行。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-052",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "查看命令历史用？",
+    "options": [
+      "history",
+      "hist",
+      "past",
+      "cmdlog"
+    ],
+    "answer": 0,
+    "explanation": "history 显示命令历史。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-053",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "ps -ef 与 ps aux 的关系？",
+    "options": [
+      "都看进程，格式不同",
+      "完全不同",
+      "ps -ef 是错的",
+      "只有 ps aux 对"
+    ],
+    "answer": 0,
+    "explanation": "两者都列出所有进程，字段略有不同。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-054",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "top 命令中 q 的作用？",
+    "options": [
+      "退出",
+      "排序",
+      "帮助",
+      "刷新"
+    ],
+    "answer": 0,
+    "explanation": "在 top 里按 q 退出。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-055",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "kill 默认发送的信号？",
+    "options": [
+      "SIGTERM (15)",
+      "SIGKILL (9)",
+      "SIGINT (2)",
+      "SIGHUP (1)"
+    ],
+    "answer": 0,
+    "explanation": "kill 默认 SIGTERM，可被捕获优雅退出。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-056",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "df 和 du 的区别？",
+    "options": [
+      "df 看分区，du 看目录",
+      "都看分区",
+      "都看目录",
+      "du 看分区"
+    ],
+    "answer": 0,
+    "explanation": "df 文件系统总览，du 目录大小。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-057",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "free -h 中 -h 含义？",
+    "options": [
+      "人类可读",
+      "硬链接",
+      "主机",
+      "高亮"
+    ],
+    "answer": 0,
+    "explanation": "-h 人类可读（K/M/G）。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-058",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "curl -X POST 的作用？",
+    "options": [
+      "指定 POST 方法",
+      "执行",
+      "扩展",
+      "退出"
+    ],
+    "answer": 0,
+    "explanation": "-X 指定 HTTP 方法。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-059",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "curl -d 的作用？",
+    "options": [
+      "发送数据",
+      "删除",
+      "下载",
+      "调试"
+    ],
+    "answer": 0,
+    "explanation": "-d 发送 POST 数据。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-060",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "curl -H 的作用？",
+    "options": [
+      "添加请求头",
+      "帮助",
+      "主机",
+      "高亮"
+    ],
+    "answer": 0,
+    "explanation": "-H 添加请求头。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-061",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "ssh -p 2222 的含义？",
+    "options": [
+      "指定端口 2222",
+      "密码 2222",
+      "协议",
+      "路径"
+    ],
+    "answer": 0,
+    "explanation": "-p 指定端口。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-062",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "scp 本地到远程的格式？",
+    "options": [
+      "scp 本地 user@host:路径",
+      "scp user@host:路径 本地",
+      "都行",
+      "无顺序"
+    ],
+    "answer": 0,
+    "explanation": "scp 源 目标，本地在前远程在后。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-063",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "netstat -tlnp 中 -t 含义？",
+    "options": [
+      "TCP",
+      "监听",
+      "数字",
+      "进程"
+    ],
+    "answer": 0,
+    "explanation": "-t 仅 TCP。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-064",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "netstat -tlnp 中 -l 含义？",
+    "options": [
+      "仅监听",
+      "TCP",
+      "数字",
+      "进程"
+    ],
+    "answer": 0,
+    "explanation": "-l 仅监听端口。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-065",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "netstat -tlnp 中 -n 含义？",
+    "options": [
+      "数字地址端口",
+      "监听",
+      "TCP",
+      "进程"
+    ],
+    "answer": 0,
+    "explanation": "-n 不解析名字，显示数字。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-066",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "ss 命令相比 netstat？",
+    "options": [
+      "更快的新版替代",
+      "完全不同",
+      "已废弃",
+      "只能查看 TCP"
+    ],
+    "answer": 0,
+    "explanation": "ss 是 netstat 的现代替代，更快。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-067",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "lsof -i:8080 的作用？",
+    "options": [
+      "查看 8080 端口占用",
+      "列出文件",
+      "列出进程",
+      "列出用户"
+    ],
+    "answer": 0,
+    "explanation": "lsof -i:端口 查端口占用。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-068",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "ifconfig 的新版替代？",
+    "options": [
+      "ip addr",
+      "ifcfg",
+      "netcfg",
+      "ifnew"
+    ],
+    "answer": 0,
+    "explanation": "ip addr 是新版网卡查看命令。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-069",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "hostname -I 的作用？",
+    "options": [
+      "显示本机 IP",
+      "显示主机名",
+      "设置主机名",
+      "显示域名"
+    ],
+    "answer": 0,
+    "explanation": "-I 显示本机所有 IP。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-070",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "who 命令的作用？",
+    "options": [
+      "显示登录用户",
+      "我是谁",
+      "谁在用",
+      "所有用户"
+    ],
+    "answer": 0,
+    "explanation": "who 显示当前登录用户。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-071",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "uptime 显示的 load average 是？",
+    "options": [
+      "平均负载",
+      "运行时间",
+      "用户数",
+      "CPU 数"
+    ],
+    "answer": 0,
+    "explanation": "load average 是运行队列平均长度。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-072",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "脚本中 # 的作用？",
+    "options": [
+      "注释",
+      "执行",
+      "变量",
+      "路径"
+    ],
+    "answer": 0,
+    "explanation": "# 开头是注释（除 shebang）。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-073",
+    "skill": "linux",
+    "level": "high",
+    "type": "choice",
+    "title": "echo \"hello\" 输出？",
+    "options": [
+      "hello",
+      "\"hello\"",
+      "hello\\n",
+      "报错"
+    ],
+    "answer": 0,
+    "explanation": "echo 输出 hello 加换行。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-074",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "查看所有进程。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "ps aux"
+      }
+    ],
+    "referenceAnswer": "ps aux",
+    "explanation": "ps aux 查看所有进程。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-075",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "实时监控进程。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "top"
+      }
+    ],
+    "referenceAnswer": "top",
+    "explanation": "top 实时进程。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-076",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "强制杀死 PID 1234。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kill -9 1234"
+      }
+    ],
+    "referenceAnswer": "kill -9 1234",
+    "explanation": "kill -9 强制终止。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-077",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "优雅终止 PID 1234。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kill -15 1234"
+      }
+    ],
+    "referenceAnswer": "kill -15 1234",
+    "explanation": "kill -15 优雅终止。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-078",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "按名杀 nginx 进程。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "killall nginx"
+      }
+    ],
+    "referenceAnswer": "killall nginx",
+    "explanation": "killall 按名杀。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-079",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "查看磁盘使用情况。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "df -h"
+      }
+    ],
+    "referenceAnswer": "df -h",
+    "explanation": "df -h 磁盘使用。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-high-080",
+    "skill": "linux",
+    "level": "high",
+    "type": "fill",
+    "title": "查看当前目录总大小。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "du -sh ."
+      }
+    ],
+    "referenceAnswer": "du -sh .",
+    "explanation": "du -sh 目录大小。",
+    "tags": [
+      "Linux"
+    ]
   }
 ]

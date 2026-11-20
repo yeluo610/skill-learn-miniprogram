@@ -556,5 +556,1074 @@
     "tags": [
       "Unicode"
     ]
+  },
+  {
+    "id": "regex-top-025",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「回溯灾难」，下列说法正确的是？",
+    "options": [
+      "嵌套量词 (a+)+ 在特定输入下会产生指数级回溯。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "嵌套量词 (a+)+ 在特定输入下会产生指数级回溯。",
+    "tags": [
+      "正则",
+      "回溯灾难"
+    ]
+  },
+  {
+    "id": "regex-top-026",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「回溯灾难」的描述，错误的是？",
+    "options": [
+      "嵌套量词 (a+)+ 在特定输入下会产生指数级回溯。",
+      "表示取反操作",
+      "只匹配字符串开头",
+      "等价于空匹配"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：嵌套量词 (a+)+ 在特定输入下会产生指数级回溯。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "回溯灾难"
+    ]
+  },
+  {
+    "id": "regex-top-027",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「原子分组」，下列说法正确的是？",
+    "options": [
+      "(?>...) 原子分组禁止回溯，提升性能但可能改变语义。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?>...) 原子分组禁止回溯，提升性能但可能改变语义。",
+    "tags": [
+      "正则",
+      "原子分组"
+    ]
+  },
+  {
+    "id": "regex-top-028",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「原子分组」的描述，错误的是？",
+    "options": [
+      "(?>...) 原子分组禁止回溯，提升性能但可能改变语义。",
+      "只匹配字符串开头",
+      "等价于空匹配",
+      "必须转义才能使用"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：(?>...) 原子分组禁止回溯，提升性能但可能改变语义。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "原子分组"
+    ]
+  },
+  {
+    "id": "regex-top-029",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「Unicode 属性」，下列说法正确的是？",
+    "options": [
+      "\\p{L} 匹配字母类，需 u 标志。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "\\p{L} 匹配字母类，需 u 标志。",
+    "tags": [
+      "正则",
+      "Unicode 属性"
+    ]
+  },
+  {
+    "id": "regex-top-030",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「Unicode 属性」的描述，错误的是？",
+    "options": [
+      "\\p{L} 匹配字母类，需 u 标志。",
+      "等价于空匹配",
+      "必须转义才能使用",
+      "表示取反操作"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：\\p{L} 匹配字母类，需 u 标志。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "Unicode 属性"
+    ]
+  },
+  {
+    "id": "regex-top-031",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「条件表达式」，下列说法正确的是？",
+    "options": [
+      "(?(1)yes|no) 根据分组是否匹配选择分支。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?(1)yes|no) 根据分组是否匹配选择分支。",
+    "tags": [
+      "正则",
+      "条件表达式"
+    ]
+  },
+  {
+    "id": "regex-top-032",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「条件表达式」的描述，错误的是？",
+    "options": [
+      "(?(1)yes|no) 根据分组是否匹配选择分支。",
+      "必须转义才能使用",
+      "表示取反操作",
+      "只匹配字符串开头"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：(?(1)yes|no) 根据分组是否匹配选择分支。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "条件表达式"
+    ]
+  },
+  {
+    "id": "regex-top-033",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「性能优化」，下列说法正确的是？",
+    "options": [
+      "用具体字符类替代 . ，减少回溯。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "用具体字符类替代 . ，减少回溯。",
+    "tags": [
+      "正则",
+      "性能优化"
+    ]
+  },
+  {
+    "id": "regex-top-034",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「性能优化」的描述，错误的是？",
+    "options": [
+      "用具体字符类替代 . ，减少回溯。",
+      "表示取反操作",
+      "只匹配字符串开头",
+      "等价于空匹配"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：用具体字符类替代 . ，减少回溯。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "性能优化"
+    ]
+  },
+  {
+    "id": "regex-top-035",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「占有量词」，下列说法正确的是？",
+    "options": [
+      "a++ 是占有量词，不回溯，性能最佳。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "a++ 是占有量词，不回溯，性能最佳。",
+    "tags": [
+      "正则",
+      "占有量词"
+    ]
+  },
+  {
+    "id": "regex-top-036",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「占有量词」的描述，错误的是？",
+    "options": [
+      "a++ 是占有量词，不回溯，性能最佳。",
+      "只匹配字符串开头",
+      "等价于空匹配",
+      "必须转义才能使用"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：a++ 是占有量词，不回溯，性能最佳。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "占有量词"
+    ]
+  },
+  {
+    "id": "regex-top-037",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「ReDoS 防御」，下列说法正确的是？",
+    "options": [
+      "避免嵌套量词与重叠分支，限制输入长度。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "避免嵌套量词与重叠分支，限制输入长度。",
+    "tags": [
+      "正则",
+      "ReDoS 防御"
+    ]
+  },
+  {
+    "id": "regex-top-038",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「ReDoS 防御」的描述，错误的是？",
+    "options": [
+      "避免嵌套量词与重叠分支，限制输入长度。",
+      "等价于空匹配",
+      "必须转义才能使用",
+      "表示取反操作"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：避免嵌套量词与重叠分支，限制输入长度。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "ReDoS 防御"
+    ]
+  },
+  {
+    "id": "regex-top-039",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「u 标志」，下列说法正确的是？",
+    "options": [
+      "u 标志启用 Unicode 模式，正确处理 surrogate pair。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "u 标志启用 Unicode 模式，正确处理 surrogate pair。",
+    "tags": [
+      "正则",
+      "u 标志"
+    ]
+  },
+  {
+    "id": "regex-top-040",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「u 标志」的描述，错误的是？",
+    "options": [
+      "u 标志启用 Unicode 模式，正确处理 surrogate pair。",
+      "必须转义才能使用",
+      "表示取反操作",
+      "只匹配字符串开头"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：u 标志启用 Unicode 模式，正确处理 surrogate pair。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "u 标志"
+    ]
+  },
+  {
+    "id": "regex-top-041",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「y 标志」，下列说法正确的是？",
+    "options": [
+      "y 粘连标志从 lastIndex 开始必须匹配，做词法分析。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "y 粘连标志从 lastIndex 开始必须匹配，做词法分析。",
+    "tags": [
+      "正则",
+      "y 标志"
+    ]
+  },
+  {
+    "id": "regex-top-042",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「y 标志」的描述，错误的是？",
+    "options": [
+      "y 粘连标志从 lastIndex 开始必须匹配，做词法分析。",
+      "表示取反操作",
+      "只匹配字符串开头",
+      "等价于空匹配"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：y 粘连标志从 lastIndex 开始必须匹配，做词法分析。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "y 标志"
+    ]
+  },
+  {
+    "id": "regex-top-043",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「命名反向引用」，下列说法正确的是？",
+    "options": [
+      "\\k<name> 引用命名分组。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "\\k<name> 引用命名分组。",
+    "tags": [
+      "正则",
+      "命名反向引用"
+    ]
+  },
+  {
+    "id": "regex-top-044",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「命名反向引用」的描述，错误的是？",
+    "options": [
+      "\\k<name> 引用命名分组。",
+      "只匹配字符串开头",
+      "等价于空匹配",
+      "必须转义才能使用"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：\\k<name> 引用命名分组。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "命名反向引用"
+    ]
+  },
+  {
+    "id": "regex-top-045",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「Unicode 范围」，下列说法正确的是？",
+    "options": [
+      "\\u{1F600} 匹配 emoji，需 u 标志。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "\\u{1F600} 匹配 emoji，需 u 标志。",
+    "tags": [
+      "正则",
+      "Unicode 范围"
+    ]
+  },
+  {
+    "id": "regex-top-046",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「Unicode 范围」的描述，错误的是？",
+    "options": [
+      "\\u{1F600} 匹配 emoji，需 u 标志。",
+      "等价于空匹配",
+      "必须转义才能使用",
+      "表示取反操作"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：\\u{1F600} 匹配 emoji，需 u 标志。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "Unicode 范围"
+    ]
+  },
+  {
+    "id": "regex-top-047",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「回溯原理」，下列说法正确的是？",
+    "options": [
+      "回溯是正则在分支失败后退回尝试其他路径的机制。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "回溯是正则在分支失败后退回尝试其他路径的机制。",
+    "tags": [
+      "正则",
+      "回溯原理"
+    ]
+  },
+  {
+    "id": "regex-top-048",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「回溯原理」的描述，错误的是？",
+    "options": [
+      "回溯是正则在分支失败后退回尝试其他路径的机制。",
+      "必须转义才能使用",
+      "表示取反操作",
+      "只匹配字符串开头"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：回溯是正则在分支失败后退回尝试其他路径的机制。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "回溯原理"
+    ]
+  },
+  {
+    "id": "regex-top-049",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「NFA vs DFA」，下列说法正确的是？",
+    "options": [
+      "JS/Python 用 NFA 支持反向引用，DFA 不支持但快。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "JS/Python 用 NFA 支持反向引用，DFA 不支持但快。",
+    "tags": [
+      "正则",
+      "NFA vs DFA"
+    ]
+  },
+  {
+    "id": "regex-top-050",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「NFA vs DFA」的描述，错误的是？",
+    "options": [
+      "JS/Python 用 NFA 支持反向引用，DFA 不支持但快。",
+      "表示取反操作",
+      "只匹配字符串开头",
+      "等价于空匹配"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：JS/Python 用 NFA 支持反向引用，DFA 不支持但快。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "NFA vs DFA"
+    ]
+  },
+  {
+    "id": "regex-top-051",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「量词等价」，下列说法正确的是？",
+    "options": [
+      "a+ 等价 a{1,}，a* 等价 a{0,}，a? 等价 a{0,1}。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "a+ 等价 a{1,}，a* 等价 a{0,}，a? 等价 a{0,1}。",
+    "tags": [
+      "正则",
+      "量词等价"
+    ]
+  },
+  {
+    "id": "regex-top-052",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「量词等价」的描述，错误的是？",
+    "options": [
+      "a+ 等价 a{1,}，a* 等价 a{0,}，a? 等价 a{0,1}。",
+      "只匹配字符串开头",
+      "等价于空匹配",
+      "必须转义才能使用"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：a+ 等价 a{1,}，a* 等价 a{0,}，a? 等价 a{0,1}。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "量词等价"
+    ]
+  },
+  {
+    "id": "regex-top-053",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「锚点组合」，下列说法正确的是？",
+    "options": [
+      "^...$ 整体匹配校验常用组合。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "^...$ 整体匹配校验常用组合。",
+    "tags": [
+      "正则",
+      "锚点组合"
+    ]
+  },
+  {
+    "id": "regex-top-054",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「锚点组合」的描述，错误的是？",
+    "options": [
+      "^...$ 整体匹配校验常用组合。",
+      "等价于空匹配",
+      "必须转义才能使用",
+      "表示取反操作"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：^...$ 整体匹配校验常用组合。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "锚点组合"
+    ]
+  },
+  {
+    "id": "regex-top-055",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「环视性能」，下列说法正确的是？",
+    "options": [
+      "环视不消耗字符但仍有回溯成本，避免过深嵌套。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "环视不消耗字符但仍有回溯成本，避免过深嵌套。",
+    "tags": [
+      "正则",
+      "环视性能"
+    ]
+  },
+  {
+    "id": "regex-top-056",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「环视性能」的描述，错误的是？",
+    "options": [
+      "环视不消耗字符但仍有回溯成本，避免过深嵌套。",
+      "必须转义才能使用",
+      "表示取反操作",
+      "只匹配字符串开头"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：环视不消耗字符但仍有回溯成本，避免过深嵌套。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "环视性能"
+    ]
+  },
+  {
+    "id": "regex-top-057",
+    "skill": "regex",
+    "level": "top",
+    "type": "fill",
+    "title": "优化版：用 [^,] 替代 . 匹配 CSV 字段（\"a,b,c\"）。",
+    "testCases": [
+      {
+        "input": "a,b,c",
+        "expected": [
+          "a",
+          "b",
+          "c"
+        ]
+      }
+    ],
+    "referenceAnswer": "/[^,]+/g",
+    "explanation": "具体字符类。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-top-058",
+    "skill": "regex",
+    "level": "top",
+    "type": "fill",
+    "title": "匹配 Unicode 字母（\"你好 world 123\" 中的字母）。",
+    "testCases": [
+      {
+        "input": "你好 world 123",
+        "expected": [
+          "你好",
+          "world"
+        ]
+      }
+    ],
+    "referenceAnswer": "/\\p{L}+/gu",
+    "explanation": "Unicode 属性。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-top-059",
+    "skill": "regex",
+    "level": "top",
+    "type": "fill",
+    "title": "匹配 emoji。",
+    "testCases": [
+      {
+        "input": "😀 ok",
+        "expected": "😀"
+      }
+    ],
+    "referenceAnswer": "/\\u{1F600}/u",
+    "explanation": "Unicode 码点。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-top-060",
+    "skill": "regex",
+    "level": "top",
+    "type": "fill",
+    "title": "优化匹配数字。",
+    "testCases": [
+      {
+        "input": "abc123",
+        "expected": [
+          "123"
+        ]
+      }
+    ],
+    "referenceAnswer": "/\\d+/g",
+    "explanation": "贪婪量词匹配连续数字。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-top-061",
+    "skill": "regex",
+    "level": "top",
+    "type": "fill",
+    "title": "匹配 \"a, a, a\" 中重复的 \", a\"。",
+    "testCases": [
+      {
+        "input": "a, a, a",
+        "expected": [
+          ", a, a"
+        ]
+      }
+    ],
+    "referenceAnswer": "/(?:, a)+/g",
+    "explanation": "非捕获分组。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-top-062",
+    "skill": "regex",
+    "level": "top",
+    "type": "fill",
+    "title": "匹配定长 6 位数字（不回溯版）。",
+    "testCases": [
+      {
+        "input": "code 123456 ok",
+        "expected": "123456"
+      }
+    ],
+    "referenceAnswer": "/\\d{6}/",
+    "explanation": "定长无回溯。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-top-063",
+    "skill": "regex",
+    "level": "top",
+    "type": "fill",
+    "title": "匹配 \"2024年01月15日\" 日期。",
+    "testCases": [
+      {
+        "input": "2024年01月15日",
+        "expected": "2024年01月15日",
+        "expectedType": "equal"
+      }
+    ],
+    "referenceAnswer": "/\\d{4}年\\d{2}月\\d{2}日/",
+    "explanation": "中文日期。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-top-064",
+    "skill": "regex",
+    "level": "top",
+    "type": "fill",
+    "title": "匹配千分位数字（\"1,234,567\"）。",
+    "testCases": [
+      {
+        "input": "1,234,567 ok",
+        "expected": "1,234,567"
+      }
+    ],
+    "referenceAnswer": "/\\d{1,3}(?:,\\d{3})+/",
+    "explanation": "千分位。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-top-065",
+    "skill": "regex",
+    "level": "top",
+    "type": "fill",
+    "title": "匹配 16 进制数。",
+    "testCases": [
+      {
+        "input": "ff 1a2B",
+        "expected": [
+          "ff",
+          "1a2B"
+        ]
+      }
+    ],
+    "referenceAnswer": "/[0-9a-fA-F]+/g",
+    "explanation": "16 进制。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-top-066",
+    "skill": "regex",
+    "level": "top",
+    "type": "fill",
+    "title": "匹配 UUID（粗略）。",
+    "testCases": [
+      {
+        "input": "id 12345678-1234-1234-1234-1234567890ab ok",
+        "expected": "12345678-1234-1234-1234-1234567890ab"
+      }
+    ],
+    "referenceAnswer": "/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i",
+    "explanation": "UUID。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-top-067",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「回溯灾难」，下列说法正确的是？",
+    "options": [
+      "嵌套量词 (a+)+ 在特定输入下会产生指数级回溯。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "嵌套量词 (a+)+ 在特定输入下会产生指数级回溯。",
+    "tags": [
+      "正则",
+      "回溯灾难"
+    ]
+  },
+  {
+    "id": "regex-top-068",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「回溯灾难」的描述，错误的是？",
+    "options": [
+      "嵌套量词 (a+)+ 在特定输入下会产生指数级回溯。",
+      "表示取反操作",
+      "只匹配字符串开头",
+      "等价于空匹配"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：嵌套量词 (a+)+ 在特定输入下会产生指数级回溯。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "回溯灾难"
+    ]
+  },
+  {
+    "id": "regex-top-069",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「原子分组」，下列说法正确的是？",
+    "options": [
+      "(?>...) 原子分组禁止回溯，提升性能但可能改变语义。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?>...) 原子分组禁止回溯，提升性能但可能改变语义。",
+    "tags": [
+      "正则",
+      "原子分组"
+    ]
+  },
+  {
+    "id": "regex-top-070",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「原子分组」的描述，错误的是？",
+    "options": [
+      "(?>...) 原子分组禁止回溯，提升性能但可能改变语义。",
+      "只匹配字符串开头",
+      "等价于空匹配",
+      "必须转义才能使用"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：(?>...) 原子分组禁止回溯，提升性能但可能改变语义。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "原子分组"
+    ]
+  },
+  {
+    "id": "regex-top-071",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「Unicode 属性」，下列说法正确的是？",
+    "options": [
+      "\\p{L} 匹配字母类，需 u 标志。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "\\p{L} 匹配字母类，需 u 标志。",
+    "tags": [
+      "正则",
+      "Unicode 属性"
+    ]
+  },
+  {
+    "id": "regex-top-072",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「Unicode 属性」的描述，错误的是？",
+    "options": [
+      "\\p{L} 匹配字母类，需 u 标志。",
+      "等价于空匹配",
+      "必须转义才能使用",
+      "表示取反操作"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：\\p{L} 匹配字母类，需 u 标志。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "Unicode 属性"
+    ]
+  },
+  {
+    "id": "regex-top-073",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「条件表达式」，下列说法正确的是？",
+    "options": [
+      "(?(1)yes|no) 根据分组是否匹配选择分支。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?(1)yes|no) 根据分组是否匹配选择分支。",
+    "tags": [
+      "正则",
+      "条件表达式"
+    ]
+  },
+  {
+    "id": "regex-top-074",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「条件表达式」的描述，错误的是？",
+    "options": [
+      "(?(1)yes|no) 根据分组是否匹配选择分支。",
+      "必须转义才能使用",
+      "表示取反操作",
+      "只匹配字符串开头"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：(?(1)yes|no) 根据分组是否匹配选择分支。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "条件表达式"
+    ]
+  },
+  {
+    "id": "regex-top-075",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「性能优化」，下列说法正确的是？",
+    "options": [
+      "用具体字符类替代 . ，减少回溯。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "用具体字符类替代 . ，减少回溯。",
+    "tags": [
+      "正则",
+      "性能优化"
+    ]
+  },
+  {
+    "id": "regex-top-076",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「性能优化」的描述，错误的是？",
+    "options": [
+      "用具体字符类替代 . ，减少回溯。",
+      "表示取反操作",
+      "只匹配字符串开头",
+      "等价于空匹配"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：用具体字符类替代 . ，减少回溯。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "性能优化"
+    ]
+  },
+  {
+    "id": "regex-top-077",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「占有量词」，下列说法正确的是？",
+    "options": [
+      "a++ 是占有量词，不回溯，性能最佳。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "a++ 是占有量词，不回溯，性能最佳。",
+    "tags": [
+      "正则",
+      "占有量词"
+    ]
+  },
+  {
+    "id": "regex-top-078",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「占有量词」的描述，错误的是？",
+    "options": [
+      "a++ 是占有量词，不回溯，性能最佳。",
+      "只匹配字符串开头",
+      "等价于空匹配",
+      "必须转义才能使用"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：a++ 是占有量词，不回溯，性能最佳。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "占有量词"
+    ]
+  },
+  {
+    "id": "regex-top-079",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "关于正则「ReDoS 防御」，下列说法正确的是？",
+    "options": [
+      "避免嵌套量词与重叠分支，限制输入长度。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "避免嵌套量词与重叠分支，限制输入长度。",
+    "tags": [
+      "正则",
+      "ReDoS 防御"
+    ]
+  },
+  {
+    "id": "regex-top-080",
+    "skill": "regex",
+    "level": "top",
+    "type": "choice",
+    "title": "下列关于「ReDoS 防御」的描述，错误的是？",
+    "options": [
+      "避免嵌套量词与重叠分支，限制输入长度。",
+      "等价于空匹配",
+      "必须转义才能使用",
+      "表示取反操作"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：避免嵌套量词与重叠分支，限制输入长度。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "ReDoS 防御"
+    ]
   }
 ]

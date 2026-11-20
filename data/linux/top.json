@@ -574,5 +574,869 @@
     "tags": [
       "Linux"
     ]
+  },
+  {
+    "id": "linux-top-033",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "查看系统负载的命令是？",
+    "options": [
+      "uptime",
+      "load",
+      "top",
+      "free"
+    ],
+    "answer": 0,
+    "explanation": "uptime 显示运行时间和平均负载。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-034",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "查看打开文件的命令是？",
+    "options": [
+      "lsof",
+      "openfiles",
+      "files",
+      "fuser"
+    ],
+    "answer": 0,
+    "explanation": "lsof 列出打开的文件和进程。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-035",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "跟踪系统调用的命令是？",
+    "options": [
+      "strace",
+      "trace",
+      "sys",
+      "ptrace"
+    ],
+    "answer": 0,
+    "explanation": "strace 跟踪进程的系统调用。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-036",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "跟踪库调用的命令是？",
+    "options": [
+      "ltrace",
+      "libtrace",
+      "ldtrace",
+      "strace"
+    ],
+    "answer": 0,
+    "explanation": "ltrace 跟踪库函数调用。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-037",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "性能分析工具是？",
+    "options": [
+      "perf",
+      "prof",
+      "perfmon",
+      "bench"
+    ],
+    "answer": 0,
+    "explanation": "perf 是 Linux 性能分析工具。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-038",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 IO 情况的命令是？",
+    "options": [
+      "iostat",
+      "iostat",
+      "io",
+      "diskstat"
+    ],
+    "answer": 0,
+    "explanation": "iostat 查看 IO 统计。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-039",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 CPU 情况的命令是？",
+    "options": [
+      "mpstat",
+      "cpustat",
+      "cpu",
+      "top"
+    ],
+    "answer": 0,
+    "explanation": "mpstat 查看各 CPU 统计。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-040",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "查看进程资源用？",
+    "options": [
+      "pidstat",
+      "procstat",
+      "psstat",
+      "pstat"
+    ],
+    "answer": 0,
+    "explanation": "pidstat 查看进程资源使用。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-041",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "定时任务管理命令是？",
+    "options": [
+      "crontab",
+      "cron",
+      "schedule",
+      "timer"
+    ],
+    "answer": 0,
+    "explanation": "crontab -e 编辑定时任务。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-042",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "crontab 中 * * * * * 含义？",
+    "options": [
+      "每分钟",
+      "每小时",
+      "每天",
+      "每秒"
+    ],
+    "answer": 0,
+    "explanation": "5 字段：分 时 日 月 周，全 * 是每分钟。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-043",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "systemctl 重启服务？",
+    "options": [
+      "systemctl restart svc",
+      "systemctl reload svc",
+      "systemctl start svc",
+      "systemctl stop svc"
+    ],
+    "answer": 0,
+    "explanation": "restart 重启服务。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-044",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "查看服务状态用？",
+    "options": [
+      "systemctl status svc",
+      "systemctl show svc",
+      "service svc",
+      "svc status"
+    ],
+    "answer": 0,
+    "explanation": "systemctl status 查看服务运行状态。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-045",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "journalctl 查看日志用？",
+    "options": [
+      "journalctl -u svc",
+      "log svc",
+      "dmesg",
+      "syslog"
+    ],
+    "answer": 0,
+    "explanation": "journalctl -u 查看某服务日志。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-046",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "tar 解压 .tar.gz？",
+    "options": [
+      "tar -xzf f.tar.gz",
+      "tar -czf f.tar.gz",
+      "tar -xf f.tar.gz",
+      "untar f.tar.gz"
+    ],
+    "answer": 0,
+    "explanation": "-x 解压，-z gzip，-f 指定文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-047",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "tar 压缩 .tar.gz？",
+    "options": [
+      "tar -czf f.tar.gz dir",
+      "tar -xzf f.tar.gz",
+      "tar -xf dir",
+      "gzip dir"
+    ],
+    "answer": 0,
+    "explanation": "-c 创建，-z gzip，-f 文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-048",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "find 按大小查找？",
+    "options": [
+      "find . -size +1M",
+      "find . -big 1M",
+      "find . -s 1M",
+      "find . -1M"
+    ],
+    "answer": 0,
+    "explanation": "-size +1M 找大于 1M 的文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-049",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "find 按时间查找（修改）？",
+    "options": [
+      "find . -mtime -7",
+      "find . -time 7",
+      "find . -m 7",
+      "find . -age 7"
+    ],
+    "answer": 0,
+    "explanation": "-mtime -7 表示 7 天内修改。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-050",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "环境变量 PATH 用？",
+    "options": [
+      "echo $PATH",
+      "echo PATH",
+      "print PATH",
+      "show PATH"
+    ],
+    "answer": 0,
+    "explanation": "$PATH 引用环境变量。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-051",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "export 的作用是？",
+    "options": [
+      "导出为环境变量",
+      "导出文件",
+      "退出",
+      "执行"
+    ],
+    "answer": 0,
+    "explanation": "export 把变量设为环境变量，子进程可继承。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-052",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "alias 的作用是？",
+    "options": [
+      "设置命令别名",
+      "别名文件",
+      "列表",
+      "对齐"
+    ],
+    "answer": 0,
+    "explanation": "alias ll=\"ls -la\" 设置别名。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-053",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "查看路由表用？",
+    "options": [
+      "ip route",
+      "route",
+      "routetable",
+      "paths"
+    ],
+    "answer": 0,
+    "explanation": "ip route 查看路由表（新版）。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-054",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "strace -p PID 的作用？",
+    "options": [
+      "跟踪已运行进程",
+      "新进程",
+      "杀进程",
+      "查看进程"
+    ],
+    "answer": 0,
+    "explanation": "-p 跟踪指定 PID 的进程。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-055",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "vmstat 的作用？",
+    "options": [
+      "虚拟内存统计",
+      "虚拟机",
+      "视频内存",
+      "查看进程"
+    ],
+    "answer": 0,
+    "explanation": "vmstat 报告虚拟内存、进程、CPU 等。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-056",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "sar 的作用？",
+    "options": [
+      "系统活动报告",
+      "搜索",
+      "排序",
+      "安全"
+    ],
+    "answer": 0,
+    "explanation": "sar 收集和报告系统活动数据。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-057",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "dmesg 的作用？",
+    "options": [
+      "查看内核日志",
+      "删除消息",
+      "磁盘信息",
+      "设备消息"
+    ],
+    "answer": 0,
+    "explanation": "dmesg 显示内核环形缓冲区日志。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-058",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "systemctl enable 的作用？",
+    "options": [
+      "设置开机启动",
+      "立即启动",
+      "重启",
+      "停止"
+    ],
+    "answer": 0,
+    "explanation": "enable 设置服务开机自启。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-059",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "systemctl disable 的作用？",
+    "options": [
+      "取消开机启动",
+      "停止",
+      "禁用",
+      "删除"
+    ],
+    "answer": 0,
+    "explanation": "disable 取消开机自启。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-060",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "tar -j 用什么压缩？",
+    "options": [
+      "bzip2",
+      "gzip",
+      "xz",
+      "zip"
+    ],
+    "answer": 0,
+    "explanation": "-j 用 bzip2（.tar.bz2）。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-061",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "tar -J 用什么压缩？",
+    "options": [
+      "xz",
+      "gzip",
+      "bzip2",
+      "zip"
+    ],
+    "answer": 0,
+    "explanation": "-J 用 xz（.tar.xz）。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-062",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "gzip f.txt 生成？",
+    "options": [
+      "f.txt.gz",
+      "f.gz",
+      "f.txt",
+      "f.txt.zip"
+    ],
+    "answer": 0,
+    "explanation": "gzip 生成 .gz 后缀。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-063",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "gunzip 的作用？",
+    "options": [
+      "解压 .gz",
+      "压缩",
+      "gzip 别名",
+      "删除"
+    ],
+    "answer": 0,
+    "explanation": "gunzip 解压 .gz。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-064",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "zip -r 的作用？",
+    "options": [
+      "递归压缩目录",
+      "解压",
+      "查看",
+      "删除"
+    ],
+    "answer": 0,
+    "explanation": "-r 递归压缩目录为 zip。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-065",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "unzip 的作用？",
+    "options": [
+      "解压 zip",
+      "压缩 zip",
+      "查看 zip",
+      "删除 zip"
+    ],
+    "answer": 0,
+    "explanation": "unzip 解压 .zip。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-066",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "crontab -e 的作用？",
+    "options": [
+      "编辑定时任务",
+      "查看",
+      "删除",
+      "执行"
+    ],
+    "answer": 0,
+    "explanation": "-e 编辑当前用户的 crontab。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-067",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "crontab -l 的作用？",
+    "options": [
+      "列出定时任务",
+      "编辑",
+      "删除",
+      "执行"
+    ],
+    "answer": 0,
+    "explanation": "-l 列出当前用户的定时任务。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-068",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "at 命令的作用？",
+    "options": [
+      "一次性定时任务",
+      "循环任务",
+      "查看时间",
+      "设置时区"
+    ],
+    "answer": 0,
+    "explanation": "at 执行一次性任务（at 10:00）。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-069",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "envsubst 的作用？",
+    "options": [
+      "替换环境变量",
+      "设置环境",
+      "查看环境",
+      "导出环境"
+    ],
+    "answer": 0,
+    "explanation": "envsubst 把模板里的 $VAR 替换为环境变量值。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-070",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "xargs -I {} 的作用？",
+    "options": [
+      "自定义占位符",
+      "忽略",
+      "输入",
+      "交互"
+    ],
+    "answer": 0,
+    "explanation": "-I {} 用 {} 作占位符传给后续命令。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-071",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "nohup cmd & 的作用？",
+    "options": [
+      "后台运行且忽略挂断",
+      "前台运行",
+      "只后台",
+      "只忽略挂断"
+    ],
+    "answer": 0,
+    "explanation": "组合：后台 + 忽略 SIGHUP，终端关闭仍运行。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-072",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "jobs 命令的作用？",
+    "options": [
+      "查看后台任务",
+      "查看进程",
+      "查看服务",
+      "查看日志"
+    ],
+    "answer": 0,
+    "explanation": "jobs 列出当前 shell 的后台任务。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-073",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "fg 命令的作用？",
+    "options": [
+      "把后台任务拉到前台",
+      "查看文件",
+      "格式化",
+      "过滤"
+    ],
+    "answer": 0,
+    "explanation": "fg 将后台任务调至前台。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-074",
+    "skill": "linux",
+    "level": "top",
+    "type": "choice",
+    "title": "bg 命令的作用？",
+    "options": [
+      "让暂停的任务后台继续",
+      "后台运行",
+      "查看后台",
+      "结束后台"
+    ],
+    "answer": 0,
+    "explanation": "bg 让 Ctrl+Z 暂停的任务后台继续运行。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-075",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "查看系统负载。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "uptime"
+      }
+    ],
+    "referenceAnswer": "uptime",
+    "explanation": "uptime 显示负载。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-076",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "编辑定时任务。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "crontab -e"
+      }
+    ],
+    "referenceAnswer": "crontab -e",
+    "explanation": "crontab -e 编辑。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-077",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "列出当前定时任务。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "crontab -l"
+      }
+    ],
+    "referenceAnswer": "crontab -l",
+    "explanation": "crontab -l 列出。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-078",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "重启 nginx 服务（systemd）。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "systemctl restart nginx"
+      }
+    ],
+    "referenceAnswer": "systemctl restart nginx",
+    "explanation": "systemctl restart 重启。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-079",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "查看 nginx 服务状态。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "systemctl status nginx"
+      }
+    ],
+    "referenceAnswer": "systemctl status nginx",
+    "explanation": "systemctl status 状态。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-top-080",
+    "skill": "linux",
+    "level": "top",
+    "type": "fill",
+    "title": "设置 nginx 开机自启。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "systemctl enable nginx"
+      }
+    ],
+    "referenceAnswer": "systemctl enable nginx",
+    "explanation": "enable 开机自启。",
+    "tags": [
+      "Linux"
+    ]
   }
 ]

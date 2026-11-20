@@ -574,5 +574,869 @@
     "tags": [
       "kubectl"
     ]
+  },
+  {
+    "id": "kubectl-low-033",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "列出 Pod 的命令是？",
+    "options": [
+      "kubectl get pods",
+      "kubectl pods",
+      "kubectl list pods",
+      "kubectl show pods"
+    ],
+    "answer": 0,
+    "explanation": "kubectl get pods 列出当前命名空间的 Pod。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-034",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "列出所有命名空间的 Pod 用？",
+    "options": [
+      "kubectl get pods -A",
+      "kubectl get pods --all",
+      "kubectl get pods -n all",
+      "kubectl get pods *"
+    ],
+    "answer": 0,
+    "explanation": "-A 等价 --all-namespaces。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-035",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "查看 Pod 详情用？",
+    "options": [
+      "kubectl describe pod <name>",
+      "kubectl show pod <name>",
+      "kubectl inspect pod <name>",
+      "kubectl pod <name>"
+    ],
+    "answer": 0,
+    "explanation": "describe 显示资源详细事件和状态。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-036",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "以 YAML 查看资源用？",
+    "options": [
+      "kubectl get pod <name> -o yaml",
+      "kubectl yaml pod <name>",
+      "kubectl get pod <name> yaml",
+      "kubectl show yaml pod"
+    ],
+    "answer": 0,
+    "explanation": "-o yaml 输出 YAML 格式。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-037",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "列出节点用？",
+    "options": [
+      "kubectl get nodes",
+      "kubectl nodes",
+      "kubectl get node",
+      "kubectl list nodes"
+    ],
+    "answer": 0,
+    "explanation": "kubectl get nodes 列出集群节点。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-038",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "列出 Deployment 用？",
+    "options": [
+      "kubectl get deploy",
+      "kubectl deployments",
+      "kubectl get deployments",
+      "kubectl list deploy"
+    ],
+    "answer": 0,
+    "explanation": "deploy 是 deployment 的简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-039",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "列出 Service 用？",
+    "options": [
+      "kubectl get svc",
+      "kubectl services",
+      "kubectl get services",
+      "kubectl list svc"
+    ],
+    "answer": 0,
+    "explanation": "svc 是 service 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-040",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "查看宽格式信息用？",
+    "options": [
+      "-o wide",
+      "-w",
+      "--wide",
+      "-W"
+    ],
+    "answer": 0,
+    "explanation": "-o wide 显示节点、IP 等更多信息。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-041",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "指定命名空间用？",
+    "options": [
+      "-n <ns>",
+      "--ns <ns>",
+      "-N <ns>",
+      "--namespace=<ns>"
+    ],
+    "answer": 0,
+    "explanation": "-n 指定命名空间。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-042",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "kubectl 命令格式是？",
+    "options": [
+      "kubectl <verb> <resource> [name] [flags]",
+      "kubectl <resource> <verb>",
+      "kubectl <name> <verb>",
+      "kubectl run <verb>"
+    ],
+    "answer": 0,
+    "explanation": "动词 + 资源 + 名称 + 标志。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-043",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "K8s 最小调度单元是？",
+    "options": [
+      "Pod",
+      "Container",
+      "Node",
+      "Deployment"
+    ],
+    "answer": 0,
+    "explanation": "Pod 是 K8s 最小调度单元，含一或多个容器。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-044",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "管理 Pod 副本的是？",
+    "options": [
+      "Deployment",
+      "Service",
+      "Node",
+      "ConfigMap"
+    ],
+    "answer": 0,
+    "explanation": "Deployment 管理 Pod 副本和滚动更新。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-045",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "提供稳定访问的是？",
+    "options": [
+      "Service",
+      "Pod",
+      "Volume",
+      "Label"
+    ],
+    "answer": 0,
+    "explanation": "Service 提供稳定的网络访问入口。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-046",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "逻辑隔离用？",
+    "options": [
+      "Namespace",
+      "Node",
+      "Pod",
+      "Volume"
+    ],
+    "answer": 0,
+    "explanation": "Namespace 用于逻辑隔离资源。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-047",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "查看集群信息用？",
+    "options": [
+      "kubectl cluster-info",
+      "kubectl info",
+      "kubectl cluster",
+      "kubectl status"
+    ],
+    "answer": 0,
+    "explanation": "kubectl cluster-info 显示控制平面地址。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-048",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "查看 K8s 版本用？",
+    "options": [
+      "kubectl version",
+      "kubectl ver",
+      "kubectl --version",
+      "kubectl k8s-version"
+    ],
+    "answer": 0,
+    "explanation": "kubectl version 显示客户端和服务端版本。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-049",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "查看节点资源用？",
+    "options": [
+      "kubectl top nodes",
+      "kubectl nodes top",
+      "kubectl stats nodes",
+      "kubectl node-stats"
+    ],
+    "answer": 0,
+    "explanation": "kubectl top nodes 查看 CPU/内存。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-050",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "查看 Pod 资源用？",
+    "options": [
+      "kubectl top pods",
+      "kubectl pods top",
+      "kubectl stats pods",
+      "kubectl pod-stats"
+    ],
+    "answer": 0,
+    "explanation": "kubectl top pods 查看 Pod 资源占用。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-051",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "获取所有资源简写帮助用？",
+    "options": [
+      "kubectl api-resources",
+      "kubectl resources",
+      "kubectl api",
+      "kubectl types"
+    ],
+    "answer": 0,
+    "explanation": "kubectl api-resources 列出资源及简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-052",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "查看事件用？",
+    "options": [
+      "kubectl get events",
+      "kubectl events",
+      "kubectl list events",
+      "kubectl show events"
+    ],
+    "answer": 0,
+    "explanation": "kubectl get events 查看集群事件。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-053",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "Pod 简写是？",
+    "options": [
+      "po",
+      "pod",
+      "p",
+      "pods"
+    ],
+    "answer": 0,
+    "explanation": "po 是 pods 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-054",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "Service 简写是？",
+    "options": [
+      "svc",
+      "sv",
+      "ser",
+      "service"
+    ],
+    "answer": 0,
+    "explanation": "svc 是 service 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-055",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "Deployment 简写是？",
+    "options": [
+      "deploy",
+      "dep",
+      "d",
+      "deployments"
+    ],
+    "answer": 0,
+    "explanation": "deploy 是 deployment 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-056",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "Namespace 简写是？",
+    "options": [
+      "ns",
+      "nm",
+      "n",
+      "namespaces"
+    ],
+    "answer": 0,
+    "explanation": "ns 是 namespace 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-057",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "Node 简写是？",
+    "options": [
+      "no",
+      "nd",
+      "n",
+      "nodes"
+    ],
+    "answer": 0,
+    "explanation": "no 是 node 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-058",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "ConfigMap 简写是？",
+    "options": [
+      "cm",
+      "cfg",
+      "cmap",
+      "config"
+    ],
+    "answer": 0,
+    "explanation": "cm 是 configmap 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-059",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "列出所有常见资源用？",
+    "options": [
+      "kubectl get all",
+      "kubectl get everything",
+      "kubectl all",
+      "kubectl list all"
+    ],
+    "answer": 0,
+    "explanation": "kubectl get all 列出常见资源。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-060",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "-A 等价于？",
+    "options": [
+      "--all-namespaces",
+      "--all-ns",
+      "--every-ns",
+      "-all"
+    ],
+    "answer": 0,
+    "explanation": "-A 是 --all-namespaces 的简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-061",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "查看 Pod 日志用？",
+    "options": [
+      "kubectl logs <pod>",
+      "kubectl cat <pod>",
+      "kubectl show logs <pod>",
+      "kubectl tail <pod>"
+    ],
+    "answer": 0,
+    "explanation": "kubectl logs 查看容器日志。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-062",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "进入容器用？",
+    "options": [
+      "kubectl exec -it <pod> -- sh",
+      "kubectl ssh <pod>",
+      "kubectl enter <pod>",
+      "kubectl shell <pod>"
+    ],
+    "answer": 0,
+    "explanation": "exec -it 进入交互式终端。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-063",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "容器在 Pod 中的关系？",
+    "options": [
+      "一个 Pod 可含多个容器",
+      "一个容器多个 Pod",
+      "一一对应",
+      "无关系"
+    ],
+    "answer": 0,
+    "explanation": "Pod 可含一个或多个容器。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-064",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "K8s 编排的对象是？",
+    "options": [
+      "容器",
+      "虚拟机",
+      "物理机",
+      "进程"
+    ],
+    "answer": 0,
+    "explanation": "K8s 编排容器化应用。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-065",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "describe 看什么最有用？",
+    "options": [
+      "Events 部分",
+      "名字",
+      "标签",
+      "创建时间"
+    ],
+    "answer": 0,
+    "explanation": "describe 的 Events 部分显示调度、拉镜像等事件。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-066",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "kubectl 简写别名常用？",
+    "options": [
+      "k",
+      "ku",
+      "kc",
+      "kube"
+    ],
+    "answer": 0,
+    "explanation": "常设置 alias k=kubectl。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-067",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "查看 Pod 的标签用？",
+    "options": [
+      "kubectl get pods --show-labels",
+      "kubectl get pods -l",
+      "kubectl get pods labels",
+      "kubectl get pods --labels"
+    ],
+    "answer": 0,
+    "explanation": "--show-labels 显示标签。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-068",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "查看 Ingress 用？",
+    "options": [
+      "kubectl get ingress",
+      "kubectl get ing",
+      "kubectl get ingresses",
+      "kubectl get routing"
+    ],
+    "answer": 0,
+    "explanation": "ing 是 ingress 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-069",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "查看 ConfigMap 用？",
+    "options": [
+      "kubectl get cm",
+      "kubectl get configmaps",
+      "kubectl get cfgmap",
+      "kubectl get configmap"
+    ],
+    "answer": 0,
+    "explanation": "cm 是 configmap 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-070",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "查看 Secret 用？",
+    "options": [
+      "kubectl get secret",
+      "kubectl get secrets",
+      "kubectl get sec",
+      "kubectl get credentials"
+    ],
+    "answer": 0,
+    "explanation": "kubectl get secret 查看 Secret。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-071",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "输出 JSON 格式用？",
+    "options": [
+      "-o json",
+      "--json",
+      "-j",
+      "-O json"
+    ],
+    "answer": 0,
+    "explanation": "-o json 输出 JSON。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-072",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "choice",
+    "title": "实时跟踪变化用？",
+    "options": [
+      "-w",
+      "--watch",
+      "-W",
+      "--follow"
+    ],
+    "answer": 0,
+    "explanation": "-w / --watch 实时跟踪。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-073",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "fill",
+    "title": "列出当前命名空间的所有 Pod。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl get pods"
+      }
+    ],
+    "referenceAnswer": "kubectl get pods",
+    "explanation": "kubectl get pods 列出 Pod。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-074",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "fill",
+    "title": "列出所有命名空间的 Pod。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl get pods -A"
+      }
+    ],
+    "referenceAnswer": "kubectl get pods -A",
+    "explanation": "-A 所有命名空间。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-075",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "fill",
+    "title": "查看 Pod nginx 的详情。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl describe pod nginx"
+      }
+    ],
+    "referenceAnswer": "kubectl describe pod nginx",
+    "explanation": "describe 查看详情。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-076",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "fill",
+    "title": "以 YAML 格式查看 Pod nginx。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl get pod nginx -o yaml"
+      }
+    ],
+    "referenceAnswer": "kubectl get pod nginx -o yaml",
+    "explanation": "-o yaml 输出 YAML。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-077",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "fill",
+    "title": "列出所有节点。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl get nodes"
+      }
+    ],
+    "referenceAnswer": "kubectl get nodes",
+    "explanation": "kubectl get nodes 节点。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-078",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "fill",
+    "title": "以宽格式列出 Pod。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl get pods -o wide"
+      }
+    ],
+    "referenceAnswer": "kubectl get pods -o wide",
+    "explanation": "-o wide 宽格式。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-079",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "fill",
+    "title": "列出 default 命名空间的 Deployment。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl get deploy -n default"
+      }
+    ],
+    "referenceAnswer": "kubectl get deploy -n default",
+    "explanation": "-n 指定命名空间。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-low-080",
+    "skill": "kubectl",
+    "level": "low",
+    "type": "fill",
+    "title": "查看集群信息。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl cluster-info"
+      }
+    ],
+    "referenceAnswer": "kubectl cluster-info",
+    "explanation": "cluster-info 集群信息。",
+    "tags": [
+      "kubectl"
+    ]
   }
 ]

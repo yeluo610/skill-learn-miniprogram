@@ -574,5 +574,869 @@
     "tags": [
       "Linux"
     ]
+  },
+  {
+    "id": "linux-mid-033",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "修改文件权限的命令是？",
+    "options": [
+      "chmod",
+      "chown",
+      "chperm",
+      "perm"
+    ],
+    "answer": 0,
+    "explanation": "chmod 修改权限，如 chmod 755 file。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-034",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "修改文件所有者的命令是？",
+    "options": [
+      "chown",
+      "chmod",
+      "chuser",
+      "owner"
+    ],
+    "answer": 0,
+    "explanation": "chown user:group file 修改所有者和组。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-035",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "权限 rwx 对应的数字是？",
+    "options": [
+      "7",
+      "6",
+      "5",
+      "4"
+    ],
+    "answer": 0,
+    "explanation": "r=4, w=2, x=1，rwx=4+2+1=7。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-036",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "权限 r-x 对应的数字是？",
+    "options": [
+      "5",
+      "7",
+      "6",
+      "4"
+    ],
+    "answer": 0,
+    "explanation": "r=4, x=1，r-x=5。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-037",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "权限 rw- 对应的数字是？",
+    "options": [
+      "6",
+      "7",
+      "5",
+      "4"
+    ],
+    "answer": 0,
+    "explanation": "r=4, w=2，rw-=6。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-038",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "搜索文本的命令是？",
+    "options": [
+      "grep",
+      "find",
+      "search",
+      "locate"
+    ],
+    "answer": 0,
+    "explanation": "grep 按内容搜索，如 grep \"TODO\" file。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-039",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "按文件名查找的命令是？",
+    "options": [
+      "find",
+      "grep",
+      "locate",
+      "search"
+    ],
+    "answer": 0,
+    "explanation": "find /path -name \"*.txt\" 按文件名查找。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-040",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "流编辑器替换文本的命令是？",
+    "options": [
+      "sed",
+      "awk",
+      "cut",
+      "tr"
+    ],
+    "answer": 0,
+    "explanation": "sed 's/old/new/g' file 全局替换。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-041",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "列处理的命令是？",
+    "options": [
+      "awk",
+      "sed",
+      "grep",
+      "sort"
+    ],
+    "answer": 0,
+    "explanation": "awk '{print $1}' file 按列处理。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-042",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "管道符 | 的作用是？",
+    "options": [
+      "前命令输出作后命令输入",
+      "或运算",
+      "重定向",
+      "注释"
+    ],
+    "answer": 0,
+    "explanation": "管道把前一个命令的标准输出连接到后一个命令的输入。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-043",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "grep -i 的作用是？",
+    "options": [
+      "忽略大小写",
+      "递归",
+      "反向",
+      "行号"
+    ],
+    "answer": 0,
+    "explanation": "-i 忽略大小写。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-044",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "grep -r 的作用是？",
+    "options": [
+      "递归搜索子目录",
+      "反向",
+      "行号",
+      "正则"
+    ],
+    "answer": 0,
+    "explanation": "-r 递归搜索目录下所有文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-045",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "grep -v 的作用是？",
+    "options": [
+      "反向匹配",
+      "递归",
+      "忽略大小写",
+      "行号"
+    ],
+    "answer": 0,
+    "explanation": "-v 显示不匹配的行。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-046",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "grep -n 的作用是？",
+    "options": [
+      "显示行号",
+      "递归",
+      "反向",
+      "忽略大小写"
+    ],
+    "answer": 0,
+    "explanation": "-n 显示匹配行的行号。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-047",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "sort -u 的作用是？",
+    "options": [
+      "排序并去重",
+      "升序",
+      "降序",
+      "唯一"
+    ],
+    "answer": 0,
+    "explanation": "-u 排序后去重。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-048",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "uniq 的作用是？",
+    "options": [
+      "去重相邻重复行",
+      "唯一文件",
+      "统计",
+      "排序"
+    ],
+    "answer": 0,
+    "explanation": "uniq 去除相邻重复行，常与 sort 配合。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-049",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "输出重定向 > 的作用是？",
+    "options": [
+      "覆盖写入文件",
+      "追加",
+      "管道",
+      "错误重定向"
+    ],
+    "answer": 0,
+    "explanation": "> 覆盖写入文件，>> 追加。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-050",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": ">> 的作用是？",
+    "options": [
+      "追加写入",
+      "覆盖写入",
+      "管道",
+      "错误重定向"
+    ],
+    "answer": 0,
+    "explanation": ">> 追加到文件末尾。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-051",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "2> 的作用是？",
+    "options": [
+      "重定向标准错误",
+      "重定向标准输出",
+      "追加",
+      "管道"
+    ],
+    "answer": 0,
+    "explanation": "2> 重定向标准错误（文件描述符 2）。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-052",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "2>&1 的作用是？",
+    "options": [
+      "错误合并到标准输出",
+      "输出合并到错误",
+      "关闭错误",
+      "关闭输出"
+    ],
+    "answer": 0,
+    "explanation": "2>&1 把标准错误重定向到标准输出。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-053",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "cut -d , -f 2 的作用是？",
+    "options": [
+      "以逗号分隔取第 2 段",
+      "删除第 2 行",
+      "复制第 2 列",
+      "排序"
+    ],
+    "answer": 0,
+    "explanation": "-d 指定分隔符，-f 指定字段。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-054",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "tee 命令的作用是？",
+    "options": [
+      "同时输出到屏幕和文件",
+      "排序",
+      "过滤",
+      "删除"
+    ],
+    "answer": 0,
+    "explanation": "tee 把 stdin 同时输出到文件和 stdout。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-055",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "xargs 的作用是？",
+    "options": [
+      "把 stdin 作为参数传给命令",
+      "执行多次",
+      "等待",
+      "排序"
+    ],
+    "answer": 0,
+    "explanation": "xargs 把标准输入转为命令参数。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-056",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "chmod u+x 的含义？",
+    "options": [
+      "给所有者加执行权",
+      "给组加执行权",
+      "给其他人加",
+      "去掉执行权"
+    ],
+    "answer": 0,
+    "explanation": "u+x 给所有者(user)加执行权限。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-057",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "chmod g-w 的含义？",
+    "options": [
+      "去掉组的写权限",
+      "去掉所有者的写",
+      "给组加写",
+      "给所有者加写"
+    ],
+    "answer": 0,
+    "explanation": "g-w 去掉组(group)的写权限。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-058",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "chmod o=r 的含义？",
+    "options": [
+      "其他人只读",
+      "所有者只读",
+      "组只读",
+      "所有人只读"
+    ],
+    "answer": 0,
+    "explanation": "o=r 其他人(other)权限设为只读。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-059",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "chmod a+x 的含义？",
+    "options": [
+      "所有人加执行权",
+      "所有者加",
+      "组加",
+      "其他人加"
+    ],
+    "answer": 0,
+    "explanation": "a+x a=all 所有人加执行权限。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-060",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "权限 755 含义？",
+    "options": [
+      "所有者全权，其他人可读可执行",
+      "所有人全权",
+      "只读",
+      "所有人只读"
+    ],
+    "answer": 0,
+    "explanation": "755：u=rwx, g=rx, o=rx。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-061",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "权限 644 含义？",
+    "options": [
+      "所有者读写，其他人只读",
+      "全读写",
+      "全执行",
+      "只读"
+    ],
+    "answer": 0,
+    "explanation": "644：u=rw, g=r, o=r，普通文件常用。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-062",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "权限 600 含义？",
+    "options": [
+      "仅所有者读写",
+      "所有人读写",
+      "只读",
+      "所有人执行"
+    ],
+    "answer": 0,
+    "explanation": "600：u=rw, g=-, o=-，密钥文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-063",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "777 权限的危险性？",
+    "options": [
+      "所有人可读写执行",
+      "无危险",
+      "只读",
+      "仅所有者"
+    ],
+    "answer": 0,
+    "explanation": "777 所有人全权，极不安全。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-064",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "find -name 的作用？",
+    "options": [
+      "按文件名查找",
+      "按大小",
+      "按时间",
+      "按用户"
+    ],
+    "answer": 0,
+    "explanation": "-name 按文件名（支持通配符）。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-065",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "find -type f 的作用？",
+    "options": [
+      "只找普通文件",
+      "只找目录",
+      "只找链接",
+      "只找块设备"
+    ],
+    "answer": 0,
+    "explanation": "-type f 普通文件，d 目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-066",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "sort -n 的作用？",
+    "options": [
+      "数字序排序",
+      "自然序",
+      "倒序",
+      "不排序"
+    ],
+    "answer": 0,
+    "explanation": "-n 按数字大小排序。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-067",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "sort -r 的作用？",
+    "options": [
+      "降序",
+      "升序",
+      "随机",
+      "不排序"
+    ],
+    "answer": 0,
+    "explanation": "-r 反向（降序）。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-068",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "tr 命令的作用？",
+    "options": [
+      "转换或删除字符",
+      "翻译",
+      "传输",
+      "跟踪"
+    ],
+    "answer": 0,
+    "explanation": "tr 'a-z' 'A-Z' 把小写转大写。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-069",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "sed -i 的作用？",
+    "options": [
+      "原地修改文件",
+      "忽略",
+      "输入",
+      "交互"
+    ],
+    "answer": 0,
+    "explanation": "-i 直接修改原文件（不输出到屏幕）。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-070",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "awk -F , 的作用？",
+    "options": [
+      "用逗号分隔",
+      "第 F 列",
+      "过滤",
+      "格式化"
+    ],
+    "answer": 0,
+    "explanation": "-F 指定字段分隔符。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-071",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "echo $VAR 的作用？",
+    "options": [
+      "输出变量值",
+      "定义变量",
+      "删除变量",
+      "导入变量"
+    ],
+    "answer": 0,
+    "explanation": "echo $VAR 输出变量 VAR 的值。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-072",
+    "skill": "linux",
+    "level": "mid",
+    "type": "choice",
+    "title": "env 命令的作用？",
+    "options": [
+      "显示环境变量",
+      "设置环境",
+      "执行命令",
+      "退出"
+    ],
+    "answer": 0,
+    "explanation": "env 显示所有环境变量。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-073",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "把文件权限改为 755。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "chmod 755 file"
+      }
+    ],
+    "referenceAnswer": "chmod 755 file",
+    "explanation": "chmod 数字法。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-074",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "给文件所有者加执行权限。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "chmod u+x file"
+      }
+    ],
+    "referenceAnswer": "chmod u+x file",
+    "explanation": "u+x 符号法。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-075",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "给所有人加执行权限。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "chmod a+x file"
+      }
+    ],
+    "referenceAnswer": "chmod a+x file",
+    "explanation": "a+x 所有人。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-076",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "把文件所有者改为 root。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "chown root file"
+      }
+    ],
+    "referenceAnswer": "chown root file",
+    "explanation": "chown 改所有者。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-077",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "在 file 中搜索 \"TODO\"。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "grep TODO file"
+      }
+    ],
+    "referenceAnswer": "grep TODO file",
+    "explanation": "grep 搜索文本。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-078",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "递归搜索目录中含 \"TODO\" 的行。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "grep -r TODO ."
+      }
+    ],
+    "referenceAnswer": "grep -r TODO .",
+    "explanation": "-r 递归。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-079",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "忽略大小写搜索 \"error\"。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "grep -i error file"
+      }
+    ],
+    "referenceAnswer": "grep -i error file",
+    "explanation": "-i 忽略大小写。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-mid-080",
+    "skill": "linux",
+    "level": "mid",
+    "type": "fill",
+    "title": "反向匹配（显示不含 error 的行）。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "grep -v error file"
+      }
+    ],
+    "referenceAnswer": "grep -v error file",
+    "explanation": "-v 反向。",
+    "tags": [
+      "Linux"
+    ]
   }
 ]

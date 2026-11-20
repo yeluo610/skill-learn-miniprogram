@@ -759,5 +759,815 @@
     "tags": [
       "基础访问"
     ]
+  },
+  {
+    "id": "jsonpath-low-039",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "关于 JSONPath「根 $」，下列正确的是？",
+    "options": [
+      "$ 表示根对象。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$ 表示根对象。",
+    "tags": [
+      "JSONPath",
+      "根 $"
+    ]
+  },
+  {
+    "id": "jsonpath-low-040",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「根 $」错误的是？",
+    "options": [
+      "$ 表示根对象。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：$ 表示根对象。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "根 $"
+    ]
+  },
+  {
+    "id": "jsonpath-low-041",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "关于 JSONPath「点号 .」，下列正确的是？",
+    "options": [
+      ". 访问子字段，如 $.a。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": ". 访问子字段，如 $.a。",
+    "tags": [
+      "JSONPath",
+      "点号 ."
+    ]
+  },
+  {
+    "id": "jsonpath-low-042",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「点号 .」错误的是？",
+    "options": [
+      ". 访问子字段，如 $.a。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：. 访问子字段，如 $.a。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "点号 ."
+    ]
+  },
+  {
+    "id": "jsonpath-low-043",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "关于 JSONPath「下标 [n]」，下列正确的是？",
+    "options": [
+      "[n] 访问数组第 n 个元素（从 0 开始）。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[n] 访问数组第 n 个元素（从 0 开始）。",
+    "tags": [
+      "JSONPath",
+      "下标 [n]"
+    ]
+  },
+  {
+    "id": "jsonpath-low-044",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「下标 [n]」错误的是？",
+    "options": [
+      "[n] 访问数组第 n 个元素（从 0 开始）。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：[n] 访问数组第 n 个元素（从 0 开始）。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "下标 [n]"
+    ]
+  },
+  {
+    "id": "jsonpath-low-045",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "关于 JSONPath「下标 [-1]」，下列正确的是？",
+    "options": [
+      "[-1] 访问数组最后一个元素。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[-1] 访问数组最后一个元素。",
+    "tags": [
+      "JSONPath",
+      "下标 [-1]"
+    ]
+  },
+  {
+    "id": "jsonpath-low-046",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「下标 [-1]」错误的是？",
+    "options": [
+      "[-1] 访问数组最后一个元素。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：[-1] 访问数组最后一个元素。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "下标 [-1]"
+    ]
+  },
+  {
+    "id": "jsonpath-low-047",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "关于 JSONPath「括号 ['a']」，下列正确的是？",
+    "options": [
+      "$['a'] 等价于 $.a，用于含特殊字符的字段名。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$['a'] 等价于 $.a，用于含特殊字符的字段名。",
+    "tags": [
+      "JSONPath",
+      "括号 ['a']"
+    ]
+  },
+  {
+    "id": "jsonpath-low-048",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「括号 ['a']」错误的是？",
+    "options": [
+      "$['a'] 等价于 $.a，用于含特殊字符的字段名。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：$['a'] 等价于 $.a，用于含特殊字符的字段名。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "括号 ['a']"
+    ]
+  },
+  {
+    "id": "jsonpath-low-049",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "关于 JSONPath「链式访问」，下列正确的是？",
+    "options": [
+      "$.a.b.c 链式访问嵌套字段。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$.a.b.c 链式访问嵌套字段。",
+    "tags": [
+      "JSONPath",
+      "链式访问"
+    ]
+  },
+  {
+    "id": "jsonpath-low-050",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「链式访问」错误的是？",
+    "options": [
+      "$.a.b.c 链式访问嵌套字段。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：$.a.b.c 链式访问嵌套字段。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "链式访问"
+    ]
+  },
+  {
+    "id": "jsonpath-low-051",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "关于 JSONPath「JSON 解析」，下列正确的是？",
+    "options": [
+      "JSONPath 表达式作用于一个 JSON 对象。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "JSONPath 表达式作用于一个 JSON 对象。",
+    "tags": [
+      "JSONPath",
+      "JSON 解析"
+    ]
+  },
+  {
+    "id": "jsonpath-low-052",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「JSON 解析」错误的是？",
+    "options": [
+      "JSONPath 表达式作用于一个 JSON 对象。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：JSONPath 表达式作用于一个 JSON 对象。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "JSON 解析"
+    ]
+  },
+  {
+    "id": "jsonpath-low-053",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "关于 JSONPath「返回类型」，下列正确的是？",
+    "options": [
+      "查询结果通常是数组（即使只匹配一个）。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "查询结果通常是数组（即使只匹配一个）。",
+    "tags": [
+      "JSONPath",
+      "返回类型"
+    ]
+  },
+  {
+    "id": "jsonpath-low-054",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「返回类型」错误的是？",
+    "options": [
+      "查询结果通常是数组（即使只匹配一个）。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：查询结果通常是数组（即使只匹配一个）。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "返回类型"
+    ]
+  },
+  {
+    "id": "jsonpath-low-055",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "关于 JSONPath「空结果」，下列正确的是？",
+    "options": [
+      "查不到的字段返回空数组，不报错。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "查不到的字段返回空数组，不报错。",
+    "tags": [
+      "JSONPath",
+      "空结果"
+    ]
+  },
+  {
+    "id": "jsonpath-low-056",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「空结果」错误的是？",
+    "options": [
+      "查不到的字段返回空数组，不报错。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：查不到的字段返回空数组，不报错。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "空结果"
+    ]
+  },
+  {
+    "id": "jsonpath-low-057",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "关于 JSONPath「字段名规范」，下列正确的是？",
+    "options": [
+      "合法标识符可用 .a，含特殊字符必须用 ['a']。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "合法标识符可用 .a，含特殊字符必须用 ['a']。",
+    "tags": [
+      "JSONPath",
+      "字段名规范"
+    ]
+  },
+  {
+    "id": "jsonpath-low-058",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「字段名规范」错误的是？",
+    "options": [
+      "合法标识符可用 .a，含特殊字符必须用 ['a']。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：合法标识符可用 .a，含特殊字符必须用 ['a']。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "字段名规范"
+    ]
+  },
+  {
+    "id": "jsonpath-low-059",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取 {\"a\":1,\"b\":2,\"c\":3} 中 a 字段。",
+    "testCases": [
+      {
+        "input": "{\"a\":1,\"b\":2,\"c\":3}",
+        "expected": [
+          "1"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.a",
+    "explanation": "基础访问。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-low-060",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取 {\"a\":1,\"b\":2,\"c\":3} 中 b 字段。",
+    "testCases": [
+      {
+        "input": "{\"a\":1,\"b\":2,\"c\":3}",
+        "expected": [
+          "2"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.b",
+    "explanation": "基础访问。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-low-061",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中第 0 个元素。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "10"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[0]",
+    "explanation": "下标。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-low-062",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中第 2 个元素。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "30"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[2]",
+    "explanation": "下标。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-low-063",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中最后一个元素。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "50"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[-1]",
+    "explanation": "负下标。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-low-064",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中倒数第 2 个。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "40"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[-2]",
+    "explanation": "负下标。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-low-065",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中 store.book。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "[{\"price\":10,\"title\":\"A\"},{\"price\":20,\"title\":\"B\"}]"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.store.book",
+    "explanation": "链式。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-low-066",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取 {\"x\":{\"y\":{\"z\":1}}} 中 z 的值。",
+    "testCases": [
+      {
+        "input": "{\"x\":{\"y\":{\"z\":1}}}",
+        "expected": [
+          "1"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.x.y.z",
+    "explanation": "链式。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-low-067",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取 {\"a\":1,\"b\":2,\"c\":3} 中 c 字段（用括号写法）。",
+    "testCases": [
+      {
+        "input": "{\"a\":1,\"b\":2,\"c\":3}",
+        "expected": [
+          "3"
+        ]
+      }
+    ],
+    "referenceAnswer": "$['c']",
+    "explanation": "括号。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-low-068",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中 store。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "{\"book\":[{\"price\":10,\"title\":\"A\"},{\"price\":20,\"title\":\"B\"}]}"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.store",
+    "explanation": "基础。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-low-069",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取 {\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]} 中第 0 个用户。",
+    "testCases": [
+      {
+        "input": "{\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]}",
+        "expected": [
+          "{\"age\":20,\"name\":\"Tom\"}"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.users[0]",
+    "explanation": "下标。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-low-070",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "fill",
+    "title": "取 {\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]} 中第 1 个用户的 name。",
+    "testCases": [
+      {
+        "input": "{\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]}",
+        "expected": [
+          "Jerry"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.users[1].name",
+    "explanation": "链式。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-low-071",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "关于 JSONPath「根 $」，下列正确的是？",
+    "options": [
+      "$ 表示根对象。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$ 表示根对象。",
+    "tags": [
+      "JSONPath",
+      "根 $"
+    ]
+  },
+  {
+    "id": "jsonpath-low-072",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「根 $」错误的是？",
+    "options": [
+      "$ 表示根对象。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：$ 表示根对象。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "根 $"
+    ]
+  },
+  {
+    "id": "jsonpath-low-073",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "关于 JSONPath「点号 .」，下列正确的是？",
+    "options": [
+      ". 访问子字段，如 $.a。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": ". 访问子字段，如 $.a。",
+    "tags": [
+      "JSONPath",
+      "点号 ."
+    ]
+  },
+  {
+    "id": "jsonpath-low-074",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「点号 .」错误的是？",
+    "options": [
+      ". 访问子字段，如 $.a。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：. 访问子字段，如 $.a。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "点号 ."
+    ]
+  },
+  {
+    "id": "jsonpath-low-075",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "关于 JSONPath「下标 [n]」，下列正确的是？",
+    "options": [
+      "[n] 访问数组第 n 个元素（从 0 开始）。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[n] 访问数组第 n 个元素（从 0 开始）。",
+    "tags": [
+      "JSONPath",
+      "下标 [n]"
+    ]
+  },
+  {
+    "id": "jsonpath-low-076",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「下标 [n]」错误的是？",
+    "options": [
+      "[n] 访问数组第 n 个元素（从 0 开始）。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：[n] 访问数组第 n 个元素（从 0 开始）。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "下标 [n]"
+    ]
+  },
+  {
+    "id": "jsonpath-low-077",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "关于 JSONPath「下标 [-1]」，下列正确的是？",
+    "options": [
+      "[-1] 访问数组最后一个元素。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[-1] 访问数组最后一个元素。",
+    "tags": [
+      "JSONPath",
+      "下标 [-1]"
+    ]
+  },
+  {
+    "id": "jsonpath-low-078",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「下标 [-1]」错误的是？",
+    "options": [
+      "[-1] 访问数组最后一个元素。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：[-1] 访问数组最后一个元素。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "下标 [-1]"
+    ]
+  },
+  {
+    "id": "jsonpath-low-079",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "关于 JSONPath「括号 ['a']」，下列正确的是？",
+    "options": [
+      "$['a'] 等价于 $.a，用于含特殊字符的字段名。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$['a'] 等价于 $.a，用于含特殊字符的字段名。",
+    "tags": [
+      "JSONPath",
+      "括号 ['a']"
+    ]
+  },
+  {
+    "id": "jsonpath-low-080",
+    "skill": "jsonpath",
+    "level": "low",
+    "type": "choice",
+    "title": "下列关于「括号 ['a']」错误的是？",
+    "options": [
+      "$['a'] 等价于 $.a，用于含特殊字符的字段名。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：$['a'] 等价于 $.a，用于含特殊字符的字段名。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "括号 ['a']"
+    ]
   }
 ]

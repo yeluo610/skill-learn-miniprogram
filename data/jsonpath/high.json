@@ -389,5 +389,1200 @@
     "tags": [
       "多选"
     ]
+  },
+  {
+    "id": "jsonpath-high-020",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「递归 ..」，下列正确的是？",
+    "options": [
+      ".. 从当前位置递归查找所有层级。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": ".. 从当前位置递归查找所有层级。",
+    "tags": [
+      "JSONPath",
+      "递归 .."
+    ]
+  },
+  {
+    "id": "jsonpath-high-021",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「递归 ..」错误的是？",
+    "options": [
+      ".. 从当前位置递归查找所有层级。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：.. 从当前位置递归查找所有层级。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "递归 .."
+    ]
+  },
+  {
+    "id": "jsonpath-high-022",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「脚本表达式」，下列正确的是？",
+    "options": [
+      "部分实现支持 (script) 脚本表达式。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "部分实现支持 (script) 脚本表达式。",
+    "tags": [
+      "JSONPath",
+      "脚本表达式"
+    ]
+  },
+  {
+    "id": "jsonpath-high-023",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「脚本表达式」错误的是？",
+    "options": [
+      "部分实现支持 (script) 脚本表达式。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：部分实现支持 (script) 脚本表达式。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "脚本表达式"
+    ]
+  },
+  {
+    "id": "jsonpath-high-024",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「多选 [a,b]」，下列正确的是？",
+    "options": [
+      "['a','b'] 同时选取多个字段。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "['a','b'] 同时选取多个字段。",
+    "tags": [
+      "JSONPath",
+      "多选 [a,b]"
+    ]
+  },
+  {
+    "id": "jsonpath-high-025",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「多选 [a,b]」错误的是？",
+    "options": [
+      "['a','b'] 同时选取多个字段。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：['a','b'] 同时选取多个字段。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "多选 [a,b]"
+    ]
+  },
+  {
+    "id": "jsonpath-high-026",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「组合表达式」，下列正确的是？",
+    "options": [
+      "$..book[0].title 与 $..price 组合查询。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$..book[0].title 与 $..price 组合查询。",
+    "tags": [
+      "JSONPath",
+      "组合表达式"
+    ]
+  },
+  {
+    "id": "jsonpath-high-027",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「组合表达式」错误的是？",
+    "options": [
+      "$..book[0].title 与 $..price 组合查询。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：$..book[0].title 与 $..price 组合查询。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "组合表达式"
+    ]
+  },
+  {
+    "id": "jsonpath-high-028",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「递归+过滤」，下列正确的是？",
+    "options": [
+      "$..book[?(@.price<10)] 递归后过滤。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$..book[?(@.price<10)] 递归后过滤。",
+    "tags": [
+      "JSONPath",
+      "递归+过滤"
+    ]
+  },
+  {
+    "id": "jsonpath-high-029",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「递归+过滤」错误的是？",
+    "options": [
+      "$..book[?(@.price<10)] 递归后过滤。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：$..book[?(@.price<10)] 递归后过滤。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "递归+过滤"
+    ]
+  },
+  {
+    "id": "jsonpath-high-030",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「递归+切片」，下列正确的是？",
+    "options": [
+      "$..list[0:2] 递归找 list 再切片。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$..list[0:2] 递归找 list 再切片。",
+    "tags": [
+      "JSONPath",
+      "递归+切片"
+    ]
+  },
+  {
+    "id": "jsonpath-high-031",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「递归+切片」错误的是？",
+    "options": [
+      "$..list[0:2] 递归找 list 再切片。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：$..list[0:2] 递归找 list 再切片。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "递归+切片"
+    ]
+  },
+  {
+    "id": "jsonpath-high-032",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「@ 与 $ 区别」，下列正确的是？",
+    "options": [
+      "@ 是当前元素，$ 是根。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "@ 是当前元素，$ 是根。",
+    "tags": [
+      "JSONPath",
+      "@ 与 $ 区别"
+    ]
+  },
+  {
+    "id": "jsonpath-high-033",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「@ 与 $ 区别」错误的是？",
+    "options": [
+      "@ 是当前元素，$ 是根。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：@ 是当前元素，$ 是根。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "@ 与 $ 区别"
+    ]
+  },
+  {
+    "id": "jsonpath-high-034",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「嵌套过滤」，下列正确的是？",
+    "options": [
+      "过滤条件里可再嵌套 JSONPath。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "过滤条件里可再嵌套 JSONPath。",
+    "tags": [
+      "JSONPath",
+      "嵌套过滤"
+    ]
+  },
+  {
+    "id": "jsonpath-high-035",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「嵌套过滤」错误的是？",
+    "options": [
+      "过滤条件里可再嵌套 JSONPath。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：过滤条件里可再嵌套 JSONPath。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "嵌套过滤"
+    ]
+  },
+  {
+    "id": "jsonpath-high-036",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「字段存在检查」，下列正确的是？",
+    "options": [
+      "用 @.field 过滤出有该字段的元素。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "用 @.field 过滤出有该字段的元素。",
+    "tags": [
+      "JSONPath",
+      "字段存在检查"
+    ]
+  },
+  {
+    "id": "jsonpath-high-037",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「字段存在检查」错误的是？",
+    "options": [
+      "用 @.field 过滤出有该字段的元素。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：用 @.field 过滤出有该字段的元素。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "字段存在检查"
+    ]
+  },
+  {
+    "id": "jsonpath-high-038",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「正则匹配」，下列正确的是？",
+    "options": [
+      "部分实现支持 =~ /pattern/ 正则匹配。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "部分实现支持 =~ /pattern/ 正则匹配。",
+    "tags": [
+      "JSONPath",
+      "正则匹配"
+    ]
+  },
+  {
+    "id": "jsonpath-high-039",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「正则匹配」错误的是？",
+    "options": [
+      "部分实现支持 =~ /pattern/ 正则匹配。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：部分实现支持 =~ /pattern/ 正则匹配。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "正则匹配"
+    ]
+  },
+  {
+    "id": "jsonpath-high-040",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中所有 price。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "10",
+          "20"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..price",
+    "explanation": "递归。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-041",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中所有 title。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "A",
+          "B"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..title",
+    "explanation": "递归。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-042",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "同时取 {\"a\":1,\"b\":2,\"c\":3} 中 a 和 b。",
+    "testCases": [
+      {
+        "input": "{\"a\":1,\"b\":2,\"c\":3}",
+        "expected": [
+          "1",
+          "2"
+        ]
+      }
+    ],
+    "referenceAnswer": "$['a','b']",
+    "explanation": "多选。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-043",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "同时取 {\"a\":1,\"b\":2,\"c\":3} 中 a 和 c。",
+    "testCases": [
+      {
+        "input": "{\"a\":1,\"b\":2,\"c\":3}",
+        "expected": [
+          "1",
+          "3"
+        ]
+      }
+    ],
+    "referenceAnswer": "$['a','c']",
+    "explanation": "多选。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-044",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归取 {\"x\":{\"y\":{\"z\":1}}} 中 z。",
+    "testCases": [
+      {
+        "input": "{\"x\":{\"y\":{\"z\":1}}}",
+        "expected": [
+          "1"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..z",
+    "explanation": "递归。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-045",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归取 {\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]} 中所有 name。",
+    "testCases": [
+      {
+        "input": "{\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]}",
+        "expected": [
+          "Tom",
+          "Jerry"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..name",
+    "explanation": "递归。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-046",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中所有 book 数组第 0 个的 title。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "A"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..book[0].title",
+    "explanation": "递归+下标。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-047",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归后过滤：取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中 price<20 的 title。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "A"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..book[?(@.price<20)].title",
+    "explanation": "递归+过滤。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-048",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中下标 0、2 的元素。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "10",
+          "30"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[0,2]",
+    "explanation": "多下标。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-049",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "取 {\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]} 中有 age 字段的用户。",
+    "testCases": [
+      {
+        "input": "{\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]}",
+        "expected": [
+          "{\"age\":20,\"name\":\"Tom\"}",
+          "{\"age\":25,\"name\":\"Jerry\"}"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.users[?(@.age)]",
+    "explanation": "存在性。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-050",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「递归 ..」，下列正确的是？",
+    "options": [
+      ".. 从当前位置递归查找所有层级。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": ".. 从当前位置递归查找所有层级。",
+    "tags": [
+      "JSONPath",
+      "递归 .."
+    ]
+  },
+  {
+    "id": "jsonpath-high-051",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「递归 ..」错误的是？",
+    "options": [
+      ".. 从当前位置递归查找所有层级。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：.. 从当前位置递归查找所有层级。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "递归 .."
+    ]
+  },
+  {
+    "id": "jsonpath-high-052",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「脚本表达式」，下列正确的是？",
+    "options": [
+      "部分实现支持 (script) 脚本表达式。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "部分实现支持 (script) 脚本表达式。",
+    "tags": [
+      "JSONPath",
+      "脚本表达式"
+    ]
+  },
+  {
+    "id": "jsonpath-high-053",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「脚本表达式」错误的是？",
+    "options": [
+      "部分实现支持 (script) 脚本表达式。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：部分实现支持 (script) 脚本表达式。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "脚本表达式"
+    ]
+  },
+  {
+    "id": "jsonpath-high-054",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「多选 [a,b]」，下列正确的是？",
+    "options": [
+      "['a','b'] 同时选取多个字段。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "['a','b'] 同时选取多个字段。",
+    "tags": [
+      "JSONPath",
+      "多选 [a,b]"
+    ]
+  },
+  {
+    "id": "jsonpath-high-055",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「多选 [a,b]」错误的是？",
+    "options": [
+      "['a','b'] 同时选取多个字段。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：['a','b'] 同时选取多个字段。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "多选 [a,b]"
+    ]
+  },
+  {
+    "id": "jsonpath-high-056",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「组合表达式」，下列正确的是？",
+    "options": [
+      "$..book[0].title 与 $..price 组合查询。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$..book[0].title 与 $..price 组合查询。",
+    "tags": [
+      "JSONPath",
+      "组合表达式"
+    ]
+  },
+  {
+    "id": "jsonpath-high-057",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「组合表达式」错误的是？",
+    "options": [
+      "$..book[0].title 与 $..price 组合查询。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：$..book[0].title 与 $..price 组合查询。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "组合表达式"
+    ]
+  },
+  {
+    "id": "jsonpath-high-058",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「递归+过滤」，下列正确的是？",
+    "options": [
+      "$..book[?(@.price<10)] 递归后过滤。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$..book[?(@.price<10)] 递归后过滤。",
+    "tags": [
+      "JSONPath",
+      "递归+过滤"
+    ]
+  },
+  {
+    "id": "jsonpath-high-059",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「递归+过滤」错误的是？",
+    "options": [
+      "$..book[?(@.price<10)] 递归后过滤。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：$..book[?(@.price<10)] 递归后过滤。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "递归+过滤"
+    ]
+  },
+  {
+    "id": "jsonpath-high-060",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「递归+切片」，下列正确的是？",
+    "options": [
+      "$..list[0:2] 递归找 list 再切片。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "$..list[0:2] 递归找 list 再切片。",
+    "tags": [
+      "JSONPath",
+      "递归+切片"
+    ]
+  },
+  {
+    "id": "jsonpath-high-061",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「递归+切片」错误的是？",
+    "options": [
+      "$..list[0:2] 递归找 list 再切片。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：$..list[0:2] 递归找 list 再切片。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "递归+切片"
+    ]
+  },
+  {
+    "id": "jsonpath-high-062",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「@ 与 $ 区别」，下列正确的是？",
+    "options": [
+      "@ 是当前元素，$ 是根。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "@ 是当前元素，$ 是根。",
+    "tags": [
+      "JSONPath",
+      "@ 与 $ 区别"
+    ]
+  },
+  {
+    "id": "jsonpath-high-063",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「@ 与 $ 区别」错误的是？",
+    "options": [
+      "@ 是当前元素，$ 是根。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：@ 是当前元素，$ 是根。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "@ 与 $ 区别"
+    ]
+  },
+  {
+    "id": "jsonpath-high-064",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「嵌套过滤」，下列正确的是？",
+    "options": [
+      "过滤条件里可再嵌套 JSONPath。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "过滤条件里可再嵌套 JSONPath。",
+    "tags": [
+      "JSONPath",
+      "嵌套过滤"
+    ]
+  },
+  {
+    "id": "jsonpath-high-065",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「嵌套过滤」错误的是？",
+    "options": [
+      "过滤条件里可再嵌套 JSONPath。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：过滤条件里可再嵌套 JSONPath。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "嵌套过滤"
+    ]
+  },
+  {
+    "id": "jsonpath-high-066",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「字段存在检查」，下列正确的是？",
+    "options": [
+      "用 @.field 过滤出有该字段的元素。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "用 @.field 过滤出有该字段的元素。",
+    "tags": [
+      "JSONPath",
+      "字段存在检查"
+    ]
+  },
+  {
+    "id": "jsonpath-high-067",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「字段存在检查」错误的是？",
+    "options": [
+      "用 @.field 过滤出有该字段的元素。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：用 @.field 过滤出有该字段的元素。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "字段存在检查"
+    ]
+  },
+  {
+    "id": "jsonpath-high-068",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "关于 JSONPath「正则匹配」，下列正确的是？",
+    "options": [
+      "部分实现支持 =~ /pattern/ 正则匹配。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "部分实现支持 =~ /pattern/ 正则匹配。",
+    "tags": [
+      "JSONPath",
+      "正则匹配"
+    ]
+  },
+  {
+    "id": "jsonpath-high-069",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「正则匹配」错误的是？",
+    "options": [
+      "部分实现支持 =~ /pattern/ 正则匹配。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：部分实现支持 =~ /pattern/ 正则匹配。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "正则匹配"
+    ]
+  },
+  {
+    "id": "jsonpath-high-070",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中所有 price。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "10",
+          "20"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..price",
+    "explanation": "递归。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-071",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中所有 title。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "A",
+          "B"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..title",
+    "explanation": "递归。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-072",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "同时取 {\"a\":1,\"b\":2,\"c\":3} 中 a 和 b。",
+    "testCases": [
+      {
+        "input": "{\"a\":1,\"b\":2,\"c\":3}",
+        "expected": [
+          "1",
+          "2"
+        ]
+      }
+    ],
+    "referenceAnswer": "$['a','b']",
+    "explanation": "多选。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-073",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "同时取 {\"a\":1,\"b\":2,\"c\":3} 中 a 和 c。",
+    "testCases": [
+      {
+        "input": "{\"a\":1,\"b\":2,\"c\":3}",
+        "expected": [
+          "1",
+          "3"
+        ]
+      }
+    ],
+    "referenceAnswer": "$['a','c']",
+    "explanation": "多选。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-074",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "同时取 {\"a\":1,\"b\":2,\"c\":3} 中 b 和 c。",
+    "testCases": [
+      {
+        "input": "{\"a\":1,\"b\":2,\"c\":3}",
+        "expected": [
+          "2",
+          "3"
+        ]
+      }
+    ],
+    "referenceAnswer": "$['b','c']",
+    "explanation": "多选。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-075",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归取 {\"x\":{\"y\":{\"z\":1}}} 中 z。",
+    "testCases": [
+      {
+        "input": "{\"x\":{\"y\":{\"z\":1}}}",
+        "expected": [
+          "1"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..z",
+    "explanation": "递归。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-076",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归取 {\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]} 中所有 name。",
+    "testCases": [
+      {
+        "input": "{\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]}",
+        "expected": [
+          "Tom",
+          "Jerry"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..name",
+    "explanation": "递归。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-077",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归取 {\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]} 中所有 age。",
+    "testCases": [
+      {
+        "input": "{\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]}",
+        "expected": [
+          "20",
+          "25"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..age",
+    "explanation": "递归。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-078",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中所有 book 数组第 0 个的 title。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "A"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..book[0].title",
+    "explanation": "递归+下标。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-079",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "递归后过滤：取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中 price<20 的 title。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "A"
+        ]
+      }
+    ],
+    "referenceAnswer": "$..book[?(@.price<20)].title",
+    "explanation": "递归+过滤。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-high-080",
+    "skill": "jsonpath",
+    "level": "high",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中下标 0、2 的元素。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "10",
+          "30"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[0,2]",
+    "explanation": "多下标。",
+    "tags": [
+      "JSONPath"
+    ]
   }
 ]

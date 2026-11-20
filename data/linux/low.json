@@ -574,5 +574,869 @@
     "tags": [
       "Linux"
     ]
+  },
+  {
+    "id": "linux-low-033",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "显示当前工作目录的命令是？",
+    "options": [
+      "pwd",
+      "cd",
+      "ls",
+      "dir"
+    ],
+    "answer": 0,
+    "explanation": "pwd (print working directory) 显示当前目录绝对路径。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-034",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "列出目录内容的命令是？",
+    "options": [
+      "ls",
+      "list",
+      "dir",
+      "show"
+    ],
+    "answer": 0,
+    "explanation": "ls 列出目录内容，-l 详细，-a 含隐藏文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-035",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "切换目录的命令是？",
+    "options": [
+      "cd",
+      "chdir",
+      "goto",
+      "move"
+    ],
+    "answer": 0,
+    "explanation": "cd (change directory) 切换工作目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-036",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "创建目录的命令是？",
+    "options": [
+      "mkdir",
+      "createdir",
+      "md",
+      "newdir"
+    ],
+    "answer": 0,
+    "explanation": "mkdir 创建目录，-p 递归创建父目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-037",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "创建空文件的命令是？",
+    "options": [
+      "touch",
+      "create",
+      "new",
+      "make"
+    ],
+    "answer": 0,
+    "explanation": "touch 创建空文件或更新文件时间戳。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-038",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "删除文件的命令是？",
+    "options": [
+      "rm",
+      "del",
+      "delete",
+      "remove"
+    ],
+    "answer": 0,
+    "explanation": "rm 删除文件，-r 递归，-f 强制。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-039",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "复制文件的命令是？",
+    "options": [
+      "cp",
+      "copy",
+      "duplicate",
+      "clone"
+    ],
+    "answer": 0,
+    "explanation": "cp 复制文件或目录，-r 递归复制目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-040",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "移动或重命名文件的命令是？",
+    "options": [
+      "mv",
+      "move",
+      "rename",
+      "cut"
+    ],
+    "answer": 0,
+    "explanation": "mv 移动或重命名文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-041",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "查看文件内容的命令是？",
+    "options": [
+      "cat",
+      "show",
+      "view",
+      "read"
+    ],
+    "answer": 0,
+    "explanation": "cat 输出文件全部内容，适合小文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-042",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "显示文件前几行的命令是？",
+    "options": [
+      "head",
+      "top",
+      "first",
+      "begin"
+    ],
+    "answer": 0,
+    "explanation": "head 默认显示前 10 行，-n N 指定行数。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-043",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "显示文件末尾几行的命令是？",
+    "options": [
+      "tail",
+      "bottom",
+      "last",
+      "end"
+    ],
+    "answer": 0,
+    "explanation": "tail 默认显示后 10 行，-f 实时跟踪。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-044",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "ls -la 中 -l 的含义是？",
+    "options": [
+      "长格式",
+      "链接",
+      "本地",
+      "列表"
+    ],
+    "answer": 0,
+    "explanation": "-l 长格式，显示权限、所有者、大小等详细信息。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-045",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "ls -a 中 -a 的含义是？",
+    "options": [
+      "所有文件",
+      "追加",
+      "归档",
+      "绝对路径"
+    ],
+    "answer": 0,
+    "explanation": "-a 显示包括 . 开头的隐藏文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-046",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "cd ~ 的作用是？",
+    "options": [
+      "回到用户主目录",
+      "上一级目录",
+      "根目录",
+      "当前目录"
+    ],
+    "answer": 0,
+    "explanation": "~ 代表当前用户主目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-047",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "cd - 的作用是？",
+    "options": [
+      "回到上一个工作目录",
+      "后退一步",
+      "根目录",
+      "主目录"
+    ],
+    "answer": 0,
+    "explanation": "cd - 切换到上一个工作目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-048",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "cd .. 的作用是？",
+    "options": [
+      "上一级目录",
+      "主目录",
+      "根目录",
+      "后退一步"
+    ],
+    "answer": 0,
+    "explanation": ".. 表示上一级目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-049",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "mkdir -p 的作用是？",
+    "options": [
+      "递归创建父目录",
+      "打印",
+      "权限",
+      "粘贴"
+    ],
+    "answer": 0,
+    "explanation": "-p 需要时创建父目录，已存在不报错。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-050",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "rm -rf 中 -f 的含义是？",
+    "options": [
+      "强制",
+      "递归",
+      "文件",
+      "快速"
+    ],
+    "answer": 0,
+    "explanation": "-f 强制删除，不提示确认。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-051",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "rm -r 中 -r 的含义是？",
+    "options": [
+      "递归",
+      "强制",
+      "只读",
+      "快速"
+    ],
+    "answer": 0,
+    "explanation": "-r 递归删除，用于删目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-052",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "cp -r 的作用是？",
+    "options": [
+      "递归复制目录",
+      "保留权限",
+      "远程",
+      "重命名"
+    ],
+    "answer": 0,
+    "explanation": "-r 递归复制，用于复制目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-053",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "查看命令帮助的命令是？",
+    "options": [
+      "man",
+      "help",
+      "info",
+      "doc"
+    ],
+    "answer": 0,
+    "explanation": "man 显示命令手册页，如 man ls。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-054",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "wc -l 的作用是？",
+    "options": [
+      "统计行数",
+      "统计字数",
+      "统计字符",
+      "统计文件"
+    ],
+    "answer": 0,
+    "explanation": "wc -l 统计行数，-w 字数，-c 字符数。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-055",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "wc -w 的作用是？",
+    "options": [
+      "统计字数",
+      "统计行数",
+      "统计字符",
+      "统计文件"
+    ],
+    "answer": 0,
+    "explanation": "wc -w 统计字数。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-056",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "隐藏文件的特征是？",
+    "options": [
+      "以 . 开头",
+      "以 _ 开头",
+      "以 - 开头",
+      "没有扩展名"
+    ],
+    "answer": 0,
+    "explanation": "Linux 隐藏文件以 . 开头，ls -a 可见。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-057",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "绝对路径的特征是？",
+    "options": [
+      "以 / 开头",
+      "以 . 开头",
+      "以 ~ 开头",
+      "没有 .. "
+    ],
+    "answer": 0,
+    "explanation": "绝对路径以 / 开头，从根开始。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-058",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "相对路径 . 表示？",
+    "options": [
+      "当前目录",
+      "上一级",
+      "主目录",
+      "根目录"
+    ],
+    "answer": 0,
+    "explanation": ". 表示当前目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-059",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "相对路径 .. 表示？",
+    "options": [
+      "上一级目录",
+      "当前目录",
+      "主目录",
+      "根目录"
+    ],
+    "answer": 0,
+    "explanation": ".. 表示上一级目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-060",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "ls -lh 中 -h 的含义是？",
+    "options": [
+      "人类可读大小",
+      "硬链接",
+      "主机",
+      "高亮"
+    ],
+    "answer": 0,
+    "explanation": "-h 人类可读（K/M/G）。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-061",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "clear 命令的作用？",
+    "options": [
+      "清屏",
+      "清除文件",
+      "清空目录",
+      "退出"
+    ],
+    "answer": 0,
+    "explanation": "clear 清空终端屏幕。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-062",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "history 命令的作用？",
+    "options": [
+      "查看命令历史",
+      "删除历史",
+      "重置",
+      "时间"
+    ],
+    "answer": 0,
+    "explanation": "history 显示命令历史。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-063",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "Ctrl+C 的作用是？",
+    "options": [
+      "终止当前命令",
+      "复制",
+      "清屏",
+      "退出登录"
+    ],
+    "answer": 0,
+    "explanation": "Ctrl+C 发送中断信号，终止前台命令。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-064",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "Tab 键的作用是？",
+    "options": [
+      "自动补全",
+      "换行",
+      "确认",
+      "删除"
+    ],
+    "answer": 0,
+    "explanation": "Tab 自动补全命令/路径。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-065",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "touch 已存在文件的作用？",
+    "options": [
+      "更新时间戳",
+      "删除",
+      "清空",
+      "报错"
+    ],
+    "answer": 0,
+    "explanation": "touch 已存在文件会更新其访问/修改时间。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-066",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "rmdir 只能删除？",
+    "options": [
+      "空目录",
+      "文件",
+      "任意目录",
+      "隐藏文件"
+    ],
+    "answer": 0,
+    "explanation": "rmdir 只能删空目录，非空用 rm -r。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-067",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "cp 的源和目标顺序？",
+    "options": [
+      "cp 源 目标",
+      "cp 目标 源",
+      "cp 源;目标",
+      "cp 目标;源"
+    ],
+    "answer": 0,
+    "explanation": "cp 源 目标，源在前目标在后。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-068",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "mv 同目录下重命名相当于？",
+    "options": [
+      "重命名",
+      "复制",
+      "删除",
+      "链接"
+    ],
+    "answer": 0,
+    "explanation": "mv 同目录相当于重命名。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-069",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "cat 多个文件会？",
+    "options": [
+      "依次连接输出",
+      "只输出第一个",
+      "报错",
+      "合并为新文件"
+    ],
+    "answer": 0,
+    "explanation": "cat a b 依次输出 a 和 b 的内容。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-070",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "head -n 5 显示？",
+    "options": [
+      "前 5 行",
+      "后 5 行",
+      "第 5 行",
+      "5 个文件"
+    ],
+    "answer": 0,
+    "explanation": "head -n 5 显示前 5 行。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-071",
+    "skill": "linux",
+    "level": "low",
+    "type": "choice",
+    "title": "tail -f 的作用？",
+    "options": [
+      "实时跟踪文件末尾",
+      "前几行",
+      "排序",
+      "过滤"
+    ],
+    "answer": 0,
+    "explanation": "tail -f 持续输出新增内容，看日志神器。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-072",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "显示当前工作目录。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "pwd"
+      }
+    ],
+    "referenceAnswer": "pwd",
+    "explanation": "pwd 显示当前目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-073",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "列出当前目录所有文件（含隐藏）。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "ls -a"
+      }
+    ],
+    "referenceAnswer": "ls -a",
+    "explanation": "-a 显示隐藏文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-074",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "以长格式列出目录内容。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "ls -l"
+      }
+    ],
+    "referenceAnswer": "ls -l",
+    "explanation": "-l 长格式。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-075",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "回到用户主目录。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "cd ~"
+      }
+    ],
+    "referenceAnswer": "cd ~",
+    "explanation": "~ 代表主目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-076",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "回到上一级目录。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "cd .."
+      }
+    ],
+    "referenceAnswer": "cd ..",
+    "explanation": ".. 上一级。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-077",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "创建名为 test 的目录。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "mkdir test"
+      }
+    ],
+    "referenceAnswer": "mkdir test",
+    "explanation": "mkdir 创建目录。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-078",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "递归创建 a/b/c 目录。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "mkdir -p a/b/c"
+      }
+    ],
+    "referenceAnswer": "mkdir -p a/b/c",
+    "explanation": "-p 递归创建。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-079",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "创建空文件 a.txt。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "touch a.txt"
+      }
+    ],
+    "referenceAnswer": "touch a.txt",
+    "explanation": "touch 创建空文件。",
+    "tags": [
+      "Linux"
+    ]
+  },
+  {
+    "id": "linux-low-080",
+    "skill": "linux",
+    "level": "low",
+    "type": "fill",
+    "title": "删除文件 a.txt。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "rm a.txt"
+      }
+    ],
+    "referenceAnswer": "rm a.txt",
+    "explanation": "rm 删除文件。",
+    "tags": [
+      "Linux"
+    ]
   }
 ]

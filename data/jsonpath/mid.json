@@ -500,5 +500,1094 @@
     "tags": [
       "过滤"
     ]
+  },
+  {
+    "id": "jsonpath-mid-025",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「通配符 [*]」，下列正确的是？",
+    "options": [
+      "[*] 选取数组所有元素。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[*] 选取数组所有元素。",
+    "tags": [
+      "JSONPath",
+      "通配符 [*]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-026",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「通配符 [*]」错误的是？",
+    "options": [
+      "[*] 选取数组所有元素。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：[*] 选取数组所有元素。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "通配符 [*]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-027",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「通配符 .*」，下列正确的是？",
+    "options": [
+      ".* 选取对象所有字段值。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": ".* 选取对象所有字段值。",
+    "tags": [
+      "JSONPath",
+      "通配符 .*"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-028",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「通配符 .*」错误的是？",
+    "options": [
+      ".* 选取对象所有字段值。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：.* 选取对象所有字段值。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "通配符 .*"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-029",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「切片 [1:3]」，下列正确的是？",
+    "options": [
+      "[1:3] 选取下标 1、2 的元素（含头不含尾）。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[1:3] 选取下标 1、2 的元素（含头不含尾）。",
+    "tags": [
+      "JSONPath",
+      "切片 [1:3]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-030",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「切片 [1:3]」错误的是？",
+    "options": [
+      "[1:3] 选取下标 1、2 的元素（含头不含尾）。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：[1:3] 选取下标 1、2 的元素（含头不含尾）。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "切片 [1:3]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-031",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「切片 [:2]」，下列正确的是？",
+    "options": [
+      "[:2] 省略 start 默认 0，取下标 0、1。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[:2] 省略 start 默认 0，取下标 0、1。",
+    "tags": [
+      "JSONPath",
+      "切片 [:2]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-032",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「切片 [:2]」错误的是？",
+    "options": [
+      "[:2] 省略 start 默认 0，取下标 0、1。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：[:2] 省略 start 默认 0，取下标 0、1。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "切片 [:2]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-033",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「切片 [::-1]」，下列正确的是？",
+    "options": [
+      "[::-1] 步长 -1，反转数组。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[::-1] 步长 -1，反转数组。",
+    "tags": [
+      "JSONPath",
+      "切片 [::-1]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-034",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「切片 [::-1]」错误的是？",
+    "options": [
+      "[::-1] 步长 -1，反转数组。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：[::-1] 步长 -1，反转数组。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "切片 [::-1]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-035",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「过滤 [?(...)]」，下列正确的是？",
+    "options": [
+      "[?(expr)] 按表达式过滤数组。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[?(expr)] 按表达式过滤数组。",
+    "tags": [
+      "JSONPath",
+      "过滤 [?(...)]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-036",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「过滤 [?(...)]」错误的是？",
+    "options": [
+      "[?(expr)] 按表达式过滤数组。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：[?(expr)] 按表达式过滤数组。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "过滤 [?(...)]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-037",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「当前元素 @」，下列正确的是？",
+    "options": [
+      "@ 在过滤表达式中代表当前元素。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "@ 在过滤表达式中代表当前元素。",
+    "tags": [
+      "JSONPath",
+      "当前元素 @"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-038",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「当前元素 @」错误的是？",
+    "options": [
+      "@ 在过滤表达式中代表当前元素。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：@ 在过滤表达式中代表当前元素。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "当前元素 @"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-039",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「比较 ==」，下列正确的是？",
+    "options": [
+      "@.field == 'value' 等值比较。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "@.field == 'value' 等值比较。",
+    "tags": [
+      "JSONPath",
+      "比较 =="
+    ]
+  },
+  {
+    "id": "jsonpath-mid-040",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「比较 ==」错误的是？",
+    "options": [
+      "@.field == 'value' 等值比较。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：@.field == 'value' 等值比较。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "比较 =="
+    ]
+  },
+  {
+    "id": "jsonpath-mid-041",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「比较 < >」，下列正确的是？",
+    "options": [
+      "@.price < 10 数值比较。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "@.price < 10 数值比较。",
+    "tags": [
+      "JSONPath",
+      "比较 < >"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-042",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「比较 < >」错误的是？",
+    "options": [
+      "@.price < 10 数值比较。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：@.price < 10 数值比较。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "比较 < >"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-043",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「逻辑 && ||」，下列正确的是？",
+    "options": [
+      "过滤条件可用 && || 组合。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "过滤条件可用 && || 组合。",
+    "tags": [
+      "JSONPath",
+      "逻辑 && ||"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-044",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「逻辑 && ||」错误的是？",
+    "options": [
+      "过滤条件可用 && || 组合。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：过滤条件可用 && || 组合。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "逻辑 && ||"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-045",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「存在性」，下列正确的是？",
+    "options": [
+      "条件用 @.field 判断字段是否存在。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "条件用 @.field 判断字段是否存在。",
+    "tags": [
+      "JSONPath",
+      "存在性"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-046",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「存在性」错误的是？",
+    "options": [
+      "条件用 @.field 判断字段是否存在。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：条件用 @.field 判断字段是否存在。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "存在性"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-047",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「否定 !」，下列正确的是？",
+    "options": [
+      "!@.field 表示字段不存在。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "!@.field 表示字段不存在。",
+    "tags": [
+      "JSONPath",
+      "否定 !"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-048",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「否定 !」错误的是？",
+    "options": [
+      "!@.field 表示字段不存在。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：!@.field 表示字段不存在。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "否定 !"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-049",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中所有元素。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "10",
+          "20",
+          "30",
+          "40",
+          "50"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[*]",
+    "explanation": "通配符。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-050",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取 {\"a\":1,\"b\":2,\"c\":3} 中所有字段值。",
+    "testCases": [
+      {
+        "input": "{\"a\":1,\"b\":2,\"c\":3}",
+        "expected": [
+          "1",
+          "2",
+          "3"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.*",
+    "explanation": "对象通配。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-051",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中下标 1、2 的元素。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "20",
+          "30"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[1:3]",
+    "explanation": "切片含头不含尾。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-052",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中前 2 个元素。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "10",
+          "20"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[:2]",
+    "explanation": "省略 start。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-053",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中后 2 个元素。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "40",
+          "50"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[-2:]",
+    "explanation": "后 N 个。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-054",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中 price < 15 的书的 title。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "A"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.store.book[?(@.price<15)].title",
+    "explanation": "过滤。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-055",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取 {\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]} 中 age > 22 的用户。",
+    "testCases": [
+      {
+        "input": "{\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]}",
+        "expected": [
+          "{\"age\":25,\"name\":\"Jerry\"}"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.users[?(@.age>22)]",
+    "explanation": "过滤。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-056",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取 {\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]} 中 name 为 Tom 的用户。",
+    "testCases": [
+      {
+        "input": "{\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]}",
+        "expected": [
+          "{\"age\":20,\"name\":\"Tom\"}"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.users[?(@.name=='Tom')]",
+    "explanation": "等值过滤。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-057",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中所有书的 price。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "10",
+          "20"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.store.book[*].price",
+    "explanation": "通配+链式。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-058",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取 {\"list\":[10,20,30,40,50]} 中下标 0、2、4 的元素。",
+    "testCases": [
+      {
+        "input": "{\"list\":[10,20,30,40,50]}",
+        "expected": [
+          "10",
+          "30",
+          "50"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.list[::2]",
+    "explanation": "步长。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-059",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取 {\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}} 中 price >= 20 的书。",
+    "testCases": [
+      {
+        "input": "{\"store\":{\"book\":[{\"title\":\"A\",\"price\":10},{\"title\":\"B\",\"price\":20}]}}",
+        "expected": [
+          "{\"price\":20,\"title\":\"B\"}"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.store.book[?(@.price>=20)]",
+    "explanation": "过滤。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-060",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "fill",
+    "title": "取 {\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]} 中所有用户的 name。",
+    "testCases": [
+      {
+        "input": "{\"users\":[{\"name\":\"Tom\",\"age\":20},{\"name\":\"Jerry\",\"age\":25}]}",
+        "expected": [
+          "Tom",
+          "Jerry"
+        ]
+      }
+    ],
+    "referenceAnswer": "$.users[*].name",
+    "explanation": "通配。",
+    "tags": [
+      "JSONPath"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-061",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「通配符 [*]」，下列正确的是？",
+    "options": [
+      "[*] 选取数组所有元素。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[*] 选取数组所有元素。",
+    "tags": [
+      "JSONPath",
+      "通配符 [*]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-062",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「通配符 [*]」错误的是？",
+    "options": [
+      "[*] 选取数组所有元素。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：[*] 选取数组所有元素。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "通配符 [*]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-063",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「通配符 .*」，下列正确的是？",
+    "options": [
+      ".* 选取对象所有字段值。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": ".* 选取对象所有字段值。",
+    "tags": [
+      "JSONPath",
+      "通配符 .*"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-064",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「通配符 .*」错误的是？",
+    "options": [
+      ".* 选取对象所有字段值。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：.* 选取对象所有字段值。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "通配符 .*"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-065",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「切片 [1:3]」，下列正确的是？",
+    "options": [
+      "[1:3] 选取下标 1、2 的元素（含头不含尾）。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[1:3] 选取下标 1、2 的元素（含头不含尾）。",
+    "tags": [
+      "JSONPath",
+      "切片 [1:3]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-066",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「切片 [1:3]」错误的是？",
+    "options": [
+      "[1:3] 选取下标 1、2 的元素（含头不含尾）。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：[1:3] 选取下标 1、2 的元素（含头不含尾）。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "切片 [1:3]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-067",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「切片 [:2]」，下列正确的是？",
+    "options": [
+      "[:2] 省略 start 默认 0，取下标 0、1。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[:2] 省略 start 默认 0，取下标 0、1。",
+    "tags": [
+      "JSONPath",
+      "切片 [:2]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-068",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「切片 [:2]」错误的是？",
+    "options": [
+      "[:2] 省略 start 默认 0，取下标 0、1。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：[:2] 省略 start 默认 0，取下标 0、1。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "切片 [:2]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-069",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「切片 [::-1]」，下列正确的是？",
+    "options": [
+      "[::-1] 步长 -1，反转数组。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[::-1] 步长 -1，反转数组。",
+    "tags": [
+      "JSONPath",
+      "切片 [::-1]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-070",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「切片 [::-1]」错误的是？",
+    "options": [
+      "[::-1] 步长 -1，反转数组。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：[::-1] 步长 -1，反转数组。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "切片 [::-1]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-071",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「过滤 [?(...)]」，下列正确的是？",
+    "options": [
+      "[?(expr)] 按表达式过滤数组。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "[?(expr)] 按表达式过滤数组。",
+    "tags": [
+      "JSONPath",
+      "过滤 [?(...)]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-072",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「过滤 [?(...)]」错误的是？",
+    "options": [
+      "[?(expr)] 按表达式过滤数组。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：[?(expr)] 按表达式过滤数组。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "过滤 [?(...)]"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-073",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「当前元素 @」，下列正确的是？",
+    "options": [
+      "@ 在过滤表达式中代表当前元素。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "@ 在过滤表达式中代表当前元素。",
+    "tags": [
+      "JSONPath",
+      "当前元素 @"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-074",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「当前元素 @」错误的是？",
+    "options": [
+      "@ 在过滤表达式中代表当前元素。",
+      "不能用于数组",
+      "必须配合 SQL",
+      "会修改原数据"
+    ],
+    "answer": 0,
+    "explanation": "正确：@ 在过滤表达式中代表当前元素。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "当前元素 @"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-075",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「比较 ==」，下列正确的是？",
+    "options": [
+      "@.field == 'value' 等值比较。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "@.field == 'value' 等值比较。",
+    "tags": [
+      "JSONPath",
+      "比较 =="
+    ]
+  },
+  {
+    "id": "jsonpath-mid-076",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「比较 ==」错误的是？",
+    "options": [
+      "@.field == 'value' 等值比较。",
+      "必须配合 SQL",
+      "会修改原数据",
+      "仅支持整数下标"
+    ],
+    "answer": 0,
+    "explanation": "正确：@.field == 'value' 等值比较。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "比较 =="
+    ]
+  },
+  {
+    "id": "jsonpath-mid-077",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「比较 < >」，下列正确的是？",
+    "options": [
+      "@.price < 10 数值比较。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "@.price < 10 数值比较。",
+    "tags": [
+      "JSONPath",
+      "比较 < >"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-078",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「比较 < >」错误的是？",
+    "options": [
+      "@.price < 10 数值比较。",
+      "会修改原数据",
+      "仅支持整数下标",
+      "不能用于数组"
+    ],
+    "answer": 0,
+    "explanation": "正确：@.price < 10 数值比较。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "比较 < >"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-079",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "关于 JSONPath「逻辑 && ||」，下列正确的是？",
+    "options": [
+      "过滤条件可用 && || 组合。",
+      "只能用于 XML",
+      "必须大写",
+      "不能嵌套"
+    ],
+    "answer": 0,
+    "explanation": "过滤条件可用 && || 组合。",
+    "tags": [
+      "JSONPath",
+      "逻辑 && ||"
+    ]
+  },
+  {
+    "id": "jsonpath-mid-080",
+    "skill": "jsonpath",
+    "level": "mid",
+    "type": "choice",
+    "title": "下列关于「逻辑 && ||」错误的是？",
+    "options": [
+      "过滤条件可用 && || 组合。",
+      "仅支持整数下标",
+      "不能用于数组",
+      "必须配合 SQL"
+    ],
+    "answer": 0,
+    "explanation": "正确：过滤条件可用 && || 组合。。JSONPath 是只读查询，不修改原数据。",
+    "tags": [
+      "JSONPath",
+      "逻辑 && ||"
+    ]
   }
 ]

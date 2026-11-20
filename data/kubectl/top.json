@@ -574,5 +574,869 @@
     "tags": [
       "kubectl"
     ]
+  },
+  {
+    "id": "kubectl-top-033",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 Pod 失败原因应先看？",
+    "options": [
+      "kubectl describe pod <name>",
+      "kubectl get pod <name>",
+      "kubectl logs <name>",
+      "kubectl status pod <name>"
+    ],
+    "answer": 0,
+    "explanation": "describe 看 Events 部分找失败原因。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-034",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "Pod CrashLoopBackOff 应查看？",
+    "options": [
+      "kubectl logs <pod>",
+      "kubectl describe <pod>",
+      "kubectl get <pod>",
+      "kubectl status <pod>"
+    ],
+    "answer": 0,
+    "explanation": "CrashLoopBackOff 看日志找崩溃原因。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-035",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看节点资源压力用？",
+    "options": [
+      "kubectl describe node <n>",
+      "kubectl top node <n>",
+      "kubectl node <n>",
+      "kubectl stats node <n>"
+    ],
+    "answer": 0,
+    "explanation": "describe node 看 Capacity 和 Conditions。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-036",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看节点是否 Ready 用？",
+    "options": [
+      "kubectl get nodes",
+      "kubectl node-status",
+      "kubectl check nodes",
+      "kubectl nodes ready"
+    ],
+    "answer": 0,
+    "explanation": "kubectl get nodes 看 STATUS 列。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-037",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 Pod 分配到哪个节点用？",
+    "options": [
+      "kubectl get pod -o wide",
+      "kubectl get pod --node",
+      "kubectl get pod -n",
+      "kubectl get pod --where"
+    ],
+    "answer": 0,
+    "explanation": "-o wide 显示 NODE 列。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-038",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 Pod 事件用？",
+    "options": [
+      "kubectl get events --field-selector involvedObject.name=<pod>",
+      "kubectl pod-events <pod>",
+      "kubectl events <pod>",
+      "kubectl get pod-events <pod>"
+    ],
+    "answer": 0,
+    "explanation": "按 field-selector 过滤该 Pod 的事件。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-039",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 HPA（自动扩缩）用？",
+    "options": [
+      "kubectl get hpa",
+      "kubectl get autoscalers",
+      "kubectl get scales",
+      "kubectl get hpa-list"
+    ],
+    "answer": 0,
+    "explanation": "hpa 是 horizontalpodautoscaler 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-040",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 PDB（中断预算）用？",
+    "options": [
+      "kubectl get pdb",
+      "kubectl get disruptionbudgets",
+      "kubectl get budgets",
+      "kubectl get pdb-list"
+    ],
+    "answer": 0,
+    "explanation": "pdb 是 poddisruptionbudget 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-041",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 NetworkPolicy 用？",
+    "options": [
+      "kubectl get networkpolicy",
+      "kubectl get netpol",
+      "kubectl get np",
+      "kubectl get firewall"
+    ],
+    "answer": 0,
+    "explanation": "kubectl get networkpolicy（netpol 简写）。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-042",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看节点污点用？",
+    "options": [
+      "kubectl describe node <n>",
+      "kubectl get taints <n>",
+      "kubectl node-taints <n>",
+      "kubectl taints <n>"
+    ],
+    "answer": 0,
+    "explanation": "describe node 看 Taints 字段。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-043",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看资源配额用？",
+    "options": [
+      "kubectl get quota",
+      "kubectl get resourcequotas",
+      "kubectl get limits",
+      "kubectl get rq"
+    ],
+    "answer": 0,
+    "explanation": "quota 是 resourcequota 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-044",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 LimitRange 用？",
+    "options": [
+      "kubectl get limitrange",
+      "kubectl get limits",
+      "kubectl get lr",
+      "kubectl get limitranges"
+    ],
+    "answer": 0,
+    "explanation": "limitrange 限制资源范围。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-045",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 CronJob 用？",
+    "options": [
+      "kubectl get cronjob",
+      "kubectl get cj",
+      "kubectl get cronjobs",
+      "kubectl get scheduled-jobs"
+    ],
+    "answer": 0,
+    "explanation": "cj 是 cronjob 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-046",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 Job 用？",
+    "options": [
+      "kubectl get job",
+      "kubectl get jobs",
+      "kubectl get batch",
+      "kubectl get task"
+    ],
+    "answer": 0,
+    "explanation": "kubectl get job 查看 Job。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-047",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 DaemonSet 用？",
+    "options": [
+      "kubectl get ds",
+      "kubectl get daemonsets",
+      "kubectl get daemon",
+      "kubectl get daemons"
+    ],
+    "answer": 0,
+    "explanation": "ds 是 daemonset 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-048",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 StatefulSet 用？",
+    "options": [
+      "kubectl get sts",
+      "kubectl get statefulsets",
+      "kubectl get stateful",
+      "kubectl get sfs"
+    ],
+    "answer": 0,
+    "explanation": "sts 是 statefulset 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-049",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 ReplicaSet 用？",
+    "options": [
+      "kubectl get rs",
+      "kubectl get replicasets",
+      "kubectl get replica",
+      "kubectl get replicas"
+    ],
+    "answer": 0,
+    "explanation": "rs 是 replicaset 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-050",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看 Endpoint 用？",
+    "options": [
+      "kubectl get endpoints",
+      "kubectl get ep",
+      "kubectl get endpoint",
+      "kubectl get eps"
+    ],
+    "answer": 0,
+    "explanation": "ep 是 endpoints 简写。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-051",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看节点组件版本用？",
+    "options": [
+      "kubectl version --short",
+      "kubectl version",
+      "kubectl components",
+      "kubectl node-version"
+    ],
+    "answer": 0,
+    "explanation": "kubectl version 显示客户端和服务端版本。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-052",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "查看集群证书到期用？",
+    "options": [
+      "kubectl get cs",
+      "kubectl certs",
+      "kubectl get certificates",
+      "kubectl expiration"
+    ],
+    "answer": 0,
+    "explanation": "kubectl get cs 查看 componentstatus（已逐步废弃）。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-053",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "ImagePullBackOff 原因？",
+    "options": [
+      "镜像拉不下来",
+      "资源不够",
+      "配置错误",
+      "网络断"
+    ],
+    "answer": 0,
+    "explanation": "镜像拉取失败（标签错、无权限、不存在）。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-054",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "Pending 状态常见原因？",
+    "options": [
+      "调度不上（资源/污点）",
+      "镜像错",
+      "代码错",
+      "权限错"
+    ],
+    "answer": 0,
+    "explanation": "Pending 通常是调度失败。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-055",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "OOMKilled 含义？",
+    "options": [
+      "内存超限被杀",
+      "磁盘满",
+      "网络断",
+      "CPU 不足"
+    ],
+    "answer": 0,
+    "explanation": "OOMKilled 是内存超 limits 被内核杀。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-056",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "CrashLoopBackOff 含义？",
+    "options": [
+      "容器崩溃重启循环",
+      "镜像拉失败",
+      "调度失败",
+      "配置错"
+    ],
+    "answer": 0,
+    "explanation": "容器启动后崩溃，K8s 反复重启退避。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-057",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "logs --previous 看什么？",
+    "options": [
+      "上次崩溃前日志",
+      "上一行",
+      "历史所有",
+      "前一 Pod"
+    ],
+    "answer": 0,
+    "explanation": "--previous 查看容器上次崩溃前的日志。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-058",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "Evicted 状态原因？",
+    "options": [
+      "节点资源压力被驱逐",
+      "镜像错",
+      "配置错",
+      "代码错"
+    ],
+    "answer": 0,
+    "explanation": "节点资源不足时 Pod 被驱逐。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-059",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "top 需要？",
+    "options": [
+      "metrics-server",
+      "GPU",
+      "特殊权限",
+      "GPU 插件"
+    ],
+    "answer": 0,
+    "explanation": "kubectl top 依赖 metrics-server。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-060",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "rollout undo --to-revision=N 作用？",
+    "options": [
+      "回滚到指定版本",
+      "查看 N",
+      "删除 N",
+      "重启 N"
+    ],
+    "answer": 0,
+    "explanation": "--to-revision=N 回滚到指定版本。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-061",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "taint 的三个效果？",
+    "options": [
+      "NoSchedule/PreferNoSchedule/NoExecute",
+      "Yes/No/Maybe",
+      "Low/Mid/High",
+      "A/B/C"
+    ],
+    "answer": 0,
+    "explanation": "三种污点效果。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-062",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "drain --ignore-daemonsets 作用？",
+    "options": [
+      "忽略 DaemonSet Pod",
+      "删除 DaemonSet",
+      "重启",
+      "报错"
+    ],
+    "answer": 0,
+    "explanation": "忽略 DaemonSet 管理的 Pod（无法驱逐）。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-063",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "config set-context 作用？",
+    "options": [
+      "修改上下文配置",
+      "切换上下文",
+      "删除上下文",
+      "查看上下文"
+    ],
+    "answer": 0,
+    "explanation": "set-context 修改或创建上下文。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-064",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "api-resources --namespaced=true 作用？",
+    "options": [
+      "只看命名空间级资源",
+      "只看集群级",
+      "看所有",
+      "看版本"
+    ],
+    "answer": 0,
+    "explanation": "按是否命名空间级筛选。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-065",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "kubectl explain 作用？",
+    "options": [
+      "查看资源字段说明",
+      "解释错误",
+      "查看日志",
+      "查看事件"
+    ],
+    "answer": 0,
+    "explanation": "explain pod.spec.containers 查看字段定义。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-066",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "rollout status 退出码？",
+    "options": [
+      "成功 0，失败非 0",
+      "总是 0",
+      "总是 1",
+      "随机"
+    ],
+    "answer": 0,
+    "explanation": "rollout status 成功返回 0，可用于脚本判断。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-067",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "PriorityClass 作用？",
+    "options": [
+      "Pod 调度优先级",
+      "资源配额",
+      "标签",
+      "注解"
+    ],
+    "answer": 0,
+    "explanation": "PriorityClass 定义 Pod 优先级。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-068",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "PodDisruptionBudget 作用？",
+    "options": [
+      "保证最少可用副本数",
+      "限制资源",
+      "加密",
+      "路由"
+    ],
+    "answer": 0,
+    "explanation": "PDB 保证自愿驱逐时最少可用副本。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-069",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "Service type ClusterIP 作用？",
+    "options": [
+      "集群内访问",
+      "对外暴露",
+      "节点端口",
+      "负载均衡"
+    ],
+    "answer": 0,
+    "explanation": "ClusterIP 仅集群内访问（默认）。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-070",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "Service type NodePort 作用？",
+    "options": [
+      "节点端口对外暴露",
+      "仅集群内",
+      "负载均衡",
+      "加密"
+    ],
+    "answer": 0,
+    "explanation": "NodePort 在每个节点开端口对外。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-071",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "Service type LoadBalancer 作用？",
+    "options": [
+      "云负载均衡器对外",
+      "节点端口",
+      "仅集群内",
+      "加密"
+    ],
+    "answer": 0,
+    "explanation": "LoadBalancer 自动配置云 LB。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-072",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "Ingress 作用？",
+    "options": [
+      "HTTP/HTTPS 路由",
+      "TCP 路由",
+      "存储",
+      "调度"
+    ],
+    "answer": 0,
+    "explanation": "Ingress 是七层路由入口。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-073",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "choice",
+    "title": "kubectl auth can-i 作用？",
+    "options": [
+      "检查权限",
+      "认证",
+      "授权",
+      "查看角色"
+    ],
+    "answer": 0,
+    "explanation": "auth can-i <verb> <resource> 检查是否有权限。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-074",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "fill",
+    "title": "查看 Pod nginx 的失败事件。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl describe pod nginx"
+      }
+    ],
+    "referenceAnswer": "kubectl describe pod nginx",
+    "explanation": "describe 看 Events。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-075",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "fill",
+    "title": "查看 Pod nginx 上次崩溃前日志。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl logs --previous nginx"
+      }
+    ],
+    "referenceAnswer": "kubectl logs --previous nginx",
+    "explanation": "--previous 旧日志。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-076",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "fill",
+    "title": "查看 HPA。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl get hpa"
+      }
+    ],
+    "referenceAnswer": "kubectl get hpa",
+    "explanation": "get hpa 自动扩缩。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-077",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "fill",
+    "title": "查看 PDB（中断预算）。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl get pdb"
+      }
+    ],
+    "referenceAnswer": "kubectl get pdb",
+    "explanation": "get pdb 中断预算。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-078",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "fill",
+    "title": "查看 NetworkPolicy。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl get networkpolicy"
+      }
+    ],
+    "referenceAnswer": "kubectl get networkpolicy",
+    "explanation": "get networkpolicy 网络策略。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-079",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "fill",
+    "title": "查看 CronJob。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl get cronjob"
+      }
+    ],
+    "referenceAnswer": "kubectl get cronjob",
+    "explanation": "get cronjob 定时任务。",
+    "tags": [
+      "kubectl"
+    ]
+  },
+  {
+    "id": "kubectl-top-080",
+    "skill": "kubectl",
+    "level": "top",
+    "type": "fill",
+    "title": "查看 DaemonSet。",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "kubectl get ds"
+      }
+    ],
+    "referenceAnswer": "kubectl get ds",
+    "explanation": "get ds DaemonSet。",
+    "tags": [
+      "kubectl"
+    ]
   }
 ]

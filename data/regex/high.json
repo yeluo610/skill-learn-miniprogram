@@ -625,5 +625,1030 @@
     "tags": [
       "环视"
     ]
+  },
+  {
+    "id": "regex-high-028",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「顺序肯定环视」，下列说法正确的是？",
+    "options": [
+      "(?=...) 顺序肯定环视，匹配后面是 ... 的位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?=...) 顺序肯定环视，匹配后面是 ... 的位置。",
+    "tags": [
+      "正则",
+      "顺序肯定环视"
+    ]
+  },
+  {
+    "id": "regex-high-029",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「顺序肯定环视」的描述，错误的是？",
+    "options": [
+      "(?=...) 顺序肯定环视，匹配后面是 ... 的位置。",
+      "表示取反操作",
+      "只匹配字符串开头",
+      "等价于空匹配"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：(?=...) 顺序肯定环视，匹配后面是 ... 的位置。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "顺序肯定环视"
+    ]
+  },
+  {
+    "id": "regex-high-030",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「顺序否定环视」，下列说法正确的是？",
+    "options": [
+      "(?!...) 顺序否定环视，匹配后面不是 ... 的位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?!...) 顺序否定环视，匹配后面不是 ... 的位置。",
+    "tags": [
+      "正则",
+      "顺序否定环视"
+    ]
+  },
+  {
+    "id": "regex-high-031",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「顺序否定环视」的描述，错误的是？",
+    "options": [
+      "(?!...) 顺序否定环视，匹配后面不是 ... 的位置。",
+      "只匹配字符串开头",
+      "等价于空匹配",
+      "必须转义才能使用"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：(?!...) 顺序否定环视，匹配后面不是 ... 的位置。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "顺序否定环视"
+    ]
+  },
+  {
+    "id": "regex-high-032",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「逆序肯定环视」，下列说法正确的是？",
+    "options": [
+      "(?<=...) 逆序肯定环视，匹配前面是 ... 的位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?<=...) 逆序肯定环视，匹配前面是 ... 的位置。",
+    "tags": [
+      "正则",
+      "逆序肯定环视"
+    ]
+  },
+  {
+    "id": "regex-high-033",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「逆序肯定环视」的描述，错误的是？",
+    "options": [
+      "(?<=...) 逆序肯定环视，匹配前面是 ... 的位置。",
+      "等价于空匹配",
+      "必须转义才能使用",
+      "表示取反操作"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：(?<=...) 逆序肯定环视，匹配前面是 ... 的位置。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "逆序肯定环视"
+    ]
+  },
+  {
+    "id": "regex-high-034",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「逆序否定环视」，下列说法正确的是？",
+    "options": [
+      "(?<!...) 逆序否定环视，匹配前面不是 ... 的位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?<!...) 逆序否定环视，匹配前面不是 ... 的位置。",
+    "tags": [
+      "正则",
+      "逆序否定环视"
+    ]
+  },
+  {
+    "id": "regex-high-035",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「逆序否定环视」的描述，错误的是？",
+    "options": [
+      "(?<!...) 逆序否定环视，匹配前面不是 ... 的位置。",
+      "必须转义才能使用",
+      "表示取反操作",
+      "只匹配字符串开头"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：(?<!...) 逆序否定环视，匹配前面不是 ... 的位置。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "逆序否定环视"
+    ]
+  },
+  {
+    "id": "regex-high-036",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「命名分组」，下列说法正确的是？",
+    "options": [
+      "(?<name>...) 命名分组，用 \\k<name> 引用。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?<name>...) 命名分组，用 \\k<name> 引用。",
+    "tags": [
+      "正则",
+      "命名分组"
+    ]
+  },
+  {
+    "id": "regex-high-037",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「命名分组」的描述，错误的是？",
+    "options": [
+      "(?<name>...) 命名分组，用 \\k<name> 引用。",
+      "表示取反操作",
+      "只匹配字符串开头",
+      "等价于空匹配"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：(?<name>...) 命名分组，用 \\k<name> 引用。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "命名分组"
+    ]
+  },
+  {
+    "id": "regex-high-038",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「回溯陷阱」，下列说法正确的是？",
+    "options": [
+      "贪婪量词 + 多个 .* 会导致大量回溯，性能差。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "贪婪量词 + 多个 .* 会导致大量回溯，性能差。",
+    "tags": [
+      "正则",
+      "回溯陷阱"
+    ]
+  },
+  {
+    "id": "regex-high-039",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「回溯陷阱」的描述，错误的是？",
+    "options": [
+      "贪婪量词 + 多个 .* 会导致大量回溯，性能差。",
+      "只匹配字符串开头",
+      "等价于空匹配",
+      "必须转义才能使用"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：贪婪量词 + 多个 .* 会导致大量回溯，性能差。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "回溯陷阱"
+    ]
+  },
+  {
+    "id": "regex-high-040",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「惰性量词」，下列说法正确的是？",
+    "options": [
+      ".*? 在 HTML/标签匹配中常用，避免贪婪吞过多。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": ".*? 在 HTML/标签匹配中常用，避免贪婪吞过多。",
+    "tags": [
+      "正则",
+      "惰性量词"
+    ]
+  },
+  {
+    "id": "regex-high-041",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「惰性量词」的描述，错误的是？",
+    "options": [
+      ".*? 在 HTML/标签匹配中常用，避免贪婪吞过多。",
+      "等价于空匹配",
+      "必须转义才能使用",
+      "表示取反操作"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：.*? 在 HTML/标签匹配中常用，避免贪婪吞过多。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "惰性量词"
+    ]
+  },
+  {
+    "id": "regex-high-042",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「原子分组」，下列说法正确的是？",
+    "options": [
+      "(?>...) 原子分组禁止回溯，提升性能但可能改变语义。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?>...) 原子分组禁止回溯，提升性能但可能改变语义。",
+    "tags": [
+      "正则",
+      "原子分组"
+    ]
+  },
+  {
+    "id": "regex-high-043",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「原子分组」的描述，错误的是？",
+    "options": [
+      "(?>...) 原子分组禁止回溯，提升性能但可能改变语义。",
+      "必须转义才能使用",
+      "表示取反操作",
+      "只匹配字符串开头"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：(?>...) 原子分组禁止回溯，提升性能但可能改变语义。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "原子分组"
+    ]
+  },
+  {
+    "id": "regex-high-044",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「环视组合」，下列说法正确的是？",
+    "options": [
+      "多个环视可叠加在同一位置，全部满足才匹配。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "多个环视可叠加在同一位置，全部满足才匹配。",
+    "tags": [
+      "正则",
+      "环视组合"
+    ]
+  },
+  {
+    "id": "regex-high-045",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「环视组合」的描述，错误的是？",
+    "options": [
+      "多个环视可叠加在同一位置，全部满足才匹配。",
+      "表示取反操作",
+      "只匹配字符串开头",
+      "等价于空匹配"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：多个环视可叠加在同一位置，全部满足才匹配。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "环视组合"
+    ]
+  },
+  {
+    "id": "regex-high-046",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「密码强度」，下列说法正确的是？",
+    "options": [
+      "用环视确保密码含大小写、数字、符号等多类。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "用环视确保密码含大小写、数字、符号等多类。",
+    "tags": [
+      "正则",
+      "密码强度"
+    ]
+  },
+  {
+    "id": "regex-high-047",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「密码强度」的描述，错误的是？",
+    "options": [
+      "用环视确保密码含大小写、数字、符号等多类。",
+      "只匹配字符串开头",
+      "等价于空匹配",
+      "必须转义才能使用"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：用环视确保密码含大小写、数字、符号等多类。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "密码强度"
+    ]
+  },
+  {
+    "id": "regex-high-048",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「IP 匹配」，下列说法正确的是？",
+    "options": [
+      "IP 可用 (\\d{1,3}\\.){3}\\d{1,3} 粗略匹配。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "IP 可用 (\\d{1,3}\\.){3}\\d{1,3} 粗略匹配。",
+    "tags": [
+      "正则",
+      "IP 匹配"
+    ]
+  },
+  {
+    "id": "regex-high-049",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「IP 匹配」的描述，错误的是？",
+    "options": [
+      "IP 可用 (\\d{1,3}\\.){3}\\d{1,3} 粗略匹配。",
+      "等价于空匹配",
+      "必须转义才能使用",
+      "表示取反操作"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：IP 可用 (\\d{1,3}\\.){3}\\d{1,3} 粗略匹配。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "IP 匹配"
+    ]
+  },
+  {
+    "id": "regex-high-050",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「URL 提取」，下列说法正确的是？",
+    "options": [
+      "https?://[\\w./?=&-]+ 可粗略提取 URL。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "https?://[\\w./?=&-]+ 可粗略提取 URL。",
+    "tags": [
+      "正则",
+      "URL 提取"
+    ]
+  },
+  {
+    "id": "regex-high-051",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「URL 提取」的描述，错误的是？",
+    "options": [
+      "https?://[\\w./?=&-]+ 可粗略提取 URL。",
+      "必须转义才能使用",
+      "表示取反操作",
+      "只匹配字符串开头"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：https?://[\\w./?=&-]+ 可粗略提取 URL。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "URL 提取"
+    ]
+  },
+  {
+    "id": "regex-high-052",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「数字千分位」，下列说法正确的是？",
+    "options": [
+      "(?<=\\d)(?=(\\d{3})+$) 在数字间插入千分位的位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?<=\\d)(?=(\\d{3})+$) 在数字间插入千分位的位置。",
+    "tags": [
+      "正则",
+      "数字千分位"
+    ]
+  },
+  {
+    "id": "regex-high-053",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「数字千分位」的描述，错误的是？",
+    "options": [
+      "(?<=\\d)(?=(\\d{3})+$) 在数字间插入千分位的位置。",
+      "表示取反操作",
+      "只匹配字符串开头",
+      "等价于空匹配"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：(?<=\\d)(?=(\\d{3})+$) 在数字间插入千分位的位置。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "数字千分位"
+    ]
+  },
+  {
+    "id": "regex-high-054",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「驼峰转下划线」，下列说法正确的是？",
+    "options": [
+      "用环视或 replace 在大写字母前插入 _。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "用环视或 replace 在大写字母前插入 _。",
+    "tags": [
+      "正则",
+      "驼峰转下划线"
+    ]
+  },
+  {
+    "id": "regex-high-055",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「驼峰转下划线」的描述，错误的是？",
+    "options": [
+      "用环视或 replace 在大写字母前插入 _。",
+      "只匹配字符串开头",
+      "等价于空匹配",
+      "必须转义才能使用"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：用环视或 replace 在大写字母前插入 _。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "驼峰转下划线"
+    ]
+  },
+  {
+    "id": "regex-high-056",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「非捕获优化」，下列说法正确的是？",
+    "options": [
+      "不需要引用时用 (?:) 替代 ()，提升性能。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "不需要引用时用 (?:) 替代 ()，提升性能。",
+    "tags": [
+      "正则",
+      "非捕获优化"
+    ]
+  },
+  {
+    "id": "regex-high-057",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「非捕获优化」的描述，错误的是？",
+    "options": [
+      "不需要引用时用 (?:) 替代 ()，提升性能。",
+      "等价于空匹配",
+      "必须转义才能使用",
+      "表示取反操作"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：不需要引用时用 (?:) 替代 ()，提升性能。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "非捕获优化"
+    ]
+  },
+  {
+    "id": "regex-high-058",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「定长逆序」，下列说法正确的是？",
+    "options": [
+      "逆序环视内模式必须定长（多数实现）。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "逆序环视内模式必须定长（多数实现）。",
+    "tags": [
+      "正则",
+      "定长逆序"
+    ]
+  },
+  {
+    "id": "regex-high-059",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「定长逆序」的描述，错误的是？",
+    "options": [
+      "逆序环视内模式必须定长（多数实现）。",
+      "必须转义才能使用",
+      "表示取反操作",
+      "只匹配字符串开头"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：逆序环视内模式必须定长（多数实现）。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "定长逆序"
+    ]
+  },
+  {
+    "id": "regex-high-060",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "匹配后面跟着\"元\"的数字（\"100元 200块\" 中的 100）。",
+    "testCases": [
+      {
+        "input": "100元 200块 300元",
+        "expected": [
+          "100",
+          "300"
+        ]
+      }
+    ],
+    "referenceAnswer": "/\\d+(?=元)/g",
+    "explanation": "顺序肯定环视。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-high-061",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "匹配不以数字开头的单词。",
+    "testCases": [
+      {
+        "input": "abc 1de",
+        "expected": [
+          "abc"
+        ]
+      }
+    ],
+    "referenceAnswer": "/^(?!\\d)\\w+/g",
+    "explanation": "顺序否定。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-high-062",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "匹配前面是 $ 的数字（\"$100 and 200\" 中的 100）。",
+    "testCases": [
+      {
+        "input": "$100 and 200",
+        "expected": [
+          "100"
+        ]
+      }
+    ],
+    "referenceAnswer": "/(?<=\\$)\\d+/g",
+    "explanation": "逆序肯定。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-high-063",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "匹配前面不是空格的字母（\"a b c\" 中只匹配 a）。",
+    "testCases": [
+      {
+        "input": "a b c",
+        "expected": [
+          "a"
+        ]
+      }
+    ],
+    "referenceAnswer": "/(?<!\\s)[a-z]/g",
+    "explanation": "逆序否定。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-high-064",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "匹配 4-6 位数字。",
+    "testCases": [
+      {
+        "input": "a1 a22 a3333 a444444",
+        "expected": [
+          "3333",
+          "444444"
+        ]
+      }
+    ],
+    "referenceAnswer": "/\\d{4,6}/g",
+    "explanation": "区间量词。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-high-065",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "匹配 a.b.c 的点号（非捕获分组，贪婪合并）。",
+    "testCases": [
+      {
+        "input": "a.b.c",
+        "expected": [
+          ".",
+          "."
+        ]
+      }
+    ],
+    "referenceAnswer": "/(?:\\.)+/g",
+    "explanation": "非捕获分组贪婪匹配连续点。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-high-066",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "匹配 100-999 范围的数字。",
+    "testCases": [
+      {
+        "input": "a100 b999 c50",
+        "expected": [
+          "100",
+          "999"
+        ]
+      }
+    ],
+    "referenceAnswer": "/[1-9]\\d{2}/g",
+    "explanation": "范围。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-high-067",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "匹配 HTML 起始标签（惰性）。",
+    "testCases": [
+      {
+        "input": "<a>txt",
+        "expected": [
+          "<a>"
+        ]
+      }
+    ],
+    "referenceAnswer": "/<.+?>/",
+    "explanation": "惰性匹配最短标签。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-high-068",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "匹配 \"key=value\" 中的 key。",
+    "testCases": [
+      {
+        "input": "a=1 b=2",
+        "expected": [
+          "a",
+          "b"
+        ]
+      }
+    ],
+    "referenceAnswer": "/\\w+(?==)/g",
+    "explanation": "顺序肯定。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-high-069",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "匹配 \"a:b:c\" 中的字母（前面是 : 或开头）。",
+    "testCases": [
+      {
+        "input": "a:b:c",
+        "expected": [
+          "a",
+          "b",
+          "c"
+        ]
+      }
+    ],
+    "referenceAnswer": "/(?<=:|^)[a-z]/g",
+    "explanation": "逆序肯定+或。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-high-070",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "匹配不在引号内的数字。",
+    "testCases": [
+      {
+        "input": "abc123def",
+        "expected": "123"
+      }
+    ],
+    "referenceAnswer": "/(?<!\")\\d+(?!\")/",
+    "explanation": "逆序否定+顺序否定。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-high-071",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "匹配连续两个相同数字。",
+    "testCases": [
+      {
+        "input": "aa 112233",
+        "expected": [
+          "11",
+          "22",
+          "33"
+        ]
+      }
+    ],
+    "referenceAnswer": "/(\\d)\\1/g",
+    "explanation": "反向引用。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-high-072",
+    "skill": "regex",
+    "level": "high",
+    "type": "fill",
+    "title": "匹配 \"1.2.3.4\" IP 形式。",
+    "testCases": [
+      {
+        "input": "ip 192.168.1.1 ok",
+        "expected": "192.168.1.1"
+      }
+    ],
+    "referenceAnswer": "/(\\d{1,3}\\.){3}\\d{1,3}/",
+    "explanation": "分组重复。",
+    "tags": [
+      "正则"
+    ]
+  },
+  {
+    "id": "regex-high-073",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「顺序肯定环视」，下列说法正确的是？",
+    "options": [
+      "(?=...) 顺序肯定环视，匹配后面是 ... 的位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?=...) 顺序肯定环视，匹配后面是 ... 的位置。",
+    "tags": [
+      "正则",
+      "顺序肯定环视"
+    ]
+  },
+  {
+    "id": "regex-high-074",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「顺序肯定环视」的描述，错误的是？",
+    "options": [
+      "(?=...) 顺序肯定环视，匹配后面是 ... 的位置。",
+      "表示取反操作",
+      "只匹配字符串开头",
+      "等价于空匹配"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：(?=...) 顺序肯定环视，匹配后面是 ... 的位置。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "顺序肯定环视"
+    ]
+  },
+  {
+    "id": "regex-high-075",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「顺序否定环视」，下列说法正确的是？",
+    "options": [
+      "(?!...) 顺序否定环视，匹配后面不是 ... 的位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?!...) 顺序否定环视，匹配后面不是 ... 的位置。",
+    "tags": [
+      "正则",
+      "顺序否定环视"
+    ]
+  },
+  {
+    "id": "regex-high-076",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「顺序否定环视」的描述，错误的是？",
+    "options": [
+      "(?!...) 顺序否定环视，匹配后面不是 ... 的位置。",
+      "只匹配字符串开头",
+      "等价于空匹配",
+      "必须转义才能使用"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：(?!...) 顺序否定环视，匹配后面不是 ... 的位置。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "顺序否定环视"
+    ]
+  },
+  {
+    "id": "regex-high-077",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「逆序肯定环视」，下列说法正确的是？",
+    "options": [
+      "(?<=...) 逆序肯定环视，匹配前面是 ... 的位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?<=...) 逆序肯定环视，匹配前面是 ... 的位置。",
+    "tags": [
+      "正则",
+      "逆序肯定环视"
+    ]
+  },
+  {
+    "id": "regex-high-078",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「逆序肯定环视」的描述，错误的是？",
+    "options": [
+      "(?<=...) 逆序肯定环视，匹配前面是 ... 的位置。",
+      "等价于空匹配",
+      "必须转义才能使用",
+      "表示取反操作"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：(?<=...) 逆序肯定环视，匹配前面是 ... 的位置。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "逆序肯定环视"
+    ]
+  },
+  {
+    "id": "regex-high-079",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "关于正则「逆序否定环视」，下列说法正确的是？",
+    "options": [
+      "(?<!...) 逆序否定环视，匹配前面不是 ... 的位置。",
+      "匹配固定字符串 abc",
+      "只能用于 JavaScript",
+      "必须配合 g 标志使用"
+    ],
+    "answer": 0,
+    "explanation": "(?<!...) 逆序否定环视，匹配前面不是 ... 的位置。",
+    "tags": [
+      "正则",
+      "逆序否定环视"
+    ]
+  },
+  {
+    "id": "regex-high-080",
+    "skill": "regex",
+    "level": "high",
+    "type": "choice",
+    "title": "下列关于「逆序否定环视」的描述，错误的是？",
+    "options": [
+      "(?<!...) 逆序否定环视，匹配前面不是 ... 的位置。",
+      "必须转义才能使用",
+      "表示取反操作",
+      "只匹配字符串开头"
+    ],
+    "answer": 0,
+    "explanation": "正确描述是：(?<!...) 逆序否定环视，匹配前面不是 ... 的位置。。其余选项均不正确。",
+    "tags": [
+      "正则",
+      "逆序否定环视"
+    ]
   }
 ]
